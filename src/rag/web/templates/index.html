@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .user-message {
+            background-color: #007bff;
+            color: white;
+            border-radius: 15px 15px 0 15px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            align-self: flex-end;
+        }
+
+        .bot-message {
+            background-color: #e9ecef;
+            color: #212529;
+            border-radius: 15px 15px 15px 0;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            align-self: flex-start;
+            white-space: pre-wrap;
+        }
+
+        .user-message-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+        }
+
+        .bot-message-container {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .chat-input {
+            padding: 20px;
+            background-color: white;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .thinking {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 0;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 7px;
+            height: 15px;
+            background-color: #212529;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="h3 mb-0">RAG System <small class="text-light opacity-75">DSGVO-Experte</small></h1>
+        </div>
+    </div>
+
+    <div class="container chat-container py-4">
+        <div id="chatMessages" class="chat-messages mb-3 d-flex flex-column">
+            <div class="bot-message-container">
+                <div class="bot-message">
+                    Willkommen beim RAG-System für DSGVO-Fragen! Wie kann ich dir heute helfen?
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <form id="chatForm" class="row g-3">
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="userInput" placeholder="Stellen Sie eine Frage zur DSGVO..." autocomplete="off">
+                </div>
+                <div class="col-md-2 d-grid">
+                    <button type="submit" class="btn btn-primary" id="sendButton">
+                        <i class="bi bi-send"></i> Senden
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatMessages = document.getElementById('chatMessages');
+            const chatForm = document.getElementById('chatForm');
+            const userInput = document.getElementById('userInput');
+            const sendButton = document.getElementById('sendButton');
+
+            // Stream-Modus aktivieren
+            const useStream = true;
+            // Socket.IO-Modus aktivieren (alternativ zu fetch)
+            const useSocketIO = false;
+
+            // Socket.IO initialisieren
+            let socket;
+            if (useSocketIO) {
+                socket = io();
+
+                // Token empfangen
+                socket.on('token', function(data) {
+                    const botResponse = document.querySelector('.bot-message:last-child');
+                    if (botResponse) {
+                        // Cursor entfernen, falls vorhanden
+                        const cursor = botResponse.querySelector('.cursor');
+                        if (cursor) {
+                            cursor.remove();
+                        }
+
+                        // Token hinzufügen
+                        botResponse.innerHTML += data.token;
+
+                        // Cursor wieder hinzufügen
+                        const newCursor = document.createElement('span');
+                        newCursor.classList.add('cursor');
+                        botResponse.appendChild(newCursor);
+
+                        // Zum Ende scrollen
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                    }
+                });
+
+                // Fertig-Event empfangen
+                socket.on('done', function() {
+                    const botResponse = document.querySelector('.bot-message:last-child');
+                    if (botResponse) {
+                        // Cursor entfernen, falls vorhanden
+                        const cursor = botResponse.querySelector('.cursor');
+                        if (cursor) {
+                            cursor.remove();
+                        }
+                    }
+
+                    // Button wieder aktivieren
+                    sendButton.disabled = false;
+                    sendButton.innerHTML = '<i class="bi bi-send"></i> Senden';
+
+                    // Fokus auf Eingabefeld setzen
+                    userInput.focus();
+                });
+
+                // Fehler empfangen
+                socket.on('error', function(data) {
+                    // Thinking-Element entfernen
+                    const thinking = document.querySelector('.thinking');
+                    if (thinking) {
+                        thinking.parentNode.remove();
+                    }
+
+                    // Fehlermeldung anzeigen
+                    addBotMessage(`Fehler: ${data.message}`);
+
+                    // Button wieder aktivieren
+                    sendButton.disabled = false;
+                    sendButton.innerHTML = '<i class="bi bi-send"></i> Senden';
+
+                    // Fokus auf Eingabefeld setzen
+                    userInput.focus();
+                });
+            }
+
+            // Chat-Form abschicken
+            chatForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const message = userInput.value.trim();
+                if (!message) return;
+
+                // Benutzernachricht anzeigen
+                addUserMessage(message);
+
+                // Eingabefeld leeren
+                userInput.value = '';
+
+                // Button deaktivieren
+                sendButton.disabled = true;
+                sendButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Senden';
+
+                if (useSocketIO) {
+                    // Thinking-Nachricht anzeigen
+                    const thinkingContainer = document.createElement('div');
+                    thinkingContainer.classList.add('bot-message-container');
+
+                    const thinkingMessage = document.createElement('div');
+                    thinkingMessage.classList.add('bot-message');
+                    thinkingMessage.innerHTML = '<span class="cursor"></span>';
+
+                    thinkingContainer.appendChild(thinkingMessage);
+                    chatMessages.appendChild(thinkingContainer);
+
+                    // Zum Ende scrollen
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                    // Nachricht an Socket.IO senden
+                    socket.emit('chat', { query: message });
+                } else {
+                    // Thinking-Nachricht anzeigen
+                    addBotMessage('<span class="thinking">Denke nach...</span>');
+
+                    if (useStream) {
+                        // Stream-Anfrage senden
+                        streamRequest(message);
+                    } else {
+                        // Normale Anfrage senden
+                        sendRequest(message);
+                    }
+                }
+            });
+
+            // Normale Anfrage senden
+            function sendRequest(message) {
+                fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query: message })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Thinking-Element entfernen
+                    const thinking = document.querySelector('.thinking');
+                    if (thinking) {
+                        thinking.parentNode.remove();
+                    }
+
+                    // Antwort anzeigen
+                    if (data.response) {
+                        addBotMessage(data.response);
+                    } else if (data.error) {
+                        addBotMessage(`Fehler: ${data.error}`);
+                    }
+
+                    // Button wieder aktivieren
+                    sendButton.disabled = false;
+                    sendButton.innerHTML = '<i class="bi bi-send"></i> Senden';
+
+                    // Fokus auf Eingabefeld setzen
+                    userInput.focus();
+                })
+                .catch(error => {
+                    // Thinking-Element entfernen
+                    const thinking = document.querySelector('.thinking');
+                    if (thinking) {
+                        thinking.parentNode.remove();
+                    }
+
+                    // Fehlermeldung anzeigen
+                    addBotMessage(`Fehler: ${error.message}`);
+
+                    // Button wieder aktivieren
+                    sendButton.disabled = false;
+                    sendButton.innerHTML = '<i class="bi bi-send"></i> Senden';
+
+                    // Fokus auf Eingabefeld setzen
+                    userInput.focus();
+                });
+            }
+
+            // Stream-Anfrage senden
+            function streamRequest(message) {
+                // Thinking-Element entfernen
+                const thinking = document.querySelector('.thinking');
+                if (thinking) {
+                    thinking.parentNode.remove();
+                }
+
+                // Leere Bot-Nachricht erstellen
+                const botMessageContainer = document.createElement('div');
+                botMessageContainer.classList.add('bot-message-container');
+
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('bot-message');
+                botMessage.innerHTML = '<span class="cursor"></span>';
+
+                botMessageContainer.appendChild(botMessage);
+                chatMessages.appendChild(botMessageContainer);
+
+                // Zum Ende scrollen
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Stream-Anfrage senden
+                fetch('/api/chat/stream', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query: message })
+                })
+                .then(response => {
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder();
+
+                    function read() {
+                        return reader.read().then(({ done, value }) => {
+                            if (done) {
+                                // Stream beendet
+                                const cursor = botMessage.querySelector('.cursor');
+                                if (cursor) {
+                                    cursor.remove();
+                                }
+
+                                // Button wieder aktivieren
+                                sendButton.disabled = false;
+                                sendButton.innerHTML = '<i class="bi bi-send"></i> Senden';
+
+                                // Fokus auf Eingabefeld setzen
+                                userInput.focus();
+
+                                return;
+                            }
+
+                            // Chunk decodieren
+                            const chunk = decoder.decode(value, { stream: true });
+                            const lines = chunk.split('\n');
+
+                            for (const line of lines) {
+                                if (line.trim()) {
+                                    try {
+                                        const data = JSON.parse(line);
+
+                                        if (data.token) {
+                                            // Cursor entfernen, falls vorhanden
+                                            const cursor = botMessage.querySelector('.cursor');
+                                            if (cursor) {
+                                                cursor.remove();
+                                            }
+
+                                            // Token hinzufügen
+                                            botMessage.innerHTML += data.token;
+
+                                            // Cursor wieder hinzufügen
+                                            const newCursor = document.createElement('span');
+                                            newCursor.classList.add('cursor');
+                                            botMessage.appendChild(newCursor);
+
+                                            // Zum Ende scrollen
+                                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                                        } else if (data.error) {
+                                            // Fehlermeldung anzeigen
+                                            botMessage.innerHTML = `Fehler: ${data.error}`;
+
+                                            // Button wieder aktivieren
+                                            sendButton.disabled = false;
+                                            sendButton.innerHTML = '<i class="bi bi-send"></i> Senden';
+
+                                            // Fokus auf Eingabefeld setzen
+                                            userInput.focus();
+
+                                            return;
+                                        }
+                                    } catch (e) {
+                                        console.error('Fehler beim Parsen des Streams:', e);
+                                    }
+                                }
+                            }
+
+                            // Nächsten Chunk lesen
+                            return read();
+                        });
+                    }
+
+                    return read();
+                })
+                .catch(error => {
+                    // Fehlermeldung anzeigen
+                    botMessage.innerHTML = `Fehler: ${error.message}`;
+
+                    // Button wieder aktivieren
+                    sendButton.disabled = false;
+                    sendButton.innerHTML = '<i class="bi bi-send"></i> Senden';
+
+                    // Fokus auf Eingabefeld setzen
+                    userInput.focus();
+                });
+            }
+
+            // Benutzernachricht hinzufügen
+            function addUserMessage(message) {
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('user-message-container');
+
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('user-message');
+                messageElement.textContent = message;
+
+                messageContainer.appendChild(messageElement);
+                chatMessages.appendChild(messageContainer);
+
+                // Zum Ende scrollen
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // Bot-Nachricht hinzufügen
+            function addBotMessage(message) {
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('bot-message-container');
+
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('bot-message');
+                messageElement.innerHTML = message;
+
+                messageContainer.appendChild(messageElement);
+                chatMessages.appendChild(messageContainer);
+
+                // Zum Ende scrollen
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // Fokus auf Eingabefeld setzen
+            userInput.focus();
+        });
+    </script>
+</body>
+</html>
