@@ -1,3 +1,7 @@
+# MkDocs
+
+site/
+
 # Python
 __pycache__/
 .mypy_cache/
