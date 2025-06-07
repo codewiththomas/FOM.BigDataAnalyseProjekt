@@ -12,7 +12,7 @@ from src.rag.components.chunking.base import BaseChunker
 from src.rag.components.data_sources.base import Document
 
 class FixedSizeChunker(BaseChunker):
-    def __init__(self, chunk_size: int = 1000, chunk_overlap: int = 200):
+    def __init__(self, chunk_size: int = 1280, chunk_overlap: int = 200):  # Embedding-optimiert
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
 
@@ -33,22 +33,28 @@ class FixedSizeChunker(BaseChunker):
                     break
                 start = end - self.chunk_overlap
             
-            # Erstellung der Document-Objekte mit Metadaten
+            # Erstellung der Document-Objekte mit Metadaten und Token-Validierung
             for i, chunk in enumerate(chunks):
+                chunk_id = f"{doc.id}_{i}" if doc.id else f"chunk_{i}"
+                
+                # Token-Validierung mit Warnung
+                self.validate_chunk_tokens(chunk, chunk_id)
+                
                 metadata = doc.metadata.copy() if doc.metadata else {}
                 metadata["chunk"] = i
                 metadata["chunk_count"] = len(chunks)
+                metadata["estimated_tokens"] = self.count_tokens_estimate(chunk)
 
                 chunked_documents.append(
-                    Document(content=chunk, metadata=metadata, id=f"{doc.id}_{i}" if doc.id else None)
+                    Document(content=chunk, metadata=metadata, id=chunk_id)
                 )
         
         return chunked_documents
 
 if __name__ == "__main__":
     try:
-        test_doc = Document(content="Test", metadata={}, id="test")
-        chunker = FixedSizeChunker(chunk_size=100, chunk_overlap=20)
+        test_doc = Document(content="Test " * 200, metadata={}, id="test")  # Längerer Test
+        chunker = FixedSizeChunker(chunk_size=1280, chunk_overlap=200)
         chunks = chunker.split_documents([test_doc])
         print("FixedSizeChunker abgeschlossen")
     except Exception as e:

@@ -25,8 +25,8 @@ except LookupError:
 class SemanticChunker(BaseChunker):
     def __init__(self,
                  model_name: str = 'sentence-transformers/all-MiniLM-L6-v2',
-                 chunk_size: int = 5,  # Minimale Anzahl Sätze pro Chunk
-                 distance_threshold: float = 1.0):
+                 chunk_size: int = 3,  # Embedding-optimiert: weniger Sätze pro Chunk
+                 distance_threshold: float = 0.8):  # Embedding-optimiert: engere semantische Gruppierung
         # Initialisierung des Sentence Transformer Modells
         self.model = SentenceTransformer(model_name)
         self.chunk_size = chunk_size
@@ -34,13 +34,14 @@ class SemanticChunker(BaseChunker):
 
     def split_documents(self, documents: List[Document]) -> List[Document]:
         """
-        Semantische Chunk-Erstellung durch Clustering ähnlicher Sätze.
+        Semantische Chunk-Erstellung durch Clustering ähnlicher Sätze
+        mit Token-Validierung für Embedding-Kompatibilität.
         
         Args:
             documents: Liste der zu verarbeitenden Dokumente
             
         Returns:
-            Liste der erstellten semantischen Chunks als Document-Objekte
+            Liste der erstellten semantischen Chunks als Document-Objekte mit Token-Metadaten
         """
         chunked_documents = []
 
@@ -50,6 +51,15 @@ class SemanticChunker(BaseChunker):
 
             # Verarbeitung kurzer Dokumente ohne Clustering
             if len(sentences) <= self.chunk_size:
+                # Token-Validierung auch für ungeclusterte Dokumente
+                chunk_id = doc.id or "short_doc"
+                self.validate_chunk_tokens(doc.content, chunk_id)
+                
+                # Erweiterung der Metadaten um Token-Information
+                if doc.metadata is None:
+                    doc.metadata = {}
+                doc.metadata["estimated_tokens"] = self.count_tokens_estimate(doc.content)
+                
                 chunked_documents.append(doc)
                 continue
 
@@ -69,18 +79,24 @@ class SemanticChunker(BaseChunker):
             for idx, label in enumerate(clustering.labels_):
                 clustered_chunks.setdefault(label, []).append(sentences[idx])
 
-            # Erstellung der Document-Objekte mit Metadaten
+            # Erstellung der Document-Objekte mit Metadaten und Token-Validierung
             for i, sentence_list in enumerate(clustered_chunks.values()):
                 chunk_text = " ".join(sentence_list).strip()
+                chunk_id = f"{doc.id}_{i}" if doc.id else f"chunk_{i}"
+                
+                # Token-Validierung mit Warnung
+                self.validate_chunk_tokens(chunk_text, chunk_id)
+                
                 metadata = doc.metadata.copy() if doc.metadata else {}
                 metadata["chunk"] = i
                 metadata["chunk_count"] = len(clustered_chunks)
+                metadata["estimated_tokens"] = self.count_tokens_estimate(chunk_text)
 
                 chunked_documents.append(
                     Document(
                         content=chunk_text,
                         metadata=metadata,
-                        id=f"{doc.id}_{i}" if doc.id else None
+                        id=chunk_id
                     )
                 )
 
@@ -89,11 +105,11 @@ class SemanticChunker(BaseChunker):
 if __name__ == "__main__":
     try:
         test_doc = Document(
-            content="Künstliche Intelligenz revolutioniert die Technologie. Machine Learning ermöglicht neue Anwendungen. Datenschutz ist in Europa wichtig. Die DSGVO regelt den Umgang mit Daten.",
+            content="Künstliche Intelligenz revolutioniert die Technologie. Machine Learning ermöglicht neue Anwendungen. Datenschutz ist in Europa wichtig. Die DSGVO regelt den Umgang mit Daten. Deep Learning verwendet neuronale Netze. Algorithmen verarbeiten große Datenmengen. Automatisierung verändert Arbeitsprozesse. Ethik in der KI wird diskutiert." * 5,  # Längerer Test
             metadata={}, 
             id="test"
         )
-        chunker = SemanticChunker(chunk_size=2, distance_threshold=0.8)
+        chunker = SemanticChunker(chunk_size=3, distance_threshold=0.8)
         chunks = chunker.split_documents([test_doc])
         print("SemanticChunker abgeschlossen")
     except Exception as e:
