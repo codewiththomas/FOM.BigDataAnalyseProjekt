@@ -10,7 +10,7 @@ from pathlib import Path
 
 from src.rag.config import config
 from src.rag.components.data_sources.document_loader import TextFileLoader, DirectoryLoader
-from src.rag.components.chunking.fixedsize_chunker import FixedSizeChunker
+from src.rag.components.data_sources.text_splitter import RecursiveCharacterTextSplitter
 from src.rag.components.embeddings.openai_embeddings import OpenAIEmbedder
 from src.rag.components.vector_stores.in_memory import InMemoryVectorStore, SimilarityMetric
 from src.rag.components.llm.openai_llm import OpenAILanguageModel
@@ -114,10 +114,14 @@ def create_and_store_embeddings(raw_data_dir, embeddings_file, vector_store, emb
     documents = loader.load()
     print(f"Geladen: {len(documents)} Dokumente")
 
-    # Chunker initialisieren
+    # Text in Chunks aufteilen
     print("Teile Text in Chunks auf...")
-    chunker = FixedSizeChunker(chunk_size=1000, chunk_overlap=200)
-    chunks = chunker.split_documents(documents)
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1000,
+        chunk_overlap=200,
+        separators=["\n\n", "\n", ". ", " ", ""]
+    )
+    chunks = text_splitter.split_documents(documents)
     print(f"Erstellt: {len(chunks)} Chunks")
 
     # Embeddings erstellen
