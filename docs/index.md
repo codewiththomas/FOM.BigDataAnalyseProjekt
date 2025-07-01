@@ -16,6 +16,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         ...
     src/rag/                # Enthält den eigentlichen Quellcode.
         components/         # Enthält die Komponenten des Projekts.
+            chunking/       # Enthält die Klassen für die Chunking Verfahren.
             chain/          # Enthält die Klassen für die RAG-Pipeline.
             data_sources    # Enthält die Klassen für die Datenquellen.
             embeddings/     # Enthält die Klassen für die Embeddings.
