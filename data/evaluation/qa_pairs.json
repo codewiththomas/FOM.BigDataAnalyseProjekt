@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "DSGVO QA-Datensatz für RAG-System Evaluierung",
+    "created_by": "FOM Research Team",
+    "creation_date": "2025-01-08",
+    "total_questions": 5,
+    "categories": ["faktenfragen", "prozessfragen"],
+    "difficulty_levels": ["easy", "medium", "hard"]
+  },
+  "questions": [
+    {
+      "id": "dsgvo_001",
+      "question": "Was ist die maximale Geldbuße nach Art. 83 DSGVO?",
+      "category": "faktenfragen",
+      "difficulty": "easy",
+      "gold_answer": "20 Millionen Euro oder 4% des weltweiten Jahresumsatzes, je nachdem welcher Betrag höher ist.",
+      "relevant_articles": ["Art. 83"],
+      "keywords": ["Geldbuße", "Sanktionen", "Artikel 83"]
+    },
+    {
+      "id": "dsgvo_002",
+      "question": "Welche Rechtsgrundlagen für die Verarbeitung personenbezogener Daten gibt es?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Die Rechtsgrundlagen sind in Art. 6 DSGVO aufgeführt: Einwilligung, Vertragserfüllung, rechtliche Verpflichtung, Schutz lebenswichtiger Interessen, öffentliche Aufgabe und berechtigte Interessen.",
+      "relevant_articles": ["Art. 6"],
+      "keywords": ["Rechtsgrundlagen", "Verarbeitung", "Artikel 6"]
+    },
+    {
+      "id": "dsgvo_003",
+      "question": "Wie läuft das Verfahren bei einer Datenschutz-Folgenabschätzung ab?",
+      "category": "prozessfragen",
+      "difficulty": "hard",
+      "gold_answer": "Eine Datenschutz-Folgenabschätzung nach Art. 35 DSGVO umfasst die Beschreibung der Verarbeitung, Bewertung der Notwendigkeit und Verhältnismäßigkeit, Risikobewertung und Schutzmaßnahmen.",
+      "relevant_articles": ["Art. 35"],
+      "keywords": ["Datenschutz-Folgenabschätzung", "DSFA", "Artikel 35"]
+    },
+    {
+      "id": "dsgvo_004",
+      "question": "Welche Rechte haben betroffene Personen?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Betroffene Personen haben verschiedene Rechte: Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21).",
+      "relevant_articles": ["Art. 15", "Art. 16", "Art. 17", "Art. 18", "Art. 20", "Art. 21"],
+      "keywords": ["Betroffenenrechte", "Auskunft", "Löschung", "Berichtigung"]
+    },
+    {
+      "id": "dsgvo_005",
+      "question": "Was sind die Grundsätze der Datenverarbeitung?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Die Grundsätze nach Art. 5 DSGVO sind: Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit sowie Rechenschaftspflicht.",
+      "relevant_articles": ["Art. 5"],
+      "keywords": ["Grundsätze", "Artikel 5", "Datenverarbeitung"]
+    }
+  ]
+} 

@@ -1,146 +1,119 @@
-# Forschungs-RAG-System für Big Data Analyse
+# ResearchRAG - Modulares RAG-System
 
-Ein modulares, erweiterbares RAG-System (Retrieval-Augmented Generation) für Forschungszwecke mit DSGVO-Daten.
+Ein flexibles und erweiterbares RAG-System für wissenschaftliche Studien, das es ermöglicht, verschiedene Komponenten (Chunker, Embeddings, Vector Stores, Language Models) einfach auszutauschen und zu vergleichen.
 
-## 🎯 Projektziel
+## 🎯 Projektübersicht
 
-Dieses System ermöglicht die systematische Evaluierung verschiedener RAG-Komponenten:
+Dieses Projekt wurde für eine wissenschaftliche Studie (Hausarbeit; 4 Personen; 30 Tage) entwickelt, bei der jede Person einen spezifischen Aspekt des RAG-Systems untersucht:
 
-- **Chunker**: Line Chunker vs. Recursive Character Chunker
-- **Embeddings**: OpenAI Embeddings vs. lokale Sentence Transformers
-- **Vector Stores**: In-Memory vs. Chroma DB
-- **Language Models**: OpenAI LLM vs. lokale Small Language Models (SLM)
+- **Person A**: Chunking-Strategien (verschiedene Chunker-Implementierungen)
+- **Person B**: Embedding-Verfahren (verschiedene Embedding-Modelle)  
+- **Person C**: Vector Stores & Retrieval (verschiedene Speicher- und Suchstrategien)
+- **Person D**: Language Models & Generation (verschiedene LLM-Ansätze)
 
-## 📊 Evaluierungsmetriken
+## 🏗️ Architektur
 
-- **Precision, Recall, F1-Score**
-- **RAGAS-Metriken** (Context Relevance, Answer Relevance, Faithfulness)
-- **Mean Reciprocal Rank (MRR)**
-- **Normalized Discounted Cumulative Gain (nDCG)**
-
-## 🏗️ Systemarchitektur
-
+### Modularer Aufbau
 ```
 src/
-├── components/
-│   ├── chunkers/           # Text-Aufteilung
-│   │   ├── base_chunker.py
-│   │   ├── line_chunker.py
-│   │   └── recursive_chunker.py
-│   ├── embeddings/         # Text-Vektorisierung
-│   │   ├── base_embedding.py
-│   │   ├── sentence_transformer_embedding.py
-│   │   └── openai_embedding.py
-│   ├── vector_stores/      # Vektorspeicherung
-│   │   ├── base_vector_store.py
-│   │   ├── in_memory_vector_store.py
-│   │   └── chroma_vector_store.py
-│   └── language_models/    # Antwortgenerierung
-│       ├── base_language_model.py
-│       ├── openai_language_model.py
-│       └── local_language_model.py
-├── config/                 # Konfiguration
-├── evaluations/            # Evaluierung
-├── experiments/            # Experimente
-└── data_loader.py          # Datenverarbeitung
+├── components/           # Austauschbare RAG-Komponenten
+│   ├── chunkers/        # Text-Chunking-Strategien
+│   ├── embeddings/      # Embedding-Modelle
+│   ├── vector_stores/   # Vector-Speicher-Systeme
+│   └── language_models/ # Language Models
+├── config/              # Konfigurationssystem
+├── core/                # RAG-Pipeline und Component Loader
+├── evaluations/         # Evaluierungsmetriken
+└── utils/               # Hilfsfunktionen
+```
+
+### Datenstruktur
+```
+data/
+├── raw/                 # Rohdaten (DSGVO-Text)
+├── processed/           # Verarbeitete Daten
+│   ├── chunks/         # Gespeicherte Chunks
+│   └── embeddings/     # Gespeicherte Embeddings
+└── evaluation/         # Evaluierungsdaten
+    ├── results/        # Experiment-Ergebnisse
+    └── qa_pairs.json   # QA-Datensatz
 ```
 
 ## 🚀 Schnellstart
 
-### 1. Umgebung einrichten
+### 1. Installation
 
 ```bash
 # Repository klonen
 git clone <repository-url>
 cd FOM.BigDataAnalyseProjekt
 
-# Python-Umgebung erstellen
-python -m venv .venv
-
-# Umgebung aktivieren (Windows)
-.\.venv\Scripts\Activate
-
-# Umgebung aktivieren (Linux/Mac)
-source .venv/bin/activate
-
 # Abhängigkeiten installieren
 pip install -r requirements.txt
 ```
 
-### 2. OpenAI API Key konfigurieren
-
-Erstellen Sie eine `.env`-Datei im Hauptverzeichnis:
-
-```env
-OPENAI_API_KEY=your-openai-api-key-here
-```
-
-### 3. Experimente ausführen
+### 2. Umgebung konfigurieren
 
 ```bash
-# Vollständige Experimente mit DSGVO-Daten
-python run_experiments.py
+# API-Schlüssel setzen
+export OPENAI_API_KEY="your-api-key-here"
 ```
 
-### 4. Jupyter Notebook verwenden
+### 3. Jupyter Notebook starten
 
 ```bash
-# Jupyter starten
-jupyter notebook src/rag.ipynb
+# Notebook öffnen
+jupyter notebook src/ResearchRAG.ipynb
 ```
 
-## 📋 Verfügbare Komponenten
+Das Notebook führt Sie durch:
+- Pipeline-Konfiguration
+- Dokument-Indexierung
+- Query-Ausführung
+- Komponenten-Analyse
 
-### Chunker
+## 🔧 Verfügbare Komponenten
 
-- **Line Chunker**: Einfache Zeilen-basierte Aufteilung
-- **Recursive Character Chunker**: Intelligente Aufteilung mit Overlap
+### Baseline-Implementierungen (Phase 1)
+- **Chunker**: `LineChunker` - Einfaches zeilenbasiertes Chunking
+- **Embedding**: `OpenAIEmbedding` - OpenAI text-embedding-3-small
+- **Vector Store**: `InMemoryVectorStore` - In-Memory-Speicher mit sklearn
+- **Language Model**: `OpenAILanguageModel` - OpenAI GPT-4o-mini
 
-### Embeddings
+### Geplante Erweiterungen (Phase 2-4)
+- **Chunker**: `RecursiveChunker`, `SemanticChunker`
+- **Embedding**: `SentenceTransformerEmbedding`, `HuggingFaceEmbedding`
+- **Vector Store**: `ChromaVectorStore`, `FAISSVectorStore`
+- **Language Model**: `OllamaLanguageModel`, `HuggingFaceLanguageModel`
 
-- **Sentence Transformers**: Lokale Embeddings (all-MiniLM-L6-v2)
-- **OpenAI Embeddings**: Cloud-basierte Embeddings (text-embedding-ada-002)
-
-### Vector Stores
-
-- **In-Memory**: Schneller Speicher für kleine Datensätze
-- **Chroma DB**: Persistente, skalierbare Vektordatenbank
-
-### Language Models
-
-- **OpenAI GPT**: Cloud-basierte Antwortgenerierung
-- **Lokale SLMs**: Ollama/LLaMA2 Integration
-
-## 🔬 Experimente
-
-Das System führt automatisch Experimente mit verschiedenen Konfigurationen durch:
-
-1. **Baseline**: Line Chunker + Sentence Transformers + In-Memory + OpenAI
-2. **Recursive Chunker**: Verbesserte Textaufteilung
-3. **OpenAI Embeddings**: Cloud-basierte Vektorisierung
-4. **Chroma Vector Store**: Persistente Speicherung
-5. **Lokales LLM**: Offline-Verarbeitung
-6. **Beste Kombination**: Optimierte Konfiguration
-
-## 📊 Ergebnisse
-
-Experimente werden automatisch gespeichert in:
-- `experiment_results/` - JSON-Dateien mit detaillierten Ergebnissen
-- `experiment_report.md` - Markdown-Bericht mit Vergleich
-
-## 🛠️ Entwicklung
-
-### Neue Komponenten hinzufügen
-
-1. **Chunker**: Erweitern Sie `BaseChunker`
-2. **Embeddings**: Erweitern Sie `BaseEmbedding`
-3. **Vector Stores**: Erweitern Sie `BaseVectorStore`
-4. **Language Models**: Erweitern Sie `BaseLanguageModel`
-
-### Beispiel für neue Komponente
+## 📊 Beispiel-Konfiguration
 
 ```python
-from src.components.chunkers.base_chunker import BaseChunker
+from src.config.pipeline_configs import get_baseline_config
+from src.core.rag_pipeline import RAGPipeline
+
+# Baseline-Konfiguration laden
+config = get_baseline_config()
+
+# Pipeline erstellen
+pipeline = RAGPipeline(config)
+
+# Dokumente indexieren
+documents = pipeline.load_documents_from_file("data/raw/dsgvo.txt")
+pipeline.index_documents(documents)
+
+# Query ausführen
+result = pipeline.query("Was ist die maximale Geldbuße nach Art. 83 DSGVO?")
+print(result['answer'])
+```
+
+## 🔬 Experimentieren
+
+### Neue Komponente hinzufügen
+
+1. **Basisklasse implementieren**:
+```python
+from src.components.chunkers import BaseChunker
 
 class MyCustomChunker(BaseChunker):
     def chunk_text(self, text: str) -> List[str]:
@@ -148,94 +121,133 @@ class MyCustomChunker(BaseChunker):
         pass
 ```
 
+2. **Komponente registrieren**:
+```python
+from src.core.component_loader import component_loader
+component_loader.register_chunker("my_custom", MyCustomChunker)
+```
+
+3. **Konfiguration erstellen**:
+```python
+from src.config.pipeline_configs import create_custom_config
+
+config = create_custom_config(
+    chunker_type="my_custom",
+    embedding_type="openai",
+    vector_store_type="in_memory",
+    llm_type="openai"
+)
+```
+
+### Konfigurationen vergleichen
+
+```python
+from src.config.pipeline_configs import get_alternative_configs
+
+configs = get_alternative_configs()
+for name, config in configs.items():
+    print(f"{name}: {config.get_component_types()}")
+```
+
 ## 📈 Evaluierung
 
-### Automatische Metriken
+### QA-Datensatz
+Das Projekt enthält einen DSGVO-spezifischen QA-Datensatz mit verschiedenen Fragetypen:
+- **Faktenfragen**: "Was ist die maximale Geldbuße?"
+- **Prozessfragen**: "Wie läuft eine Datenschutz-Folgenabschätzung ab?"
+- **Problemlösungsfragen**: "Was ist bei Marketing-Nutzung zu beachten?"
 
-- **Retrieval-Metriken**: Precision@k, Recall@k, F1@k, MRR, nDCG
-- **Generation-Metriken**: Relevanz, Treue, Korrektheit
-- **System-Metriken**: Antwortlänge, Erfolgsrate, Fehlerrate
+### Metriken (geplant)
+- **Retrieval**: Precision@k, Recall@k, F1@k, MRR, NDCG
+- **Generation**: ROUGE-L, BLEU, BERTScore, Semantic Similarity
+- **RAG**: RAGAS, Faithfulness, Groundedness
+- **Performance**: Inferenzzeit, Speicherverbrauch, Durchsatz
 
-### Manuelle Evaluierung
+## 🛠️ Entwicklung
 
-```python
-from src.evaluations.rag_metrics import RAGMetrics
-
-metrics = RAGMetrics()
-results = metrics.evaluate_rag_system(
-    queries=test_questions,
-    retrieved_docs=retrieved_documents,
-    answers=generated_answers
-)
-```
-
-## 📚 DSGVO-Daten
-
-Das System verwendet die vollständige DSGVO-Verordnung als Testdaten:
-
-- **Quelle**: `data/raw/dsgvo.txt`
-- **Größe**: ~400KB, 3633 Zeilen
-- **Struktur**: Artikel-basierte Aufteilung
-- **Testfragen**: 20 DSGVO-spezifische Fragen
-
-## 🔧 Konfiguration
-
-### RAGConfig
-
-```python
-from src.config import RAGConfig
-
-config = RAGConfig(
-    chunker_type="recursive",
-    chunker_params={"chunk_size": 1000, "chunk_overlap": 200},
-    embedding_type="openai",
-    embedding_params={"model": "text-embedding-ada-002"},
-    vector_store_type="chroma",
-    vector_store_params={"persist_directory": "./chroma_db"},
-    language_model_type="openai",
-    language_model_params={"api_key": "your-key"}
-)
-```
-
-## 🧪 Testing
+### Projektstruktur erweitern
 
 ```bash
-# Unit Tests
-pytest tests/unit/
+# Neue Komponente hinzufügen
+touch src/components/chunkers/my_new_chunker.py
 
-# Integration Tests
-pytest tests/integration/
+# Tests schreiben
+touch tests/unit/test_my_new_chunker.py
 
-# End-to-End Tests
-pytest tests/e2e/
+# Dokumentation aktualisieren
+echo "## MyNewChunker" >> docs/components.md
 ```
 
-## 📖 Dokumentation
+### Code-Qualität
 
 ```bash
-# Dokumentation generieren
-mkdocs serve
+# Tests ausführen
+pytest tests/
+
+# Code formatieren
+black src/
+
+# Linting
+flake8 src/
+```
+
+## 📚 Für Google Colab
+
+Das System ist für Google Colab optimiert:
+
+1. **Automatische Package-Installation**
+2. **Google Drive-Integration** für Persistierung
+3. **GPU-Unterstützung** für Embeddings
+4. **Memory-Management** für große Dokumente
+
+```python
+# In Google Colab
+!git clone <repository-url>
+%cd FOM.BigDataAnalyseProjekt
+!pip install -r requirements.txt
+
+# Google Drive mounten
+from google.colab import drive
+drive.mount('/content/drive')
 ```
 
 ## 🤝 Beitragen
 
-1. Fork das Repository
-2. Erstellen Sie einen Feature Branch
-3. Implementieren Sie Ihre Änderungen
-4. Fügen Sie Tests hinzu
-5. Erstellen Sie einen Pull Request
+### Für Teammitglieder
+
+1. **Fork** das Repository
+2. **Branch** für Ihr Feature erstellen (`git checkout -b feature/chunking-strategy`)
+3. **Commit** Ihre Änderungen (`git commit -am 'Add new chunking strategy'`)
+4. **Push** zum Branch (`git push origin feature/chunking-strategy`)
+5. **Pull Request** erstellen
+
+### Coding-Standards
+
+- **Docstrings**: Alle öffentlichen Funktionen dokumentieren
+- **Type Hints**: Verwenden Sie Type Annotations
+- **Tests**: Mindestens 80% Code Coverage
+- **Logging**: Verwenden Sie das logging-Modul
 
 ## 📄 Lizenz
 
-Dieses Projekt ist für Forschungszwecke konzipiert.
+Dieses Projekt ist für Bildungszwecke an der FOM entwickelt.
 
-## 🆘 Support
+## 👥 Team
 
-Bei Fragen oder Problemen:
-1. Überprüfen Sie die Dokumentation
-2. Schauen Sie in die Issues
-3. Erstellen Sie ein neues Issue mit detaillierter Beschreibung
+- **Person A**: Chunking-Strategien
+- **Person B**: Embedding-Verfahren  
+- **Person C**: Vector Stores & Retrieval
+- **Person D**: Language Models & Generation
+
+## 🔗 Nützliche Links
+
+- [OpenAI API Documentation](https://platform.openai.com/docs)
+- [Sentence Transformers](https://www.sbert.net/)
+- [ChromaDB Documentation](https://docs.trychroma.com/)
+- [FAISS Documentation](https://faiss.ai/)
+- [RAGAS Evaluation Framework](https://docs.ragas.io/)
 
 ---
 
-**Entwickelt für das FOM Big Data Analyseprojekt** 🎓
+**Status**: Phase 1 abgeschlossen (Baseline-System funktionsfähig)  
+**Nächste Schritte**: Implementierung erweiterte Komponenten (Phase 2-4) 
