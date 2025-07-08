@@ -13,7 +13,10 @@ torch>=2.0.0
 
 # Vector stores
 chromadb>=0.4.0
-faiss-cpu>=1.7.0
+# Option 1: Install via conda: conda install -c conda-forge faiss-gpu
+# Option 2: Use unofficial PyPI GPU build (uncomment next line):
+# faiss-gpu-cu12>=1.7.0  # For CUDA 12.x
+faiss-cpu>=1.7.0  # Current fallback for pip installation
 
 # Jupyter and visualization
 jupyter>=1.0.0
@@ -42,4 +45,4 @@ mkdocs-material>=9.0.0
 # Evaluation metrics
 rouge-score>=0.1.2
 nltk>=3.8.0
-evaluate>=0.4.0 
+evaluate>=0.4.0

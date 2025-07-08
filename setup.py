@@ -9,7 +9,8 @@ setup(
     description="Modulares RAG-System für wissenschaftliche Studien",
     author="FOM Research Team",
     author_email="research@fom.de",
-    packages=find_packages(),
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     install_requires=requirements,
     python_requires=">=3.10",
     classifiers=[
@@ -26,4 +27,4 @@ setup(
         "Bug Reports": "https://github.com/codewiththomas/rrag/issues",
         "Source": "https://github.com/codewiththomas/rrag",
     },
-) 
+)

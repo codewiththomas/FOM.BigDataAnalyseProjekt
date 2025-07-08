@@ -7,7 +7,7 @@ Ein flexibles und erweiterbares RAG-System für wissenschaftliche Studien, das e
 Dieses Projekt wurde für eine wissenschaftliche Studie (Hausarbeit; 4 Personen; 30 Tage) entwickelt, bei der jede Person einen spezifischen Aspekt des RAG-Systems untersucht:
 
 - **Person A**: Chunking-Strategien (verschiedene Chunker-Implementierungen)
-- **Person B**: Embedding-Verfahren (verschiedene Embedding-Modelle)  
+- **Person B**: Embedding-Verfahren (verschiedene Embedding-Modelle)
 - **Person C**: Vector Stores & Retrieval (verschiedene Speicher- und Suchstrategien)
 - **Person D**: Language Models & Generation (verschiedene LLM-Ansätze)
 
@@ -50,6 +50,21 @@ cd FOM.BigDataAnalyseProjekt
 
 # Abhängigkeiten installieren
 pip install -r requirements.txt
+
+# Paket im Entwicklungsmodus installieren (empfohlen)
+pip install -e .
+```
+
+**Ohne Installation (Portabel):**
+```bash
+# Projekt in beliebiges Verzeichnis kopieren
+cp -r FOM.BigDataAnalyseProjekt /mycode
+cd /mycode
+
+# Abhängigkeiten installieren
+pip install -r requirements.txt
+
+# Notebooks funktionieren automatisch mit robuster Import-Lösung
 ```
 
 ### 2. Umgebung konfigurieren
@@ -235,7 +250,7 @@ Dieses Projekt ist für Bildungszwecke an der FOM entwickelt.
 ## 👥 Team
 
 - **Person A**: Chunking-Strategien
-- **Person B**: Embedding-Verfahren  
+- **Person B**: Embedding-Verfahren
 - **Person C**: Vector Stores & Retrieval
 - **Person D**: Language Models & Generation
 
@@ -249,5 +264,5 @@ Dieses Projekt ist für Bildungszwecke an der FOM entwickelt.
 
 ---
 
-**Status**: Phase 1 abgeschlossen (Baseline-System funktionsfähig)  
-**Nächste Schritte**: Implementierung erweiterte Komponenten (Phase 2-4) 
+**Status**: Phase 1 abgeschlossen (Baseline-System funktionsfähig)
+**Nächste Schritte**: Implementierung erweiterte Komponenten (Phase 2-4)
