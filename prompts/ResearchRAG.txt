@@ -1,0 +1,262 @@
+# ResearchRAG
+
+## Projektübersicht
+
+Für eine wissenschaftliche Studie (Hausarbeit; 4 Personen; 30 Tage) benötige ich ein modulares RAG-System, bei dem ich einzelne Komponenten einfach austauschen kann. Jede der 4 Personen soll einen Aspekt des Systems untersuchen.
+
+Person A: Chunking-Strategien (verschiedene Chunker-Implementierungen)
+Person B: Embedding-Verfahren (verschiedene Embedding-Modelle)
+Person C: Vector Stores & Retrieval (verschiedene Speicher- und Suchstrategien)
+Person D: Language Models & Generation (verschiedene LLM-Ansätze)
+
+Als Datengrundlage soll zunächst die DSGVO verwendet werden, welche ich als Textdatei hinterlegt habe.
+
+## (Mindest)Projekt/Repo-Struktur:
+
+/
+├── data/
+│   ├── raw/
+│   │   └── dsgvo.txt
+│   ├── processed/
+│   │   ├── chunks/
+│   │   └── embeddings/
+│   └── evaluation/
+│       ├── results/
+│       └── qa_pairs.json
+├── docs/
+│   ├── architecture.md
+│   ├── api_reference.md
+│   ├── experiment_logs.md
+│   └── results_analysis.md
+├── src/
+│   ├── components/
+│   │   ├── chunkers/
+│   │   │   ├── __init__.py
+│   │   │   ├── base_chunker.py
+│   │   │   ├── line_chunker.py
+│   │   │   └── recursive_chunker.py
+│   │   ├── embeddings/
+│   │   │   ├── __init__.py
+│   │   │   ├── base_embedding.py
+│   │   │   ├── openai_embedding.py
+│   │   │   └── sentence_transformer_embedding.py
+│   │   ├── vector_stores/
+│   │   │   ├── __init__.py
+│   │   │   ├── base_vector_store.py
+│   │   │   ├── in_memory_vector_store.py
+│   │   │   ├── chroma_vector_store.py
+│   │   │   └── faiss_vector_store.py
+│   │   └── language_models/
+│   │       ├── __init__.py
+│   │       ├── base_language_model.py
+│   │       ├── openai_language_model.py
+│   │       └── ollama_language_model.py
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── base_config.py
+│   │   ├── pipeline_configs.py
+│   │   └── experiment_configs.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── rag_pipeline.py
+│   │   └── experiment_runner.py
+│   ├── evaluations/
+│   │   ├── __init__.py
+│   │   ├── base_evaluator.py
+│   │   ├── retrieval_evaluator.py
+│   │   ├── generation_evaluator.py
+│   │   ├── rag_evaluator.py
+│   │   └── performance_evaluator.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── data_loader.py
+│   │   ├── logging.py
+│   │   └── visualization.py
+│   └── ResearchRAG.ipynb
+├── tests/
+├── .env
+├── requirements.txt
+└── setup.py
+
+Anmerkungen zur Struktur: 
+
+- Das Notebook selbst soll so wenig Code wie möglich enthalten. Es soll nur ein einziges Notebook existieren. Es dient eigentlich nur zur Einstellung der RAG-Pipeline-Config, also welche Komponenten genutzt werden sollen und zur Ausführung des RAG.
+
+### Baseline-Konfiguration
+
+```{json}
+baseline_config = {
+    "chunker": {
+        "type": "line_chunker",
+        "chunk_size": 512,
+        "overlap": 50
+    },
+    "embedding": {
+        "type": "openai",
+        "model": "text-embedding-3-small",
+        "dimensions": 1536
+    },
+    "vector_store": {
+        "type": "in_memory",
+        "similarity_metric": "cosine",
+        "top_k": 5
+    },
+    "language_model": {
+        "type": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 500
+    }
+}
+```
+
+### Alternative Komponenten
+
+Chunkers: LineChunker (Baseline), RecursiveChunker, SemanticChunker
+Embeddings: OpenAI (Baseline), SentenceTransformer (all-MiniLM-L6-v2), HuggingFace
+Vector Stores: InMemory (Baseline), ChromaDB, FAISS
+LLMs: OpenAI (Baseline), Ollama (llama3.2), HuggingFace
+
+### Abstrakte Klassen
+
+Die base_*.py-Dateien enthälten jeweils eine abstrakte Klasse, welche als Interface dienen soll. Implementierungen von Komponenten sollen von der Basisklasse erben, um sie austauschbar zu machen.
+
+- `BaseChunker` mit `chunk_text(text: str) -> List[str]`
+- `BaseEmbedding` mit `embed_texts(texts: List[str]) -> np.ndarray`
+- `BaseVectorStore` mit `add_texts(), similarity_search()`
+- `BaseLanguageModel` mit `generate(prompt: str) -> str`
+- `BaseEvaluator` mit `evaluate(predictions, ground_truth) -> Dict`
+
+### RAG-Pipeline
+
+```{python}
+class RAGPipeline:
+    def __init__(self, config):
+        self.chunker = load_component("chunker", config)
+        self.embedding = load_component("embedding", config)
+        self.vector_store = load_component("vector_store", config)
+        self.llm = load_component("language_model", config)
+    
+    def index_documents(self, documents: List[str]):
+        # Chunking -> Embedding -> Speicherung
+    
+    def query(self, question: str) -> str:
+        # Embedding -> Retrieval -> Generation
+```
+
+## Geplante Laufzeitumgebung
+
+Das Notebook soll in Google Colab ausgeführt werden. Das heißt:
+
+- Automatische Package-Installation
+- Google Drive-Mounting für Persistierung
+- GPU-Nutzung für Embeddings
+- Memory-Management für große Dokumente
+
+## Experimente
+
+Wir benötigen einen Fragenkatalog mit den dazugehörigen "Gold-Antworten", welche wir später bewerten können.
+
+- Faktenfragen, z.B.:
+  - "Was ist die maximale Geldbuße nach Art. 83 DSGVO?",
+  - "Welche Rechtsgrundlagen für die Verarbeitung gibt es?"
+- Prozessfragen
+  - "Wie läuft das Verfahren bei einer Datenschutz-Folgenabschätzung ab?",
+  - "Welche Schritte sind bei einer Datenpanne zu beachten?"
+- Problemlösungsfragen
+  - "Ein Unternehmen möchte Kundendaten für Marketing nutzen. Was ist zu beachten?",
+  - "Wie kann ein Auftragsverarbeitungsvertrag DSGVO-konform gestaltet werden?"
+- Vergleichsfragen (erstmal nicht?)
+- Interpretationsfragen (erstmal nicht?)
+
+### QA-Datensatz-Format
+
+```{json}
+{
+  "questions": [
+    {
+      "id": "dsgvo_001",
+      "question": "Was ist die maximale Geldbuße nach Art. 83 DSGVO?",
+      "category": "faktenfragen",
+      "difficulty": "easy",
+      "gold_answer": "20 Millionen Euro oder 4% des weltweiten Jahresumsatzes",
+      "relevant_articles": ["Art. 83"],
+      "relevant_chunks": [1, 5, 12]
+    }
+  ]
+}
+```
+
+### Experiment-Runner
+
+```{python}
+class ExperimentRunner:
+    def run_experiment(self, config, qa_pairs):
+        # Pipeline erstellen, evaluieren, Ergebnisse speichern
+    
+    def compare_configurations(self, configs: List[dict]):
+        # Mehrere Configs vergleichen, statistische Tests
+```
+
+## Evaluierungsmetriken
+
+Ich möchte verschiedene RAG-Pipelines/Konfigurationen miteinander vergleichen. Dafür möchte ich folgende Metriken automatisiert erfassen:
+- Rerieval
+  - Precision@k
+  - Recall@k
+  - F1-Score@k
+  - MRR
+  - NDCG
+- Generation
+  - ROUGE-L
+  - BLEU
+  - BERTScore
+  - Semantic Similarity
+  - Exact Match
+- RAG
+  - RAGAS
+  - Truelens
+  - Faithfulness (Hallucination Rate)
+  - Groundness
+- Performance
+  - Inferenzgeschwindigkeit
+  - Latenz
+  - Throughput
+  - Memory sage
+  - Cost per Query
+
+## Implementierungsanweisungen
+
+Implementiere das beschriebene System.
+
+Implementierungs-Prioritäten
+
+Phase 1: Base-Klassen + einfache Baseline-Implementierungen
+Phase 2: RAG-Pipeline + grundlegende Evaluierung
+Phase 3: Erweiterte Komponenten + vollständige Evaluierung
+Phase 4: Experiment-Framework + Visualisierung
+
+Wichtige Design-Prinzipien
+
+Modularität: Alle Komponenten austauschbar
+Konfigurierbarkeit: Alles über Config-Files steuerbar
+Reproduzierbarkeit: Seeds setzen, Determinismus
+Skalierbarkeit: Memory-effizient für Colab
+Erweiterbarkeit: Einfache Integration neuer Komponenten
+
+Deliverables
+
+Funktionsfähiges modulares RAG-System
+Jupyter Notebook für einfache Bedienung
+Umfassende Evaluierungs-Suite
+Dokumentation und Experiment-Logs
+Vergleichbare Ergebnisse verschiedener Konfigurationen
+
+Implementiere das System mit Python, verwende Standard-Libraries (langchain, sentence-transformers, openai, chromadb, faiss, etc.) und achte auf saubere Abstraktion und Testbarkeit.
+
+Vorgehen:
+1. Starte mit dem Notebook: Lass die Pipeline von dort aus steuern
+2. Hardcode erst, abstrahiere später: Funktionsfähigkeit vor Eleganz
+3. Ein Komponententyp nach dem anderen: Nicht alle parallel entwickeln
+4. Kleine QA-Sets: 10-15 Fragen pro Kategorie reichen für den Anfang
+
