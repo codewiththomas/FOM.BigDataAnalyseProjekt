@@ -4,8 +4,8 @@
     "description": "DSGVO QA-Datensatz für RAG-System Evaluierung",
     "created_by": "FOM Research Team",
     "creation_date": "2025-01-08",
-    "total_questions": 5,
-    "categories": ["faktenfragen", "prozessfragen"],
+    "total_questions": 55,
+    "categories": ["faktenfragen", "prozessfragen", "problemlösungsfragen", "interpretationsfragen"],
     "difficulty_levels": ["easy", "medium", "hard"]
   },
   "questions": [
@@ -53,6 +53,456 @@
       "gold_answer": "Die Grundsätze nach Art. 5 DSGVO sind: Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit sowie Rechenschaftspflicht.",
       "relevant_articles": ["Art. 5"],
       "keywords": ["Grundsätze", "Artikel 5", "Datenverarbeitung"]
+    },
+    {
+      "id": "dsgvo_006",
+      "question": "Was versteht man unter personenbezogenen Daten?",
+      "category": "faktenfragen",
+      "difficulty": "easy",
+      "gold_answer": "Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Eine identifizierbare Person ist eine Person, die direkt oder indirekt identifiziert werden kann.",
+      "relevant_articles": ["Art. 4"],
+      "keywords": ["personenbezogene Daten", "Definition", "Artikel 4"]
+    },
+    {
+      "id": "dsgvo_007",
+      "question": "Wann ist eine Einwilligung gültig?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Eine Einwilligung ist gültig, wenn sie freiwillig, für den bestimmten Fall, in informierter Weise und unmissverständlich abgegeben wurde. Sie muss durch eine eindeutige bestätigende Handlung erfolgen.",
+      "relevant_articles": ["Art. 7"],
+      "keywords": ["Einwilligung", "Gültigkeit", "Artikel 7"]
+    },
+    {
+      "id": "dsgvo_008",
+      "question": "Was ist ein Datenschutzbeauftragter und wann muss er bestellt werden?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Ein Datenschutzbeauftragter ist eine Person, die den Verantwortlichen bei der Einhaltung der DSGVO unterstützt. Er muss bestellt werden bei öffentlichen Stellen, bei Kerntätigkeiten mit regelmäßiger Überwachung oder bei umfangreicher Verarbeitung besonderer Kategorien.",
+      "relevant_articles": ["Art. 37", "Art. 38", "Art. 39"],
+      "keywords": ["Datenschutzbeauftragter", "Bestellung", "Artikel 37"]
+    },
+    {
+      "id": "dsgvo_009",
+      "question": "Was sind besondere Kategorien personenbezogener Daten?",
+      "category": "faktenfragen",
+      "difficulty": "easy",
+      "gold_answer": "Besondere Kategorien sind Daten über rassische/ethnische Herkunft, politische Meinungen, religiöse Überzeugungen, Gewerkschaftszugehörigkeit, Gesundheit, Sexualleben, sexuelle Orientierung, genetische und biometrische Daten.",
+      "relevant_articles": ["Art. 9"],
+      "keywords": ["besondere Kategorien", "sensible Daten", "Artikel 9"]
+    },
+    {
+      "id": "dsgvo_010",
+      "question": "Welche Informationspflichten hat der Verantwortliche?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Der Verantwortliche muss über Identität, Zwecke, Rechtsgrundlagen, Empfänger, Speicherdauer, Betroffenenrechte, Widerrufsrecht und Beschwerderecht informieren. Bei indirekter Erhebung zusätzlich über Kategorien und Herkunft der Daten.",
+      "relevant_articles": ["Art. 13", "Art. 14"],
+      "keywords": ["Informationspflichten", "Transparenz", "Artikel 13", "Artikel 14"]
+    },
+    {
+      "id": "dsgvo_011",
+      "question": "Was ist das Recht auf Vergessenwerden?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Das Recht auf Vergessenwerden ist das Recht auf Löschung personenbezogener Daten, wenn diese nicht mehr erforderlich sind, die Einwilligung widerrufen wurde, unrechtmäßig verarbeitet wurden oder aus anderen gesetzlichen Gründen gelöscht werden müssen.",
+      "relevant_articles": ["Art. 17"],
+      "keywords": ["Recht auf Vergessenwerden", "Löschung", "Artikel 17"]
+    },
+    {
+      "id": "dsgvo_012",
+      "question": "Wie lange dürfen personenbezogene Daten gespeichert werden?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für die Zwecke erforderlich ist. Nach Wegfall des Zwecks sind die Daten zu löschen oder zu anonymisieren, es sei denn, gesetzliche Aufbewahrungspflichten bestehen.",
+      "relevant_articles": ["Art. 5"],
+      "keywords": ["Speicherdauer", "Löschung", "Artikel 5"]
+    },
+    {
+      "id": "dsgvo_013",
+      "question": "Was ist eine Datenpanne und wie ist damit umzugehen?",
+      "category": "prozessfragen",
+      "difficulty": "hard",
+      "gold_answer": "Eine Datenpanne ist eine Verletzung des Schutzes personenbezogener Daten. Sie muss binnen 72 Stunden der Aufsichtsbehörde gemeldet werden. Bei hohem Risiko für Betroffene sind auch diese zu benachrichtigen.",
+      "relevant_articles": ["Art. 33", "Art. 34"],
+      "keywords": ["Datenpanne", "Meldung", "Artikel 33", "Artikel 34"]
+    },
+    {
+      "id": "dsgvo_014",
+      "question": "Was ist Auftragsverarbeitung?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Auftragsverarbeitung liegt vor, wenn personenbezogene Daten im Auftrag des Verantwortlichen durch einen Auftragsverarbeiter verarbeitet werden. Es muss ein schriftlicher Vertrag geschlossen werden, der die Verarbeitung regelt.",
+      "relevant_articles": ["Art. 28"],
+      "keywords": ["Auftragsverarbeitung", "Auftragsverarbeiter", "Artikel 28"]
+    },
+    {
+      "id": "dsgvo_015",
+      "question": "Wann ist eine Datenübertragung in Drittländer zulässig?",
+      "category": "faktenfragen",
+      "difficulty": "hard",
+      "gold_answer": "Eine Datenübertragung in Drittländer ist zulässig bei Angemessenheitsbeschluss, geeigneten Garantien (z.B. Standardvertragsklauseln), verbindlichen unternehmensinternen Datenschutzvorschriften oder unter bestimmten Ausnahmen.",
+      "relevant_articles": ["Art. 44", "Art. 45", "Art. 46"],
+      "keywords": ["Drittländer", "Datenübertragung", "Artikel 44"]
+    },
+    {
+      "id": "dsgvo_016",
+      "question": "Was ist Privacy by Design?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Privacy by Design bedeutet, dass Datenschutz bereits bei der Entwicklung von Systemen und Verfahren berücksichtigt wird. Technische und organisatorische Maßnahmen sollen von vornherein den Datenschutz gewährleisten.",
+      "relevant_articles": ["Art. 25"],
+      "keywords": ["Privacy by Design", "Datenschutz durch Technikgestaltung", "Artikel 25"]
+    },
+    {
+      "id": "dsgvo_017",
+      "question": "Welche Rolle haben Aufsichtsbehörden?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Aufsichtsbehörden überwachen die Einhaltung der DSGVO, können Untersuchungen durchführen, Geldbußen verhängen, Anordnungen erlassen und Beschwerden bearbeiten. Sie beraten auch Verantwortliche und Betroffene.",
+      "relevant_articles": ["Art. 57", "Art. 58"],
+      "keywords": ["Aufsichtsbehörden", "Überwachung", "Artikel 57"]
+    },
+    {
+      "id": "dsgvo_018",
+      "question": "Was ist ein Verzeichnis von Verarbeitungstätigkeiten?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Ein Verzeichnis von Verarbeitungstätigkeiten ist eine Dokumentation aller Verarbeitungen personenbezogener Daten. Es muss Angaben zu Zwecken, Kategorien, Empfängern, Übermittlungen und Löschfristen enthalten.",
+      "relevant_articles": ["Art. 30"],
+      "keywords": ["Verzeichnis", "Verarbeitungstätigkeiten", "Artikel 30"]
+    },
+    {
+      "id": "dsgvo_019",
+      "question": "Was sind technische und organisatorische Maßnahmen?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Technische und organisatorische Maßnahmen sind Schutzmaßnahmen zur Gewährleistung der Sicherheit der Verarbeitung. Sie umfassen Verschlüsselung, Zugangskontrollen, Backup-Systeme, Schulungen und Prozesse.",
+      "relevant_articles": ["Art. 32"],
+      "keywords": ["TOM", "Sicherheit", "Artikel 32"]
+    },
+    {
+      "id": "dsgvo_020",
+      "question": "Wie funktioniert das Beschwerderecht?",
+      "category": "prozessfragen",
+      "difficulty": "medium",
+      "gold_answer": "Betroffene Personen können sich bei einer Aufsichtsbehörde beschweren, wenn sie der Ansicht sind, dass die Verarbeitung ihrer Daten gegen die DSGVO verstößt. Die Behörde muss die Beschwerde bearbeiten und den Beschwerdeführer informieren.",
+      "relevant_articles": ["Art. 77"],
+      "keywords": ["Beschwerderecht", "Aufsichtsbehörde", "Artikel 77"]
+    },
+    {
+      "id": "dsgvo_021",
+      "question": "Was ist gemeinsame Verantwortlichkeit?",
+      "category": "faktenfragen",
+      "difficulty": "hard",
+      "gold_answer": "Gemeinsame Verantwortlichkeit liegt vor, wenn zwei oder mehr Verantwortliche gemeinsam Zwecke und Mittel der Verarbeitung festlegen. Sie müssen eine Vereinbarung über ihre jeweiligen Pflichten treffen.",
+      "relevant_articles": ["Art. 26"],
+      "keywords": ["gemeinsame Verantwortlichkeit", "Joint Controller", "Artikel 26"]
+    },
+    {
+      "id": "dsgvo_022",
+      "question": "Welche Rechte haben Kinder bezüglich ihrer Daten?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Kinder haben dieselben Rechte wie Erwachsene. Bei Diensten der Informationsgesellschaft ist ab 16 Jahren (in Deutschland ab 14 Jahren) eine eigene Einwilligung möglich. Darunter ist die Einwilligung der Eltern erforderlich.",
+      "relevant_articles": ["Art. 8"],
+      "keywords": ["Kinder", "Minderjährige", "Artikel 8"]
+    },
+    {
+      "id": "dsgvo_023",
+      "question": "Was ist Profiling?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Profiling ist jede Art der automatisierten Verarbeitung personenbezogener Daten zur Bewertung persönlicher Aspekte einer natürlichen Person, insbesondere zur Analyse von Arbeitsleistung, Gesundheit, Vorlieben oder Verhalten.",
+      "relevant_articles": ["Art. 4", "Art. 22"],
+      "keywords": ["Profiling", "automatisierte Entscheidung", "Artikel 22"]
+    },
+    {
+      "id": "dsgvo_024",
+      "question": "Wann sind automatisierte Entscheidungen zulässig?",
+      "category": "faktenfragen",
+      "difficulty": "hard",
+      "gold_answer": "Automatisierte Entscheidungen sind zulässig, wenn sie für einen Vertragsschluss erforderlich sind, durch Rechtsvorschriften erlaubt sind oder auf ausdrücklicher Einwilligung beruhen. In allen Fällen müssen angemessene Schutzmaßnahmen getroffen werden.",
+      "relevant_articles": ["Art. 22"],
+      "keywords": ["automatisierte Entscheidung", "Profiling", "Artikel 22"]
+    },
+    {
+      "id": "dsgvo_025",
+      "question": "Was ist das Marktortprinzip?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Das Marktortprinzip besagt, dass die DSGVO auch auf Unternehmen außerhalb der EU anwendbar ist, wenn sie Waren oder Dienstleistungen für Personen in der EU anbieten oder deren Verhalten beobachten.",
+      "relevant_articles": ["Art. 3"],
+      "keywords": ["Marktortprinzip", "Anwendungsbereich", "Artikel 3"]
+    },
+    {
+      "id": "dsgvo_026",
+      "question": "Wie muss eine Datenschutzerklärung gestaltet sein?",
+      "category": "problemlösungsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Eine Datenschutzerklärung muss alle Informationspflichten nach Art. 13/14 DSGVO erfüllen, verständlich formuliert, leicht zugänglich und kostenfrei sein. Sie sollte strukturiert und in klarer Sprache verfasst werden.",
+      "relevant_articles": ["Art. 13", "Art. 14"],
+      "keywords": ["Datenschutzerklärung", "Informationspflichten", "Transparenz"]
+    },
+    {
+      "id": "dsgvo_027",
+      "question": "Ein Unternehmen möchte Kundendaten für Marketing nutzen. Was ist zu beachten?",
+      "category": "problemlösungsfragen",
+      "difficulty": "hard",
+      "gold_answer": "Das Unternehmen benötigt eine Rechtsgrundlage (meist Einwilligung oder berechtigte Interessen), muss über die Verarbeitung informieren, Widerspruchsrechte beachten und bei E-Mail-Marketing die Einwilligung nach UWG berücksichtigen.",
+      "relevant_articles": ["Art. 6", "Art. 7", "Art. 21"],
+      "keywords": ["Marketing", "Direktwerbung", "Einwilligung"]
+    },
+    {
+      "id": "dsgvo_028",
+      "question": "Wie kann ein Auftragsverarbeitungsvertrag DSGVO-konform gestaltet werden?",
+      "category": "problemlösungsfragen",
+      "difficulty": "hard",
+      "gold_answer": "Der Vertrag muss Gegenstand, Dauer, Art und Zweck der Verarbeitung, Kategorien der Daten, Weisungen, Sicherheitsmaßnahmen, Unterauftragsverarbeitung, Löschung und Kontrollrechte regeln.",
+      "relevant_articles": ["Art. 28"],
+      "keywords": ["Auftragsverarbeitung", "AV-Vertrag", "Vertrag"]
+    },
+    {
+      "id": "dsgvo_029",
+      "question": "Welche Schritte sind bei einer Datenpanne zu beachten?",
+      "category": "prozessfragen",
+      "difficulty": "hard",
+      "gold_answer": "1. Sofortige Schadensbegrenzung, 2. Dokumentation des Vorfalls, 3. Risikobewertung, 4. Meldung an Aufsichtsbehörde binnen 72h, 5. Benachrichtigung der Betroffenen bei hohem Risiko, 6. Nachverfolgung und Verbesserung.",
+      "relevant_articles": ["Art. 33", "Art. 34"],
+      "keywords": ["Datenpanne", "Incident Response", "Meldung"]
+    },
+    {
+      "id": "dsgvo_030",
+      "question": "Wie führt man eine Datenschutz-Folgenabschätzung durch?",
+      "category": "prozessfragen",
+      "difficulty": "hard",
+      "gold_answer": "1. Beschreibung der Verarbeitung und Zwecke, 2. Bewertung der Notwendigkeit und Verhältnismäßigkeit, 3. Risikobewertung für Betroffene, 4. Schutzmaßnahmen definieren, 5. Konsultation der Aufsichtsbehörde bei hohem Risiko.",
+      "relevant_articles": ["Art. 35"],
+      "keywords": ["DSFA", "Risikobewertung", "Folgenabschätzung"]
+    },
+    {
+      "id": "dsgvo_031",
+      "question": "Was bedeutet Datenminimierung in der Praxis?",
+      "category": "interpretationsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Datenminimierung bedeutet, dass nur die Daten verarbeitet werden dürfen, die für den jeweiligen Zweck erforderlich sind. Nicht benötigte Daten dürfen nicht erhoben werden, und bereits erhobene Daten müssen gelöscht werden, wenn sie nicht mehr benötigt werden.",
+      "relevant_articles": ["Art. 5"],
+      "keywords": ["Datenminimierung", "Erforderlichkeit", "Zweckbindung"]
+    },
+    {
+      "id": "dsgvo_032",
+      "question": "Wann liegt ein berechtigtes Interesse vor?",
+      "category": "interpretationsfragen",
+      "difficulty": "hard",
+      "gold_answer": "Ein berechtigtes Interesse liegt vor, wenn es rechtmäßig, klar artikuliert und hinreichend spezifisch ist. Es muss gegen die Interessen der betroffenen Person abgewogen werden. Beispiele sind Direktwerbung, IT-Sicherheit oder Betrugsbekämpfung.",
+      "relevant_articles": ["Art. 6"],
+      "keywords": ["berechtigtes Interesse", "Interessenabwägung", "Artikel 6"]
+    },
+    {
+      "id": "dsgvo_033",
+      "question": "Was ist unter Pseudonymisierung zu verstehen?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Pseudonymisierung ist die Verarbeitung personenbezogener Daten in einer Weise, dass die Daten ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer spezifischen Person zugeordnet werden können. Diese zusätzlichen Informationen sind gesondert aufzubewahren.",
+      "relevant_articles": ["Art. 4"],
+      "keywords": ["Pseudonymisierung", "Anonymisierung", "Artikel 4"]
+    },
+    {
+      "id": "dsgvo_034",
+      "question": "Welche Bedeutung hat die Rechenschaftspflicht?",
+      "category": "interpretationsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Die Rechenschaftspflicht bedeutet, dass Verantwortliche nicht nur die DSGVO einhalten, sondern auch nachweisen können müssen, dass sie die Vorschriften befolgen. Dies erfordert Dokumentation, Prozesse und kontinuierliche Überwachung.",
+      "relevant_articles": ["Art. 5"],
+      "keywords": ["Rechenschaftspflicht", "Accountability", "Nachweis"]
+    },
+    {
+      "id": "dsgvo_035",
+      "question": "Was sind die Voraussetzungen für eine wirksame Einwilligung?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Eine wirksame Einwilligung muss freiwillig, informiert, unmissverständlich und für den bestimmten Fall abgegeben werden. Sie muss durch eine eindeutige bestätigende Handlung erfolgen und jederzeit widerrufbar sein.",
+      "relevant_articles": ["Art. 7"],
+      "keywords": ["Einwilligung", "Freiwilligkeit", "Widerruf"]
+    },
+    {
+      "id": "dsgvo_036",
+      "question": "Wie lange hat man Zeit, um auf einen Auskunftsantrag zu antworten?",
+      "category": "faktenfragen",
+      "difficulty": "easy",
+      "gold_answer": "Auf einen Auskunftsantrag muss unverzüglich, spätestens aber innerhalb eines Monats nach Eingang geantwortet werden. Die Frist kann um weitere zwei Monate verlängert werden, wenn der Antrag komplex ist.",
+      "relevant_articles": ["Art. 12"],
+      "keywords": ["Auskunftsantrag", "Frist", "Artikel 12"]
+    },
+    {
+      "id": "dsgvo_037",
+      "question": "Was ist ein Löschkonzept?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Ein Löschkonzept ist eine systematische Planung der Löschung personenbezogener Daten. Es definiert, welche Daten wann und wie gelöscht werden müssen, berücksichtigt Aufbewahrungsfristen und stellt sicher, dass Daten nicht länger als nötig gespeichert werden.",
+      "relevant_articles": ["Art. 5", "Art. 17"],
+      "keywords": ["Löschkonzept", "Löschung", "Aufbewahrung"]
+    },
+    {
+      "id": "dsgvo_038",
+      "question": "Welche Rolle spielt die Verhältnismäßigkeit bei der Datenverarbeitung?",
+      "category": "interpretationsfragen",
+      "difficulty": "hard",
+      "gold_answer": "Verhältnismäßigkeit bedeutet, dass die Verarbeitung in einem angemessenen Verhältnis zum verfolgten Zweck stehen muss. Es muss das mildeste Mittel gewählt werden, das den Zweck noch erreicht. Übermäßige Eingriffe in die Rechte Betroffener sind unzulässig.",
+      "relevant_articles": ["Art. 5"],
+      "keywords": ["Verhältnismäßigkeit", "Angemessenheit", "Grundrechte"]
+    },
+    {
+      "id": "dsgvo_039",
+      "question": "Was ist bei der Verarbeitung von Beschäftigtendaten zu beachten?",
+      "category": "problemlösungsfragen",
+      "difficulty": "hard",
+      "gold_answer": "Bei Beschäftigtendaten ist das Abhängigkeitsverhältnis zu berücksichtigen. Einwilligungen sind problematisch. Meist wird auf berechtigte Interessen oder Vertragserfüllung gestützt. Betriebsvereinbarungen können Rechtsgrundlage sein. Mitbestimmungsrechte sind zu beachten.",
+      "relevant_articles": ["Art. 6", "Art. 88"],
+      "keywords": ["Beschäftigtendaten", "Arbeitnehmer", "Mitbestimmung"]
+    },
+    {
+      "id": "dsgvo_040",
+      "question": "Wie ist mit Cookies umzugehen?",
+      "category": "problemlösungsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Technisch notwendige Cookies können auf berechtigte Interessen gestützt werden. Für andere Cookies ist eine Einwilligung erforderlich. Cookie-Banner müssen DSGVO-konform gestaltet sein, eine echte Wahlmöglichkeit bieten und Widerspruch ermöglichen.",
+      "relevant_articles": ["Art. 6", "Art. 7"],
+      "keywords": ["Cookies", "Einwilligung", "Tracking"]
+    },
+    {
+      "id": "dsgvo_041",
+      "question": "Was sind die Besonderheiten bei der Verarbeitung von Gesundheitsdaten?",
+      "category": "faktenfragen",
+      "difficulty": "hard",
+      "gold_answer": "Gesundheitsdaten sind besondere Kategorien personenbezogener Daten und grundsätzlich verarbeitungsverboten. Ausnahmen sind u.a. ausdrückliche Einwilligung, Gesundheitsvorsorge, Arbeitsmedizin, öffentliches Interesse im Gesundheitsbereich oder lebenswichtige Interessen.",
+      "relevant_articles": ["Art. 9"],
+      "keywords": ["Gesundheitsdaten", "besondere Kategorien", "Verarbeitungsverbot"]
+    },
+    {
+      "id": "dsgvo_042",
+      "question": "Welche Rechte haben Betroffene bei automatisierten Entscheidungen?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Betroffene haben das Recht, nicht einer ausschließlich automatisierten Entscheidung unterworfen zu werden. Ist eine solche Entscheidung zulässig, haben sie das Recht auf menschliche Intervention, Darlegung des Standpunkts und Anfechtung der Entscheidung.",
+      "relevant_articles": ["Art. 22"],
+      "keywords": ["automatisierte Entscheidung", "menschliche Intervention", "Anfechtung"]
+    },
+    {
+      "id": "dsgvo_043",
+      "question": "Was ist bei der Datenübertragung zu beachten?",
+      "category": "faktenfragen",
+      "difficulty": "medium",
+      "gold_answer": "Bei der Datenübertragung müssen angemessene technische und organisatorische Maßnahmen getroffen werden. Dazu gehören Verschlüsselung, sichere Übertragungskanäle, Zugangskontrollen und Integritätsprüfungen. Die Übertragung muss dem Stand der Technik entsprechen.",
+      "relevant_articles": ["Art. 32"],
+      "keywords": ["Datenübertragung", "Verschlüsselung", "Sicherheit"]
+    },
+    {
+      "id": "dsgvo_044",
+      "question": "Wie funktioniert das One-Stop-Shop-Verfahren?",
+      "category": "prozessfragen",
+      "difficulty": "hard",
+      "gold_answer": "Das One-Stop-Shop-Verfahren ermöglicht es Unternehmen, die in mehreren EU-Ländern tätig sind, nur mit einer Aufsichtsbehörde (der federführenden Behörde) zu kommunizieren. Diese koordiniert mit anderen betroffenen Behörden und trifft einheitliche Entscheidungen.",
+      "relevant_articles": ["Art. 56"],
+      "keywords": ["One-Stop-Shop", "federführende Behörde", "Koordination"]
+    },
+    {
+      "id": "dsgvo_045",
+      "question": "Was ist bei der Archivierung von Daten zu beachten?",
+      "category": "problemlösungsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Bei der Archivierung sind die Grundsätze der Datenminimierung und Speicherbegrenzung zu beachten. Archivierte Daten müssen gegen unbefugten Zugriff geschützt werden. Betroffenenrechte können eingeschränkt sein, wenn die Archivierung im öffentlichen Interesse liegt.",
+      "relevant_articles": ["Art. 5", "Art. 89"],
+      "keywords": ["Archivierung", "öffentliches Interesse", "Speicherbegrenzung"]
+    },
+    {
+      "id": "dsgvo_046",
+      "question": "Welche Bedeutung hat die Zweckbindung?",
+      "category": "interpretationsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Zweckbindung bedeutet, dass personenbezogene Daten nur für festgelegte, eindeutige und legitime Zwecke erhoben werden dürfen. Eine Weiterverarbeitung für andere Zwecke ist nur unter bestimmten Voraussetzungen zulässig, etwa bei Vereinbarkeit der Zwecke.",
+      "relevant_articles": ["Art. 5"],
+      "keywords": ["Zweckbindung", "Zweckänderung", "Vereinbarkeit"]
+    },
+    {
+      "id": "dsgvo_047",
+      "question": "Was ist bei der Videoüberwachung zu beachten?",
+      "category": "problemlösungsfragen",
+      "difficulty": "hard",
+      "gold_answer": "Videoüberwachung ist nur bei berechtigten Interessen zulässig, die die Interessen der Betroffenen überwiegen. Eine Interessenabwägung ist erforderlich. Hinweisschilder müssen aufgestellt, Speicherzeiten begrenzt und Zugangskontrollen implementiert werden.",
+      "relevant_articles": ["Art. 6"],
+      "keywords": ["Videoüberwachung", "Interessenabwägung", "Hinweispflicht"]
+    },
+    {
+      "id": "dsgvo_048",
+      "question": "Wie ist mit personenbezogenen Daten Verstorbener umzugehen?",
+      "category": "interpretationsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Die DSGVO gilt grundsätzlich nur für lebende Personen. Daten Verstorbener können jedoch weiterhin schutzwürdig sein. Nationale Gesetze können Regelungen für Daten Verstorbener vorsehen. Erben können unter Umständen Rechte geltend machen.",
+      "relevant_articles": ["Art. 1"],
+      "keywords": ["Verstorbene", "Erben", "nationale Regelungen"]
+    },
+    {
+      "id": "dsgvo_049",
+      "question": "Was ist bei der Nutzung von Cloud-Diensten zu beachten?",
+      "category": "problemlösungsfragen",
+      "difficulty": "hard",
+      "gold_answer": "Bei Cloud-Diensten ist meist ein Auftragsverarbeitungsvertrag erforderlich. Die Sicherheit der Daten muss gewährleistet sein. Bei Servern außerhalb der EU sind die Regelungen für Drittlandübermittlungen zu beachten. Zugriffsmöglichkeiten ausländischer Behörden sind zu prüfen.",
+      "relevant_articles": ["Art. 28", "Art. 44"],
+      "keywords": ["Cloud", "Auftragsverarbeitung", "Drittland"]
+    },
+    {
+      "id": "dsgvo_050",
+      "question": "Welche Auswirkungen hat die DSGVO auf kleine Unternehmen?",
+      "category": "interpretationsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Kleine Unternehmen müssen grundsätzlich dieselben Anforderungen erfüllen wie große Unternehmen. Es gibt jedoch Erleichterungen: Unternehmen mit weniger als 250 Mitarbeitern müssen nur bei riskanten Verarbeitungen ein Verzeichnis führen. Geldbußen können verhältnismäßig niedriger ausfallen.",
+      "relevant_articles": ["Art. 30", "Art. 83"],
+      "keywords": ["kleine Unternehmen", "Erleichterungen", "Verhältnismäßigkeit"]
+    },
+    {
+      "id": "dsgvo_051",
+      "question": "Was ist bei der Verwendung von Analyse-Tools zu beachten?",
+      "category": "problemlösungsfragen",
+      "difficulty": "hard",
+      "gold_answer": "Analyse-Tools wie Google Analytics verarbeiten personenbezogene Daten und benötigen eine Rechtsgrundlage, meist Einwilligung. IP-Adressen müssen anonymisiert werden. Bei Tools von Drittanbietern außerhalb der EU sind Drittlandübermittlungen zu prüfen. Cookie-Einwilligungen sind erforderlich.",
+      "relevant_articles": ["Art. 6", "Art. 44"],
+      "keywords": ["Analyse-Tools", "Google Analytics", "IP-Anonymisierung"]
+    },
+    {
+      "id": "dsgvo_052",
+      "question": "Wie ist mit Bewerberdaten umzugehen?",
+      "category": "problemlösungsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Bewerberdaten dürfen für das Bewerbungsverfahren verarbeitet werden. Rechtsgrundlage ist die Vertragsanbahnung. Nicht erfolgreiche Bewerbungen sind nach angemessener Zeit zu löschen. Bewerber müssen über die Verarbeitung informiert werden und haben Betroffenenrechte.",
+      "relevant_articles": ["Art. 6", "Art. 13"],
+      "keywords": ["Bewerberdaten", "Vertragsanbahnung", "Löschung"]
+    },
+    {
+      "id": "dsgvo_053",
+      "question": "Was ist bei der Nutzung sozialer Medien zu beachten?",
+      "category": "problemlösungsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Bei der Nutzung sozialer Medien für Unternehmenszwecke sind die Datenschutzbestimmungen der Plattformen zu beachten. Eigene Datenschutzerklärungen müssen angepasst werden. Bei Plugins und Tracking-Tools sind Einwilligungen erforderlich. Mitarbeiter sollten geschult werden.",
+      "relevant_articles": ["Art. 13", "Art. 26"],
+      "keywords": ["soziale Medien", "Plugins", "Fanpages"]
+    },
+    {
+      "id": "dsgvo_054",
+      "question": "Welche Rolle spielt die Transparenz bei der Datenverarbeitung?",
+      "category": "interpretationsfragen",
+      "difficulty": "medium",
+      "gold_answer": "Transparenz ist ein Grundprinzip der DSGVO. Betroffene müssen in verständlicher Form über die Verarbeitung ihrer Daten informiert werden. Dazu gehören Zwecke, Rechtsgrundlagen, Empfänger, Speicherdauer und Betroffenenrechte. Informationen müssen leicht zugänglich und kostenlos sein.",
+      "relevant_articles": ["Art. 5", "Art. 12"],
+      "keywords": ["Transparenz", "Verständlichkeit", "Informationspflichten"]
+    },
+    {
+      "id": "dsgvo_055",
+      "question": "Was ist bei der Löschung von Daten technisch zu beachten?",
+      "category": "problemlösungsfragen",
+      "difficulty": "hard",
+      "gold_answer": "Bei der Löschung müssen alle Kopien der Daten entfernt werden, auch aus Backups und Archiven. Die Löschung muss sicher und unumkehrbar erfolgen. Bei elektronischen Daten sind spezielle Löschverfahren anzuwenden. Die Löschung ist zu dokumentieren und zu überwachen.",
+      "relevant_articles": ["Art. 17"],
+      "keywords": ["Löschung", "Backups", "sichere Löschung"]
     }
   ]
-} 
+}
