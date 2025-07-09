@@ -43,5 +43,5 @@ ENV/
 # Project specific
 .env.local
 .env.*.local
-/data/processed/
-/data/embeddings/
+/data/processed/chunks/*
+/data/processed/embeddings/*

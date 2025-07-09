@@ -2,12 +2,12 @@ from typing import List, Dict, Any, Optional, Tuple
 import time
 import logging
 from pathlib import Path
-from ..config.pipeline_configs import PipelineConfig
-from .component_loader import ComponentLoader
-from ..components.chunkers import BaseChunker
-from ..components.embeddings import BaseEmbedding
-from ..components.vector_stores import BaseVectorStore
-from ..components.language_models import BaseLanguageModel
+from config.pipeline_configs import PipelineConfig
+from core.component_loader import ComponentLoader
+from components.chunkers import BaseChunker
+from components.embeddings import BaseEmbedding
+from components.vector_stores import BaseVectorStore
+from components.language_models import BaseLanguageModel
 
 
 class RAGPipeline:

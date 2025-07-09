@@ -1,9 +1,14 @@
-from typing import Dict, Any, Union
+from typing import Dict, Any, Type, Optional, Union
+import logging
 import importlib
-from ..components.chunkers import BaseChunker, LineChunker
-from ..components.embeddings import BaseEmbedding, OpenAIEmbedding
-from ..components.vector_stores import BaseVectorStore, InMemoryVectorStore
-from ..components.language_models import BaseLanguageModel, OpenAILanguageModel
+from components.chunkers import BaseChunker, LineChunker
+from components.embeddings import BaseEmbedding, OpenAIEmbedding
+from components.vector_stores import BaseVectorStore, InMemoryVectorStore
+from components.language_models import BaseLanguageModel, OpenAILanguageModel
+from evaluations import (
+    BaseEvaluator, RetrievalEvaluator, GenerationEvaluator,
+    RAGEvaluator, PerformanceEvaluator
+)
 
 
 class ComponentLoader:
@@ -31,6 +36,13 @@ class ComponentLoader:
 
         self._language_model_registry = {
             "openai": OpenAILanguageModel,
+        }
+
+        self._evaluator_registry = {
+            "retrieval": RetrievalEvaluator,
+            "generation": GenerationEvaluator,
+            "rag": RAGEvaluator,
+            "performance": PerformanceEvaluator,
         }
 
     def load_chunker(self, config: Dict[str, Any]) -> BaseChunker:
@@ -197,6 +209,44 @@ class ComponentLoader:
 
         self._language_model_registry[name] = llm_class
 
+    def load_evaluator(self, config: Dict[str, Any]) -> BaseEvaluator:
+        """
+        Lädt einen Evaluator basierend auf der Konfiguration.
+
+        Args:
+            config: Evaluator-Konfiguration
+
+        Returns:
+            Evaluator-Instanz
+        """
+        evaluator_type = config.get("type")
+
+        if evaluator_type not in self._evaluator_registry:
+            raise ValueError(f"Unbekannter Evaluator-Typ: {evaluator_type}")
+
+        evaluator_class = self._evaluator_registry[evaluator_type]
+
+        # Typ aus Konfiguration entfernen für Instanziierung
+        init_config = {k: v for k, v in config.items() if k != "type"}
+
+        try:
+            return evaluator_class(**init_config)
+        except Exception as e:
+            raise RuntimeError(f"Fehler beim Laden des Evaluators '{evaluator_type}': {e}")
+
+    def register_evaluator(self, name: str, evaluator_class: type) -> None:
+        """
+        Registriert einen neuen Evaluator-Typ.
+
+        Args:
+            name: Name des Evaluator-Typs
+            evaluator_class: Evaluator-Klasse
+        """
+        if not issubclass(evaluator_class, BaseEvaluator):
+            raise ValueError("Evaluator-Klasse muss von BaseEvaluator erben")
+
+        self._evaluator_registry[name] = evaluator_class
+
     def get_available_components(self) -> Dict[str, list]:
         """
         Gibt alle verfügbaren Komponententypen zurück.
@@ -208,7 +258,8 @@ class ComponentLoader:
             "chunkers": list(self._chunker_registry.keys()),
             "embeddings": list(self._embedding_registry.keys()),
             "vector_stores": list(self._vector_store_registry.keys()),
-            "language_models": list(self._language_model_registry.keys())
+            "language_models": list(self._language_model_registry.keys()),
+            "evaluators": list(self._evaluator_registry.keys())
         }
 
     def load_components_from_config(self, config: Dict[str, Any]) -> Dict[str, Any]:
@@ -235,6 +286,9 @@ class ComponentLoader:
         if "language_model" in config:
             components["language_model"] = self.load_language_model(config["language_model"])
 
+        if "evaluator" in config:
+            components["evaluator"] = self.load_evaluator(config["evaluator"])
+
         return components
 
 
@@ -242,12 +296,12 @@ class ComponentLoader:
 component_loader = ComponentLoader()
 
 
-def load_component(component_type: str, config: Dict[str, Any]) -> Union[BaseChunker, BaseEmbedding, BaseVectorStore, BaseLanguageModel]:
+def load_component(component_type: str, config: Dict[str, Any]) -> Union[BaseChunker, BaseEmbedding, BaseVectorStore, BaseLanguageModel, BaseEvaluator]:
     """
     Convenience-Funktion zum Laden einer Komponente.
 
     Args:
-        component_type: Typ der Komponente ("chunker", "embedding", "vector_store", "language_model")
+        component_type: Typ der Komponente ("chunker", "embedding", "vector_store", "language_model", "evaluator")
         config: Konfiguration der Komponente
 
     Returns:
@@ -261,5 +315,7 @@ def load_component(component_type: str, config: Dict[str, Any]) -> Union[BaseChu
         return component_loader.load_vector_store(config)
     elif component_type == "language_model":
         return component_loader.load_language_model(config)
+    elif component_type == "evaluator":
+        return component_loader.load_evaluator(config)
     else:
         raise ValueError(f"Unbekannter Komponententyp: {component_type}")

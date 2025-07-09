@@ -1,48 +1,98 @@
 # Core dependencies
-numpy>=1.24.0
-pandas>=2.0.0
-scikit-learn>=1.3.0
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+scipy>=1.7.0
 
-# OpenAI
-openai>=1.0.0
+# Text processing and NLP
+nltk>=3.6.0
+spacy>=3.4.0
+regex>=2021.0.0
 
-# Embeddings and NLP
+# Machine Learning and Embeddings
 sentence-transformers>=2.2.0
-transformers>=4.30.0
-torch>=2.0.0
+transformers>=4.20.0
+torch>=1.12.0
+tokenizers>=0.13.0
 
-# Vector stores
+# Vector databases
 chromadb>=0.4.0
-# Option 1: Install via conda: conda install -c conda-forge faiss-gpu
-# Option 2: Use unofficial PyPI GPU build (uncomment next line):
-# faiss-gpu-cu12>=1.7.0  # For CUDA 12.x
-faiss-cpu>=1.7.0  # Current fallback for pip installation
+faiss-cpu>=1.7.0  # Use faiss-gpu for GPU support
 
-# Jupyter and visualization
-jupyter>=1.0.0
-ipywidgets>=8.0.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-plotly>=5.15.0
-
-# Utils
-tqdm>=4.65.0
-python-dotenv>=1.0.0
-pyyaml>=6.0.0
-typing-extensions>=4.5.0
-
-# Development and testing
-pytest>=7.4.0
-pytest-cov>=4.1.0
-black>=23.0.0
-flake8>=6.0.0
-mypy>=1.5.0
-
-# Documentation
-mkdocs>=1.5.0
-mkdocs-material>=9.0.0
+# Language models
+openai>=1.0.0
+requests>=2.25.0
+httpx>=0.24.0
 
 # Evaluation metrics
-rouge-score>=0.1.2
-nltk>=3.8.0
+rouge-score>=0.1.0
 evaluate>=0.4.0
+bert-score>=0.3.0
+
+# Data handling
+tqdm>=4.62.0
+pydantic>=1.8.0
+pyyaml>=6.0
+python-dotenv>=0.19.0
+
+# Visualization and analysis
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipywidgets>=7.6.0
+notebook>=6.4.0
+
+# Development and testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.950
+
+# Performance monitoring
+psutil>=5.8.0
+memory-profiler>=0.60.0
+
+# Logging and utilities
+loguru>=0.6.0
+rich>=12.0.0
+typer>=0.6.0
+
+# Optional dependencies for specific features
+# Uncomment based on your needs:
+
+# For GPU support (choose one):
+# torch>=1.12.0+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
+# faiss-gpu>=1.7.0
+
+# For additional embedding models:
+# sentence-transformers[all]>=2.2.0
+
+# For advanced text processing:
+# spacy[de]>=3.4.0  # German language model
+# spacy[en]>=3.4.0  # English language model
+
+# For web scraping (if needed):
+# beautifulsoup4>=4.10.0
+# selenium>=4.0.0
+
+# For database support:
+# sqlalchemy>=1.4.0
+# psycopg2-binary>=2.9.0  # PostgreSQL
+# pymongo>=4.0.0  # MongoDB
+
+# For cloud storage:
+# boto3>=1.20.0  # AWS S3
+# google-cloud-storage>=2.0.0  # Google Cloud Storage
+
+# For advanced metrics:
+# sacrebleu>=2.0.0
+# bleurt>=0.0.1
+
+# For experiment tracking:
+# wandb>=0.13.0
+# mlflow>=1.20.0
+# tensorboard>=2.8.0
