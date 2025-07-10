@@ -2,7 +2,7 @@
 
 Ein flexibles und erweiterbares RAG-System für wissenschaftliche Studien, das es ermöglicht, verschiedene Komponenten (Chunker, Embeddings, Vector Stores, Language Models) einfach auszutauschen und zu vergleichen.
 
-## 🎯 Projektübersicht
+## Projektübersicht
 
 Dieses Projekt wurde für eine wissenschaftliche Studie (Hausarbeit; 4 Personen; 30 Tage) entwickelt, bei der jede Person einen spezifischen Aspekt des RAG-Systems untersucht:
 
@@ -11,7 +11,7 @@ Dieses Projekt wurde für eine wissenschaftliche Studie (Hausarbeit; 4 Personen;
 - **Person C**: Vector Stores & Retrieval (verschiedene Speicher- und Suchstrategien)
 - **Person D**: Language Models & Generation (verschiedene LLM-Ansätze)
 
-## 🏗️ Architektur
+## Architektur
 
 ### Modularer Aufbau
 ```
@@ -39,7 +39,7 @@ data/
     └── qa_pairs.json   # QA-Datensatz
 ```
 
-## 🚀 Schnellstart
+## Schnellstart
 
 ### 1. Installation
 
@@ -101,7 +101,7 @@ Das Notebook führt Sie durch:
 - **Vector Store**: `ChromaVectorStore`, `FAISSVectorStore`
 - **Language Model**: `OllamaLanguageModel`, `HuggingFaceLanguageModel`
 
-## 📊 Beispiel-Konfiguration
+## Beispiel-Konfiguration
 
 ```python
 from src.config.pipeline_configs import get_baseline_config
@@ -164,7 +164,7 @@ for name, config in configs.items():
     print(f"{name}: {config.get_component_types()}")
 ```
 
-## 📈 Evaluierung
+## Evaluierung
 
 ### QA-Datensatz
 Das Projekt enthält einen DSGVO-spezifischen QA-Datensatz mit verschiedenen Fragetypen:
@@ -178,7 +178,7 @@ Das Projekt enthält einen DSGVO-spezifischen QA-Datensatz mit verschiedenen Fra
 - **RAG**: RAGAS, Faithfulness, Groundedness
 - **Performance**: Inferenzzeit, Speicherverbrauch, Durchsatz
 
-## 🛠️ Entwicklung
+## Entwicklung
 
 ### Projektstruktur erweitern
 
@@ -206,7 +206,7 @@ black src/
 flake8 src/
 ```
 
-## 📚 Für Google Colab
+## Für Google Colab
 
 Das System ist für Google Colab optimiert:
 
@@ -226,7 +226,7 @@ from google.colab import drive
 drive.mount('/content/drive')
 ```
 
-## 🤝 Beitragen
+## Beitragen
 
 ### Für Teammitglieder
 
@@ -243,18 +243,18 @@ drive.mount('/content/drive')
 - **Tests**: Mindestens 80% Code Coverage
 - **Logging**: Verwenden Sie das logging-Modul
 
-## 📄 Lizenz
+## Lizenz
 
 Dieses Projekt ist für Bildungszwecke an der FOM entwickelt.
 
-## 👥 Team
+## Team
 
 - **Person A**: Chunking-Strategien
 - **Person B**: Embedding-Verfahren
 - **Person C**: Vector Stores & Retrieval
 - **Person D**: Language Models & Generation
 
-## 🔗 Nützliche Links
+## Nützliche Links
 
 - [OpenAI API Documentation](https://platform.openai.com/docs)
 - [Sentence Transformers](https://www.sbert.net/)
