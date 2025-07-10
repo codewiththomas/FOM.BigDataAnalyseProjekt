@@ -122,7 +122,7 @@ result = pipeline.query("Was ist die maximale Geldbuße nach Art. 83 DSGVO?")
 print(result['answer'])
 ```
 
-## 🔬 Experimentieren
+## Experimentieren
 
 ### Neue Komponente hinzufügen
 
