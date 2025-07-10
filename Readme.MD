@@ -18,19 +18,49 @@ Dieses Projekt wurde für eine wissenschaftliche Studie (Hausarbeit; 4 Personen;
 src/
 ├── components/           # Austauschbare RAG-Komponenten
 │   ├── chunkers/        # Text-Chunking-Strategien
+│   │   ├── base_chunker.py
+│   │   ├── line_chunker.py
+│   │   ├── recursive_chunker.py
+│   │   └── semantic_chunker.py
 │   ├── embeddings/      # Embedding-Modelle
+│   │   ├── base_embedding.py
+│   │   ├── openai_embedding.py
+│   │   └── sentence_transformer_embedding.py
 │   ├── vector_stores/   # Vector-Speicher-Systeme
+│   │   ├── base_vector_store.py
+│   │   ├── in_memory_vector_store.py
+│   │   ├── chroma_vector_store.py
+│   │   └── faiss_vector_store.py
 │   └── language_models/ # Language Models
+│       ├── base_language_model.py
+│       ├── openai_language_model.py
+│       └── ollama_language_model.py
 ├── config/              # Konfigurationssystem
+│   ├── base_config.py
+│   ├── pipeline_configs.py
+│   └── experiment_configs.py
 ├── core/                # RAG-Pipeline und Component Loader
+│   ├── rag_pipeline.py
+│   ├── component_loader.py
+│   └── experiment_runner.py
 ├── evaluations/         # Evaluierungsmetriken
-└── utils/               # Hilfsfunktionen
+│   ├── base_evaluator.py
+│   ├── retrieval_evaluator.py
+│   ├── generation_evaluator.py
+│   ├── rag_evaluator.py
+│   └── performance_evaluator.py
+├── utils/               # Hilfsfunktionen
+│   └── data_loader.py
+├── ResearchRAG.ipynb    # Hauptnotebook
+└── test_evaluation_system.py
 ```
 
 ### Datenstruktur
 ```
 data/
 ├── raw/                 # Rohdaten (DSGVO-Text)
+│   ├── dsgvo.txt
+│   └── dsgvo_timo.txt
 ├── processed/           # Verarbeitete Daten
 │   ├── chunks/         # Gespeicherte Chunks
 │   └── embeddings/     # Gespeicherte Embeddings
@@ -87,21 +117,57 @@ Das Notebook führt Sie durch:
 - Query-Ausführung
 - Komponenten-Analyse
 
-## 🔧 Verfügbare Komponenten
+## Verfügbare Komponenten
 
-### Baseline-Implementierungen (Phase 1)
-- **Chunker**: `LineChunker` - Einfaches zeilenbasiertes Chunking
-- **Embedding**: `OpenAIEmbedding` - OpenAI text-embedding-3-small
-- **Vector Store**: `InMemoryVectorStore` - In-Memory-Speicher mit sklearn
-- **Language Model**: `OpenAILanguageModel` - OpenAI GPT-4o-mini
+### Implementierte Komponenten
 
-### Geplante Erweiterungen (Phase 2-4)
-- **Chunker**: `RecursiveChunker`, `SemanticChunker`
-- **Embedding**: `SentenceTransformerEmbedding`, `HuggingFaceEmbedding`
-- **Vector Store**: `ChromaVectorStore`, `FAISSVectorStore`
-- **Language Model**: `OllamaLanguageModel`, `HuggingFaceLanguageModel`
+**Chunker:**
+- `LineChunker` - Einfaches zeilenbasiertes Chunking
+- `RecursiveChunker` - Rekursives Text-Chunking mit Overlap
+- `SemanticChunker` - Semantisches Chunking basierend auf Bedeutung
 
-## Beispiel-Konfiguration
+**Embeddings:**
+- `OpenAIEmbedding` - OpenAI text-embedding-3-small
+- `SentenceTransformerEmbedding` - Sentence Transformers Modelle
+
+**Vector Stores:**
+- `InMemoryVectorStore` - In-Memory-Speicher mit sklearn
+- `ChromaVectorStore` - ChromaDB Integration
+- `FAISSVectorStore` - FAISS Integration
+
+**Language Models:**
+- `OpenAILanguageModel` - OpenAI GPT-Modelle
+- `OllamaLanguageModel` - Lokale Ollama-Modelle
+
+### Baseline-Konfiguration
+
+```python
+baseline_config = {
+    "chunker": {
+        "type": "line_chunker",
+        "chunk_size": 512,
+        "overlap": 50
+    },
+    "embedding": {
+        "type": "openai",
+        "model": "text-embedding-3-small",
+        "dimensions": 1536
+    },
+    "vector_store": {
+        "type": "in_memory",
+        "similarity_metric": "cosine",
+        "top_k": 5
+    },
+    "language_model": {
+        "type": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 500
+    }
+}
+```
+
+## Beispiel-Verwendung
 
 ```python
 from src.config.pipeline_configs import get_baseline_config
@@ -172,33 +238,61 @@ Das Projekt enthält einen DSGVO-spezifischen QA-Datensatz mit verschiedenen Fra
 - **Prozessfragen**: "Wie läuft eine Datenschutz-Folgenabschätzung ab?"
 - **Problemlösungsfragen**: "Was ist bei Marketing-Nutzung zu beachten?"
 
-### Metriken (geplant)
-- **Retrieval**: Precision@k, Recall@k, F1@k, MRR, NDCG
-- **Generation**: ROUGE-L, BLEU, BERTScore, Semantic Similarity
-- **RAG**: RAGAS, Faithfulness, Groundedness
-- **Performance**: Inferenzzeit, Speicherverbrauch, Durchsatz
+### Verfügbare Evaluierungsmetriken
+
+**Retrieval-Metriken:**
+- Precision@k, Recall@k, F1@k
+- Mean Reciprocal Rank (MRR)
+- Normalized Discounted Cumulative Gain (NDCG)
+
+**Generation-Metriken:**
+- ROUGE-L, BLEU
+- BERTScore
+- Semantic Similarity
+
+**RAG-Metriken:**
+- RAGAS Framework
+- Faithfulness (Hallucination Rate)
+- Groundedness
+
+**Performance-Metriken:**
+- Inferenzzeit
+- Speicherverbrauch
+- Durchsatz
+
+### Experiment-Runner verwenden
+
+```python
+from src.core.experiment_runner import ExperimentRunner
+
+# Experiment-Runner erstellen
+runner = ExperimentRunner()
+
+# Einzelnes Experiment ausführen
+results = runner.run_experiment(config, qa_pairs)
+
+# Mehrere Konfigurationen vergleichen
+comparison = runner.compare_configurations([config1, config2, config3])
+```
 
 ## Entwicklung
 
-### Projektstruktur erweitern
+### Tests ausführen
 
 ```bash
-# Neue Komponente hinzufügen
-touch src/components/chunkers/my_new_chunker.py
+# Alle Tests ausführen
+pytest tests/
 
-# Tests schreiben
-touch tests/unit/test_my_new_chunker.py
+# Spezifische Tests
+python run_tests.py
 
-# Dokumentation aktualisieren
-echo "## MyNewChunker" >> docs/components.md
+# Evaluierungssystem testen
+python src/test_evaluation_system.py
 ```
 
 ### Code-Qualität
 
 ```bash
-# Tests ausführen
-pytest tests/
-
 # Code formatieren
 black src/
 
@@ -264,5 +358,5 @@ Dieses Projekt ist für Bildungszwecke an der FOM entwickelt.
 
 ---
 
-**Status**: Phase 1 abgeschlossen (Baseline-System funktionsfähig)
-**Nächste Schritte**: Implementierung erweiterte Komponenten (Phase 2-4)
+**Status**: Vollständig implementiert (Alle Komponenten verfügbar)
+**Nächste Schritte**: Experimentelle Evaluierung und Optimierung
