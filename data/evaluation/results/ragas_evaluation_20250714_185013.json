@@ -1,0 +1,776 @@
+{
+  "metadata": {
+    "timestamp": "2025-07-14T18:51:37.724802",
+    "test_type": "ragas_evaluation",
+    "system_config": {
+      "chunker": "recursive_chunker",
+      "embedding": "sentence_transformer",
+      "vector_store": "in_memory",
+      "language_model": "openai"
+    },
+    "questions_tested": 10,
+    "evaluation_framework": "RAGAS"
+  },
+  "ragas_metrics": {
+    "retrieval_precision@1": 0.0,
+    "retrieval_recall@1": 0.0,
+    "retrieval_f1@1": 0.0,
+    "retrieval_precision@3": 0.0,
+    "retrieval_recall@3": 0.0,
+    "retrieval_f1@3": 0.0,
+    "retrieval_precision@5": 0.0,
+    "retrieval_recall@5": 0.0,
+    "retrieval_f1@5": 0.0,
+    "retrieval_mrr": 0.0,
+    "retrieval_ndcg@1": 0.0,
+    "retrieval_ndcg@3": 0.0,
+    "retrieval_ndcg@5": 0.0,
+    "retrieval_num_queries": 10,
+    "retrieval_avg_retrieved_docs": 5.0,
+    "retrieval_avg_relevant_docs": 0.0,
+    "generation_rouge_l": 0.18852585524024684,
+    "generation_bleu": 0.048776827475297116,
+    "generation_exact_match": 0.0,
+    "generation_semantic_similarity": 0.14917440926009343,
+    "generation_avg_prediction_length": 111.6,
+    "generation_avg_ground_truth_length": 23.0,
+    "generation_length_ratio": 4.886493024995599,
+    "generation_num_samples": 10,
+    "performance_avg_latency": 4.285254549980164,
+    "performance_min_latency": 0.8597753047943115,
+    "performance_max_latency": 9.479851007461548,
+    "performance_median_latency": 3.4596670866012573,
+    "performance_p95_latency": 8.4082294344902,
+    "performance_p99_latency": 9.26552669286728,
+    "performance_throughput_qps": 0.2450756554306766,
+    "performance_total_processing_time": 40.80372643470764,
+    "performance_num_queries": 10,
+    "performance_current_memory_mb": 527.3203125,
+    "performance_memory_overhead_mb": -196.00390625,
+    "faithfulness": 0.4072680211199974,
+    "groundedness": 0.2154212454212454,
+    "answer_relevance": 0.6504761904761905,
+    "context_precision": 0.0,
+    "context_recall": 0.0,
+    "rag_score": 0.219464965020073,
+    "quality_score": 0.432948717948718,
+    "efficiency_score": 0.05719045451612928,
+    "overall_score": 0.27240356409074223,
+    "category_analysis": {
+      "faktenfragen": {
+        "count": 9,
+        "avg_query_time": 3.708077165815565,
+        "avg_contexts_retrieved": 5.0
+      },
+      "prozessfragen": {
+        "count": 1,
+        "avg_query_time": 9.479851007461548,
+        "avg_contexts_retrieved": 5.0
+      }
+    }
+  },
+  "predictions": [
+    {
+      "question": "Was ist die maximale Geldbuße nach Art. 83 DSGVO?",
+      "answer": "{'question': 'Was ist die maximale Geldbuße nach Art. 83 DSGVO?', 'answer': 'Die maximale Geldbuße nach Artikel 83 der DSGVO beträgt bis zu 20.000.000 EUR oder im Fall eines Unternehmens bis zu 4 % seines gesamten weltweit erzielten Jahresumsatzes des vorangegangenen Geschäftsjahrs, je nachdem, welcher der Beträge höher ist.', 'retrieval_count': 5, 'query_time': 2.1804349422454834, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "10d3bf22-bbcb-4388-8e15-7113d9d87916",
+          "text": "(151)\n\nNach den Rechtsordnungen Dänemarks und Estlands sind die in dieser Verordnung vorgesehenen Geldbußen nicht zulässig. Die Vorschriften über die Geldbußen können so angewandt werden, dass die Geldbuße in Dänemark durch die zuständigen nationalen Gerichte als Strafe und in Estland durch die Aufsichtsbehörde im Rahmen eines Verfahrens bei Vergehen verhängt wird, sofern eine solche Anwendung der Vorschriften in diesen Mitgliedstaaten die gleiche Wirkung wie die von den Aufsichtsbehörden verhängten Geldbußen hat. Daher sollten die zuständigen nationalen Gerichte die Empfehlung der Aufsichtsbehörde, die die Geldbuße in die Wege geleitet hat, berücksichtigen. In jeden Fall sollten die verhängten Geldbußen wirksam, verhältnismäßig und abschreckend sein.\n\n(152)",
+          "score": 0.46482858061790466,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 313,
+            "total_chunks": 638,
+            "char_count": 768
+          }
+        },
+        {
+          "chunk_id": "97353224-8086-4dbf-ae31-fa86ba667984",
+          "text": " nationalen Vorschriften und von verwaltungsrechtlichen Sanktionen sollte jedoch nicht zu einer Verletzung des Grundsatzes „ne bis in idem“, wie er vom Gerichtshof ausgelegt worden ist, führen.\n\n(150)Um die verwaltungsrechtlichen Sanktionen bei Verstößen gegen diese Verordnung zu vereinheitlichen und ihnen mehr Wirkung zu verleihen, sollte jede Aufsichtsbehörde befugt sein, Geldbußen zu verhängen. In dieser Verordnung sollten die Verstöße sowie die Obergrenze der entsprechenden Geldbußen und die Kriterien für ihre Festsetzung genannt werden, wobei diese Geldbußen von der zuständigen Aufsichtsbehörde in jedem Einzelfall unter Berücksichtigung aller besonderen Umstände und insbesondere der Art, Schwere und Dauer des Verstoßes und seiner Folgen sowie der Maßnahmen, die ergriffen worden sind, um die Einhaltung der aus dieser Verordnung erwachsenden Verpflichtungen zu gewährleisten und die Folgen des Verstoßes abzuwenden oder abzumildern, festzusetzen sind. Werden Geldbußen Unternehmen auferlegt, sollte zu diesem Zweck der Begriff „Unternehmen“ im Sinne der Artikel 101 und 102 AEUV verstanden werden.",
+          "score": 0.43677300214767456,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 310,
+            "total_chunks": 638,
+            "char_count": 1112
+          }
+        },
+        {
+          "chunk_id": "5e650e94-cf09-46cf-b574-b9ffe30b209e",
+          "text": "egenheit gemäß Artikel 40 Absatz 7 und damit die Frage betrifft, ob ein Entwurf von Verhaltensregeln oder eine Änderung oder Ergänzung von Verhaltensregeln mit dieser Verordnung in Einklang steht,\n\nc)der Billigung der Kriterien für die Akkreditierung einer Stelle nach Artikel 41 Absatz 3 oder einer Zertifizierungsstelle nach Artikel 43 Absatz 3 dient,\n\nd)\n\nder Festlegung von Standard-Datenschutzklauseln gemäß Artikel 46 Absatz 2 Buchstabe d und Artikel 28 Absatz 8 dient,\n\ne)\n\nder Genehmigung von Vertragsklauseln gemäß Artikels 46 Absatz 3 Buchstabe a dient, oder\n\nf)\n\nder Annahme verbindlicher interner Vorschriften im Sinne von Artikel 47 dient.\n\n(2)   Jede Aufsichtsbehörde, der Vorsitz des Ausschuss oder die Kommission können beantragen, dass eine Angelegenheit mit allgemeiner Geltung oder mit Auswirkungen in mehr als einem Mitgliedstaat vom Ausschuss geprüft wird, um eine Stellungnahme zu erhalten, insbesondere wenn eine zuständige Aufsichtsbehörde den Verpflichtungen zur Amtshilfe gemäß Artikel 61 oder zu gemeinsamen Maßnahmen gemäß Artikel 62 nicht nachkommt.",
+          "score": 0.42562562227249146,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 569,
+            "total_chunks": 638,
+            "char_count": 1078
+          }
+        },
+        {
+          "chunk_id": "7491d3f4-5ae5-47fc-98a1-70b5fbe7c832",
+          "text": " dringenden Handlungsbedarf gemäß Artikel 66 Absatz 1 ausgegangen, der einen im Dringlichkeitsverfahren angenommenen verbindlichen Beschluss des Ausschuss gemäß Artikel 66 Absatz 2 erforderlich macht.(9)   Die Kommission kann im Wege von Durchführungsrechtsakten Form und Verfahren der Amtshilfe nach diesem Artikel und die Ausgestaltung des elektronischen Informationsaustauschs zwischen den Aufsichtsbehörden sowie zwischen den Aufsichtsbehörden und dem Ausschuss, insbesondere das in Absatz 6 des vorliegenden Artikels genannte standardisierte Format, festlegen. Diese Durchführungsrechtsakte werden gemäß dem in Artikel 93 Absatz 2 genannten Prüfverfahren erlassen.\n\nArtikel 62\n\nGemeinsame Maßnahmen der Aufsichtsbehörden\n\n(1)   Die Aufsichtsbehörden führen gegebenenfalls gemeinsame Maßnahmen einschließlich gemeinsamer Untersuchungen und gemeinsamer Durchsetzungsmaßnahmen durch, an denen Mitglieder oder Bedienstete der Aufsichtsbehörden anderer Mitgliedstaaten teilnehmen.",
+          "score": 0.4190770089626312,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 563,
+            "total_chunks": 638,
+            "char_count": 980
+          }
+        },
+        {
+          "chunk_id": "4f762f48-4b4a-46d2-9a95-a16040dae8b8",
+          "text": "arbeiter gemäß den Artikeln 8, 11, 25 bis 39, 42 und 43;\n\nb)\n\ndie Pflichten der Zertifizierungsstelle gemäß den Artikeln 42 und 43;\n\nc)\n\ndie Pflichten der Überwachungsstelle gemäß Artikel 41 Absatz 4.(5)   Bei Verstößen gegen die folgenden Bestimmungen werden im Einklang mit Absatz 2 Geldbußen von bis zu 20 000 000 EUR oder im Fall eines Unternehmens von bis zu 4 % seines gesamten weltweit erzielten Jahresumsatzes des vorangegangenen Geschäftsjahrs verhängt, je nachdem, welcher der Beträge höher ist:\n\na)\n\ndie Grundsätze für die Verarbeitung, einschließlich der Bedingungen für die Einwilligung, gemäß den Artikeln 5, 6, 7 und 9;\n\nb)\n\ndie Rechte der betroffenen Person gemäß den Artikeln 12 bis 22;\n\nc)\n\ndie Übermittlung personenbezogener Daten an einen Empfänger in einem Drittland oder an eine internationale Organisation gemäß den Artikeln 44 bis 49;\n\nd)\n\nalle Pflichten gemäß den Rechtsvorschriften der Mitgliedstaaten, die im Rahmen des Kapitels IX erlassen wurden;\n\ne)",
+          "score": 0.4120168685913086,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 608,
+            "total_chunks": 638,
+            "char_count": 979
+          }
+        }
+      ],
+      "query_time": 2.1804349422454834,
+      "timestamp": 1752511856.8744678
+    },
+    {
+      "question": "Welche Rechtsgrundlagen für die Verarbeitung personenbezogener Daten gibt es?",
+      "answer": "{'question': 'Welche Rechtsgrundlagen für die Verarbeitung personenbezogener Daten gibt es?', 'answer': 'Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Rechtsgrundlagen für die Verarbeitung personenbezogener Daten gemäß der DSGVO. Daher kann ich diese Frage nicht beantworten.', 'retrieval_count': 5, 'query_time': 0.8881244659423828, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "2753f1a5-9d34-4360-ba8a-b0c0d9135a04",
+          "text": "weit technisch machbar, sollte die betroffene Person das Recht haben, zu erwirken, dass die personenbezogenen Daten direkt von einem Verantwortlichen einem anderen Verantwortlichen übermittelt werden.",
+          "score": 0.7467489242553711,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 140,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "baa4db0d-3284-4e16-a320-8730b1754f7c",
+          "text": "(72)\n\nDas Profiling unterliegt den Vorschriften dieser Verordnung für die Verarbeitung personenbezogener Daten, wie etwa die Rechtsgrundlage für die Verarbeitung oder die Datenschutzgrundsätze. Der durch diese Verordnung eingerichtete Europäische Datenschutzausschuss (im Folgenden „Ausschuss“) sollte, diesbezüglich Leitlinien herausgeben können.\n\n(73)",
+          "score": 0.7456156015396118,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 150,
+            "total_chunks": 638,
+            "char_count": 353
+          }
+        },
+        {
+          "chunk_id": "aec10c28-0ba9-4fee-95d1-cede5b644d3d",
+          "text": "r Erhebung und Verarbeitung personenbezogener Daten zu verstehen. Diese statistischen Ergebnisse können für verschiedene Zwecke, so auch für wissenschaftliche Forschungszwecke, weiterverwendet werden.Im Zusammenhang mit den statistischen Zwecken wird vorausgesetzt, dass die Ergebnisse der Verarbeitung zu statistischen Zwecken keine personenbezogenen Daten, sondern aggregierte Daten sind und diese Ergebnisse oder personenbezogenen Daten nicht für Maßnahmen oder Entscheidungen gegenüber einzelnen natürlichen Personen verwendet werden.",
+          "score": 0.7435224056243896,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 345,
+            "total_chunks": 638,
+            "char_count": 538
+          }
+        },
+        {
+          "chunk_id": "2a048dd5-4e68-4c94-8fbc-bc8cb574df0b",
+          "text": "llten immer schriftlich erfolgen, mit Gründen versehen sein und gelegentlichen Charakter haben, und sie sollten nicht vollständige Dateisysteme betreffen oder zur Verknüpfung von Dateisystemen führen.Die Verarbeitung personenbezogener Daten durch die genannten Behörden sollte den für die Zwecke der Verarbeitung geltenden Datenschutzvorschriften entsprechen.",
+          "score": 0.7397483587265015,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 46,
+            "total_chunks": 638,
+            "char_count": 359
+          }
+        },
+        {
+          "chunk_id": "1ebbba7d-a294-446e-bea4-c95cff8b7d7d",
+          "text": "thalten, bei denen Rechtsvorschriften vorsehen, dass ihre Weiterverwendung nicht mit dem Recht über den Schutz natürlicher Personen in Bezug auf die Verarbeitung personenbezogener Daten vereinbar ist.",
+          "score": 0.7373650074005127,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 322,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        }
+      ],
+      "query_time": 0.8881244659423828,
+      "timestamp": 1752511857.779103
+    },
+    {
+      "question": "Wie läuft das Verfahren bei einer Datenschutz-Folgenabschätzung ab?",
+      "answer": "{'question': 'Wie läuft das Verfahren bei einer Datenschutz-Folgenabschätzung ab?', 'answer': 'Das Verfahren bei einer Datenschutz-Folgenabschätzung (DSFA) läuft gemäß Artikel 35 der DSGVO wie folgt ab:\\n\\n1. **Durchführung der DSFA**: Der Verantwortliche führt eine Abschätzung der Folgen der vorgesehenen Verarbeitungsvorgänge für den Schutz personenbezogener Daten durch, wenn die Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat. Dies gilt insbesondere bei Verwendung neuer Technologien.\\n\\n2. **Beratung des Datenschutzbeauftragten**: Der Verantwortliche holt den Rat des Datenschutzbeauftragten ein, sofern ein solcher benannt wurde (Artikel 35, Absatz 2).\\n\\n3. **Bewertung der Risiken**: Die DSFA sollte die spezifische Eintrittswahrscheinlichkeit und die Schwere des hohen Risikos bewerten, unter Berücksichtigung der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der Ursachen des Risikos (Kontext 3).\\n\\n4. **Maßnahmen und Garantien**: Die DSFA sollte sich auch mit den Maßnahmen, Garantien und Verfahren befassen, die ergriffen werden, um das Risiko einzudämmen und den Schutz personenbezogener Daten sicherzustellen (Kontext 3).\\n\\n5. **Dokumentation**: Die Ergebnisse der DSFA müssen dokumentiert werden, um die Einhaltung der Bestimmungen der DSGVO nachzuweisen.\\n\\nFalls die DSFA ergibt, dass trotz der ergriffenen Maßnahmen ein hohes Risiko besteht, das nicht angemessen gemindert werden kann, muss der Verantwortliche die zuständige Aufsichtsbehörde konsultieren, bevor er mit der Verarbeitung fortfährt (Artikel 36).', 'retrieval_count': 5, 'query_time': 9.479851007461548, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "33233d70-b86a-49e1-b3a2-5b49c6b76d48",
+          "text": "igt wurden, einzuhalten;\n\nc)\n\nVerfahren für die Erteilung, die regelmäßige Überprüfung und den Widerruf der Datenschutzzertifizierung sowie der Datenschutzsiegel und -prüfzeichen festgelegt haben;\n\nd)Verfahren und Strukturen festgelegt haben, mit denen sie Beschwerden über Verletzungen der Zertifizierung oder die Art und Weise, in der die Zertifizierung von dem Verantwortlichen oder dem Auftragsverarbeiter umgesetzt wird oder wurde, nachgehen und diese Verfahren und Strukturen für betroffene Personen und die Öffentlichkeit transparent machen, und\n\ne)\n\nzur Zufriedenheit der zuständigen Aufsichtsbehörde nachgewiesen haben, dass ihre Aufgaben und Pflichten nicht zu einem Interessenkonflikt führen.",
+          "score": 0.6323487758636475,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 496,
+            "total_chunks": 638,
+            "char_count": 703
+          }
+        },
+        {
+          "chunk_id": "0e0b1d91-afbd-42e8-88e8-fab819e14bd9",
+          "text": "ängen gehören insbesondere solche, bei denen neue Technologien eingesetzt werden oder die neuartig sind und bei denen der Verantwortliche noch keine Datenschutz-Folgenabschätzung durchgeführt hat bzw.bei denen aufgrund der seit der ursprünglichen Verarbeitung vergangenen Zeit eine Datenschutz-Folgenabschätzung notwendig geworden ist.",
+          "score": 0.6253435611724854,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 188,
+            "total_chunks": 638,
+            "char_count": 335
+          }
+        },
+        {
+          "chunk_id": "a07a518f-f721-420d-825d-4c1ad4d317ab",
+          "text": "(90)\n\nIn derartigen Fällen sollte der Verantwortliche vor der Verarbeitung eine Datenschutz-Folgenabschätzung durchführen, mit der die spezifische Eintrittswahrscheinlichkeit und die Schwere dieses hohen Risikos unter Berücksichtigung der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung und der Ursachen des Risikos bewertet werden. Diese Folgenabschätzung sollte sich insbesondere mit den Maßnahmen, Garantien und Verfahren befassen, durch die dieses Risiko eingedämmt, der Schutz personenbezogener Daten sichergestellt und die Einhaltung der Bestimmungen dieser Verordnung nachgewiesen werden soll.\n\n(91)",
+          "score": 0.6076747179031372,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 189,
+            "total_chunks": 638,
+            "char_count": 621
+          }
+        },
+        {
+          "chunk_id": "e4eb692f-fb7d-48c6-b5eb-b1d467105579",
+          "text": "n Risiko führt, von dem Verantwortlichen verlangen, dies nachzuholen, oder sie kann mit einem Beschluss feststellen, dass bestimmte der in Absatz 3 genannten Voraussetzungen erfüllt sind.\n\nAbschnitt 3Datenschutz-Folgenabschätzung und vorherige Konsultation\n\nArtikel 35\n\nDatenschutz-Folgenabschätzung\n\n(1)   Hat eine Form der Verarbeitung, insbesondere bei Verwendung neuer Technologien, aufgrund der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge, so führt der Verantwortliche vorab eine Abschätzung der Folgen der vorgesehenen Verarbeitungsvorgänge für den Schutz personenbezogener Daten durch. Für die Untersuchung mehrerer ähnlicher Verarbeitungsvorgänge mit ähnlich hohen Risiken kann eine einzige Abschätzung vorgenommen werden.\n\n(2)   Der Verantwortliche holt bei der Durchführung einer Datenschutz-Folgenabschätzung den Rat des Datenschutzbeauftragten, sofern ein solcher benannt wurde, ein.\n\n(3)   Eine Datenschutz-Folgenabschätzung gemäß Absatz 1 ist insbesondere in folgenden Fällen erforderlich:\n\na)",
+          "score": 0.6064764261245728,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 463,
+            "total_chunks": 638,
+            "char_count": 1120
+          }
+        },
+        {
+          "chunk_id": "0bdcab18-f0fb-4f86-90e5-8a03f0718377",
+          "text": "rDatenschutzverfahrenverfügt,unterstütztwerdenImprivatenSektorbeziehtsichdieKerntätigkeiteinesVerantwortlichenaufseineHaupttätigkeitenundnichtaufdieVerarbeitungpersonenbezogenerDatenalsNebentätigkeit.Das erforderliche Niveau des Fachwissens sollte sich insbesondere nach den durchgeführten Datenverarbeitungsvorgängen und dem erforderlichen Schutz für die von dem Verantwortlichen oder dem Auftragsverarbeiter verarbeiteten personenbezogenen Daten richten. Derartige Datenschutzbeauftragte sollten unabhängig davon, ob es sich bei ihnen um Beschäftigte des Verantwortlichen handelt oder nicht, ihre Pflichten und Aufgaben in vollständiger Unabhängigkeit ausüben können.",
+          "score": 0.603954553604126,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 200,
+            "total_chunks": 638,
+            "char_count": 669
+          }
+        }
+      ],
+      "query_time": 9.479851007461548,
+      "timestamp": 1752511867.2749827
+    },
+    {
+      "question": "Welche Rechte haben betroffene Personen?",
+      "answer": "{'question': 'Welche Rechte haben betroffene Personen?', 'answer': 'Betroffene Personen haben gemäß der DSGVO das Recht auf wirksame und durchsetzbare Rechte sowie wirksame verwaltungsrechtliche und gerichtliche Rechtsbehelfe (Kontext 1). Sie haben das Recht, Beschwerde bei einer Aufsichtsbehörde einzulegen oder einen gerichtlichen Rechtsbehelf in Anspruch zu nehmen, insbesondere wenn sie sich in ihren Rechten gemäß der Verordnung verletzt sehen (Kontext 5). \\n\\nDie spezifischen Rechte der betroffenen Personen sind in den Artikeln 12 bis 23 der DSGVO geregelt, die unter anderem das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch umfassen.', 'retrieval_count': 5, 'query_time': 3.959899663925171, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "caa43313-de52-47e0-a1ef-2d081d042328",
+          "text": "hutzbehörden der Mitgliedstaaten vorsehen, und den betroffenen Personen sollten wirksame und durchsetzbare Rechte sowie wirksame verwaltungsrechtliche und gerichtliche Rechtsbehelfe eingeräumt werden.",
+          "score": 0.5842071771621704,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 211,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "1ebbba7d-a294-446e-bea4-c95cff8b7d7d",
+          "text": "thalten, bei denen Rechtsvorschriften vorsehen, dass ihre Weiterverwendung nicht mit dem Recht über den Schutz natürlicher Personen in Bezug auf die Verarbeitung personenbezogener Daten vereinbar ist.",
+          "score": 0.5663766264915466,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 322,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "d1c96dab-0916-4fbe-b5fb-720ba8e9fb24",
+          "text": " dieser Personen oder nur dann erfolgen, wenn diese Personen die Adressaten der Übermittlung sind, wobei den Interessen und Grundrechten der betroffenen Person in vollem Umfang Rechnung zu tragen ist.",
+          "score": 0.562787652015686,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 225,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "551358f3-b52c-4607-8373-2a8eafc1c043",
+          "text": "erson, so sollte er verlangen können, dass die betroffene Person präzisiert, auf welche Information oder welche Verarbeitungsvorgänge sich ihr Auskunftsersuchen bezieht, bevor er ihr Auskunft erteilt.",
+          "score": 0.5624388456344604,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 129,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "bac574cf-6028-41d8-a8a1-8c716e95ff4a",
+          "text": "Betroffene Personen, die sich in ihren Rechten gemäß dieser Verordnung verletzt sehen, sollten das Recht haben, nach dem Recht eines Mitgliedstaats gegründete Einrichtungen, Organisationen oder Verbände ohne Gewinnerzielungsabsicht, deren satzungsmäßige Ziele im öffentlichem Interesse liegen und die im Bereich des Schutzes personenbezogener Daten tätig sind, zu beauftragen, in ihrem Namen Beschwerde bei einer Aufsichtsbehörde oder einen gerichtlichen Rechtsbehelf einzulegen oder das Recht auf Schadensersatz in Anspruch zu nehmen, sofern dieses im Recht der Mitgliedstaaten vorgesehen ist.",
+          "score": 0.561134934425354,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 285,
+            "total_chunks": 638,
+            "char_count": 594
+          }
+        }
+      ],
+      "query_time": 3.959899663925171,
+      "timestamp": 1752511871.2485378
+    },
+    {
+      "question": "Was sind die Grundsätze der Datenverarbeitung?",
+      "answer": "{'question': 'Was sind die Grundsätze der Datenverarbeitung?', 'answer': 'Die Grundsätze der Datenverarbeitung sind in der Datenschutz-Grundverordnung (DSGVO) nicht explizit in den bereitgestellten Kontextinformationen aufgeführt. Allgemein umfassen die Grundsätze jedoch die Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit sowie Rechenschaftspflicht. Für spezifische Artikel der DSGVO, die diese Grundsätze behandeln, wäre auf Artikel 5 verwiesen.', 'retrieval_count': 5, 'query_time': 2.660722017288208, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "baa4db0d-3284-4e16-a320-8730b1754f7c",
+          "text": "(72)\n\nDas Profiling unterliegt den Vorschriften dieser Verordnung für die Verarbeitung personenbezogener Daten, wie etwa die Rechtsgrundlage für die Verarbeitung oder die Datenschutzgrundsätze. Der durch diese Verordnung eingerichtete Europäische Datenschutzausschuss (im Folgenden „Ausschuss“) sollte, diesbezüglich Leitlinien herausgeben können.\n\n(73)",
+          "score": 0.7042407989501953,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 150,
+            "total_chunks": 638,
+            "char_count": 353
+          }
+        },
+        {
+          "chunk_id": "2a048dd5-4e68-4c94-8fbc-bc8cb574df0b",
+          "text": "llten immer schriftlich erfolgen, mit Gründen versehen sein und gelegentlichen Charakter haben, und sie sollten nicht vollständige Dateisysteme betreffen oder zur Verknüpfung von Dateisystemen führen.Die Verarbeitung personenbezogener Daten durch die genannten Behörden sollte den für die Zwecke der Verarbeitung geltenden Datenschutzvorschriften entsprechen.",
+          "score": 0.6993634700775146,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 46,
+            "total_chunks": 638,
+            "char_count": 359
+          }
+        },
+        {
+          "chunk_id": "0d48cce8-446d-4a9d-aad7-e97a0ede5bab",
+          "text": "s sollte jedoch den freien Verkehr personenbezogener Daten innerhalb der Union nicht beeinträchtigen, falls die betreffenden Bedingungen für die grenzüberschreitende Verarbeitung solcher Daten gelten.",
+          "score": 0.6608135104179382,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 110,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "00b850c0-54fc-4fd3-890e-c70a7f4682d1",
+          "text": "(114)\n\nIn allen Fällen, in denen kein Kommissionsbeschluss zur Angemessenheit des in einem Drittland bestehenden Datenschutzniveaus vorliegt, sollte der Verantwortliche oder der Auftragsverarbeiter auf Lösungen zurückgreifen, mit denen den betroffenen Personen durchsetzbare und wirksame Rechte in Bezug auf die Verarbeitung ihrer personenbezogenen Daten in der Union nach der Übermittlung dieser Daten eingeräumt werden, damit sie weiterhin die Grundrechte und Garantien genießen können.\n\n(115)",
+          "score": 0.6546499729156494,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 234,
+            "total_chunks": 638,
+            "char_count": 495
+          }
+        },
+        {
+          "chunk_id": "c24b55f8-d329-421a-afba-b9920f08e9df",
+          "text": "en zum Schutz der Grundrechte und Grundfreiheiten natürlicher Personen bei der Datenverarbeitung sowie die Gewährleistung des freien Verkehrs personenbezogener Daten zwischen den Mitgliedstaaten.\n\n(4)Die Verarbeitung personenbezogener Daten sollte im Dienste der Menschheit stehen. Das Recht auf Schutz der personenbezogenen Daten ist kein uneingeschränktes Recht; es muss im Hinblick auf seine gesellschaftliche Funktion gesehen und unter Wahrung des Verhältnismäßigkeitsprinzips gegen andere Grundrechte abgewogen werden. Diese Verordnung steht im Einklang mit allen Grundrechten und achtet alle Freiheiten und Grundsätze, die mit der Charta anerkannt wurden und in den Europäischen Verträgen verankert sind, insbesondere Achtung des Privat- und Familienlebens, der Wohnung und der Kommunikation, Schutz personenbezogener Daten, Gedanken-, Gewissens- und Religionsfreiheit, Freiheit der Meinungsäußerung und Informationsfreiheit, unternehmerische Freiheit, Recht auf einen wirksamen Rechtsbehelf und ein faires Verfahren und Vielfalt der Kulturen, Religionen und Sprachen.\n\n(5)",
+          "score": 0.646506667137146,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 3,
+            "total_chunks": 638,
+            "char_count": 1079
+          }
+        }
+      ],
+      "query_time": 2.660722017288208,
+      "timestamp": 1752511873.9243114
+    },
+    {
+      "question": "Was versteht man unter personenbezogenen Daten?",
+      "answer": "{'question': 'Was versteht man unter personenbezogenen Daten?', 'answer': 'Im bereitgestellten Kontext wird nicht explizit definiert, was unter personenbezogenen Daten zu verstehen ist. Allgemein bezieht sich der Begriff \"personenbezogene Daten\" gemäß Artikel 4 der DSGVO auf alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Eine identifizierbare natürliche Person ist jemand, der direkt oder indirekt, insbesondere durch Zuordnung zu einer Kennung wie einem Namen, einer Kennnummer, Standortdaten oder einer Online-Kennung identifiziert werden kann.', 'retrieval_count': 5, 'query_time': 2.9594345092773438, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "884a482a-dea6-40db-971d-fd4790964857",
+          "text": "onenbezogenen Daten, sondern aggregierte Daten sind und diese Ergebnisse oder personenbezogenen Daten nicht für Maßnahmen oder Entscheidungen gegenüber einzelnen natürlichen Personen verwendet werden.",
+          "score": 0.6320635080337524,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 346,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "aec10c28-0ba9-4fee-95d1-cede5b644d3d",
+          "text": "r Erhebung und Verarbeitung personenbezogener Daten zu verstehen. Diese statistischen Ergebnisse können für verschiedene Zwecke, so auch für wissenschaftliche Forschungszwecke, weiterverwendet werden.Im Zusammenhang mit den statistischen Zwecken wird vorausgesetzt, dass die Ergebnisse der Verarbeitung zu statistischen Zwecken keine personenbezogenen Daten, sondern aggregierte Daten sind und diese Ergebnisse oder personenbezogenen Daten nicht für Maßnahmen oder Entscheidungen gegenüber einzelnen natürlichen Personen verwendet werden.",
+          "score": 0.624882698059082,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 345,
+            "total_chunks": 638,
+            "char_count": 538
+          }
+        },
+        {
+          "chunk_id": "56b12236-cdb3-4ce3-b32f-1fa7b289faa5",
+          "text": "Dass sie betreffende personenbezogene Daten verarbeitet werden, sollte der betroffenen Person zum Zeitpunkt der Erhebung mitgeteilt werden oder, falls die Daten nicht von ihr, sondern aus einer anderen Quelle erlangt werden, innerhalb einer angemessenen Frist, die sich nach dem konkreten Einzelfall richtet. Wenn die personenbezogenen Daten rechtmäßig einem anderen Empfänger offengelegt werden dürfen, sollte die betroffene Person bei der erstmaligen Offenlegung der personenbezogenen Daten für diesen Empfänger darüber aufgeklärt werden. Beabsichtigt der Verantwortliche, die personenbezogenen Daten für einen anderen Zweck zu verarbeiten als den, für den die Daten erhoben wurden, so sollte er der betroffenen Person vor dieser Weiterverarbeitung Informationen über diesen anderen Zweck und andere erforderliche Informationen zur Verfügung stellen.",
+          "score": 0.6020626425743103,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 123,
+            "total_chunks": 638,
+            "char_count": 852
+          }
+        },
+        {
+          "chunk_id": "00b850c0-54fc-4fd3-890e-c70a7f4682d1",
+          "text": "(114)\n\nIn allen Fällen, in denen kein Kommissionsbeschluss zur Angemessenheit des in einem Drittland bestehenden Datenschutzniveaus vorliegt, sollte der Verantwortliche oder der Auftragsverarbeiter auf Lösungen zurückgreifen, mit denen den betroffenen Personen durchsetzbare und wirksame Rechte in Bezug auf die Verarbeitung ihrer personenbezogenen Daten in der Union nach der Übermittlung dieser Daten eingeräumt werden, damit sie weiterhin die Grundrechte und Garantien genießen können.\n\n(115)",
+          "score": 0.5992177128791809,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 234,
+            "total_chunks": 638,
+            "char_count": 495
+          }
+        },
+        {
+          "chunk_id": "683b52c5-5a9c-47e0-9c15-7991b51b3d0b",
+          "text": "ür den die Daten erhoben wurden, so sollte er der betroffenen Person vor dieser Weiterverarbeitung Informationen über diesen anderen Zweck und andere erforderliche Informationen zur Verfügung stellen.Konnte der betroffenen Person nicht mitgeteilt werden, woher die personenbezogenen Daten stammen, weil verschiedene Quellen benutzt wurden, so sollte die Unterrichtung allgemein gehalten werden.",
+          "score": 0.597556471824646,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 124,
+            "total_chunks": 638,
+            "char_count": 394
+          }
+        }
+      ],
+      "query_time": 2.9594345092773438,
+      "timestamp": 1752511876.897266
+    },
+    {
+      "question": "Wann ist eine Einwilligung gültig?",
+      "answer": "{'question': 'Wann ist eine Einwilligung gültig?', 'answer': 'Eine Einwilligung ist gültig, wenn sie freiwillig gegeben wurde, was bedeutet, dass die betroffene Person eine echte oder freie Wahl hat und in der Lage ist, die Einwilligung zu verweigern oder zurückzuziehen, ohne Nachteile zu erleiden (Kontext 1 und 2). Zudem muss die betroffene Person informiert sein, wer der Verantwortliche ist und für welche Zwecke ihre personenbezogenen Daten verarbeitet werden (Kontext 2). \\n\\nIn besonderen Fällen, insbesondere wenn ein Ungleichgewicht zwischen der betroffenen Person und dem Verantwortlichen besteht, kann die Einwilligung als nicht freiwillig erteilt angesehen werden (Kontext 4). Auch wenn die Erfüllung eines Vertrags von der Einwilligung abhängig ist, obwohl diese für die Erfüllung nicht erforderlich ist, gilt die Einwilligung nicht als freiwillig (Kontext 4 und 5). \\n\\nZusammenfassend muss die Einwilligung klar, verständlich und ohne Druck erteilt werden, und der Widerruf muss ebenso einfach sein wie die Erteilung (Kontext 5).', 'retrieval_count': 5, 'query_time': 6.467283010482788, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "338dee32-6a59-4c79-9ff5-0940d7c79c80",
+          "text": "n, dass sie ihre Einwilligung freiwillig gegeben hat, wenn sie eine echte oder freie Wahl hat und somit in der Lage ist, die Einwilligung zu verweigern oder zurückzuziehen, ohne Nachteile zu erleiden.",
+          "score": 0.6451615691184998,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 73,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "96527a45-ee65-4a45-abb2-f40c0720bfb2",
+          "text": "nis der Sachlage ihre Einwilligung geben kann, sollte die betroffene Person mindestens wissen, wer der Verantwortliche ist und für welche Zwecke ihre personenbezogenen Daten verarbeitet werden sollen.Es sollte nur dann davon ausgegangen werden, dass sie ihre Einwilligung freiwillig gegeben hat, wenn sie eine echte oder freie Wahl hat und somit in der Lage ist, die Einwilligung zu verweigern oder zurückzuziehen, ohne Nachteile zu erleiden.",
+          "score": 0.5829958915710449,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 72,
+            "total_chunks": 638,
+            "char_count": 442
+          }
+        },
+        {
+          "chunk_id": "f2b5586d-315f-42dc-91d2-683c532e4437",
+          "text": "auf elektronischem Weg zur Einwilligung aufgefordert, so muss die Aufforderung in klarer und knapper Form und ohne unnötige Unterbrechung des Dienstes, für den die Einwilligung gegeben wird, erfolgen.",
+          "score": 0.5677739381790161,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 50,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "308a4674-7a82-42e0-bec5-dff594dec252",
+          "text": "(43)\n\nUm sicherzustellen, dass die Einwilligung freiwillig erfolgt ist, sollte diese in besonderen Fällen, wenn zwischen der betroffenen Person und dem Verantwortlichen ein klares Ungleichgewicht besteht, insbesondere wenn es sich bei dem Verantwortlichen um eine Behörde handelt, und es deshalb in Anbetracht aller Umstände in dem speziellen Fall unwahrscheinlich ist, dass die Einwilligung freiwillig gegeben wurde, keine gültige Rechtsgrundlage liefern. Die Einwilligung gilt nicht als freiwillig erteilt, wenn zu verschiedenen Verarbeitungsvorgängen von personenbezogenen Daten nicht gesondert eine Einwilligung erteilt werden kann, obwohl dies im Einzelfall angebracht ist, oder wenn die Erfüllung eines Vertrags, einschließlich der Erbringung einer Dienstleistung, von der Einwilligung abhängig ist, obwohl diese Einwilligung für die Erfüllung nicht erforderlich ist.\n\n(44)",
+          "score": 0.5003734827041626,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 74,
+            "total_chunks": 638,
+            "char_count": 879
+          }
+        },
+        {
+          "chunk_id": "4077bcbb-d8a6-4a7c-a9db-bd99bf6a41a0",
+          "text": "n Verarbeitung nicht berührt. Die betroffene Person wird vor Abgabe der Einwilligung hiervon in Kenntnis gesetzt. Der Widerruf der Einwilligung muss so einfach wie die Erteilung der Einwilligung sein.(4)   Bei der Beurteilung, ob die Einwilligung freiwillig erteilt wurde, muss dem Umstand in größtmöglichem Umfang Rechnung getragen werden, ob unter anderem die Erfüllung eines Vertrags, einschließlich der Erbringung einer Dienstleistung, von der Einwilligung zu einer Verarbeitung von personenbezogenen Daten abhängig ist, die für die Erfüllung des Vertrags nicht erforderlich sind.\n\nArtikel 8\n\nBedingungen für die Einwilligung eines Kindes in Bezug auf Dienste der Informationsgesellschaft",
+          "score": 0.49428799748420715,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 387,
+            "total_chunks": 638,
+            "char_count": 692
+          }
+        }
+      ],
+      "query_time": 6.468285799026489,
+      "timestamp": 1752511883.3790746
+    },
+    {
+      "question": "Was ist ein Datenschutzbeauftragter und wann muss er bestellt werden?",
+      "answer": "{'question': 'Was ist ein Datenschutzbeauftragter und wann muss er bestellt werden?', 'answer': 'Ein Datenschutzbeauftragter ist eine Person, die für die Überwachung der Einhaltung der Datenschutzgesetze und -vorschriften innerhalb einer Organisation verantwortlich ist. Er hat die Aufgabe, den Verantwortlichen oder den Auftragsverarbeiter in Fragen des Datenschutzes zu beraten und zu unterstützen.\\n\\nEin Datenschutzbeauftragter muss bestellt werden, wenn:\\n\\n1. Der Verantwortliche oder der Auftragsverarbeiter eine Behörde oder öffentliche Stelle ist (Artikel 37 Absatz 1).\\n2. Die Kerntätigkeiten des Verantwortlichen oder des Auftragsverarbeiters in der umfangreichen Verarbeitung besonderer Kategorien von Daten bestehen (Artikel 37 Absatz 1).\\n3. Die Kerntätigkeiten des Verantwortlichen oder des Auftragsverarbeiters in der umfangreichen Überwachung von Personen bestehen (Artikel 37 Absatz 1).\\n4. Es nach dem Recht der Union oder der Mitgliedstaaten vorgeschrieben ist (Artikel 37 Absatz 4).\\n\\nZusätzlich muss der Datenschutzbeauftragte auf der Grundlage seiner beruflichen Qualifikation und seines Fachwissens im Bereich Datenschutzrecht und -praxis benannt werden (Artikel 37 Absatz 5).', 'retrieval_count': 5, 'query_time': 6.297548055648804, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "dd4b7232-8b62-4447-8f4f-0613d8772ab9",
+          "text": "ß Artikel 10 besteht.\n\n(2)   Eine Unternehmensgruppe darf einen gemeinsamen Datenschutzbeauftragten ernennen, sofern von jeder Niederlassung aus der Datenschutzbeauftragte leicht erreicht werden kann.(3)   Falls es sich bei dem Verantwortlichen oder dem Auftragsverarbeiter um eine Behörde oder öffentliche Stelle handelt, kann für mehrere solcher Behörden oder Stellen unter Berücksichtigung ihrer Organisationsstruktur und ihrer Größe ein gemeinsamer Datenschutzbeauftragter benannt werden.\n\n(4)   In anderen als den in Absatz 1 genannten Fällen können der Verantwortliche oder der Auftragsverarbeiter oder Verbände und andere Vereinigungen, die Kategorien von Verantwortlichen oder Auftragsverarbeitern vertreten, einen Datenschutzbeauftragten benennen; falls dies nach dem Recht der Union oder der Mitgliedstaaten vorgeschrieben ist, müssen sie einen solchen benennen. Der Datenschutzbeauftragte kann für derartige Verbände und andere Vereinigungen, die Verantwortliche oder Auftragsverarbeiter vertreten, handeln.",
+          "score": 0.6457259654998779,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 474,
+            "total_chunks": 638,
+            "char_count": 1018
+          }
+        },
+        {
+          "chunk_id": "fd4ff6e4-eb03-4983-a2ea-f2a4302b644e",
+          "text": "r Erfüllung seiner Aufgaben nicht abberufen oder benachteiligt werden. Der Datenschutzbeauftragte berichtet unmittelbar der höchsten Managementebene des Verantwortlichen oder des Auftragsverarbeiters.(4)   Betroffene Personen können den Datenschutzbeauftragten zu allen mit der Verarbeitung ihrer personenbezogenen Daten und mit der Wahrnehmung ihrer Rechte gemäß dieser Verordnung im Zusammenhang stehenden Fragen zu Rate ziehen.\n\n(5)   Der Datenschutzbeauftragte ist nach dem Recht der Union oder der Mitgliedstaaten bei der Erfüllung seiner Aufgaben an die Wahrung der Geheimhaltung oder der Vertraulichkeit gebunden.\n\n(6)   Der Datenschutzbeauftragte kann andere Aufgaben und Pflichten wahrnehmen. Der Verantwortliche oder der Auftragsverarbeiter stellt sicher, dass derartige Aufgaben und Pflichten nicht zu einem Interessenkonflikt führen.\n\nArtikel 39\n\nAufgaben des Datenschutzbeauftragten\n\n(1)   Dem Datenschutzbeauftragten obliegen zumindest folgende Aufgaben:\n\na)",
+          "score": 0.6410317420959473,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 477,
+            "total_chunks": 638,
+            "char_count": 972
+          }
+        },
+        {
+          "chunk_id": "fcf465b3-20b5-44e3-80ae-16a9f867d181",
+          "text": "vorgeschrieben ist, müssen sie einen solchen benennen. Der Datenschutzbeauftragte kann für derartige Verbände und andere Vereinigungen, die Verantwortliche oder Auftragsverarbeiter vertreten, handeln.(5)   Der Datenschutzbeauftragte wird auf der Grundlage seiner beruflichen Qualifikation und insbesondere des Fachwissens benannt, das er auf dem Gebiet des Datenschutzrechts und der Datenschutzpraxis besitzt, sowie auf der Grundlage seiner Fähigkeit zur Erfüllung der in Artikel 39 genannten Aufgaben.\n\n(6)   Der Datenschutzbeauftragte kann Beschäftigter des Verantwortlichen oder des Auftragsverarbeiters sein oder seine Aufgaben auf der Grundlage eines Dienstleistungsvertrags erfüllen.\n\n(7)   Der Verantwortliche oder der Auftragsverarbeiter veröffentlicht die Kontaktdaten des Datenschutzbeauftragten und teilt diese Daten der Aufsichtsbehörde mit.\n\nArtikel 38\n\nStellung des Datenschutzbeauftragten\n\n(1)   Der Verantwortliche und der Auftragsverarbeiter stellen sicher, dass der Datenschutzbeauftragte ordnungsgemäß und frühzeitig in alle mit dem Schutz personenbezogener Daten zusammenhängenden Fragen eingebunden wird.",
+          "score": 0.6405876874923706,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 475,
+            "total_chunks": 638,
+            "char_count": 1125
+          }
+        },
+        {
+          "chunk_id": "9fbc02bb-d6dc-4d81-8fa3-a68f28252d34",
+          "text": "kretariat unterstützt, das von dem Europäischen Datenschutzbeauftragten bereitgestellt wird.\n\n(2)   Das Sekretariat führt seine Aufgaben ausschließlich auf Anweisung des Vorsitzes des Ausschusses aus.(3)   Das Personal des Europäischen Datenschutzbeauftragten, das an der Wahrnehmung der dem Ausschuss gemäß dieser Verordnung übertragenen Aufgaben beteiligt ist, unterliegt anderen Berichtspflichten als das Personal, das an der Wahrnehmung der dem Europäischen Datenschutzbeauftragten übertragenen Aufgaben beteiligt ist.\n\n(4)   Soweit angebracht, erstellen und veröffentlichen der Ausschuss und der Europäische Datenschutzbeauftragte eine Vereinbarung zur Anwendung des vorliegenden Artikels, in der die Bedingungen ihrer Zusammenarbeit festgelegt sind und die für das Personal des Europäischen Datenschutzbeauftragten gilt, das an der Wahrnehmung der dem Ausschuss gemäß dieser Verordnung übertragenen Aufgaben beteiligt ist.\n\n(5)   Das Sekretariat leistet dem Ausschuss analytische, administrative und logistische Unterstützung.\n\n(6)   Das Sekretariat ist insbesondere verantwortlich für\n\na)\n\ndas Tagesgeschäft des Ausschusses,\n\nb)",
+          "score": 0.5856815576553345,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 593,
+            "total_chunks": 638,
+            "char_count": 1135
+          }
+        },
+        {
+          "chunk_id": "7f15c1d0-4da8-42fb-a55c-e23e22e2af00",
+          "text": "(84)\n\nDamit diese Verordnung in Fällen, in denen die Verarbeitungsvorgänge wahrscheinlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen mit sich bringen, besser eingehalten wird, sollte der Verantwortliche für die Durchführung einer Datenschutz-Folgenabschätzung, mit der insbesondere die Ursache, Art, Besonderheit und Schwere dieses Risikos evaluiert werden, verantwortlich sein. Die Ergebnisse der Abschätzung sollten berücksichtigt werden, wenn darüber entschieden wird, welche geeigneten Maßnahmen ergriffen werden müssen, um nachzuweisen, dass die Verarbeitung der personenbezogenen Daten mit dieser Verordnung in Einklang steht. Geht aus einer Datenschutz-Folgenabschätzung hervor, dass Verarbeitungsvorgänge ein hohes Risiko bergen, das der Verantwortliche nicht durch geeignete Maßnahmen in Bezug auf verfügbare Technik und Implementierungskosten eindämmen kann, so sollte die Aufsichtsbehörde vor der Verarbeitung konsultiert werden.\n\n(85)",
+          "score": 0.5826088786125183,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 177,
+            "total_chunks": 638,
+            "char_count": 971
+          }
+        }
+      ],
+      "query_time": 6.297548055648804,
+      "timestamp": 1752511889.691648
+    },
+    {
+      "question": "Was sind besondere Kategorien personenbezogener Daten?",
+      "answer": "{'question': 'Was sind besondere Kategorien personenbezogener Daten?', 'answer': 'Im bereitgestellten Kontext sind keine Informationen zu besonderen Kategorien personenbezogener Daten enthalten. Daher kann ich diese Frage nicht beantworten.', 'retrieval_count': 5, 'query_time': 0.8597753047943115, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "13cfcc9a-26e2-4c26-89ad-b1b19d5e4644",
+          "text": "antwortlichen sowie eines etwaigen Datenschutzbeauftragten;\n\nb)\n\ndie Zwecke der Verarbeitung;\n\nc)\n\neine Beschreibung der Kategorien betroffener Personen und der Kategorien personenbezogener Daten;\n\nd)die Kategorien von Empfängern, gegenüber denen die personenbezogenen Daten offengelegt worden sind oder noch offengelegt werden, einschließlich Empfänger in Drittländern oder internationalen Organisationen;\n\ne)\n\ngegebenenfalls Übermittlungen von personenbezogenen Daten an ein Drittland oder an eine internationale Organisation, einschließlich der Angabe des betreffenden Drittlands oder der betreffenden internationalen Organisation, sowie bei den in Artikel 49 Absatz 1 Unterabsatz 2 genannten Datenübermittlungen die Dokumentierung geeigneter Garantien;\n\nf)\n\nwenn möglich, die vorgesehenen Fristen für die Löschung der verschiedenen Datenkategorien;\n\ng)\n\nwenn möglich, eine allgemeine Beschreibung der technischen und organisatorischen Maßnahmen gemäß Artikel 32 Absatz 1.\n\n(2)   Jeder Auftragsverarbeiter und gegebenenfalls sein Vertreter führen ein Verzeichnis zu allen Kategorien von im Auftrag eines Verantwortlichen durchgeführten Tätigkeiten der Verarbeitung, die Folgendes enthält:\n\na)",
+          "score": 0.5343846678733826,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 452,
+            "total_chunks": 638,
+            "char_count": 1195
+          }
+        },
+        {
+          "chunk_id": "db9732cb-a5ff-43eb-834b-dbc81ac1a072",
+          "text": "ung dieser Verordnung sowie die Förderung der Information der Öffentlichkeit über Risiken, Vorschriften, Garantien und Rechte im Zusammenhang mit der Verarbeitung personenbezogener Daten einschließen.",
+          "score": 0.5335335731506348,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 250,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "aec10c28-0ba9-4fee-95d1-cede5b644d3d",
+          "text": "r Erhebung und Verarbeitung personenbezogener Daten zu verstehen. Diese statistischen Ergebnisse können für verschiedene Zwecke, so auch für wissenschaftliche Forschungszwecke, weiterverwendet werden.Im Zusammenhang mit den statistischen Zwecken wird vorausgesetzt, dass die Ergebnisse der Verarbeitung zu statistischen Zwecken keine personenbezogenen Daten, sondern aggregierte Daten sind und diese Ergebnisse oder personenbezogenen Daten nicht für Maßnahmen oder Entscheidungen gegenüber einzelnen natürlichen Personen verwendet werden.",
+          "score": 0.529092013835907,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 345,
+            "total_chunks": 638,
+            "char_count": 538
+          }
+        },
+        {
+          "chunk_id": "36c68f08-a57f-4415-b033-ce55769bcc81",
+          "text": "er eine Verletzung des Schutzes personenbezogener Daten bekannt wird, meldet er diese dem Verantwortlichen unverzüglich.\n\n(3)   Die Meldung gemäß Absatz 1 enthält zumindest folgende Informationen:\n\na)eine Beschreibung der Art der Verletzung des Schutzes personenbezogener Daten, soweit möglich mit Angabe der Kategorien und der ungefähren Zahl der betroffenen Personen, der betroffenen Kategorien und der ungefähren Zahl der betroffenen personenbezogenen Datensätze;\n\nb)\n\nden Namen und die Kontaktdaten des Datenschutzbeauftragten oder einer sonstigen Anlaufstelle für weitere Informationen;\n\nc)\n\neine Beschreibung der wahrscheinlichen Folgen der Verletzung des Schutzes personenbezogener Daten;\n\nd)\n\neine Beschreibung der von dem Verantwortlichen ergriffenen oder vorgeschlagenen Maßnahmen zur Behebung der Verletzung des Schutzes personenbezogener Daten und gegebenenfalls Maßnahmen zur Abmilderung ihrer möglichen nachteiligen Auswirkungen.\n\n(4)   Wenn und soweit die Informationen nicht zur gleichen Zeit bereitgestellt werden können, kann der Verantwortliche diese Informationen ohne unangemessene weitere Verzögerung schrittweise zur Verfügung stellen.",
+          "score": 0.5290015935897827,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 459,
+            "total_chunks": 638,
+            "char_count": 1158
+          }
+        },
+        {
+          "chunk_id": "683b52c5-5a9c-47e0-9c15-7991b51b3d0b",
+          "text": "ür den die Daten erhoben wurden, so sollte er der betroffenen Person vor dieser Weiterverarbeitung Informationen über diesen anderen Zweck und andere erforderliche Informationen zur Verfügung stellen.Konnte der betroffenen Person nicht mitgeteilt werden, woher die personenbezogenen Daten stammen, weil verschiedene Quellen benutzt wurden, so sollte die Unterrichtung allgemein gehalten werden.",
+          "score": 0.5275928974151611,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 124,
+            "total_chunks": 638,
+            "char_count": 394
+          }
+        }
+      ],
+      "query_time": 0.8597753047943115,
+      "timestamp": 1752511890.5651877
+    },
+    {
+      "question": "Welche Informationspflichten hat der Verantwortliche?",
+      "answer": "{'question': 'Welche Informationspflichten hat der Verantwortliche?', 'answer': 'Der Verantwortliche hat folgende Informationspflichten gemäß der DSGVO:\\n\\n1. **Zugänglichkeit und Verständlichkeit**: Alle Informationen und Mitteilungen zur Verarbeitung personenbezogener Daten müssen leicht zugänglich und verständlich sein, in klarer und einfacher Sprache abgefasst werden (Kontext 5).\\n\\n2. **Identität des Verantwortlichen**: Die betroffenen Personen müssen über die Identität des Verantwortlichen informiert werden (Kontext 5).\\n\\n3. **Zwecke der Verarbeitung**: Die Zwecke, zu denen die personenbezogenen Daten verarbeitet werden, müssen eindeutig und rechtmäßig sein und zum Zeitpunkt der Erhebung der Daten feststehen (Kontext 5).\\n\\n4. **Rechte der betroffenen Personen**: Die betroffenen Personen müssen über ihre Rechte informiert werden, einschließlich des Rechts auf Bestätigung und Auskunft darüber, welche sie betreffenden personenbezogenen Daten verarbeitet werden (Kontext 5).\\n\\n5. **Risiken und Garantien**: Die betroffenen Personen sollten über die Risiken, Vorschriften, Garantien und Rechte im Zusammenhang mit der Verarbeitung personenbezogener Daten aufgeklärt werden (Kontext 5).\\n\\nDiese Informationspflichten sind darauf ausgelegt, eine faire und transparente Verarbeitung der personenbezogenen Daten zu gewährleisten.', 'retrieval_count': 5, 'query_time': 7.0984697341918945, 'pipeline_config': {'chunker': 'recursive_chunker', 'embedding': 'sentence_transformer', 'vector_store': 'in_memory', 'language_model': 'openai'}}",
+      "retrieved_contexts": [
+        {
+          "chunk_id": "551358f3-b52c-4607-8373-2a8eafc1c043",
+          "text": "erson, so sollte er verlangen können, dass die betroffene Person präzisiert, auf welche Information oder welche Verarbeitungsvorgänge sich ihr Auskunftsersuchen bezieht, bevor er ihr Auskunft erteilt.",
+          "score": 0.5743803381919861,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 129,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "467b4a22-291d-4dfc-a768-2732cab27a35",
+          "text": "(74)\n\nDie Verantwortung und Haftung des Verantwortlichen für jedwede Verarbeitung personenbezogener Daten, die durch ihn oder in seinem Namen erfolgt, sollte geregelt werden. Insbesondere sollte der Verantwortliche geeignete und wirksame Maßnahmen treffen müssen und nachweisen können, dass die Verarbeitungstätigkeiten im Einklang mit dieser Verordnung stehen und die Maßnahmen auch wirksam sind. Dabei sollte er die Art, den Umfang, die Umstände und die Zwecke der Verarbeitung und das Risiko für die Rechte und Freiheiten natürlicher Personen berücksichtigen.\n\n(75)",
+          "score": 0.5358267426490784,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 154,
+            "total_chunks": 638,
+            "char_count": 568
+          }
+        },
+        {
+          "chunk_id": "4b143694-bdc1-4fa6-ba7e-daeb3dd352ad",
+          "text": "Interesse des jeweiligen Verantwortlichen dar. Die Verarbeitung personenbezogener Daten zum Zwecke der Direktwerbung kann als eine einem berechtigten Interesse dienende Verarbeitung betrachtet werden.",
+          "score": 0.5289106965065002,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 84,
+            "total_chunks": 638,
+            "char_count": 200
+          }
+        },
+        {
+          "chunk_id": "aa7d0ae6-07f1-4826-bdd2-45ec533371f5",
+          "text": "deren maßgeblichen Informationen gemäß Absatz 2 zur Verfügung.\n\n(5)   Die Absätze 1 bis 4 finden keine Anwendung, wenn und soweit\n\na)\n\ndie betroffene Person bereits über die Informationen verfügt,\n\nb)die Erteilung dieser Informationen sich als unmöglich erweist oder einen unverhältnismäßigen Aufwand erfordern würde; dies gilt insbesondere für die Verarbeitung für im öffentlichen Interesse liegende Archivzwecke, für wissenschaftliche oder historische Forschungszwecke oder für statistische Zwecke vorbehaltlich der in Artikel 89 Absatz 1 genannten Bedingungen und Garantien oder soweit die in Absatz 1 des vorliegenden Artikels genannte Pflicht voraussichtlich die Verwirklichung der Ziele dieser Verarbeitung unmöglich macht oder ernsthaft beeinträchtigt In diesen Fällen ergreift der Verantwortliche geeignete Maßnahmen zum Schutz der Rechte und Freiheiten sowie der berechtigten Interessen der betroffenen Person, einschließlich der Bereitstellung dieser Informationen für die Öffentlichkeit,\n\nc)",
+          "score": 0.5270712375640869,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 413,
+            "total_chunks": 638,
+            "char_count": 1002
+          }
+        },
+        {
+          "chunk_id": "7b31f260-2d0b-4f98-ab71-1833d5e9f0da",
+          "text": "ransparenz setzt voraus, dass alle Informationen und Mitteilungen zur Verarbeitung dieser personenbezogenen Daten leicht zugänglich und verständlich und in klarer und einfacher Sprache abgefasst sind.Dieser Grundsatz betrifft insbesondere die Informationen über die Identität des Verantwortlichen und die Zwecke der Verarbeitung und sonstige Informationen, die eine faire und transparente Verarbeitung im Hinblick auf die betroffenen natürlichen Personen gewährleisten, sowie deren Recht, eine Bestätigung und Auskunft darüber zu erhalten, welche sie betreffende personenbezogene Daten verarbeitet werden. Natürliche Personen sollten über die Risiken, Vorschriften, Garantien und Rechte im Zusammenhang mit der Verarbeitung personenbezogener Daten informiert und darüber aufgeklärt werden, wie sie ihre diesbezüglichen Rechte geltend machen können. Insbesondere sollten die bestimmten Zwecke, zu denen die personenbezogenen Daten verarbeitet werden, eindeutig und rechtmäßig sein und zum Zeitpunkt der Erhebung der personenbezogenen Daten feststehen.",
+          "score": 0.5254573822021484,
+          "metadata": {
+            "source_doc": 0,
+            "chunk_index": 65,
+            "total_chunks": 638,
+            "char_count": 1050
+          }
+        }
+      ],
+      "query_time": 7.0984697341918945,
+      "timestamp": 1752511897.6781943
+    }
+  ],
+  "ground_truth": [
+    {
+      "question": "Was ist die maximale Geldbuße nach Art. 83 DSGVO?",
+      "gold_answer": "20 Millionen Euro oder 4% des weltweiten Jahresumsatzes, je nachdem welcher Betrag höher ist.",
+      "relevant_chunks": [],
+      "category": "faktenfragen",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Welche Rechtsgrundlagen für die Verarbeitung personenbezogener Daten gibt es?",
+      "gold_answer": "Die Rechtsgrundlagen sind in Art. 6 DSGVO aufgeführt: Einwilligung, Vertragserfüllung, rechtliche Verpflichtung, Schutz lebenswichtiger Interessen, öffentliche Aufgabe und berechtigte Interessen.",
+      "relevant_chunks": [],
+      "category": "faktenfragen",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Wie läuft das Verfahren bei einer Datenschutz-Folgenabschätzung ab?",
+      "gold_answer": "Eine Datenschutz-Folgenabschätzung nach Art. 35 DSGVO umfasst die Beschreibung der Verarbeitung, Bewertung der Notwendigkeit und Verhältnismäßigkeit, Risikobewertung und Schutzmaßnahmen.",
+      "relevant_chunks": [],
+      "category": "prozessfragen",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Welche Rechte haben betroffene Personen?",
+      "gold_answer": "Betroffene Personen haben verschiedene Rechte: Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21).",
+      "relevant_chunks": [],
+      "category": "faktenfragen",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Was sind die Grundsätze der Datenverarbeitung?",
+      "gold_answer": "Die Grundsätze nach Art. 5 DSGVO sind: Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit sowie Rechenschaftspflicht.",
+      "relevant_chunks": [],
+      "category": "faktenfragen",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Was versteht man unter personenbezogenen Daten?",
+      "gold_answer": "Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Eine identifizierbare Person ist eine Person, die direkt oder indirekt identifiziert werden kann.",
+      "relevant_chunks": [],
+      "category": "faktenfragen",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Wann ist eine Einwilligung gültig?",
+      "gold_answer": "Eine Einwilligung ist gültig, wenn sie freiwillig, für den bestimmten Fall, in informierter Weise und unmissverständlich abgegeben wurde. Sie muss durch eine eindeutige bestätigende Handlung erfolgen.",
+      "relevant_chunks": [],
+      "category": "faktenfragen",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Was ist ein Datenschutzbeauftragter und wann muss er bestellt werden?",
+      "gold_answer": "Ein Datenschutzbeauftragter ist eine Person, die den Verantwortlichen bei der Einhaltung der DSGVO unterstützt. Er muss bestellt werden bei öffentlichen Stellen, bei Kerntätigkeiten mit regelmäßiger Überwachung oder bei umfangreicher Verarbeitung besonderer Kategorien.",
+      "relevant_chunks": [],
+      "category": "faktenfragen",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Was sind besondere Kategorien personenbezogener Daten?",
+      "gold_answer": "Besondere Kategorien sind Daten über rassische/ethnische Herkunft, politische Meinungen, religiöse Überzeugungen, Gewerkschaftszugehörigkeit, Gesundheit, Sexualleben, sexuelle Orientierung, genetische und biometrische Daten.",
+      "relevant_chunks": [],
+      "category": "faktenfragen",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Welche Informationspflichten hat der Verantwortliche?",
+      "gold_answer": "Der Verantwortliche muss über Identität, Zwecke, Rechtsgrundlagen, Empfänger, Speicherdauer, Betroffenenrechte, Widerrufsrecht und Beschwerderecht informieren. Bei indirekter Erhebung zusätzlich über Kategorien und Herkunft der Daten.",
+      "relevant_chunks": [],
+      "category": "faktenfragen",
+      "difficulty": "medium"
+    }
+  ]
+}

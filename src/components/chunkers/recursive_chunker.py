@@ -28,6 +28,9 @@ class RecursiveChunker(BaseChunker):
         """
         super().__init__(chunk_size, chunk_overlap)
 
+        # Ensure chunk_overlap is available as attribute
+        self.chunk_overlap = chunk_overlap
+
         if separators is None:
             # Default separators in order of preference
             self.separators = [

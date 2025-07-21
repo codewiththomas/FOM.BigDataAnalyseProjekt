@@ -22,20 +22,35 @@ class ComponentLoader:
         """
         Initialisiert den Component Loader.
         """
+        # Alle verfügbaren Komponenten importieren
+        try:
+            from components.chunkers import RecursiveChunker, SemanticChunker
+            from components.embeddings import SentenceTransformerEmbedding
+            from components.language_models import OllamaLanguageModel
+            from components.vector_stores import ChromaVectorStore, FAISSVectorStore
+        except ImportError as e:
+            print(f"Warning: Einige Komponenten nicht verfügbar: {e}")
+
         self._chunker_registry = {
             "line_chunker": LineChunker,
+            "recursive_chunker": RecursiveChunker,
+            "semantic_chunker": SemanticChunker,
         }
 
         self._embedding_registry = {
             "openai": OpenAIEmbedding,
+            "sentence_transformer": SentenceTransformerEmbedding,
         }
 
         self._vector_store_registry = {
             "in_memory": InMemoryVectorStore,
+            "chroma": ChromaVectorStore,
+            "faiss": FAISSVectorStore,
         }
 
         self._language_model_registry = {
             "openai": OpenAILanguageModel,
+            "ollama": OllamaLanguageModel,
         }
 
         self._evaluator_registry = {

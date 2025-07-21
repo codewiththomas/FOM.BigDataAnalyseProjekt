@@ -295,3 +295,44 @@ def create_custom_config(
             config[key] = value
 
     return PipelineConfig(config)
+
+
+def get_local_config() -> PipelineConfig:
+    """
+    Vollständig lokale Konfiguration ohne API-Abhängigkeiten.
+
+    Returns:
+        Lokale Pipeline-Konfiguration
+    """
+    return PipelineConfig({
+        "chunker": {
+            "type": "recursive_chunker",
+            "chunk_size": 1000,
+            "chunk_overlap": 200,
+            "separators": ["\n\n", "\n", ". ", " "]
+        },
+        "embedding": {
+            "type": "sentence_transformer",
+            "model": "all-MiniLM-L6-v2",
+            "dimensions": 384,
+            "normalize_embeddings": True,
+            "batch_size": 32
+        },
+        "vector_store": {
+            "type": "in_memory",
+            "similarity_metric": "cosine",
+            "top_k": 5
+        },
+        "language_model": {
+            "type": "ollama",
+            "model": "llama3.2",
+            "base_url": "http://localhost:11434",
+            "temperature": 0.1,
+            "max_tokens": 500
+        },
+        "pipeline": {
+            "name": "local_pipeline",
+            "version": "1.0.0",
+            "description": "Vollständig lokale RAG Pipeline"
+        }
+    })

@@ -1,0 +1,362 @@
+{
+  "metadata": {
+    "timestamp": "2025-07-14T18:40:03.632096",
+    "test_type": "local_rag_retrieval",
+    "system_config": {
+      "chunker": "recursive_chunker",
+      "embedding": "sentence_transformer",
+      "vector_store": "in_memory",
+      "language_model": "openai"
+    },
+    "performance_metrics": {
+      "pipeline_creation_time": 14.082050561904907,
+      "document_length": 402370
+    },
+    "test_questions": [
+      {
+        "id": "dsgvo_001",
+        "question": "Was ist die maximale Geldbuße nach Art. 83 DSGVO?",
+        "category": "faktenfragen",
+        "difficulty": "easy",
+        "gold_answer": "20 Millionen Euro oder 4% des weltweiten Jahresumsatzes, je nachdem welcher Betrag höher ist.",
+        "relevant_articles": [
+          "Art. 83"
+        ],
+        "keywords": [
+          "Geldbuße",
+          "Sanktionen",
+          "Artikel 83"
+        ]
+      },
+      {
+        "id": "dsgvo_002",
+        "question": "Welche Rechtsgrundlagen für die Verarbeitung personenbezogener Daten gibt es?",
+        "category": "faktenfragen",
+        "difficulty": "medium",
+        "gold_answer": "Die Rechtsgrundlagen sind in Art. 6 DSGVO aufgeführt: Einwilligung, Vertragserfüllung, rechtliche Verpflichtung, Schutz lebenswichtiger Interessen, öffentliche Aufgabe und berechtigte Interessen.",
+        "relevant_articles": [
+          "Art. 6"
+        ],
+        "keywords": [
+          "Rechtsgrundlagen",
+          "Verarbeitung",
+          "Artikel 6"
+        ]
+      },
+      {
+        "id": "dsgvo_003",
+        "question": "Wie läuft das Verfahren bei einer Datenschutz-Folgenabschätzung ab?",
+        "category": "prozessfragen",
+        "difficulty": "hard",
+        "gold_answer": "Eine Datenschutz-Folgenabschätzung nach Art. 35 DSGVO umfasst die Beschreibung der Verarbeitung, Bewertung der Notwendigkeit und Verhältnismäßigkeit, Risikobewertung und Schutzmaßnahmen.",
+        "relevant_articles": [
+          "Art. 35"
+        ],
+        "keywords": [
+          "Datenschutz-Folgenabschätzung",
+          "DSFA",
+          "Artikel 35"
+        ]
+      },
+      {
+        "id": "dsgvo_004",
+        "question": "Welche Rechte haben betroffene Personen?",
+        "category": "faktenfragen",
+        "difficulty": "medium",
+        "gold_answer": "Betroffene Personen haben verschiedene Rechte: Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21).",
+        "relevant_articles": [
+          "Art. 15",
+          "Art. 16",
+          "Art. 17",
+          "Art. 18",
+          "Art. 20",
+          "Art. 21"
+        ],
+        "keywords": [
+          "Betroffenenrechte",
+          "Auskunft",
+          "Löschung",
+          "Berichtigung"
+        ]
+      },
+      {
+        "id": "dsgvo_005",
+        "question": "Was sind die Grundsätze der Datenverarbeitung?",
+        "category": "faktenfragen",
+        "difficulty": "medium",
+        "gold_answer": "Die Grundsätze nach Art. 5 DSGVO sind: Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit sowie Rechenschaftspflicht.",
+        "relevant_articles": [
+          "Art. 5"
+        ],
+        "keywords": [
+          "Grundsätze",
+          "Artikel 5",
+          "Datenverarbeitung"
+        ]
+      }
+    ]
+  },
+  "results": {
+    "system_status": "success",
+    "indexing_results": {
+      "indexing_time": 15.477678060531616,
+      "chunk_count": 638,
+      "avg_chunk_length": 630.6739811912225,
+      "chunks_per_second": 41.220653221035306,
+      "embedding_dimension": 384
+    },
+    "retrieval_results": [
+      {
+        "question_id": "dsgvo_001",
+        "question": "Was ist die maximale Geldbuße nach Art. 83 DSGVO?",
+        "category": "faktenfragen",
+        "difficulty": "easy",
+        "retrieval_time": 0.020618677139282227,
+        "chunks_found": 5,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "similarity_score": 0.46482858061790466,
+            "chunk_id": "4a1b42b6-f8cf-4c56-acef-d8ced9d28599",
+            "chunk_text": "(151)\n\nNach den Rechtsordnungen Dänemarks und Estlands sind die in dieser Verordnung vorgesehenen Geldbußen nicht zulässig. Die Vorschriften über die Geldbußen können so angewandt werden, dass die Geldbuße in Dänemark durch die zuständigen nationalen Gerichte als Strafe und in Estland durch die Aufs...",
+            "chunk_length": 768,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 313,
+              "total_chunks": 638,
+              "char_count": 768
+            }
+          },
+          {
+            "rank": 2,
+            "similarity_score": 0.43677300214767456,
+            "chunk_id": "5123f21f-00ad-40b2-8489-4607051afffe",
+            "chunk_text": " nationalen Vorschriften und von verwaltungsrechtlichen Sanktionen sollte jedoch nicht zu einer Verletzung des Grundsatzes „ne bis in idem“, wie er vom Gerichtshof ausgelegt worden ist, führen.\n\n(150)Um die verwaltungsrechtlichen Sanktionen bei Verstößen gegen diese Verordnung zu vereinheitlichen un...",
+            "chunk_length": 1112,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 310,
+              "total_chunks": 638,
+              "char_count": 1112
+            }
+          },
+          {
+            "rank": 3,
+            "similarity_score": 0.42562562227249146,
+            "chunk_id": "f8ce33e3-449c-4841-b901-fae56c4f1ad1",
+            "chunk_text": "egenheit gemäß Artikel 40 Absatz 7 und damit die Frage betrifft, ob ein Entwurf von Verhaltensregeln oder eine Änderung oder Ergänzung von Verhaltensregeln mit dieser Verordnung in Einklang steht,\n\nc)der Billigung der Kriterien für die Akkreditierung einer Stelle nach Artikel 41 Absatz 3 oder einer ...",
+            "chunk_length": 1078,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 569,
+              "total_chunks": 638,
+              "char_count": 1078
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "dsgvo_002",
+        "question": "Welche Rechtsgrundlagen für die Verarbeitung personenbezogener Daten gibt es?",
+        "category": "faktenfragen",
+        "difficulty": "medium",
+        "retrieval_time": 0.020557641983032227,
+        "chunks_found": 5,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "similarity_score": 0.7467489242553711,
+            "chunk_id": "89d20353-1dfe-4c7b-91a8-ac389ded66be",
+            "chunk_text": "weit technisch machbar, sollte die betroffene Person das Recht haben, zu erwirken, dass die personenbezogenen Daten direkt von einem Verantwortlichen einem anderen Verantwortlichen übermittelt werden.",
+            "chunk_length": 200,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 140,
+              "total_chunks": 638,
+              "char_count": 200
+            }
+          },
+          {
+            "rank": 2,
+            "similarity_score": 0.7456156015396118,
+            "chunk_id": "21d6a821-a551-49d9-9658-6ae321f957ec",
+            "chunk_text": "(72)\n\nDas Profiling unterliegt den Vorschriften dieser Verordnung für die Verarbeitung personenbezogener Daten, wie etwa die Rechtsgrundlage für die Verarbeitung oder die Datenschutzgrundsätze. Der durch diese Verordnung eingerichtete Europäische Datenschutzausschuss (im Folgenden „Ausschuss“) sollt...",
+            "chunk_length": 353,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 150,
+              "total_chunks": 638,
+              "char_count": 353
+            }
+          },
+          {
+            "rank": 3,
+            "similarity_score": 0.7435224056243896,
+            "chunk_id": "8c55548f-e6a1-4ea8-a2c5-cf1acbe31d0f",
+            "chunk_text": "r Erhebung und Verarbeitung personenbezogener Daten zu verstehen. Diese statistischen Ergebnisse können für verschiedene Zwecke, so auch für wissenschaftliche Forschungszwecke, weiterverwendet werden.Im Zusammenhang mit den statistischen Zwecken wird vorausgesetzt, dass die Ergebnisse der Verarbeitu...",
+            "chunk_length": 538,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 345,
+              "total_chunks": 638,
+              "char_count": 538
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "dsgvo_003",
+        "question": "Wie läuft das Verfahren bei einer Datenschutz-Folgenabschätzung ab?",
+        "category": "prozessfragen",
+        "difficulty": "hard",
+        "retrieval_time": 0.018609285354614258,
+        "chunks_found": 5,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "similarity_score": 0.6323487758636475,
+            "chunk_id": "c239b530-512a-4216-b9fe-c578bf287cab",
+            "chunk_text": "igt wurden, einzuhalten;\n\nc)\n\nVerfahren für die Erteilung, die regelmäßige Überprüfung und den Widerruf der Datenschutzzertifizierung sowie der Datenschutzsiegel und -prüfzeichen festgelegt haben;\n\nd)Verfahren und Strukturen festgelegt haben, mit denen sie Beschwerden über Verletzungen der Zertifizi...",
+            "chunk_length": 703,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 496,
+              "total_chunks": 638,
+              "char_count": 703
+            }
+          },
+          {
+            "rank": 2,
+            "similarity_score": 0.6253435611724854,
+            "chunk_id": "1a61fee3-c792-4c40-8c6b-f2120b71abbf",
+            "chunk_text": "ängen gehören insbesondere solche, bei denen neue Technologien eingesetzt werden oder die neuartig sind und bei denen der Verantwortliche noch keine Datenschutz-Folgenabschätzung durchgeführt hat bzw.bei denen aufgrund der seit der ursprünglichen Verarbeitung vergangenen Zeit eine Datenschutz-Folgen...",
+            "chunk_length": 335,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 188,
+              "total_chunks": 638,
+              "char_count": 335
+            }
+          },
+          {
+            "rank": 3,
+            "similarity_score": 0.6076747179031372,
+            "chunk_id": "3ca83d91-165a-417c-9858-b54663e2ade7",
+            "chunk_text": "(90)\n\nIn derartigen Fällen sollte der Verantwortliche vor der Verarbeitung eine Datenschutz-Folgenabschätzung durchführen, mit der die spezifische Eintrittswahrscheinlichkeit und die Schwere dieses hohen Risikos unter Berücksichtigung der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitun...",
+            "chunk_length": 621,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 189,
+              "total_chunks": 638,
+              "char_count": 621
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "dsgvo_004",
+        "question": "Welche Rechte haben betroffene Personen?",
+        "category": "faktenfragen",
+        "difficulty": "medium",
+        "retrieval_time": 0.015032052993774414,
+        "chunks_found": 5,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "similarity_score": 0.5842071771621704,
+            "chunk_id": "5ed5f056-a815-499b-bbf1-2f7e2cc0910d",
+            "chunk_text": "hutzbehörden der Mitgliedstaaten vorsehen, und den betroffenen Personen sollten wirksame und durchsetzbare Rechte sowie wirksame verwaltungsrechtliche und gerichtliche Rechtsbehelfe eingeräumt werden.",
+            "chunk_length": 200,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 211,
+              "total_chunks": 638,
+              "char_count": 200
+            }
+          },
+          {
+            "rank": 2,
+            "similarity_score": 0.5663766264915466,
+            "chunk_id": "283eda7a-0d26-4ea7-815e-20d4b540dfd3",
+            "chunk_text": "thalten, bei denen Rechtsvorschriften vorsehen, dass ihre Weiterverwendung nicht mit dem Recht über den Schutz natürlicher Personen in Bezug auf die Verarbeitung personenbezogener Daten vereinbar ist.",
+            "chunk_length": 200,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 322,
+              "total_chunks": 638,
+              "char_count": 200
+            }
+          },
+          {
+            "rank": 3,
+            "similarity_score": 0.562787652015686,
+            "chunk_id": "465b5f44-2ef5-4f67-9d9b-5ac1551d55e5",
+            "chunk_text": " dieser Personen oder nur dann erfolgen, wenn diese Personen die Adressaten der Übermittlung sind, wobei den Interessen und Grundrechten der betroffenen Person in vollem Umfang Rechnung zu tragen ist.",
+            "chunk_length": 200,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 225,
+              "total_chunks": 638,
+              "char_count": 200
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "dsgvo_005",
+        "question": "Was sind die Grundsätze der Datenverarbeitung?",
+        "category": "faktenfragen",
+        "difficulty": "medium",
+        "retrieval_time": 0.013515710830688477,
+        "chunks_found": 5,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "similarity_score": 0.7042407989501953,
+            "chunk_id": "21d6a821-a551-49d9-9658-6ae321f957ec",
+            "chunk_text": "(72)\n\nDas Profiling unterliegt den Vorschriften dieser Verordnung für die Verarbeitung personenbezogener Daten, wie etwa die Rechtsgrundlage für die Verarbeitung oder die Datenschutzgrundsätze. Der durch diese Verordnung eingerichtete Europäische Datenschutzausschuss (im Folgenden „Ausschuss“) sollt...",
+            "chunk_length": 353,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 150,
+              "total_chunks": 638,
+              "char_count": 353
+            }
+          },
+          {
+            "rank": 2,
+            "similarity_score": 0.6993634700775146,
+            "chunk_id": "3d64d718-4868-4ceb-9bff-cde1065f75ec",
+            "chunk_text": "llten immer schriftlich erfolgen, mit Gründen versehen sein und gelegentlichen Charakter haben, und sie sollten nicht vollständige Dateisysteme betreffen oder zur Verknüpfung von Dateisystemen führen.Die Verarbeitung personenbezogener Daten durch die genannten Behörden sollte den für die Zwecke der ...",
+            "chunk_length": 359,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 46,
+              "total_chunks": 638,
+              "char_count": 359
+            }
+          },
+          {
+            "rank": 3,
+            "similarity_score": 0.6608135104179382,
+            "chunk_id": "1d909165-26e4-4caf-b511-d434eed93be8",
+            "chunk_text": "s sollte jedoch den freien Verkehr personenbezogener Daten innerhalb der Union nicht beeinträchtigen, falls die betreffenden Bedingungen für die grenzüberschreitende Verarbeitung solcher Daten gelten.",
+            "chunk_length": 200,
+            "metadata": {
+              "source_doc": 0,
+              "chunk_index": 110,
+              "total_chunks": 638,
+              "char_count": 200
+            }
+          }
+        ]
+      }
+    ],
+    "overall_performance": {
+      "total_retrieval_time": 0.0883333683013916,
+      "avg_retrieval_time": 0.01766667366027832,
+      "avg_similarity_score": 0.6264748513698578,
+      "questions_tested": 5
+    }
+  }
+}

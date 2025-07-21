@@ -14,6 +14,8 @@ class SentenceTransformerEmbedding(BaseEmbedding):
 
     def __init__(self,
                  model_name: str = "all-MiniLM-L6-v2",
+                 model: Optional[str] = None,
+                 dimensions: Optional[int] = None,
                  device: Optional[str] = None,
                  normalize_embeddings: bool = True,
                  batch_size: int = 32,
@@ -30,7 +32,15 @@ class SentenceTransformerEmbedding(BaseEmbedding):
             show_progress_bar: Whether to show progress bar during encoding
             cache_folder: Custom cache folder for models
         """
-        super().__init__()
+                # Use model parameter if provided, otherwise use model_name
+        if model is not None:
+            model_name = model
+
+        # Use provided dimensions or default based on model
+        if dimensions is None:
+            dimensions = 384 if model_name == "all-MiniLM-L6-v2" else None
+
+        super().__init__(model_name=model_name, dimensions=dimensions)
 
         self.model_name = model_name
         self.device = device
@@ -52,6 +62,16 @@ class SentenceTransformerEmbedding(BaseEmbedding):
         # Initialize the model
         self.model = None
         self._embedding_dimension = None
+
+        # Load model if available
+        if self.available:
+            self.load_model()
+
+    def load_model(self) -> None:
+        """Load the sentence transformer model."""
+        if not self.available:
+            raise RuntimeError("sentence-transformers library not available")
+
         self._initialize_model()
 
     def _initialize_model(self):
