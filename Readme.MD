@@ -1,241 +1,318 @@
-# Forschungs-RAG-System für Big Data Analyse
+# Simple Research RAG 🔍
 
-Ein modulares, erweiterbares RAG-System (Retrieval-Augmented Generation) für Forschungszwecke mit DSGVO-Daten.
+Ein einfaches, modulares RAG-System (Retrieval-Augmented Generation) zur Evaluierung verschiedener Sprachmodelle, mit besonderem Fokus auf deutsche und On-Premise-Modelle.
 
 ## 🎯 Projektziel
 
-Dieses System ermöglicht die systematische Evaluierung verschiedener RAG-Komponenten:
+Dieses Projekt ermöglicht die systematische Evaluierung und den Vergleich verschiedener Sprachmodelle für deutsche Dokumente durch ein benutzerfreundliches RAG-System.
 
-- **Chunker**: Line Chunker vs. Recursive Character Chunker
-- **Embeddings**: OpenAI Embeddings vs. lokale Sentence Transformers
-- **Vector Stores**: In-Memory vs. Chroma DB
-- **Language Models**: OpenAI LLM vs. lokale Small Language Models (SLM)
+## ✨ Features
 
-## 📊 Evaluierungsmetriken
+- **Modulare Architektur**: Einfacher Wechsel zwischen verschiedenen Sprachmodellen
+- **Mehrere Model-Provider**: OpenAI, Groq, Ollama (lokal)
+- **Umfassende Evaluierung**: RAGAS, BERTScore, Performance-Metriken
+- **Web-Interface**: Streamlit-basierte Benutzeroberfläche
+- **Deutsche Optimierung**: Spezielle Unterstützung für deutsche Texte
 
-- **Precision, Recall, F1-Score**
-- **RAGAS-Metriken** (Context Relevance, Answer Relevance, Faithfulness)
-- **Mean Reciprocal Rank (MRR)**
-- **Normalized Discounted Cumulative Gain (nDCG)**
-
-## 🏗️ Systemarchitektur
+## 🏗️ Architektur
 
 ```
-src/
-├── components/
-│   ├── chunkers/           # Text-Aufteilung
-│   │   ├── base_chunker.py
-│   │   ├── line_chunker.py
-│   │   └── recursive_chunker.py
-│   ├── embeddings/         # Text-Vektorisierung
-│   │   ├── base_embedding.py
-│   │   ├── sentence_transformer_embedding.py
-│   │   └── openai_embedding.py
-│   ├── vector_stores/      # Vektorspeicherung
-│   │   ├── base_vector_store.py
-│   │   ├── in_memory_vector_store.py
-│   │   └── chroma_vector_store.py
-│   └── language_models/    # Antwortgenerierung
-│       ├── base_language_model.py
-│       ├── openai_language_model.py
-│       └── local_language_model.py
-├── config/                 # Konfiguration
-├── evaluations/            # Evaluierung
-├── experiments/            # Experimente
-└── data_loader.py          # Datenverarbeitung
+├── src/
+│   ├── data_loader.py      # Dokumenten-Loading und Chunking
+│   ├── retriever.py        # FAISS-basierte Vektorsuche
+│   ├── generator.py        # LLM-Provider (OpenAI, Groq, Ollama)
+│   ├── evaluator.py        # Evaluierungsmetriken
+│   └── main.py            # Hauptorchestrator
+├── data/
+│   ├── documents/          # Dokumente für RAG
+│   └── test_questions.json # Testfragen mit Referenzantworten
+├── results/               # Evaluierungsergebnisse
+├── config.yaml           # Systemkonfiguration
+└── app.py                # Streamlit Web-Interface
 ```
 
-## 🚀 Schnellstart
+## 🚀 Installation
 
-### 1. Umgebung einrichten
-
+### 1. Repository klonen
 ```bash
-# Repository klonen
 git clone <repository-url>
-cd FOM.BigDataAnalyseProjekt
+cd ResearchRAG
+```
 
-# Python-Umgebung erstellen
-python -m venv .venv
+### 2. Virtuelle Umgebung erstellen
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# oder
+venv\Scripts\activate     # Windows
+```
 
-# Umgebung aktivieren (Windows)
-.\.venv\Scripts\Activate
-
-# Umgebung aktivieren (Linux/Mac)
-source .venv/bin/activate
-
-# Abhängigkeiten installieren
+### 3. Dependencies installieren
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. OpenAI API Key konfigurieren
-
-Erstellen Sie eine `.env`-Datei im Hauptverzeichnis:
-
-```env
-OPENAI_API_KEY=your-openai-api-key-here
+### 4. Umgebungsvariablen setzen
+```bash
+# .env Datei erstellen oder direkt setzen
+export OPENAI_API_KEY="your-openai-api-key"
+export GROQ_API_KEY="your-groq-api-key"
 ```
 
-### 3. Experimente ausführen
+### 5. Lokale Modelle installieren (optional)
+Für Ollama-Modelle:
+```bash
+# Ollama installieren: https://ollama.ai/
+ollama pull llama3.1:8b-sauerkraut
+ollama pull qwen2.5:7b-instruct
+```
+
+## 📖 Nutzung
+
+### Command Line Interface
+
+#### 1. System Setup
+```bash
+# Daten laden und Index erstellen
+python src/main.py --setup
+
+# Index neu erstellen (force)
+python src/main.py --rebuild
+```
+
+#### 2. Einzelne Anfrage
+```bash
+python src/main.py --query "Was ist die DSGVO?"
+```
+
+#### 3. Modell wechseln
+```bash
+# Verfügbare Modelle anzeigen
+python src/main.py --list-models
+
+# Zu anderem Modell wechseln
+python src/main.py --model gpt-4o-mini
+python src/main.py --model mixtral-8x7b
+python src/main.py --model llama-sauerkraut
+```
+
+#### 4. Evaluierung ausführen
+```bash
+# Vollständige Evaluierung
+python src/main.py --evaluate
+
+# Begrenzte Testgröße
+python src/main.py --evaluate --test-size 10
+```
+
+#### 5. Modelle vergleichen
+```bash
+python src/main.py --compare
+```
+
+### Web Interface
 
 ```bash
-# Vollständige Experimente mit DSGVO-Daten
-python run_experiments.py
+streamlit run app.py
 ```
 
-### 4. Jupyter Notebook verwenden
-
-```bash
-# Jupyter starten
-jupyter notebook src/rag.ipynb
-```
-
-## 📋 Verfügbare Komponenten
-
-### Chunker
-
-- **Line Chunker**: Einfache Zeilen-basierte Aufteilung
-- **Recursive Character Chunker**: Intelligente Aufteilung mit Overlap
-
-### Embeddings
-
-- **Sentence Transformers**: Lokale Embeddings (all-MiniLM-L6-v2)
-- **OpenAI Embeddings**: Cloud-basierte Embeddings (text-embedding-ada-002)
-
-### Vector Stores
-
-- **In-Memory**: Schneller Speicher für kleine Datensätze
-- **Chroma DB**: Persistente, skalierbare Vektordatenbank
-
-### Language Models
-
-- **OpenAI GPT**: Cloud-basierte Antwortgenerierung
-- **Lokale SLMs**: Ollama/LLaMA2 Integration
-
-## 🔬 Experimente
-
-Das System führt automatisch Experimente mit verschiedenen Konfigurationen durch:
-
-1. **Baseline**: Line Chunker + Sentence Transformers + In-Memory + OpenAI
-2. **Recursive Chunker**: Verbesserte Textaufteilung
-3. **OpenAI Embeddings**: Cloud-basierte Vektorisierung
-4. **Chroma Vector Store**: Persistente Speicherung
-5. **Lokales LLM**: Offline-Verarbeitung
-6. **Beste Kombination**: Optimierte Konfiguration
-
-## 📊 Ergebnisse
-
-Experimente werden automatisch gespeichert in:
-- `experiment_results/` - JSON-Dateien mit detaillierten Ergebnissen
-- `experiment_report.md` - Markdown-Bericht mit Vergleich
-
-## 🛠️ Entwicklung
-
-### Neue Komponenten hinzufügen
-
-1. **Chunker**: Erweitern Sie `BaseChunker`
-2. **Embeddings**: Erweitern Sie `BaseEmbedding`
-3. **Vector Stores**: Erweitern Sie `BaseVectorStore`
-4. **Language Models**: Erweitern Sie `BaseLanguageModel`
-
-### Beispiel für neue Komponente
-
-```python
-from src.components.chunkers.base_chunker import BaseChunker
-
-class MyCustomChunker(BaseChunker):
-    def chunk_text(self, text: str) -> List[str]:
-        # Ihre Implementierung hier
-        pass
-```
-
-## 📈 Evaluierung
-
-### Automatische Metriken
-
-- **Retrieval-Metriken**: Precision@k, Recall@k, F1@k, MRR, nDCG
-- **Generation-Metriken**: Relevanz, Treue, Korrektheit
-- **System-Metriken**: Antwortlänge, Erfolgsrate, Fehlerrate
-
-### Manuelle Evaluierung
-
-```python
-from src.evaluations.rag_metrics import RAGMetrics
-
-metrics = RAGMetrics()
-results = metrics.evaluate_rag_system(
-    queries=test_questions,
-    retrieved_docs=retrieved_documents,
-    answers=generated_answers
-)
-```
-
-## 📚 DSGVO-Daten
-
-Das System verwendet die vollständige DSGVO-Verordnung als Testdaten:
-
-- **Quelle**: `data/raw/dsgvo.txt`
-- **Größe**: ~400KB, 3633 Zeilen
-- **Struktur**: Artikel-basierte Aufteilung
-- **Testfragen**: 20 DSGVO-spezifische Fragen
+Das Web-Interface bietet:
+- **Query Tab**: Interaktive Fragestellung mit Kontextanzeige
+- **Evaluation Tab**: Modell-Evaluierung mit Metriken
+- **Results Analysis**: Vergleich verschiedener Modelle
+- **Settings**: Systemkonfiguration und Diagnostik
 
 ## 🔧 Konfiguration
 
-### RAGConfig
+Die `config.yaml` Datei steuert alle Systemparameter:
 
-```python
-from src.config import RAGConfig
+```yaml
+# Modell-Konfiguration
+model:
+  name: "gpt-4o-mini"
+  provider: "openai"
+  temperature: 0.1
+  max_tokens: 1000
 
-config = RAGConfig(
-    chunker_type="recursive",
-    chunker_params={"chunk_size": 1000, "chunk_overlap": 200},
-    embedding_type="openai",
-    embedding_params={"model": "text-embedding-ada-002"},
-    vector_store_type="chroma",
-    vector_store_params={"persist_directory": "./chroma_db"},
-    language_model_type="openai",
-    language_model_params={"api_key": "your-key"}
-)
+# Retrieval-Konfiguration
+retrieval:
+  embedding_model: "text-embedding-3-small"
+  chunk_size: 500
+  chunk_overlap: 100
+  top_k: 5
+
+# Evaluierungs-Konfiguration
+evaluation:
+  metrics: ["ragas", "bertscore", "performance"]
+  test_size: 50
 ```
 
-## 🧪 Testing
+## 🤖 Unterstützte Modelle
 
+| Modell | Provider | Beschreibung |
+|--------|----------|--------------|
+| `gpt-4o-mini` | OpenAI | Schnell und kostengünstig |
+| `mixtral-8x7b` | Groq | Mixtral 8x7B via Groq API |
+| `llama-sauerkraut` | Ollama | Deutsch-optimiertes Llama |
+| `qwen2.5-7b` | Ollama | Qwen 2.5 7B Instruct |
+
+## 📊 Evaluierungsmetriken
+
+### RAGAS Metriken
+- **Answer Relevancy**: Relevanz der Antwort zur Frage
+- **Faithfulness**: Treue zum Kontext
+- **Context Relevancy**: Relevanz des abgerufenen Kontexts
+
+### BERTScore
+- **Precision, Recall, F1**: Semantische Ähnlichkeit mit Referenzantworten
+
+### Performance Metriken
+- **Execution Time**: Antwortzeit
+- **Tokens/Second**: Durchsatz
+- **Cost Estimate**: Geschätzte Kosten (API-Modelle)
+
+## 📁 Datenstruktur
+
+### Dokumente hinzufügen
+Legen Sie Textdateien (.txt, .md) in `data/documents/` ab:
+```
+data/documents/
+├── dsgvo_beispiel.txt
+├── weitere_dokumente.txt
+└── ...
+```
+
+### Testfragen erstellen
+Format für `data/test_questions.json`:
+```json
+[
+  {
+    "id": 1,
+    "question": "Was ist die DSGVO?",
+    "reference_answer": "Die DSGVO ist eine EU-Verordnung...",
+    "category": "basics"
+  }
+]
+```
+
+## 🔍 Beispiel-Workflow
+
+1. **Setup**:
+   ```bash
+   python src/main.py --setup
+   ```
+
+2. **Baseline erstellen**:
+   ```bash
+   python src/main.py --model gpt-4o-mini
+   python src/main.py --evaluate --test-size 20
+   ```
+
+3. **Alternativen testen**:
+   ```bash
+   python src/main.py --model mixtral-8x7b
+   python src/main.py --evaluate --test-size 20
+
+   python src/main.py --model llama-sauerkraut
+   python src/main.py --evaluate --test-size 20
+   ```
+
+4. **Ergebnisse vergleichen**:
+   ```bash
+   python src/main.py --compare
+   ```
+
+## 📈 Ergebnisse
+
+Evaluierungsergebnisse werden in `results/` gespeichert:
+- `{model}_detailed_{timestamp}.json`: Detailierte Ergebnisse
+- `{model}_aggregates_{timestamp}.json`: Zusammengefasste Metriken
+- `{model}_results_{timestamp}.csv`: CSV für weitere Analyse
+- `model_comparison.csv`: Modellvergleich
+
+## 🔧 Troubleshooting
+
+### Häufige Probleme
+
+1. **API-Schlüssel fehlen**:
+   ```bash
+   export OPENAI_API_KEY="your-key"
+   export GROQ_API_KEY="your-key"
+   ```
+
+2. **Ollama nicht erreichbar**:
+   ```bash
+   ollama serve  # Ollama-Server starten
+   ```
+
+3. **Dependencies fehlen**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Speicher-Probleme bei FAISS**:
+   - Chunk-Größe reduzieren in `config.yaml`
+   - Weniger Dokumente verwenden
+
+### Diagnostik ausführen
 ```bash
-# Unit Tests
-pytest tests/unit/
+# CLI
+python src/main.py --help
 
-# Integration Tests
-pytest tests/integration/
-
-# End-to-End Tests
-pytest tests/e2e/
+# Web-Interface
+# Gehen Sie zu Settings > System Diagnostics
 ```
 
-## 📖 Dokumentation
+## 🤝 Entwicklung
 
-```bash
-# Dokumentation generieren
-mkdocs serve
-```
+### Neue Modelle hinzufügen
 
-## 🤝 Beitragen
+1. **Generator erweitern** (`src/generator.py`):
+   ```python
+   class NewModelGenerator(BaseGenerator):
+       def generate(self, query, context):
+           # Implementation
+   ```
 
-1. Fork das Repository
-2. Erstellen Sie einen Feature Branch
-3. Implementieren Sie Ihre Änderungen
-4. Fügen Sie Tests hinzu
-5. Erstellen Sie einen Pull Request
+2. **Factory-Funktion aktualisieren**:
+   ```python
+   def get_generator(config):
+       if config["provider"] == "new_provider":
+           return NewModelGenerator(config)
+   ```
 
-## 📄 Lizenz
+3. **Modell zu `AVAILABLE_MODELS` hinzufügen**
 
-Dieses Projekt ist für Forschungszwecke konzipiert.
+### Neue Metriken hinzufügen
 
-## 🆘 Support
+1. **Evaluator erweitern** (`src/evaluator.py`):
+   ```python
+   def _evaluate_custom_metric(self, generated, reference):
+       # Implementation
+   ```
+
+2. **Metrik in `evaluate_single` integrieren**
+
+## 📝 Lizenz
+
+MIT License - siehe LICENSE Datei für Details.
+
+## 🙋‍♂️ Support
 
 Bei Fragen oder Problemen:
-1. Überprüfen Sie die Dokumentation
-2. Schauen Sie in die Issues
-3. Erstellen Sie ein neues Issue mit detaillierter Beschreibung
+1. Überprüfen Sie die Troubleshooting-Sektion
+2. Führen Sie die Systemdiagnose aus
+3. Öffnen Sie ein Issue im Repository
+
+## 🔮 Roadmap
+
+- [ ] Weitere Embedding-Modelle
+- [ ] Advanced Chunking-Strategien
+- [ ] Multi-Modal RAG
+- [ ] Erweiterte Evaluierungsmetriken
+- [ ] Docker-Container
+- [ ] Cloud-Deployment
 
 ---
 
-**Entwickelt für das FOM Big Data Analyseprojekt** 🎓
+**Happy RAG-ing! 🚀**

@@ -1,0 +1,19 @@
+question,generated_answer,reference_answer,retrieved_contexts,metadata,ragas_answer_relevancy,ragas_faithfulness,bertscore_precision,bertscore_recall,bertscore_f1,execution_time,tokens_per_second,cost_estimate,total_tokens,prompt_tokens,completion_tokens
+Was ist die DSGVO und wann trat sie in Kraft?,"Die DSGVO, oder Datenschutz-Grundverordnung, ist eine Verordnung der Europäischen Union, die den Datenschutz und die Privatsphäre von Personen innerhalb der EU sowie den Europäischen Wirtschaftsraum regelt. Sie trat am 25. Mai 2018 in Kraft.","Die DSGVO (Datenschutz-Grundverordnung) ist eine EU-Verordnung zum Schutz personenbezogener Daten, die am 25. Mai 2018 in Kraft getreten ist.",[],"{'model': 'gpt-4o-mini', 'execution_time': 1.5998890399932861, 'tokens_per_second': 27.62691592673545, 'cost_estimate': 4.619999999999999e-05, 'usage': {'prompt_tokens': 96, 'completion_tokens': 53, 'total_tokens': 149}, 'category': 'basics'}",0.0,0.0,0.7203121185302734,0.8284540176391602,0.770607590675354,1.5998890399932861,27.62691592673545,4.619999999999999e-05,149,96,53
+Welche Rechte haben betroffene Personen nach der DSGVO?,"Die Datenschutz-Grundverordnung (DSGVO) gewährt betroffenen Personen mehrere Rechte. Dazu gehören:
+
+1. **Recht auf Auskunft**: Betroffene haben das Recht zu erfahren, ob und welche personenbezogenen Daten über sie verarbeitet werden.
+
+2. **Recht auf Berichtigung**: Personen können die Berichtigung unrichtiger oder unvollständiger Daten verlangen.
+
+3. **Recht auf Löschung**: Auch als ""Recht auf Vergessenwerden"" bekannt, ermöglicht es betroffenen Personen, die Löschung ihrer Daten unter bestimmten Bedingungen zu verlangen.
+
+4. **Recht auf Einschränkung der Verarbeitung**: Betroffene können unter bestimmten Umständen die Einschränkung der Verarbeitung ihrer Daten verlangen.
+
+5. **Recht auf Datenübertragbarkeit**: Personen haben das Recht, ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten und diese an einen anderen Verantwortlichen zu übertragen.
+
+6. **Recht auf Widerspruch**: Betroffene können der Verarbeitung ihrer personenbezogenen Daten widersprechen, insbesondere wenn die Verarbeitung auf berechtigten Interessen beruht.
+
+7. **Recht auf Widerruf der Einwilligung**: Wenn die Verarbeitung auf einer Einwilligung beruht, können betroffene Personen diese jederzeit widerrufen.
+
+Diese Rechte sollen den Schutz der personenbezogenen Daten und die Kontrolle der betroffenen Personen über ihre eigenen Daten stärken.","Betroffene Personen haben unter anderem das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.",[],"{'model': 'gpt-4o-mini', 'execution_time': 6.827946424484253, 'tokens_per_second': 31.986191223885708, 'cost_estimate': 0.00018524999999999998, 'usage': {'prompt_tokens': 95, 'completion_tokens': 285, 'total_tokens': 380}, 'category': 'rights'}",0.0,0.0,0.4652787744998932,0.6645267009735107,0.5473334789276123,6.827946424484253,31.986191223885708,0.00018524999999999998,380,95,285

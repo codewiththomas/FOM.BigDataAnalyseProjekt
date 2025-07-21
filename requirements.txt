@@ -1,43 +1,29 @@
-# Core Dependencies
-python-dotenv==1.1.1
-pydantic==2.11.7
+# Core RAG dependencies
+openai>=1.30.0
+faiss-cpu>=1.7.4
+langchain>=0.1.0
+langchain-openai>=0.1.0
+sentence-transformers>=2.2.2
 
-# OpenAI Integration
-openai==1.93.0
+# Evaluation dependencies
+ragas>=0.1.0
+bert-score>=0.3.13
+datasets>=2.14.0
 
-# Embeddings
-sentence-transformers==5.0.0
-transformers==4.53.1
-torch==2.7.1
+# API clients
+groq>=0.4.0
+ollama>=0.1.7
 
-# Vector Stores
-chromadb==0.4.22
-faiss-cpu==1.7.4
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+pyyaml>=6.0
+tiktoken>=0.5.0
 
-# Language Models
-requests==2.32.4
-
-# Data Processing
-numpy==2.3.1
-pandas==2.2.3
-scikit-learn==1.7.0
-scipy==1.16.0
-
-# Evaluation
-ragas==0.2.0
-
-# Development & Testing
-pytest==8.0.0
-pytest-cov==4.1.0
-
-# Documentation
-mkdocs==1.6.1
-mkdocs-material==9.5.0
-
-# Jupyter
-jupyter==1.0.0
-ipykernel==6.29.5
+# UI
+streamlit>=1.28.0
+plotly>=5.17.0
 
 # Utilities
-tqdm==4.67.1
-colorama==0.4.6
+tqdm>=4.65.0
+python-dotenv>=1.0.0

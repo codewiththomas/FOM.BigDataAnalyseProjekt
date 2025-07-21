@@ -1,285 +1,279 @@
+"""
+Data loader module for loading and chunking documents.
+"""
+
 import os
+import json
 from typing import List, Dict, Any, Optional
-import re
+from pathlib import Path
+import tiktoken  # type: ignore
+from tqdm import tqdm  # type: ignore
+
+
+class DocumentChunker:
+    """Handles document chunking with fixed-size strategy."""
+
+    def __init__(self, chunk_size: int = 500, chunk_overlap: int = 100, encoding_name: str = "cl100k_base"):
+        self.chunk_size = chunk_size
+        self.chunk_overlap = chunk_overlap
+        self.encoding = tiktoken.get_encoding(encoding_name)
+
+    def count_tokens(self, text: str) -> int:
+        """Count tokens in text using tiktoken."""
+        return len(self.encoding.encode(text))
+
+    def chunk_text(self, text: str, source: str = "") -> List[Dict[str, Any]]:
+        """
+        Chunk text into overlapping segments.
+
+        Args:
+            text: Text to chunk
+            source: Source document name
+
+        Returns:
+            List of chunk dictionaries with metadata
+        """
+        tokens = self.encoding.encode(text)
+        chunks: List[Dict[str, Any]] = []
+
+        start = 0
+        chunk_id = 0
+
+        while start < len(tokens):
+            # Calculate end position
+            end = min(start + self.chunk_size, len(tokens))
+
+            # Extract chunk tokens and decode
+            chunk_tokens = tokens[start:end]
+            chunk_text = self.encoding.decode(chunk_tokens)
+
+            # Create chunk metadata
+            chunk = {
+                "chunk_id": f"{source}_{chunk_id}" if source else str(chunk_id),
+                "text": chunk_text,
+                "source": source,
+                "start_token": start,
+                "end_token": end,
+                "token_count": len(chunk_tokens)
+            }
+
+            chunks.append(chunk)
+
+            # Move start position with overlap
+            start = end - self.chunk_overlap
+            chunk_id += 1
+
+            # Break if we're at the end
+            if end == len(tokens):
+                break
+
+        return chunks
 
 
 class DataLoader:
-    """
-    Data Loader für verschiedene Dokumenttypen, insbesondere DSGVO-Daten.
-    """
+    """Handles loading documents and test questions."""
 
-    def __init__(self, data_directory: str = "data"):
-        self.data_directory = data_directory
+    def __init__(self, documents_path: str, test_questions_path: str):
+        self.documents_path = Path(documents_path)
+        self.test_questions_path = Path(test_questions_path)
+        self.chunker: Optional[DocumentChunker] = None
 
-    def load_dsgvo_document(self, filepath: Optional[str] = None) -> str:
+    def set_chunker(self, chunker: DocumentChunker):
+        """Set the document chunker."""
+        self.chunker = chunker
+
+    def load_documents(self, file_extensions: List[str] = [".txt", ".md"]) -> List[Dict[str, Any]]:
         """
-        Lädt das DSGVO-Dokument und bereinigt es.
+        Load all documents from the documents directory.
+
+        Args:
+            file_extensions: List of file extensions to load
+
+        Returns:
+            List of document dictionaries
         """
-        if filepath is None:
-            filepath = os.path.join(self.data_directory, "raw", "dsgvo.txt")
+        documents: List[Dict[str, Any]] = []
+
+        if not self.documents_path.exists():
+            print(f"Documents path {self.documents_path} does not exist. Creating directory...")
+            self.documents_path.mkdir(parents=True, exist_ok=True)
+            return documents
+
+        # Find all matching files
+        files_to_load: List[Path] = []
+        for ext in file_extensions:
+            files_to_load.extend(self.documents_path.glob(f"*{ext}"))
+
+        print(f"Found {len(files_to_load)} documents to load...")
+
+        for file_path in tqdm(files_to_load, desc="Loading documents"):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+
+                document = {
+                    "filename": file_path.name,
+                    "path": str(file_path),
+                    "content": content,
+                    "size": len(content)
+                }
+
+                documents.append(document)
+
+            except Exception as e:
+                print(f"Error loading {file_path}: {e}")
+
+        return documents
+
+    def chunk_documents(self, documents: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        Chunk all documents using the configured chunker.
+
+        Args:
+            documents: List of document dictionaries
+
+        Returns:
+            List of chunk dictionaries
+        """
+        if not self.chunker:
+            raise ValueError("No chunker set. Call set_chunker() first.")
+
+        all_chunks: List[Dict[str, Any]] = []
+
+        print(f"Chunking {len(documents)} documents...")
+
+        for doc in tqdm(documents, desc="Chunking documents"):
+            chunks = self.chunker.chunk_text(
+                text=doc["content"],
+                source=doc["filename"]
+            )
+
+            # Add document metadata to chunks
+            for chunk in chunks:
+                chunk["document_path"] = doc["path"]
+                chunk["document_size"] = doc["size"]
+
+            all_chunks.extend(chunks)
+
+        print(f"Created {len(all_chunks)} chunks total")
+        return all_chunks
+
+    def load_test_questions(self) -> List[Dict[str, Any]]:
+        """
+        Load test questions from JSON file.
+
+        Returns:
+            List of test question dictionaries
+        """
+        if not self.test_questions_path.exists():
+            print(f"Test questions file {self.test_questions_path} does not exist.")
+            return []
 
         try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                content = f.read()
+            with open(self.test_questions_path, 'r', encoding='utf-8') as f:
+                questions = json.load(f)
 
-            # Bereinige den Text
-            cleaned_content = self._clean_dsgvo_text(content)
-            return cleaned_content
+            print(f"Loaded {len(questions)} test questions")
+            return questions
 
-        except FileNotFoundError:
-            raise FileNotFoundError(f"DSGVO-Datei nicht gefunden: {filepath}")
         except Exception as e:
-            raise Exception(f"Fehler beim Laden der DSGVO-Datei: {str(e)}")
+            print(f"Error loading test questions: {e}")
+            return []
 
-    def _clean_dsgvo_text(self, text: str) -> str:
+    def save_test_questions(self, questions: List[Dict[str, Any]]):
         """
-        Bereinigt den DSGVO-Text von unnötigen Formatierungen.
+        Save test questions to JSON file.
+
+        Args:
+            questions: List of test question dictionaries
         """
-        # Entferne übermäßige Leerzeichen und Zeilenumbrüche
-        text = re.sub(r'\n\s*\n\s*\n', '\n\n', text)
-        text = re.sub(r' +', ' ', text)
+        # Create directory if it doesn't exist
+        self.test_questions_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # Entferne Seitenzahlen und andere Formatierungen
-        text = re.sub(r'^\d+\s*$', '', text, flags=re.MULTILINE)
+        try:
+            with open(self.test_questions_path, 'w', encoding='utf-8') as f:
+                json.dump(questions, f, ensure_ascii=False, indent=2)
 
-        # Bereinige Artikel-Nummern
-        text = re.sub(r'Artikel\s+(\d+)\s*', r'Artikel \1: ', text)
+            print(f"Saved {len(questions)} test questions to {self.test_questions_path}")
 
-        # Entferne leere Zeilen am Anfang und Ende
-        text = text.strip()
+        except Exception as e:
+            print(f"Error saving test questions: {e}")
 
-        return text
 
-    def split_dsgvo_into_sections(self, text: str) -> List[Dict[str, str]]:
-        """
-        Teilt das DSGVO-Dokument in logische Abschnitte auf.
-        """
-        sections = []
-
-        # Teile nach Artikeln auf
-        article_pattern = r'Artikel\s+(\d+)[:\s]*([^\n]+)'
-        articles = re.finditer(article_pattern, text, re.IGNORECASE)
-
-        current_section = ""
-        current_article = ""
-
-        for match in articles:
-            article_num = match.group(1)
-            article_title = match.group(2).strip()
-
-            # Speichere vorherigen Abschnitt
-            if current_section:
-                sections.append({
-                    "type": "article",
-                    "number": current_article,
-                    "title": "",
-                    "content": current_section.strip()
-                })
-
-            current_article = article_num
-            current_section = match.group(0) + "\n"
-
-        # Letzten Abschnitt hinzufügen
-        if current_section:
-            sections.append({
-                "type": "article",
-                "number": current_article,
-                "title": "",
-                "content": current_section.strip()
-            })
-
-        return sections
-
-    def create_dsgvo_qa_dataset(self, text: str) -> List[Dict[str, str]]:
-        """
-        Erstellt ein Q&A-Dataset basierend auf dem DSGVO-Text.
-        """
-        qa_pairs = []
-
-        # Beispiel-Fragen für DSGVO
-        questions = [
-            "Was ist die DSGVO?",
-            "Welche Rechte haben betroffene Personen?",
-            "Was ist ein Verantwortlicher?",
-            "Was ist ein Auftragsverarbeiter?",
-            "Was ist die Einwilligung?",
-            "Was sind personenbezogene Daten?",
-            "Was ist das Recht auf Löschung?",
-            "Was ist das Recht auf Datenübertragbarkeit?",
-            "Was ist die Datenschutz-Folgenabschätzung?",
-            "Was sind die Grundsätze der Datenverarbeitung?"
-        ]
-
-        # Einfache Antworten basierend auf Schlüsselwörtern
-        for question in questions:
-            answer = self._generate_simple_answer(question, text)
-            qa_pairs.append({
-                "question": question,
-                "answer": answer,
-                "context": self._find_relevant_context(question, text)
-            })
-
-        return qa_pairs
-
-    def _generate_simple_answer(self, question: str, text: str) -> str:
-        """
-        Generiert eine einfache Antwort basierend auf Schlüsselwörtern.
-        """
-        question_lower = question.lower()
-
-        if "dsgvo" in question_lower or "datenschutz-grundverordnung" in question_lower:
-            return "Die DSGVO (Datenschutz-Grundverordnung) ist eine EU-Verordnung zum Schutz personenbezogener Daten."
-
-        elif "rechte" in question_lower and "betroffene" in question_lower:
-            return "Betroffene Personen haben das Recht auf Auskunft, Berichtigung, Löschung und Datenübertragbarkeit."
-
-        elif "verantwortlicher" in question_lower:
-            return "Ein Verantwortlicher ist die natürliche oder juristische Person, die über die Zwecke und Mittel der Verarbeitung entscheidet."
-
-        elif "auftragsverarbeiter" in question_lower:
-            return "Ein Auftragsverarbeiter ist eine natürliche oder juristische Person, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet."
-
-        elif "einwilligung" in question_lower:
-            return "Die Einwilligung ist eine freiwillige, informierte und unmissverständliche Willensbekundung der betroffenen Person."
-
-        elif "personenbezogene daten" in question_lower:
-            return "Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen."
-
-        else:
-            return "Diese Frage kann basierend auf dem DSGVO-Text beantwortet werden."
-
-    def _find_relevant_context(self, question: str, text: str) -> str:
-        """
-        Findet relevanten Kontext für eine Frage.
-        """
-        # Einfache Schlüsselwort-basierte Suche
-        question_lower = question.lower()
-
-        if "dsgvo" in question_lower:
-            return text[:1000]  # Erste 1000 Zeichen
-
-        elif "rechte" in question_lower:
-            # Suche nach Artikeln über Rechte
-            rights_pattern = r'Artikel\s+\d+[^.]*Recht[^.]*\.'
-            matches = re.findall(rights_pattern, text, re.IGNORECASE)
-            return matches[0] if matches else text[:500]
-
-        else:
-            return text[:500]  # Erste 500 Zeichen als Fallback
-
-    def load_test_questions(self) -> List[str]:
-        """
-        Lädt eine Liste von Testfragen für die DSGVO.
-        """
-        return [
-            "Was ist die DSGVO?",
-            "Welche Rechte haben betroffene Personen?",
-            "Was ist ein Verantwortlicher?",
-            "Was ist ein Auftragsverarbeiter?",
-            "Was ist die Einwilligung?",
-            "Was sind personenbezogene Daten?",
-            "Was ist das Recht auf Löschung?",
-            "Was ist das Recht auf Datenübertragbarkeit?",
-            "Was ist die Datenschutz-Folgenabschätzung?",
-            "Was sind die Grundsätze der Datenverarbeitung?",
-            "Was ist die Pseudonymisierung?",
-            "Was ist die Anonymisierung?",
-            "Was ist die Datenminimierung?",
-            "Was ist die Zweckbindung?",
-            "Was ist die Speicherbegrenzung?",
-            "Was ist die Richtigkeit?",
-            "Was ist die Integrität und Vertraulichkeit?",
-            "Was ist die Rechenschaftspflicht?",
-            "Was ist die Aufsichtsbehörde?",
-            "Was ist die Datenschutz-Folgenabschätzung?"
-        ]
-
-    def get_dsgvo_statistics(self, text: str) -> Dict[str, Any]:
-        """
-        Berechnet Statistiken über das DSGVO-Dokument.
-        """
-        return {
-            "total_characters": len(text),
-            "total_words": len(text.split()),
-            "total_lines": len(text.split('\n')),
-            "article_count": len(re.findall(r'Artikel\s+\d+', text)),
-            "paragraph_count": len(re.findall(r'\(\d+\)', text))
+def create_sample_test_questions() -> List[Dict[str, Any]]:
+    """Create sample test questions for DSGVO."""
+    return [
+        {
+            "id": 1,
+            "question": "Was ist die DSGVO und wann trat sie in Kraft?",
+            "reference_answer": "Die DSGVO (Datenschutz-Grundverordnung) ist eine EU-Verordnung zum Schutz personenbezogener Daten, die am 25. Mai 2018 in Kraft getreten ist.",
+            "category": "basics"
+        },
+        {
+            "id": 2,
+            "question": "Welche Rechte haben betroffene Personen nach der DSGVO?",
+            "reference_answer": "Betroffene Personen haben unter anderem das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.",
+            "category": "rights"
+        },
+        {
+            "id": 3,
+            "question": "Was sind die Grundsätze für die Verarbeitung personenbezogener Daten?",
+            "reference_answer": "Die Grundsätze umfassen Rechtmäßigkeit, Fairness, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung und Integrität/Vertraulichkeit.",
+            "category": "principles"
+        },
+        {
+            "id": 4,
+            "question": "Wie hoch können Bußgelder nach der DSGVO sein?",
+            "reference_answer": "Bußgelder können bis zu 20 Millionen Euro oder bis zu 4% des weltweiten Jahresumsatzes des Unternehmens betragen, je nachdem welcher Betrag höher ist.",
+            "category": "penalties"
+        },
+        {
+            "id": 5,
+            "question": "Was ist eine Datenschutz-Folgenabschätzung und wann ist sie erforderlich?",
+            "reference_answer": "Eine Datenschutz-Folgenabschätzung ist erforderlich, wenn eine Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat.",
+            "category": "assessment"
+        },
+        {
+            "id": 6,
+            "question": "Welche Rechtsgrundlagen gibt es für die Datenverarbeitung?",
+            "reference_answer": "Die DSGVO nennt sechs Rechtsgrundlagen: Einwilligung, Vertragserfüllung, rechtliche Verpflichtung, Schutz lebenswichtiger Interessen, öffentliches Interesse und berechtigte Interessen.",
+            "category": "legal_basis"
+        },
+        {
+            "id": 7,
+            "question": "Was bedeutet Privacy by Design?",
+            "reference_answer": "Privacy by Design bedeutet, dass Datenschutz bereits bei der Entwicklung von Systemen und Verfahren berücksichtigt wird.",
+            "category": "principles"
+        },
+        {
+            "id": 8,
+            "question": "Wann muss ein Datenschutzbeauftragter benannt werden?",
+            "reference_answer": "Ein Datenschutzbeauftragter muss unter anderem bei öffentlichen Stellen oder wenn die Kerntätigkeit in umfangreicher Überwachung oder Verarbeitung besonderer Datenkategorien besteht, benannt werden.",
+            "category": "dpo"
+        },
+        {
+            "id": 9,
+            "question": "Was ist bei der internationalen Datenübertragung zu beachten?",
+            "reference_answer": "Die Übertragung in Drittländer ist nur mit Angemessenheitsbeschluss, geeigneten Garantien oder in Ausnahmefällen zulässig.",
+            "category": "transfer"
+        },
+        {
+            "id": 10,
+            "question": "Welche Fristen gibt es für die Meldung von Datenschutzverletzungen?",
+            "reference_answer": "Datenschutzverletzungen müssen innerhalb von 72 Stunden nach Bekanntwerden an die Aufsichtsbehörde gemeldet werden. Bei hohem Risiko müssen auch die betroffenen Personen unverzüglich informiert werden.",
+            "category": "breach"
         }
+    ]
 
-    def load_dsgvo_data(self) -> List[str]:
-        """
-        Einfache API für Notebook: Lädt DSGVO-Daten und gibt Liste von Dokumenten zurück.
-        """
-        try:
-            # Lade das komplette DSGVO-Dokument
-            full_text = self.load_dsgvo_document()
 
-            # Teile in Abschnitte auf
-            sections = self.split_dsgvo_into_sections(full_text)
+if __name__ == "__main__":
+    # Example usage
+    chunker = DocumentChunker(chunk_size=500, chunk_overlap=100)
+    loader = DataLoader("../data/documents", "../data/test_questions.json")
+    loader.set_chunker(chunker)
 
-            # Konvertiere zu einfacher Liste von Strings
-            documents = []
-            for section in sections:
-                if section.get('content'):
-                    documents.append(section['content'])
+    # Create sample test questions
+    sample_questions = create_sample_test_questions()
+    loader.save_test_questions(sample_questions)
 
-            # Falls keine Abschnitte gefunden, teile einfach in Chunks
-            if not documents:
-                # Teile in 1000-Zeichen-Chunks
-                chunk_size = 1000
-                for i in range(0, len(full_text), chunk_size):
-                    chunk = full_text[i:i + chunk_size]
-                    if chunk.strip():
-                        documents.append(chunk.strip())
-
-            return documents
-
-        except Exception as e:
-            print(f"Fehler beim Laden der DSGVO-Daten: {e}")
-            return []
-
-    def get_test_questions(self) -> List[str]:
-        """
-        Einfache API für Notebook: Gibt Liste von Testfragen zurück.
-        """
-        return self.load_test_questions()
-
-    def load_legal_document(self, document_type: str, filepath: Optional[str] = None) -> List[str]:
-        """
-        Erweiterte API für andere Rechtstexte in der Zukunft.
-        """
-        if document_type.lower() == "dsgvo":
-            return self.load_dsgvo_data()
-        elif document_type.lower() == "ggb":
-            # Placeholder für Grundgesetz
-            if filepath:
-                return self._load_generic_legal_document(filepath)
-        elif document_type.lower() == "stgb":
-            # Placeholder für Strafgesetzbuch
-            if filepath:
-                return self._load_generic_legal_document(filepath)
-
-        return []
-
-    def _load_generic_legal_document(self, filepath: str) -> List[str]:
-        """
-        Generische Methode für andere Rechtstexte.
-        """
-        try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                content = f.read()
-
-            # Einfache Paragraph-basierte Aufteilung
-            paragraphs = content.split('\n\n')
-            documents = []
-
-            for para in paragraphs:
-                para = para.strip()
-                if para and len(para) > 50:  # Nur substantielle Paragraphen
-                    documents.append(para)
-
-            return documents
-
-        except Exception as e:
-            print(f"Fehler beim Laden des Dokuments {filepath}: {e}")
-            return []
+    print("Data loader setup complete!")

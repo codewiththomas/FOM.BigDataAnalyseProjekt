@@ -1,0 +1,22 @@
+{
+  "ragas_answer_relevancy_mean": 0.0,
+  "ragas_answer_relevancy_std": 0.0,
+  "ragas_faithfulness_mean": 0.0,
+  "ragas_faithfulness_std": 0.0,
+  "ragas_context_precision_mean": 0.0,
+  "ragas_context_precision_std": 0.0,
+  "bertscore_precision_mean": 0.590477928519249,
+  "bertscore_precision_std": 0.18361327237331623,
+  "bertscore_recall_mean": 0.7432622015476227,
+  "bertscore_recall_std": 0.12047942171984678,
+  "bertscore_f1_mean": 0.6562720239162445,
+  "bertscore_f1_std": 0.16169490917234708,
+  "execution_time_mean": 3.7691370248794556,
+  "execution_time_total": 3.7691370248794556,
+  "tokens_per_second_mean": 35.195416297777626,
+  "tokens_per_second_total": 35.195416297777626,
+  "cost_estimate_mean": 0.00012112499999999998,
+  "cost_estimate_total": 0.00024224999999999995,
+  "total_tokens_mean": 273.5,
+  "total_tokens_total": 273.5
+}

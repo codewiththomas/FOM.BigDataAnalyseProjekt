@@ -1,0 +1,37 @@
+data:
+  documents_path: data/documents
+  index_path: data/faiss_index
+  test_questions_path: data/test_questions.json
+evaluation:
+  batch_size: 5
+  bertscore:
+    lang: de
+    model: microsoft/deberta-xlarge-mnli
+  metrics:
+  - ragas
+  - bertscore
+  - performance
+  # RAGAS metrics to compute
+  ragas_metrics:
+    - "answer_relevancy"
+    - "faithfulness"
+  test_size: 50
+model:
+  description: OpenAI GPT-4o-mini - fast and cost-effective
+  groq_api_key: null
+  max_tokens: 1000
+  name: gpt-4o-mini
+  ollama_endpoint: http://localhost:11434
+  openai_api_key:
+  provider: openai
+  temperature: 0.1
+results:
+  output_dir: results
+  save_detailed_results: true
+  save_plots: true
+retrieval:
+  embedding_model: "text-embedding-3-small"
+  chunk_size: 500
+  chunk_overlap: 100
+  top_k: 5
+  similarity_threshold: 0.1

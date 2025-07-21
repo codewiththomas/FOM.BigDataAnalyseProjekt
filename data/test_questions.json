@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Was ist die DSGVO und wann trat sie in Kraft?",
+    "reference_answer": "Die DSGVO (Datenschutz-Grundverordnung) ist eine EU-Verordnung zum Schutz personenbezogener Daten, die am 25. Mai 2018 in Kraft getreten ist.",
+    "category": "basics"
+  },
+  {
+    "id": 2,
+    "question": "Welche Rechte haben betroffene Personen nach der DSGVO?",
+    "reference_answer": "Betroffene Personen haben unter anderem das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.",
+    "category": "rights"
+  },
+  {
+    "id": 3,
+    "question": "Was sind die Grundsätze für die Verarbeitung personenbezogener Daten?",
+    "reference_answer": "Die Grundsätze umfassen Rechtmäßigkeit, Fairness, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung und Integrität/Vertraulichkeit.",
+    "category": "principles"
+  },
+  {
+    "id": 4,
+    "question": "Wie hoch können Bußgelder nach der DSGVO sein?",
+    "reference_answer": "Bußgelder können bis zu 20 Millionen Euro oder bis zu 4% des weltweiten Jahresumsatzes des Unternehmens betragen, je nachdem welcher Betrag höher ist.",
+    "category": "penalties"
+  },
+  {
+    "id": 5,
+    "question": "Was ist eine Datenschutz-Folgenabschätzung und wann ist sie erforderlich?",
+    "reference_answer": "Eine Datenschutz-Folgenabschätzung ist erforderlich, wenn eine Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat.",
+    "category": "assessment"
+  },
+  {
+    "id": 6,
+    "question": "Welche Rechtsgrundlagen gibt es für die Datenverarbeitung?",
+    "reference_answer": "Die DSGVO nennt sechs Rechtsgrundlagen: Einwilligung, Vertragserfüllung, rechtliche Verpflichtung, Schutz lebenswichtiger Interessen, öffentliches Interesse und berechtigte Interessen.",
+    "category": "legal_basis"
+  },
+  {
+    "id": 7,
+    "question": "Was bedeutet Privacy by Design?",
+    "reference_answer": "Privacy by Design bedeutet, dass Datenschutz bereits bei der Entwicklung von Systemen und Verfahren berücksichtigt wird.",
+    "category": "principles"
+  },
+  {
+    "id": 8,
+    "question": "Wann muss ein Datenschutzbeauftragter benannt werden?",
+    "reference_answer": "Ein Datenschutzbeauftragter muss unter anderem bei öffentlichen Stellen oder wenn die Kerntätigkeit in umfangreicher Überwachung oder Verarbeitung besonderer Datenkategorien besteht, benannt werden.",
+    "category": "dpo"
+  },
+  {
+    "id": 9,
+    "question": "Was ist bei der internationalen Datenübertragung zu beachten?",
+    "reference_answer": "Die Übertragung in Drittländer ist nur mit Angemessenheitsbeschluss, geeigneten Garantien oder in Ausnahmefällen zulässig.",
+    "category": "transfer"
+  },
+  {
+    "id": 10,
+    "question": "Welche Fristen gibt es für die Meldung von Datenschutzverletzungen?",
+    "reference_answer": "Datenschutzverletzungen müssen innerhalb von 72 Stunden nach Bekanntwerden an die Aufsichtsbehörde gemeldet werden. Bei hohem Risiko müssen auch die betroffenen Personen unverzüglich informiert werden.",
+    "category": "breach"
+  }
+]

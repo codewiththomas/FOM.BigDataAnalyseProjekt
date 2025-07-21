@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Was ist die DSGVO und wann trat sie in Kraft?",
+    "generated_answer": "Die DSGVO, oder Datenschutz-Grundverordnung, ist eine Verordnung der Europäischen Union, die den Datenschutz und die Privatsphäre von Personen innerhalb der EU sowie den Europäischen Wirtschaftsraum regelt. Sie trat am 25. Mai 2018 in Kraft.",
+    "reference_answer": "Die DSGVO (Datenschutz-Grundverordnung) ist eine EU-Verordnung zum Schutz personenbezogener Daten, die am 25. Mai 2018 in Kraft getreten ist.",
+    "retrieved_contexts": [],
+    "metadata": {
+      "model": "gpt-4o-mini",
+      "execution_time": 1.3590903282165527,
+      "tokens_per_second": 32.52175303020575,
+      "cost_estimate": 4.619999999999999e-05,
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 53,
+        "total_tokens": 149
+      },
+      "category": "basics"
+    },
+    "ragas_answer_relevancy": 0.0,
+    "ragas_faithfulness": 0.0,
+    "ragas_context_precision": 0.0,
+    "bertscore_precision": 0.7203121185302734,
+    "bertscore_recall": 0.8284540176391602,
+    "bertscore_f1": 0.770607590675354,
+    "execution_time": 1.3590903282165527,
+    "tokens_per_second": 32.52175303020575,
+    "cost_estimate": 4.619999999999999e-05,
+    "total_tokens": 149,
+    "prompt_tokens": 96,
+    "completion_tokens": 53
+  },
+  {
+    "question": "Welche Rechte haben betroffene Personen nach der DSGVO?",
+    "generated_answer": "Die Datenschutz-Grundverordnung (DSGVO) gewährt betroffenen Personen mehrere Rechte. Dazu gehören:\n\n1. **Recht auf Auskunft**: Betroffene Personen haben das Recht zu erfahren, ob ihre personenbezogenen Daten verarbeitet werden, und wenn ja, welche Daten dies sind.\n\n2. **Recht auf Berichtigung**: Personen können die Berichtigung unrichtiger oder unvollständiger Daten verlangen.\n\n3. **Recht auf Löschung**: Auch bekannt als das \"Recht auf Vergessenwerden\", ermöglicht es den Betroffenen, die Löschung ihrer personenbezogenen Daten zu verlangen, wenn bestimmte Voraussetzungen erfüllt sind.\n\n4. **Recht auf Einschränkung der Verarbeitung**: Betroffene können unter bestimmten Bedingungen die Einschränkung der Verarbeitung ihrer Daten verlangen.\n\n5. **Recht auf Datenübertragbarkeit**: Personen haben das Recht, ihre personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten und diese an einen anderen Verantwortlichen zu übertragen.\n\n6. **Recht auf Widerspruch**: Betroffene können gegen die Verarbeitung ihrer personenbezogenen Daten Widerspruch einlegen, insbesondere wenn die Verarbeitung auf berechtigten Interessen beruht.\n\n7. **Recht auf Widerruf der Einwilligung**: Wenn die Verarbeitung auf einer Einwilligung beruht, können betroffene Personen diese jederzeit widerrufen.\n\nDiese Rechte sollen den Schutz der personenbezogenen Daten und die Kontrolle der betroffenen Personen über ihre eigenen Daten stärken.",
+    "reference_answer": "Betroffene Personen haben unter anderem das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.",
+    "retrieved_contexts": [],
+    "metadata": {
+      "model": "gpt-4o-mini",
+      "execution_time": 6.179183721542358,
+      "tokens_per_second": 37.8690795653495,
+      "cost_estimate": 0.00019604999999999997,
+      "usage": {
+        "prompt_tokens": 95,
+        "completion_tokens": 303,
+        "total_tokens": 398
+      },
+      "category": "rights"
+    },
+    "ragas_answer_relevancy": 0.0,
+    "ragas_faithfulness": 0.0,
+    "ragas_context_precision": 0.0,
+    "bertscore_precision": 0.4606437385082245,
+    "bertscore_recall": 0.6580703854560852,
+    "bertscore_f1": 0.541936457157135,
+    "execution_time": 6.179183721542358,
+    "tokens_per_second": 37.8690795653495,
+    "cost_estimate": 0.00019604999999999997,
+    "total_tokens": 398,
+    "prompt_tokens": 95,
+    "completion_tokens": 303
+  }
+]

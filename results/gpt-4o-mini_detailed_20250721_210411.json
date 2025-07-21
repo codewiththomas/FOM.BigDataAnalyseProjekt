@@ -1,0 +1,83 @@
+[
+  {
+    "question": "Was ist die DSGVO und wann trat sie in Kraft?",
+    "generated_answer": "Die DSGVO, oder Datenschutz-Grundverordnung, ist eine Verordnung der Europäischen Union, die den Schutz personenbezogener Daten und die Privatsphäre von Personen innerhalb der EU regelt. Sie trat am 25. Mai 2018 in Kraft.",
+    "reference_answer": "Die DSGVO (Datenschutz-Grundverordnung) ist eine EU-Verordnung zum Schutz personenbezogener Daten, die am 25. Mai 2018 in Kraft getreten ist.",
+    "retrieved_contexts": [],
+    "metadata": {
+      "model": "gpt-4o-mini",
+      "execution_time": 1.6257832050323486,
+      "tokens_per_second": 25.587667452360154,
+      "cost_estimate": 4.559999999999999e-05,
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 52,
+        "total_tokens": 148
+      },
+      "category": "basics"
+    },
+    "bertscore_precision": 0.8067247271537781,
+    "bertscore_recall": 0.8951272368431091,
+    "bertscore_f1": 0.8486299514770508,
+    "execution_time": 1.6257832050323486,
+    "tokens_per_second": 25.587667452360154,
+    "cost_estimate": 4.559999999999999e-05,
+    "total_tokens": 148,
+    "prompt_tokens": 96,
+    "completion_tokens": 52
+  },
+  {
+    "question": "Welche Rechte haben betroffene Personen nach der DSGVO?",
+    "generated_answer": "Der gegebene Kontext enthält keine spezifischen Informationen zu den Rechten betroffener Personen nach der DSGVO. Daher kann ich die Frage nicht beantworten.",
+    "reference_answer": "Betroffene Personen haben unter anderem das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.",
+    "retrieved_contexts": [],
+    "metadata": {
+      "model": "gpt-4o-mini",
+      "execution_time": 1.2984583377838135,
+      "tokens_per_second": 22.02612064458995,
+      "cost_estimate": 3.285e-05,
+      "usage": {
+        "prompt_tokens": 95,
+        "completion_tokens": 31,
+        "total_tokens": 126
+      },
+      "category": "rights"
+    },
+    "bertscore_precision": 0.5935019254684448,
+    "bertscore_recall": 0.6121653914451599,
+    "bertscore_f1": 0.6026892066001892,
+    "execution_time": 1.2984583377838135,
+    "tokens_per_second": 22.02612064458995,
+    "cost_estimate": 3.285e-05,
+    "total_tokens": 126,
+    "prompt_tokens": 95,
+    "completion_tokens": 31
+  },
+  {
+    "question": "Was sind die Grundsätze für die Verarbeitung personenbezogener Daten?",
+    "generated_answer": "Der gegebene Kontext enthält keine spezifischen Informationen zu den Grundsätzen für die Verarbeitung personenbezogener Daten. Daher kann ich die Frage nicht beantworten.",
+    "reference_answer": "Die Grundsätze umfassen Rechtmäßigkeit, Fairness, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung und Integrität/Vertraulichkeit.",
+    "retrieved_contexts": [],
+    "metadata": {
+      "model": "gpt-4o-mini",
+      "execution_time": 1.1619064807891846,
+      "tokens_per_second": 24.614717684141365,
+      "cost_estimate": 3.3299999999999996e-05,
+      "usage": {
+        "prompt_tokens": 98,
+        "completion_tokens": 31,
+        "total_tokens": 129
+      },
+      "category": "principles"
+    },
+    "bertscore_precision": 0.6132422089576721,
+    "bertscore_recall": 0.6042500734329224,
+    "bertscore_f1": 0.608712911605835,
+    "execution_time": 1.1619064807891846,
+    "tokens_per_second": 24.614717684141365,
+    "cost_estimate": 3.3299999999999996e-05,
+    "total_tokens": 129,
+    "prompt_tokens": 98,
+    "completion_tokens": 31
+  }
+]

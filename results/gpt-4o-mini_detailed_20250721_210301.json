@@ -1,0 +1,29 @@
+[
+  {
+    "question": "Was ist die DSGVO und wann trat sie in Kraft?",
+    "generated_answer": "Die DSGVO, oder Datenschutz-Grundverordnung, ist eine Verordnung der Europäischen Union, die den Schutz personenbezogener Daten und die Privatsphäre von Personen innerhalb der EU regelt. Sie trat am 25. Mai 2018 in Kraft.",
+    "reference_answer": "Die DSGVO (Datenschutz-Grundverordnung) ist eine EU-Verordnung zum Schutz personenbezogener Daten, die am 25. Mai 2018 in Kraft getreten ist.",
+    "retrieved_contexts": [],
+    "metadata": {
+      "model": "gpt-4o-mini",
+      "execution_time": 1.118624210357666,
+      "tokens_per_second": 37.188538934535416,
+      "cost_estimate": 4.559999999999999e-05,
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 52,
+        "total_tokens": 148
+      },
+      "category": "basics"
+    },
+    "bertscore_precision": 0.8067247271537781,
+    "bertscore_recall": 0.8951272368431091,
+    "bertscore_f1": 0.8486299514770508,
+    "execution_time": 1.118624210357666,
+    "tokens_per_second": 37.188538934535416,
+    "cost_estimate": 4.559999999999999e-05,
+    "total_tokens": 148,
+    "prompt_tokens": 96,
+    "completion_tokens": 52
+  }
+]

@@ -1,0 +1,98 @@
+Datenschutz-Grundverordnung (DSGVO) - Überblick
+
+Die Datenschutz-Grundverordnung (DSGVO) ist eine Verordnung der Europäischen Union, die am 25. Mai 2018 in Kraft getreten ist. Sie regelt den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und den freien Datenverkehr.
+
+Grundsätze der Datenverarbeitung
+
+Die DSGVO definiert sieben grundlegende Prinzipien für die Verarbeitung personenbezogener Daten:
+
+1. Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz
+2. Zweckbindung
+3. Datenminimierung
+4. Richtigkeit
+5. Speicherbegrenzung
+6. Integrität und Vertraulichkeit
+7. Rechenschaftspflicht
+
+Rechte der betroffenen Personen
+
+Die DSGVO gewährt betroffenen Personen umfassende Rechte:
+
+Recht auf Auskunft (Artikel 15): Betroffene haben das Recht zu erfahren, ob personenbezogene Daten verarbeitet werden und welche Daten das sind.
+
+Recht auf Berichtigung (Artikel 16): Unrichtige personenbezogene Daten müssen unverzüglich berichtigt werden.
+
+Recht auf Löschung (Artikel 17): Das "Recht auf Vergessenwerden" ermöglicht die Löschung personenbezogener Daten unter bestimmten Umständen.
+
+Recht auf Einschränkung der Verarbeitung (Artikel 18): Die Verarbeitung kann in bestimmten Fällen eingeschränkt werden.
+
+Recht auf Datenübertragbarkeit (Artikel 20): Daten müssen in einem strukturierten, gängigen und maschinenlesbaren Format zur Verfügung gestellt werden.
+
+Recht auf Widerspruch (Artikel 21): Betroffene können der Verarbeitung ihrer Daten widersprechen.
+
+Rechtsgrundlagen für die Datenverarbeitung
+
+Die DSGVO erlaubt die Verarbeitung personenbezogener Daten nur, wenn eine der folgenden Rechtsgrundlagen vorliegt:
+
+a) Einwilligung der betroffenen Person
+b) Vertragserfüllung
+c) Rechtliche Verpflichtung
+d) Schutz lebenswichtiger Interessen
+e) Öffentliches Interesse oder Ausübung öffentlicher Gewalt
+f) Berechtigte Interessen des Verantwortlichen oder eines Dritten
+
+Datenschutz-Folgenabschätzung
+
+Eine Datenschutz-Folgenabschätzung (DSFA) ist erforderlich, wenn eine Form der Verarbeitung, insbesondere bei Verwendung neuer Technologien, aufgrund der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat.
+
+Die DSFA muss mindestens enthalten:
+- Eine systematische Beschreibung der geplanten Verarbeitungsvorgänge
+- Eine Bewertung der Notwendigkeit und Verhältnismäßigkeit
+- Eine Bewertung der Risiken für die Rechte und Freiheiten der betroffenen Personen
+- Die zur Bewältigung der Risiken geplanten Abhilfemaßnahmen
+
+Bußgelder und Sanktionen
+
+Die DSGVO sieht erhebliche Bußgelder vor:
+
+Für weniger schwere Verstöße: bis zu 10 Millionen Euro oder bis zu 2% des weltweiten Jahresumsatzes des Unternehmens.
+
+Für schwere Verstöße: bis zu 20 Millionen Euro oder bis zu 4% des weltweiten Jahresumsatzes des Unternehmens.
+
+Dabei wird jeweils der höhere Betrag angewandt.
+
+Auftragsverarbeitung
+
+Wenn personenbezogene Daten im Auftrag verarbeitet werden, muss zwischen dem Verantwortlichen und dem Auftragsverarbeiter ein Vertrag geschlossen werden, der bestimmte Mindestangaben enthält und sicherstellt, dass der Auftragsverarbeiter hinreichende Garantien für die Umsetzung geeigneter technischer und organisatorischer Maßnahmen bietet.
+
+Internationale Datenübertragung
+
+Die Übertragung personenbezogener Daten in Drittländer außerhalb der EU ist nur unter bestimmten Voraussetzungen zulässig:
+
+- Angemessenheitsbeschluss der Europäischen Kommission
+- Geeignete Garantien (z.B. Standardvertragsklauseln)
+- Ausnahmen für bestimmte Situationen
+
+Technische und organisatorische Maßnahmen
+
+Verantwortliche und Auftragsverarbeiter müssen geeignete technische und organisatorische Maßnahmen umsetzen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten. Dazu gehören:
+
+- Pseudonymisierung und Verschlüsselung personenbezogener Daten
+- Fähigkeit zur Gewährleistung der dauerhaften Vertraulichkeit, Integrität, Verfügbarkeit und Belastbarkeit der Systeme
+- Fähigkeit zur raschen Wiederherstellung der Verfügbarkeit und des Zugangs zu personenbezogenen Daten
+- Verfahren zur regelmäßigen Überprüfung, Bewertung und Evaluierung der Wirksamkeit
+
+Privacy by Design und Privacy by Default
+
+Die DSGVO fordert, dass Datenschutz bereits bei der Entwicklung von Systemen und Verfahren berücksichtigt wird (Privacy by Design) und dass datenschutzfreundliche Voreinstellungen gewählt werden (Privacy by Default).
+
+Datenschutzbeauftragte
+
+Unter bestimmten Umständen müssen Organisationen einen Datenschutzbeauftragten benennen:
+- Öffentliche Stellen (mit Ausnahmen)
+- Kerntätigkeit besteht in umfangreicher Überwachung von betroffenen Personen
+- Kerntätigkeit besteht in umfangreicher Verarbeitung besonderer Kategorien von Daten
+
+Meldepflicht bei Datenschutzverletzungen
+
+Datenschutzverletzungen müssen innerhalb von 72 Stunden nach Bekanntwerden an die zuständige Aufsichtsbehörde gemeldet werden. Bei hohem Risiko für die Rechte und Freiheiten natürlicher Personen müssen auch die betroffenen Personen unverzüglich benachrichtigt werden.

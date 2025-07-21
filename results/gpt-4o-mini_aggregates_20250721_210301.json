@@ -1,0 +1,16 @@
+{
+  "bertscore_precision_mean": 0.8067247271537781,
+  "bertscore_precision_std": NaN,
+  "bertscore_recall_mean": 0.8951272368431091,
+  "bertscore_recall_std": NaN,
+  "bertscore_f1_mean": 0.8486299514770508,
+  "bertscore_f1_std": NaN,
+  "execution_time_mean": 1.118624210357666,
+  "execution_time_total": 1.118624210357666,
+  "tokens_per_second_mean": 37.188538934535416,
+  "tokens_per_second_total": 37.188538934535416,
+  "cost_estimate_mean": 4.559999999999999e-05,
+  "cost_estimate_total": 4.559999999999999e-05,
+  "total_tokens_mean": 148.0,
+  "total_tokens_total": 148.0
+}
