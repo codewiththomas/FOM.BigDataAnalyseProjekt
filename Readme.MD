@@ -6,21 +6,28 @@ Ein modulares, erweiterbares RAG-System (Retrieval-Augmented Generation) für Fo
 
 Dieses System ermöglicht die systematische Evaluierung verschiedener RAG-Komponenten:
 
-- **Chunker**: Line Chunker vs. Recursive Character Chunker
-- **Embeddings**: OpenAI Embeddings vs. lokale Sentence Transformers
-- **Vector Stores**: In-Memory vs. Chroma DB
+- **Indexing**: verschiedene Kombinationen von Chunkern und Embeddings
+- **Retrieval**: verschiedene Kombinationen aus Vector Stores und Suchalgorithmen
 - **Language Models**: OpenAI LLM vs. lokale Small Language Models (SLM)
 
 ## 📊 Evaluierungsmetriken
 
-- **Precision, Recall, F1-Score**
-- **RAGAS-Metriken** (Context Relevance, Answer Relevance, Faithfulness)
-- **Mean Reciprocal Rank (MRR)**
-- **Normalized Discounted Cumulative Gain (nDCG)**
+- Retrievalleistung
+  - **Precision, Recall, F1-Score**
+- Systemleistung
+  - **RAGAS-Metriken** (Context Relevance, Answer Relevance, Faithfulness)
+  - **Mean Reciprocal Rank (MRR)**
+  - **Normalized Discounted Cumulative Gain (nDCG)**
+- Performance
+  - Inferenz
+  - Token/s
+  - Time2Token
 
-## 🏗️ Systemarchitektur
+## 🏗️ Projektstruktur
 
 ```
+
+
 src/
 ├── components/
 │   ├── chunkers/           # Text-Aufteilung
@@ -75,19 +82,6 @@ Erstellen Sie eine `.env`-Datei im Hauptverzeichnis:
 OPENAI_API_KEY=your-openai-api-key-here
 ```
 
-### 3. Experimente ausführen
-
-```bash
-# Vollständige Experimente mit DSGVO-Daten
-python run_experiments.py
-```
-
-### 4. Jupyter Notebook verwenden
-
-```bash
-# Jupyter starten
-jupyter notebook src/rag.ipynb
-```
 
 ## 📋 Verfügbare Komponenten
 
