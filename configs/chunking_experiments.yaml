@@ -1,0 +1,68 @@
+# ResearchRAG Chunking Experiments Configuration
+# This configuration focuses on different chunking strategies
+
+llm:
+  type: openai
+  model: gpt-4o-mini
+  temperature: 0.1
+  max_tokens: 1000
+
+embedding:
+  type: openai
+  model: text-embedding-ada-002
+
+# Experiment 1: Small chunks with overlap
+chunking_small:
+  type: fixed-size
+  chunk_size: 500
+  chunk_overlap: 100
+  separator: "\n"
+
+# Experiment 2: Large chunks
+chunking_large:
+  type: fixed-size
+  chunk_size: 2000
+  chunk_overlap: 400
+  separator: "\n"
+
+# Experiment 3: Semantic chunking
+chunking_semantic:
+  type: semantic
+  max_chunk_size: 1000
+  min_chunk_size: 300
+  boundary_patterns:
+    - "\n\n+"
+    - "\.\s+"
+    - "!\s+"
+    - "\?\s+"
+    - ";\s+"
+    - ":\s+"
+
+# Experiment 4: Sentence-based chunking
+chunking_sentences:
+  type: semantic
+  max_chunk_size: 800
+  min_chunk_size: 100
+  boundary_patterns:
+    - "\.\s+"
+    - "!\s+"
+    - "\?\s+"
+
+retrieval:
+  type: vector-similarity
+  top_k: 5
+  similarity_threshold: 0.0
+
+evaluation:
+  enabled_metrics:
+    - precision-recall
+    - timing
+    - ragas
+
+dataset:
+  evaluation_subset_size: 50
+  save_qa_pairs: true
+
+pipeline:
+  include_context: true
+  max_context_length: 4000

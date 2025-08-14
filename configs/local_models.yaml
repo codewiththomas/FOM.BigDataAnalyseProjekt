@@ -1,0 +1,43 @@
+# ResearchRAG Local Models Configuration
+# This configuration uses local/on-premises models
+
+llm:
+  type: local
+  model_name: gpt-oss-20b  # Options: gpt-oss-20b, mixtral-7b, qwen3, llama3-sauerkraut
+  endpoint: http://localhost:8000
+  api_type: ollama  # Options: ollama, vllm, text-generation-webui
+
+embedding:
+  type: sentence-transformers
+  model_name: all-MiniLM-L6-v2
+  device: cpu  # Options: cpu, cuda, mps
+
+chunking:
+  type: semantic
+  max_chunk_size: 1000
+  min_chunk_size: 200
+  boundary_patterns:
+    - "\n\n+"
+    - "\.\s+"
+    - "!\s+"
+    - "\?\s+"
+
+retrieval:
+  type: hybrid
+  top_k: 5
+  vector_weight: 0.7
+  keyword_weight: 0.3
+
+evaluation:
+  enabled_metrics:
+    - precision-recall
+    - timing
+    - ragas
+
+dataset:
+  evaluation_subset_size: 50
+  save_qa_pairs: true
+
+pipeline:
+  include_context: true
+  max_context_length: 4000

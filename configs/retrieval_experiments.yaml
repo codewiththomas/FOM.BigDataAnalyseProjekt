@@ -1,0 +1,83 @@
+# ResearchRAG Retrieval Experiments Configuration
+# This configuration focuses on different retrieval strategies
+
+llm:
+  type: openai
+  model: gpt-4o-mini
+  temperature: 0.1
+  max_tokens: 1000
+
+embedding:
+  type: openai
+  model: text-embedding-ada-002
+
+chunking:
+  type: fixed-size
+  chunk_size: 1000
+  chunk_overlap: 200
+  separator: "\n"
+
+# Experiment 1: Vector similarity with different top_k values
+retrieval_vector_k3:
+  type: vector-similarity
+  top_k: 3
+  similarity_threshold: 0.0
+
+retrieval_vector_k5:
+  type: vector-similarity
+  top_k: 5
+  similarity_threshold: 0.0
+
+retrieval_vector_k10:
+  type: vector-similarity
+  top_k: 10
+  similarity_threshold: 0.0
+
+# Experiment 2: Vector similarity with similarity thresholds
+retrieval_vector_thresh_0:
+  type: vector-similarity
+  top_k: 5
+  similarity_threshold: 0.0
+
+retrieval_vector_thresh_0.3:
+  type: vector-similarity
+  top_k: 5
+  similarity_threshold: 0.3
+
+retrieval_vector_thresh_0.5:
+  type: vector-similarity
+  top_k: 5
+  similarity_threshold: 0.5
+
+# Experiment 3: Hybrid retrieval with different weights
+retrieval_hybrid_vector_heavy:
+  type: hybrid
+  top_k: 5
+  vector_weight: 0.8
+  keyword_weight: 0.2
+
+retrieval_hybrid_balanced:
+  type: hybrid
+  top_k: 5
+  vector_weight: 0.5
+  keyword_weight: 0.5
+
+retrieval_hybrid_keyword_heavy:
+  type: hybrid
+  top_k: 5
+  vector_weight: 0.2
+  keyword_weight: 0.8
+
+evaluation:
+  enabled_metrics:
+    - precision-recall
+    - timing
+    - ragas
+
+dataset:
+  evaluation_subset_size: 50
+  save_qa_pairs: true
+
+pipeline:
+  include_context: true
+  max_context_length: 4000
