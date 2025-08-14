@@ -103,6 +103,10 @@ class SentenceParser:
         if not clean_text:
             return []
 
+        # Check if there are <sup> tags for sentence numbering
+        if '<sup>' in html_str:
+            return SentenceParser._parse_sup_tags(html_str)
+
         # For now, just return the entire text as sentence 1
         # The complex sentence numbering in DSGVO articles is too difficult to parse reliably
         # without causing false positives from article references, paragraph numbers, etc.
@@ -196,7 +200,7 @@ class ContentParser:
         intro_text = li_copy.get_text(strip=True)
         if intro_text:
             # Introduction text of paragraph
-            sentences = self.sentence_parser.parse_sentences_from_text(intro_text)
+            sentences = self.sentence_parser.parse_sentences_from_element(li_element)
             for satz_nr, satz_text in sentences:
                 entry = DSGVOEntry(
                     kapitel_nr=context['kapitel_nr'],
@@ -238,24 +242,24 @@ class ContentParser:
                                artikel_name: str, absatz_nr: int) -> List[DSGVOEntry]:
         """Parse simple paragraph without subparagraphs"""
         entries = []
-        text = li_element.get_text(strip=True)
 
-        if text:
-            sentences = self.sentence_parser.parse_sentences_from_text(text)
-            for satz_nr, satz_text in sentences:
-                entry = DSGVOEntry(
-                    kapitel_nr=context['kapitel_nr'],
-                    kapitel_name=context['kapitel_name'],
-                    abschnitt_nr=context['abschnitt_nr'],
-                    abschnitt_name=context['abschnitt_name'],
-                    artikel_nr=artikel_nr,
-                    artikel_name=artikel_name,
-                    absatz_nr=absatz_nr,
-                    unterabsatz_nr=0,
-                    satz_nr=satz_nr,
-                    text=satz_text
-                )
-                entries.append(entry)
+        # Use parse_sentences_from_element to preserve <sup> tags
+        sentences = self.sentence_parser.parse_sentences_from_element(li_element)
+
+        for satz_nr, satz_text in sentences:
+            entry = DSGVOEntry(
+                kapitel_nr=context['kapitel_nr'],
+                kapitel_name=context['kapitel_name'],
+                abschnitt_nr=context['abschnitt_nr'],
+                abschnitt_name=context['abschnitt_name'],
+                artikel_nr=artikel_nr,
+                artikel_name=artikel_name,
+                absatz_nr=absatz_nr,
+                unterabsatz_nr=0,
+                satz_nr=satz_nr,
+                text=satz_text
+            )
+            entries.append(entry)
 
         return entries
 
