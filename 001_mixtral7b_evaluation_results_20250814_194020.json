@@ -1,0 +1,2752 @@
+[
+  {
+    "precision": 0.024852071005917162,
+    "recall": 0.024852071005917162,
+    "f1": 0.024852071005917162,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08284023668639054,
+    "semantic_similarity": 0.0,
+    "query_time": 62.044551849365234,
+    "tokens_per_second": 0.06446980243666509,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.225,
+    "context_utilization": 0.0,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024852071005917162,
+    "recall": 0.024852071005917162,
+    "f1": 0.024852071005917162,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08284023668639054,
+    "semantic_similarity": 0.0,
+    "query_time": 62.07237005233765,
+    "tokens_per_second": 0.06444090980620386,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.0,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024852071005917162,
+    "recall": 0.024852071005917162,
+    "f1": 0.024852071005917162,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08284023668639054,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06937098503113,
+    "tokens_per_second": 0.06444402346150171,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.18,
+    "context_utilization": 0.0,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.011180124223602485,
+    "recall": 0.011180124223602485,
+    "f1": 0.011180124223602485,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.037267080745341616,
+    "semantic_similarity": 0.0,
+    "query_time": 5.984452962875366,
+    "tokens_per_second": 0.33419930149121846,
+    "response_length": 9,
+    "word_count": 2,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 2,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.07692307692307693,
+    "context_relevance": 0.11666666666666665,
+    "context_utilization": 0.0,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "article 1",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024852071005917162,
+    "recall": 0.024852071005917162,
+    "f1": 0.024852071005917162,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08284023668639054,
+    "semantic_similarity": 0.0,
+    "query_time": 62.05573272705078,
+    "tokens_per_second": 0.06445818660451262,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.15,
+    "context_utilization": 0.0,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024852071005917162,
+    "recall": 0.024852071005917162,
+    "f1": 0.024852071005917162,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08284023668639054,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06342053413391,
+    "tokens_per_second": 0.0644502021573249,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.08888888888888888,
+    "context_utilization": 0.0,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.040490797546012265,
+    "recall": 0.040490797546012265,
+    "f1": 0.040490797546012265,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.13496932515337423,
+    "semantic_similarity": 0.0,
+    "query_time": 62.10442280769348,
+    "tokens_per_second": 0.06440765116497438,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.225,
+    "context_utilization": 0.0,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.040490797546012265,
+    "recall": 0.040490797546012265,
+    "f1": 0.040490797546012265,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.13496932515337423,
+    "semantic_similarity": 0.0,
+    "query_time": 62.08850908279419,
+    "tokens_per_second": 0.0644241593024251,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.0,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.0047177059581639735,
+    "recall": 0.0047177059581639735,
+    "f1": 0.0047177059581639735,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.004362050163576881,
+    "semantic_similarity": 0.011363636363636364,
+    "query_time": 59.498000383377075,
+    "tokens_per_second": 3.2269992060715063,
+    "response_length": 771,
+    "word_count": 120,
+    "avg_word_length": 5.416666666666667,
+    "estimated_tokens": 192,
+    "faithfulness": 0.013157894736842105,
+    "answer_relevance": 0.02619047619047619,
+    "context_relevance": 0.18,
+    "context_utilization": 0.009708737864077669,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Es seems like the text you provided contains several obligations of different parties under the General Data Protection Regulation (DSGVO) in the European Union. However, you are asking for \"the obligations of the controller according to Article 1 DSGVO\".\n\nArticle 1 of the DSGVO outlines the scope and objectives of the regulation, but it does not contain any specific obligations for controllers or processors. The obligations for controllers can be found in Articles 5 to 32 of the DSGVO, which set out the general principles for processing personal data, the rights of data subjects, the controller's responsibilities, and the conditions for consent.\n\nTherefore, I would need more information or a specific provision from the DSGVO to answer your question accurately.",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.011612903225806452,
+    "recall": 0.011612903225806452,
+    "f1": 0.011612903225806452,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.03870967741935484,
+    "semantic_similarity": 0.0,
+    "query_time": 5.913539886474609,
+    "tokens_per_second": 0.33820690117849384,
+    "response_length": 9,
+    "word_count": 2,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 2,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.07692307692307693,
+    "context_relevance": 0.11666666666666665,
+    "context_utilization": 0.0,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "article 1",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.040490797546012265,
+    "recall": 0.040490797546012265,
+    "f1": 0.040490797546012265,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.13496932515337423,
+    "semantic_similarity": 0.0,
+    "query_time": 62.056100845336914,
+    "tokens_per_second": 0.06445780423699586,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.15,
+    "context_utilization": 0.0,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.040490797546012265,
+    "recall": 0.040490797546012265,
+    "f1": 0.040490797546012265,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.13496932515337423,
+    "semantic_similarity": 0.0,
+    "query_time": 62.04071593284607,
+    "tokens_per_second": 0.06447378854121652,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.08888888888888888,
+    "context_utilization": 0.0,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.022966507177033493,
+    "recall": 0.022966507177033493,
+    "f1": 0.022966507177033496,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07655502392344497,
+    "semantic_similarity": 0.0,
+    "query_time": 62.064475297927856,
+    "tokens_per_second": 0.06444910684894725,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.225,
+    "context_utilization": 0.0,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.022966507177033493,
+    "recall": 0.022966507177033493,
+    "f1": 0.022966507177033496,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07655502392344497,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06395745277405,
+    "tokens_per_second": 0.06444964459515325,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.0,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.022966507177033493,
+    "recall": 0.022966507177033493,
+    "f1": 0.022966507177033496,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07655502392344497,
+    "semantic_similarity": 0.0,
+    "query_time": 62.05346703529358,
+    "tokens_per_second": 0.06446054009721901,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.18,
+    "context_utilization": 0.0,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.011940298507462687,
+    "recall": 0.011940298507462687,
+    "f1": 0.011940298507462687,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.03980099502487562,
+    "semantic_similarity": 0.0,
+    "query_time": 5.904556035995483,
+    "tokens_per_second": 0.3387214869005487,
+    "response_length": 9,
+    "word_count": 2,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 2,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.07692307692307693,
+    "context_relevance": 0.11666666666666665,
+    "context_utilization": 0.0,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "article 1",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.022966507177033493,
+    "recall": 0.022966507177033493,
+    "f1": 0.022966507177033496,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07655502392344497,
+    "semantic_similarity": 0.0,
+    "query_time": 62.056578397750854,
+    "tokens_per_second": 0.06445730820610267,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.15,
+    "context_utilization": 0.0,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.022966507177033493,
+    "recall": 0.022966507177033493,
+    "f1": 0.022966507177033496,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07655502392344497,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06408619880676,
+    "tokens_per_second": 0.06444951090050696,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.08888888888888888,
+    "context_utilization": 0.0,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024999999999999998,
+    "recall": 0.024999999999999998,
+    "f1": 0.024999999999999998,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08333333333333333,
+    "semantic_similarity": 0.0,
+    "query_time": 62.08750128746033,
+    "tokens_per_second": 0.06442520502605363,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.225,
+    "context_utilization": 0.0,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024999999999999998,
+    "recall": 0.024999999999999998,
+    "f1": 0.024999999999999998,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08333333333333333,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06816363334656,
+    "tokens_per_second": 0.06444527702847924,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.02222222222222222,
+    "context_utilization": 0.0,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024999999999999998,
+    "recall": 0.024999999999999998,
+    "f1": 0.024999999999999998,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08333333333333333,
+    "semantic_similarity": 0.0,
+    "query_time": 62.071422815322876,
+    "tokens_per_second": 0.06444189320262472,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.24000000000000005,
+    "context_utilization": 0.0,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024999999999999998,
+    "recall": 0.024999999999999998,
+    "f1": 0.024999999999999998,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08333333333333333,
+    "semantic_similarity": 0.0,
+    "query_time": 62.074547290802,
+    "tokens_per_second": 0.06443864956857617,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.16666666666666669,
+    "context_utilization": 0.0,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024999999999999998,
+    "recall": 0.024999999999999998,
+    "f1": 0.024999999999999998,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08333333333333333,
+    "semantic_similarity": 0.0,
+    "query_time": 62.070831298828125,
+    "tokens_per_second": 0.06444250731463168,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.15,
+    "context_utilization": 0.0,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.024999999999999998,
+    "recall": 0.024999999999999998,
+    "f1": 0.024999999999999998,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08333333333333333,
+    "semantic_similarity": 0.0,
+    "query_time": 62.07569336891174,
+    "tokens_per_second": 0.06443745986417364,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.08888888888888888,
+    "context_utilization": 0.0,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.01139240506329114,
+    "recall": 0.01139240506329114,
+    "f1": 0.01139240506329114,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0379746835443038,
+    "semantic_similarity": 0.0,
+    "query_time": 62.07560610771179,
+    "tokens_per_second": 0.06443755044548927,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.225,
+    "context_utilization": 0.0,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.01139240506329114,
+    "recall": 0.01139240506329114,
+    "f1": 0.01139240506329114,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0379746835443038,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06573796272278,
+    "tokens_per_second": 0.06444779569691791,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.02222222222222222,
+    "context_utilization": 0.0,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.01139240506329114,
+    "recall": 0.01139240506329114,
+    "f1": 0.01139240506329114,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0379746835443038,
+    "semantic_similarity": 0.0,
+    "query_time": 62.05413222312927,
+    "tokens_per_second": 0.06445984911394975,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.24000000000000005,
+    "context_utilization": 0.0,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.01139240506329114,
+    "recall": 0.01139240506329114,
+    "f1": 0.01139240506329114,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0379746835443038,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06072282791138,
+    "tokens_per_second": 0.06445300373138786,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.16666666666666669,
+    "context_utilization": 0.0,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.01139240506329114,
+    "recall": 0.01139240506329114,
+    "f1": 0.01139240506329114,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0379746835443038,
+    "semantic_similarity": 0.0,
+    "query_time": 62.063440561294556,
+    "tokens_per_second": 0.06445018135998366,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.15,
+    "context_utilization": 0.0,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.01139240506329114,
+    "recall": 0.01139240506329114,
+    "f1": 0.01139240506329114,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0379746835443038,
+    "semantic_similarity": 0.0,
+    "query_time": 62.07117056846619,
+    "tokens_per_second": 0.06444215508370173,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.08888888888888888,
+    "context_utilization": 0.0,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.023529411764705882,
+    "recall": 0.023529411764705882,
+    "f1": 0.02352941176470588,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0784313725490196,
+    "semantic_similarity": 0.0,
+    "query_time": 62.07241678237915,
+    "tokens_per_second": 0.06444086129308732,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.225,
+    "context_utilization": 0.0,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.023529411764705882,
+    "recall": 0.023529411764705882,
+    "f1": 0.02352941176470588,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0784313725490196,
+    "semantic_similarity": 0.0,
+    "query_time": 62.07567501068115,
+    "tokens_per_second": 0.06443747892087735,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.02222222222222222,
+    "context_utilization": 0.0,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.023529411764705882,
+    "recall": 0.023529411764705882,
+    "f1": 0.02352941176470588,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0784313725490196,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06343960762024,
+    "tokens_per_second": 0.06445018235033294,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.24000000000000005,
+    "context_utilization": 0.0,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.023529411764705882,
+    "recall": 0.023529411764705882,
+    "f1": 0.02352941176470588,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0784313725490196,
+    "semantic_similarity": 0.0,
+    "query_time": 62.05452585220337,
+    "tokens_per_second": 0.06445944022724286,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.16666666666666669,
+    "context_utilization": 0.0,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.023529411764705882,
+    "recall": 0.023529411764705882,
+    "f1": 0.02352941176470588,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0784313725490196,
+    "semantic_similarity": 0.0,
+    "query_time": 62.05555987358093,
+    "tokens_per_second": 0.06445836615041048,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.15,
+    "context_utilization": 0.0,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.023529411764705882,
+    "recall": 0.023529411764705882,
+    "f1": 0.02352941176470588,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0784313725490196,
+    "semantic_similarity": 0.0,
+    "query_time": 62.11790490150452,
+    "tokens_per_second": 0.06439367210375956,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.08888888888888888,
+    "context_utilization": 0.0,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.03230769230769231,
+    "recall": 0.03230769230769231,
+    "f1": 0.03230769230769231,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.1076923076923077,
+    "semantic_similarity": 0.0,
+    "query_time": 62.11962938308716,
+    "tokens_per_second": 0.06439188449326212,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.225,
+    "context_utilization": 0.0,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.03230769230769231,
+    "recall": 0.03230769230769231,
+    "f1": 0.03230769230769231,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.1076923076923077,
+    "semantic_similarity": 0.0,
+    "query_time": 62.05905199050903,
+    "tokens_per_second": 0.06445473902198406,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.02222222222222222,
+    "context_utilization": 0.0,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.03230769230769231,
+    "recall": 0.03230769230769231,
+    "f1": 0.03230769230769231,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.1076923076923077,
+    "semantic_similarity": 0.0,
+    "query_time": 62.07186794281006,
+    "tokens_per_second": 0.06444143107929991,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.24000000000000005,
+    "context_utilization": 0.0,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.03230769230769231,
+    "recall": 0.03230769230769231,
+    "f1": 0.03230769230769231,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.1076923076923077,
+    "semantic_similarity": 0.0,
+    "query_time": 62.080519914627075,
+    "tokens_per_second": 0.0644324500745288,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.16666666666666669,
+    "context_utilization": 0.0,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.03230769230769231,
+    "recall": 0.03230769230769231,
+    "f1": 0.03230769230769231,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.1076923076923077,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06988859176636,
+    "tokens_per_second": 0.06444348605662882,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.15,
+    "context_utilization": 0.0,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.03230769230769231,
+    "recall": 0.03230769230769231,
+    "f1": 0.03230769230769231,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.1076923076923077,
+    "semantic_similarity": 0.0,
+    "query_time": 62.05890774726868,
+    "tokens_per_second": 0.06445488883384427,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.08888888888888888,
+    "context_utilization": 0.0,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.021428571428571425,
+    "recall": 0.021428571428571425,
+    "f1": 0.021428571428571425,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07142857142857142,
+    "semantic_similarity": 0.0,
+    "query_time": 62.066224336624146,
+    "tokens_per_second": 0.06444729066014207,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.225,
+    "context_utilization": 0.0,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.021428571428571425,
+    "recall": 0.021428571428571425,
+    "f1": 0.021428571428571425,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07142857142857142,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06824254989624,
+    "tokens_per_second": 0.06444519508965357,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.02222222222222222,
+    "context_utilization": 0.0,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.021428571428571425,
+    "recall": 0.021428571428571425,
+    "f1": 0.021428571428571425,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07142857142857142,
+    "semantic_similarity": 0.0,
+    "query_time": 62.059295892715454,
+    "tokens_per_second": 0.06445448570533205,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.24000000000000005,
+    "context_utilization": 0.0,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.021428571428571425,
+    "recall": 0.021428571428571425,
+    "f1": 0.021428571428571425,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07142857142857142,
+    "semantic_similarity": 0.0,
+    "query_time": 62.081400871276855,
+    "tokens_per_second": 0.06443153575567391,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.16666666666666669,
+    "context_utilization": 0.0,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.021428571428571425,
+    "recall": 0.021428571428571425,
+    "f1": 0.021428571428571425,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07142857142857142,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06423902511597,
+    "tokens_per_second": 0.06444935220073016,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.15,
+    "context_utilization": 0.0,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.021428571428571425,
+    "recall": 0.021428571428571425,
+    "f1": 0.021428571428571425,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07142857142857142,
+    "semantic_similarity": 0.0,
+    "query_time": 62.081002712249756,
+    "tokens_per_second": 0.06443194898993995,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.08888888888888888,
+    "context_utilization": 0.0,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.021774193548387097,
+    "recall": 0.021774193548387097,
+    "f1": 0.021774193548387097,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07258064516129033,
+    "semantic_similarity": 0.0,
+    "query_time": 62.0730094909668,
+    "tokens_per_second": 0.06444024597489674,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.225,
+    "context_utilization": 0.0,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "durch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.021774193548387097,
+    "recall": 0.021774193548387097,
+    "f1": 0.021774193548387097,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07258064516129033,
+    "semantic_similarity": 0.0,
+    "query_time": 62.06219696998596,
+    "tokens_per_second": 0.06445147280130042,
+    "response_length": 17,
+    "word_count": 3,
+    "avg_word_length": 5.0,
+    "estimated_tokens": 4,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.02222222222222222,
+    "context_utilization": 0.0,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "durch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Request timed out",
+    "pipeline_info": {
+      "llm": {
+        "name": "mixtral:8x7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 384
+      },
+      "is_indexed": true
+    }
+  }
+]
