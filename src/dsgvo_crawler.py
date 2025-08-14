@@ -1,12 +1,8 @@
-#!/usr/bin/env python3
 """
 DSGVO Website Crawler
 
 A clean, well-structured crawler for https://dsgvo-gesetz.de/ that extracts
 DSGVO articles and converts them to structured JSONL format.
-
-Author: Generated from Jupyter notebook
-Date: 2025-08-11
 """
 
 import json
