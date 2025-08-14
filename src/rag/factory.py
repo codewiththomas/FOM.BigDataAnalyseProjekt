@@ -1,11 +1,11 @@
 from typing import Dict, Any
-from .config import RAGConfig
-from .llms import LLMFactory
-from .embeddings import EmbeddingFactory
-from .chunking import ChunkingFactory
-from .retrieval import RetrievalFactory
-from .pipeline import RAGPipeline
-from .evaluation import EvaluationManager
+from config import RAGConfig
+from llms import LLMFactory
+from embeddings import EmbeddingFactory
+from chunking import ChunkingFactory
+from retrieval import RetrievalFactory
+from pipeline import RAGPipeline
+from evaluation import EvaluationManager
 import logging
 
 logger = logging.getLogger(__name__)

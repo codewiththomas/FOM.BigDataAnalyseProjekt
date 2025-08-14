@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
 import openai
-from .interfaces import EmbeddingInterface
+from interfaces import EmbeddingInterface
 import logging
 
 logger = logging.getLogger(__name__)
@@ -14,9 +14,10 @@ class OpenAIEmbedding(EmbeddingInterface):
         self.model = config.get('model', 'text-embedding-ada-002')
 
         if self.api_key:
-            openai.api_key = self.api_key
+            self.client = openai.OpenAI(api_key=self.api_key)
         else:
             logger.warning("No OpenAI API key provided, using environment variable")
+            self.client = openai.OpenAI()
 
     def embed(self, texts: List[str]) -> List[List[float]]:
         """Generate embeddings using OpenAI API"""
@@ -28,7 +29,7 @@ class OpenAIEmbedding(EmbeddingInterface):
             for i in range(0, len(texts), batch_size):
                 batch = texts[i:i + batch_size]
 
-                response = openai.Embedding.create(
+                response = self.client.embeddings.create(
                     input=batch,
                     model=self.model
                 )

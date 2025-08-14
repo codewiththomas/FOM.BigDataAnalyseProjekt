@@ -3,10 +3,10 @@ import time
 from typing import List, Dict, Any
 from pathlib import Path
 import logging
-from .factory import RAGFactory
-from .dataset import DSGVODataset
-from .pipeline import RAGPipeline
-from .evaluation import EvaluationManager
+from factory import RAGFactory
+from dataset import DSGVODataset
+from pipeline import RAGPipeline
+from evaluation import EvaluationManager
 
 logger = logging.getLogger(__name__)
 

@@ -7,7 +7,7 @@ import argparse
 import logging
 import sys
 from pathlib import Path
-from .evaluator import RAGEvaluator
+from evaluator import RAGEvaluator
 
 # Configure logging
 logging.basicConfig(
@@ -24,13 +24,13 @@ def main():
         epilog="""
 Examples:
   # Run evaluation with default config
-  python -m rag.main --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl
+  python src/rag/main.py --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl
 
   # Run evaluation with custom number of QA pairs
-  python -m rag.main --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --num-qa 100
+  python src/rag/main.py --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --num-qa 100
 
   # Run evaluation without saving results
-  python -m rag.main --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --no-save
+  python src/rag/main.py --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --no-save
         """
     )
 

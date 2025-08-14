@@ -1,0 +1,132 @@
+[
+  {
+    "qa_id": "dsgvo_art_70_abs_1(2)_satz_1_qa_4524",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 70?",
+    "ground_truth": "Beratung der Kommission in allen Fragen, die im Zusammenhang mit dem Schutz personenbezogener Daten in der Union stehen, einschließlich etwaiger Vorschläge zur Änderung dieser Verordnung;",
+    "response": "Local LLM response to: Based on the following context, answer the questio...",
+    "retrieved_chunks": 5,
+    "query_time": 0.00036144256591796875,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 76,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.225
+    },
+    "metadata": {
+      "query_time": 0.00036144256591796875,
+      "chunks_retrieved": 5,
+      "llm_model": "mixtral:8x7b",
+      "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_75_abs_6(5)_satz_1_qa_4827",
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 75?",
+    "ground_truth": "die Übersetzung sachdienlicher Informationen,",
+    "response": "Local LLM response to: Based on the following context, answer the questio...",
+    "retrieved_chunks": 5,
+    "query_time": 0.00033473968505859375,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 76,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.25
+    },
+    "metadata": {
+      "query_time": 0.00033473968505859375,
+      "chunks_retrieved": 5,
+      "llm_model": "mixtral:8x7b",
+      "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_4_abs_15_satz_1_qa_194",
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 4?",
+    "ground_truth": "„Gesundheitsdaten“ personenbezogene Daten, die sich auf die körperliche oder geistige Gesundheit einer natürlichen Person, einschließlich der Erbringung von Gesundheitsdienstleistungen, beziehen und aus denen Informationen über deren Gesundheitszustand hervorgehen;",
+    "response": "Local LLM response to: Based on the following context, answer the questio...",
+    "retrieved_chunks": 5,
+    "query_time": 0.0003085136413574219,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 76,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.2
+    },
+    "metadata": {
+      "query_time": 0.0003085136413574219,
+      "chunks_retrieved": 5,
+      "llm_model": "mixtral:8x7b",
+      "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_83_abs_2(6)_satz_1_qa_5031",
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 83?",
+    "ground_truth": "Umfang der Zusammenarbeit mit der Aufsichtsbehörde, um dem Verstoß abzuhelfen und seine möglichen nachteiligen Auswirkungen zu mindern;",
+    "response": "Local LLM response to: Based on the following context, answer the questio...",
+    "retrieved_chunks": 5,
+    "query_time": 0.0003399848937988281,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 76,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.2166666666666667
+    },
+    "metadata": {
+      "query_time": 0.0003399848937988281,
+      "chunks_retrieved": 5,
+      "llm_model": "mixtral:8x7b",
+      "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_2_abs_2_satz_1_qa_26",
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "ground_truth": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "response": "Local LLM response to: Based on the following context, answer the questio...",
+    "retrieved_chunks": 5,
+    "query_time": 0.000377655029296875,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 76,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.28
+    },
+    "metadata": {
+      "query_time": 0.000377655029296875,
+      "chunks_retrieved": 5,
+      "llm_model": "mixtral:8x7b",
+      "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  }
+]

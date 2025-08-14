@@ -1,7 +1,7 @@
 from typing import List, Dict, Any, Optional
 import time
 import logging
-from .interfaces import (
+from interfaces import (
     LLMInterface, EmbeddingInterface, ChunkingInterface,
     RetrievalInterface, Chunk, QueryResult
 )

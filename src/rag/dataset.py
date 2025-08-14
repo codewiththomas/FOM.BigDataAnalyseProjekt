@@ -14,8 +14,34 @@ class DSGVODataset:
         self.data_path = Path(data_path)
         self.documents: List[Dict[str, Any]] = []
         self.qa_pairs: List[Dict[str, Any]] = []
-        self._load_documents()
-        self._generate_qa_pairs()
+
+        # Check if evaluation dataset exists, otherwise load raw data
+        evaluation_path = Path("data/evaluation/dsgvo_evaluation_dataset.jsonl")
+        if evaluation_path.exists():
+            logger.info("Loading pre-prepared evaluation dataset")
+            self._load_evaluation_dataset(evaluation_path)
+        else:
+            logger.info("Loading raw DSGVO documents and generating QA pairs")
+            self._load_documents()
+            self._generate_qa_pairs()
+
+    def _load_evaluation_dataset(self, evaluation_path: Path):
+        """Load pre-prepared evaluation dataset"""
+        try:
+            with jsonlines.open(evaluation_path, 'r') as reader:
+                for obj in reader:
+                    self.qa_pairs.append(obj)
+
+            # Also load documents for indexing
+            self._load_documents()
+
+            logger.info(f"Loaded {len(self.qa_pairs)} pre-prepared QA pairs")
+
+        except Exception as e:
+            logger.error(f"Failed to load evaluation dataset: {e}")
+            # Fallback to raw data
+            self._load_documents()
+            self._generate_qa_pairs()
 
     def _load_documents(self):
         """Load DSGVO documents from JSONL file"""
@@ -44,7 +70,7 @@ class DSGVODataset:
             raise
 
     def _generate_qa_pairs(self):
-        """Generate question-answer pairs for evaluation"""
+        """Generate question-answer pairs for evaluation (fallback only)"""
         # This is a simplified approach - in practice you might want more sophisticated QA generation
         qa_templates = [
             {

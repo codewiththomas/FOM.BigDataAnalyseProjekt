@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
 import numpy as np
-from .interfaces import RetrievalInterface, Chunk
+from interfaces import RetrievalInterface, Chunk
 import logging
 
 logger = logging.getLogger(__name__)

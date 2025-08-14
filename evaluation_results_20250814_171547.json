@@ -1,0 +1,1302 @@
+[
+  {
+    "qa_id": "dsgvo_art_83_abs_4_satz_1_qa_5071",
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 83?",
+    "ground_truth": "Bei Verstößen gegen die folgenden Bestimmungen werden im Einklang mit Absatz 2 Geldbußen von bis zu 10 000 000 EUR oder im Fall eines Unternehmens von bis zu 2 % seines gesamten weltweit erzielten Jahresumsatzes des vorangegangenen Geschäftsjahrs verhängt, je nachdem, welcher der Beträge höher ist:\n\ndie Pflichten der Verantwortlichen und der Auftragsverarbeiter gemäß den Artikeln 8, 11, 25 bis 39, 42 und 43;\ndie Pflichten der Zertifizierungsstelle gemäß den Artikeln 42 und 43;\ndie Pflichten der Überwachungsstelle gemäß Artikel 41 Absatz 4.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.04444444444444444
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_56_abs_3_satz_1_qa_3464",
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 56?",
+    "ground_truth": "In den in Absatz 2 des vorliegenden Artikels genannten Fällen unterrichtet die Aufsichtsbehörde unverzüglich die federführende Aufsichtsbehörde über diese Angelegenheit.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0009999275207519531,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.1
+    },
+    "metadata": {
+      "query_time": 0.0009999275207519531,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_23_abs_1(3)_satz_1_qa_1394",
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 23?",
+    "ground_truth": "die öffentliche Sicherheit;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.2
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_58_abs_1_satz_1_qa_3669",
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 58?",
+    "ground_truth": "Jede Aufsichtsbehörde verfügt über sämtliche folgenden Untersuchungsbefugnisse, die es ihr gestatten,\n\nden Verantwortlichen, den Auftragsverarbeiter und gegebenenfalls den Vertreter des Verantwortlichen oder des Auftragsverarbeiters anzuweisen, alle Informationen bereitzustellen, die für die Erfüllung ihrer Aufgaben erforderlich sind,\nUntersuchungen in Form von Datenschutzüberprüfungen durchzuführen,\neine Überprüfung der nach Artikel 42 Absatz 7 erteilten Zertifizierungen durchzuführen,\nden Verantwortlichen oder den Auftragsverarbeiter auf einen vermeintlichen Verstoß gegen diese Verordnung hinzuweisen,\nvon dem Verantwortlichen und dem Auftragsverarbeiter Zugang zu allen personenbezogenen Daten und Informationen, die zur Erfüllung ihrer Aufgaben notwendig sind, zu erhalten,\ngemäß dem Verfahrensrecht der Union oder dem Verfahrensrecht des Mitgliedstaats Zugang zu den Räumlichkeiten, einschließlich aller Datenverarbeitungsanlagen und -geräte, des Verantwortlichen und des Auftragsverarbeiters zu erhalten.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0009996891021728516,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.1833333333333333
+    },
+    "metadata": {
+      "query_time": 0.0009996891021728516,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_4_abs_5_satz_1_qa_131",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "ground_truth": "„Pseudonymisierung“ die Verarbeitung personenbezogener Daten in einer Weise, dass die personenbezogenen Daten ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden können, sofern diese zusätzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Maßnahmen unterliegen, die gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren natürlichen Person zugewiesen werden;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.01818181818181818,
+      "recall": 0.5,
+      "f1": 0.03508771929824561,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.2222222222222222,
+      "context_relevance": 0.08888888888888888
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_58_abs_1(6)_satz_1_qa_3702",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 58?",
+    "ground_truth": "gemäß dem Verfahrensrecht der Union oder dem Verfahrensrecht des Mitgliedstaats Zugang zu den Räumlichkeiten, einschließlich aller Datenverarbeitungsanlagen und -geräte, des Verantwortlichen und des Auftragsverarbeiters zu erhalten.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.15
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_6_abs_1(1)_satz_1_qa_361",
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 6?",
+    "ground_truth": "Die betroffene Person hat ihre Einwilligung zu der Verarbeitung der sie betreffenden personenbezogenen Daten für einen oder mehrere bestimmte Zwecke gegeben;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.001001596450805664,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.05454545454545454,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.02222222222222222
+    },
+    "metadata": {
+      "query_time": 0.001001596450805664,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_17_abs_3(4)_satz_1_qa_1183",
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 17?",
+    "ground_truth": "für im öffentlichen Interesse liegende Archivzwecke, wissenschaftliche oder historische Forschungszwecke oder für statistische Zwecke gemäßArtikel 89Absatz 1, soweit das in Absatz 1 genannte Recht voraussichtlich die Verwirklichung der Ziele dieser Verarbeitung unmöglich macht oder ernsthaft beeinträchtigt, oder",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0009989738464355469,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.02222222222222222
+    },
+    "metadata": {
+      "query_time": 0.0009989738464355469,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_12_abs_1_satz_3_qa_682",
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 3?",
+    "ground_truth": "Falls von der betroffenen Person verlangt, kann die Information mündlich erteilt werden, sofern die Identität der betroffenen Person in anderer Form nachgewiesen wurde.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0009980201721191406,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.16666666666666666
+    },
+    "metadata": {
+      "query_time": 0.0009980201721191406,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_46_abs_5_satz_1_qa_3005",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 5?",
+    "ground_truth": "Von einem Mitgliedstaat oder einer Aufsichtsbehörde auf der Grundlage von Artikel 26 Absatz 2 der Richtlinie 95/46/EG erteilte Genehmigungen bleiben so lange gültig, bis sie erforderlichenfalls von dieser Aufsichtsbehörde geändert, ersetzt oder aufgehoben werden.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.1111111111111111,
+      "context_relevance": 0.08888888888888888
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_14_abs_2(4)_satz_1_qa_934",
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 3?",
+    "ground_truth": "wenn die Verarbeitung aufArtikel 6Absatz 1 Buchstabe a oderArtikel 9Absatz 2 Buchstabe a beruht, das Bestehen eines Rechts, die Einwilligung jederzeit zu widerrufen, ohne dass die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt wird;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.11666666666666665
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_34_abs_3(2)_satz_1_qa_2004",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 34?",
+    "ground_truth": "der Verantwortliche hat durch nachfolgende Maßnahmen sichergestellt, dass das hohe Risiko für die Rechte und Freiheiten der betroffenen Personen gemäß Absatz 1 aller Wahrscheinlichkeit nach nicht mehr besteht;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0010027885437011719,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.2
+    },
+    "metadata": {
+      "query_time": 0.0010027885437011719,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_13_abs_3_satz_1_qa_853",
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 13?",
+    "ground_truth": "Beabsichtigt der Verantwortliche, die personenbezogenen Daten für einen anderen Zweck weiterzuverarbeiten als den, für den die personenbezogenen Daten erhoben wurden, so stellt er der betroffenen Person vor dieser Weiterverarbeitung Informationen über diesen anderen Zweck und alle anderen maßgeblichen Informationen gemäß Absatz 2 zur Verfügung.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0005104541778564453,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.04444444444444444
+    },
+    "metadata": {
+      "query_time": 0.0005104541778564453,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_9_abs_2(8)_satz_1_qa_611",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 2?",
+    "ground_truth": "die Verarbeitung ist für Zwecke der Gesundheitsvorsorge oder der Arbeitsmedizin, für die Beurteilung der Arbeitsfähigkeit des Beschäftigten, für die medizinische Diagnostik, die Versorgung oder Behandlung im Gesundheits- oder Sozialbereich oder für die Verwaltung von Systemen und Diensten im Gesundheits- oder Sozialbereich auf der Grundlage des Unionsrechts oder des Rechts eines Mitgliedstaats oder aufgrund eines Vertrags mit einem Angehörigen eines Gesundheitsberufs und vorbehaltlich der in Absatz 3 genannten Bedingungen und Garantien erforderlich,",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.01818181818181818,
+      "recall": 0.5,
+      "f1": 0.03508771929824561,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.05454545454545454,
+      "answer_relevance": 0.1111111111111111,
+      "context_relevance": 0.15555555555555556
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_20_abs_1(2)_satz_1_qa_1265",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 3?",
+    "ground_truth": "die Verarbeitung mithilfe automatisierter Verfahren erfolgt.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.1111111111111111,
+      "context_relevance": 0.08888888888888888
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_5_abs_1(1)_satz_1_qa_312",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 5?",
+    "ground_truth": "auf rechtmäßige Weise, nach Treu und Glauben und in einer für die betroffene Person nachvollziehbaren Weise verarbeitet werden („Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz“);",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0010001659393310547,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.175
+    },
+    "metadata": {
+      "query_time": 0.0010001659393310547,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_75_abs_6(5)_satz_1_qa_4829",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 7?",
+    "ground_truth": "die Übersetzung sachdienlicher Informationen,",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.05454545454545454,
+      "answer_relevance": 0.1111111111111111,
+      "context_relevance": 0.17777777777777776
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_42_abs_8_satz_1_qa_2681",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 4?",
+    "ground_truth": "Der Ausschuss nimmt alle Zertifizierungsverfahren und Datenschutzsiegel und -prüfzeichen in ein Register auf und veröffentlicht sie in geeigneter Weise.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.01818181818181818,
+      "recall": 1.0,
+      "f1": 0.03571428571428572,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.1111111111111111,
+      "context_relevance": 0.17777777777777776
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_40_abs_5_satz_1_qa_2491",
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 40?",
+    "ground_truth": "Verbände und andere Vereinigungen gemäß Absatz 2 des vorliegenden Artikels, die beabsichtigen, Verhaltensregeln auszuarbeiten oder bestehende Verhaltensregeln zu ändern oder zu erweitern, legen den Entwurf der Verhaltensregeln bzw. den Entwurf zu deren Änderung oder Erweiterung der Aufsichtsbehörde vor, die nach Artikel 55 zuständig ist.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.07272727272727272,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.04444444444444444
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_71_abs_1_satz_2_qa_4700",
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 71?",
+    "ground_truth": "Der Bericht wird veröffentlicht und dem Europäischen Parlament, dem Rat und der Kommission übermittelt.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.13999999999999999
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_64_abs_1_satz_2_qa_4183",
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 64?",
+    "ground_truth": "Zu diesem Zweck übermittelt die zuständige Aufsichtsbehörde dem Ausschuss den Entwurf des Beschlusses, wenn dieser\n\nder Annahme einer Liste der Verarbeitungsvorgänge dient, die der Anforderung einer Datenschutz-Folgenabschätzung gemäß Artikel 35 Absatz 4 unterliegen,\neine Angelegenheit gemäß Artikel 40 Absatz 7 und damit die Frage betrifft, ob ein Entwurf von Verhaltensregeln oder eine Änderung oder Ergänzung von Verhaltensregeln mit dieser Verordnung in Einklang steht,\nder Billigung der Anforderungen an die Akkreditierung einer Stelle nach Artikel 41 Absatz 3, einer Zertifizierungsstelle nach Artikel 43 Absatz 3 oder der Kriterien für die Zertifizierung gemäß Artikel 42 Absatz 5 dient,\nder Festlegung von Standard-Datenschutzklauseln gemäß Artikel 46 Absatz 2 Buchstabe d und Artikel 28 Absatz 8 dient,\nder Genehmigung von Vertragsklauseln gemäß Artikels 46 Absatz 3 Buchstabe a dient, oder\nder Annahme verbindlicher interner Vorschriften im Sinne von Artikel 47 dient.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0010004043579101562,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.13333333333333333
+    },
+    "metadata": {
+      "query_time": 0.0010004043579101562,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_12_abs_5_satz_1_qa_729",
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 12?",
+    "ground_truth": "Informationen gemäß den Artikeln 13 und 14 sowie alle Mitteilungen und Maßnahmen gemäß den Artikeln 15 bis 22 und Artikel 34 werden unentgeltlich zur Verfügung gestellt.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.06666666666666667
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_60_abs_11_satz_1_qa_3978",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 60?",
+    "ground_truth": "Hat – in Ausnahmefällen – eine betroffene Aufsichtsbehörde Grund zu der Annahme, dass zum Schutz der Interessen betroffener Personen dringender Handlungsbedarf besteht, so kommt das Dringlichkeitsverfahren nach Artikel 66 zur Anwendung.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.2
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_32_abs_3_satz_1_qa_1902",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 32?",
+    "ground_truth": "Die Einhaltung genehmigter Verhaltensregeln gemäß Artikel 40 oder eines genehmigten Zertifizierungsverfahrens gemäß Artikel 42 kann als Faktor herangezogen werden, um die Erfüllung der in Absatz 1 des vorliegenden Artikels genannten Anforderungen nachzuweisen.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.001001119613647461,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.125
+    },
+    "metadata": {
+      "query_time": 0.001001119613647461,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_60_abs_7_satz_1_qa_3941",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 7?",
+    "ground_truth": "Die federführende Aufsichtsbehörde erlässt den Beschluss und teilt ihn der Hauptniederlassung oder der einzigen Niederlassung des Verantwortlichen oder gegebenenfalls des Auftragsverarbeiters mit und setzt die anderen betroffenen Aufsichtsbehörden und den Ausschuss von dem betreffenden Beschluss einschließlich einer Zusammenfassung der maßgeblichen Fakten und Gründe in Kenntnis.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.01818181818181818,
+      "recall": 0.5,
+      "f1": 0.03508771929824561,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.1111111111111111,
+      "context_relevance": 0.17777777777777778
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_7_abs_2_satz_2_qa_486",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 7?",
+    "ground_truth": "Teile der Erklärung sind dann nicht verbindlich, wenn sie einen Verstoß gegen diese Verordnung darstellen.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.15
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_71_abs_1_satz_1_qa_4696",
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 7?",
+    "ground_truth": "Der Ausschuss erstellt einen Jahresbericht über den Schutz natürlicher Personen bei der Verarbeitung in der Union und gegebenenfalls in Drittländern und internationalen Organisationen.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.18333333333333335
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_64_abs_3_satz_3_qa_4244",
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 64?",
+    "ground_truth": "Diese Frist kann unter Berücksichtigung der Komplexität der Angelegenheit um weitere sechs Wochen verlängert werden.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0015041828155517578,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.16
+    },
+    "metadata": {
+      "query_time": 0.0015041828155517578,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_25_abs_2_satz_2_qa_1534",
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 4?",
+    "ground_truth": "Diese Verpflichtung gilt für die Menge der erhobenen personenbezogenen Daten, den Umfang ihrer Verarbeitung, ihre Speicherfrist und ihre Zugänglichkeit.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.18333333333333332
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_9_abs_2(1)_satz_1_qa_566",
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 9?",
+    "ground_truth": "Die betroffene Person hat in die Verarbeitung der genannten personenbezogenen Daten für einen oder mehrere festgelegte Zwecke ausdrücklich eingewilligt, es sei denn, nach Unionsrecht oder dem Recht der Mitgliedstaaten kann das Verbot nach Absatz 1 durch die Einwilligung der betroffenen Person nicht aufgehoben werden,",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0010066032409667969,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.25999999999999995
+    },
+    "metadata": {
+      "query_time": 0.0010066032409667969,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_58_abs_3(4)_satz_1_qa_3801",
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 58?",
+    "ground_truth": "eine Stellungnahme abzugeben und Entwürfe von Verhaltensregeln gemäßArtikel 40Absatz 5 zu billigen,",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.18333333333333332
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_76_abs_1_satz_1_qa_4844",
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 76?",
+    "ground_truth": "Die Beratungen des Ausschusses sind gemäß seiner Geschäftsordnung vertraulich, wenn der Ausschuss dies für erforderlich hält.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.22000000000000003
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_30_abs_1_satz_2_qa_1768",
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 4?",
+    "ground_truth": "Dieses Verzeichnis enthält sämtliche folgenden Angaben:\n\nden Namen und die Kontaktdaten des Verantwortlichen und gegebenenfalls des gemeinsam mit ihm Verantwortlichen, des Vertreters des Verantwortlichen sowie eines etwaigen Datenschutzbeauftragten;\ndie Zwecke der Verarbeitung;\neine Beschreibung der Kategorien betroffener Personen und der Kategorien personenbezogener Daten;\ndie Kategorien von Empfängern, gegenüber denen die personenbezogenen Daten offengelegt worden sind oder noch offengelegt werden, einschließlich Empfänger in Drittländern oder internationalen Organisationen;\ngegebenenfalls Übermittlungen von personenbezogenen Daten an ein Drittland oder an eine internationale Organisation, einschließlich der Angabe des betreffenden Drittlands oder der betreffenden internationalen Organisation, sowie bei den in Artikel 49 Absatz 1 Unterabsatz 2 genannten Datenübermittlungen die Dokumentierung geeigneter Garantien;\nwenn möglich, die vorgesehenen Fristen für die Löschung der verschiedenen Datenkategorien;\nwenn möglich, eine allgemeine Beschreibung der technischen und organisatorischen Maßnahmen gemäß Artikel 32 Absatz 1.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.19999999999999998
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_57_abs_1(10)_satz_1_qa_3568",
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 6?",
+    "ground_truth": "Standardvertragsklauseln im Sinne desArtikels 28Absatz 8 und desArtikels 46Absatz 2 Buchstabe d festlegen;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0009982585906982422,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.15
+    },
+    "metadata": {
+      "query_time": 0.0009982585906982422,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_24_abs_3_satz_1_qa_1517",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 4?",
+    "ground_truth": "Die Einhaltung der genehmigten Verhaltensregeln gemäß Artikel 40 oder eines genehmigten Zertifizierungsverfahrens gemäß Artikel 42 kann als Gesichtspunkt herangezogen werden, um die Erfüllung der Pflichten des Verantwortlichen nachzuweisen.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0009992122650146484,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.1111111111111111,
+      "context_relevance": 0.15555555555555556
+    },
+    "metadata": {
+      "query_time": 0.0009992122650146484,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_36_abs_3(6)_satz_1_qa_2217",
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 36?",
+    "ground_truth": "alle sonstigen von der Aufsichtsbehörde angeforderten Informationen.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.14999999999999997
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_17_abs_3(3)_satz_1_qa_1176",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 17?",
+    "ground_truth": "aus Gründen des öffentlichen Interesses im Bereich der öffentlichen Gesundheit gemäßArtikel 9Absatz 2 Buchstaben h und i sowieArtikel 9Absatz 3;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.05454545454545454,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.25
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_49_abs_1_satz_3_qa_3158",
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 49?",
+    "ground_truth": "Der Verantwortliche setzt die Aufsichtsbehörde von der Übermittlung in Kenntnis.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.04
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_43_abs_2(5)_satz_1_qa_2741",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 4?",
+    "ground_truth": "zur Zufriedenheit der zuständigen Aufsichtsbehörde nachgewiesen haben, dass ihre Aufgaben und Pflichten nicht zu einem Interessenkonflikt führen.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.1111111111111111,
+      "context_relevance": 0.17777777777777776
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_65_abs_6_satz_4_qa_4395",
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 65?",
+    "ground_truth": "Im endgültigen Beschluss wird auf den in Absatz 1 genannten Beschluss verwiesen und festgelegt, dass der in Absatz 1 des vorliegenden Artikels genannte Beschluss gemäß Absatz 5 auf der Website des Ausschusses veröffentlicht wird.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.2333333333333333
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_72_abs_1_satz_1_qa_4714",
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 7?",
+    "ground_truth": "Sofern in dieser Verordnung nichts anderes bestimmt ist, fasst der Ausschuss seine Beschlüsse mit einfacher Mehrheit seiner Mitglieder.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.05454545454545454,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.16666666666666666
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_43_abs_3_satz_1_qa_2742",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 43?",
+    "ground_truth": "Die Akkreditierung von Zertifizierungsstellen nach den Absätzen 1 und 2 erfolgt anhand der Anforderungen, die von der gemäß Artikel 55 oder 56 zuständigen Aufsichtsbehörde oder – gemäß Artikel 63 – von dem Ausschuss genehmigt wurden.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.2
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_4_abs_6_satz_1_qa_136",
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "ground_truth": "„Dateisystem“ jede strukturierte Sammlung personenbezogener Daten, die nach bestimmten Kriterien zugänglich sind, unabhängig davon, ob diese Sammlung zentral, dezentral oder nach funktionalen oder geografischen Gesichtspunkten geordnet geführt wird;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.05454545454545454,
+      "answer_relevance": 0.08333333333333333,
+      "context_relevance": 0.15
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_65_abs_2_satz_2_qa_4326",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 65?",
+    "ground_truth": "Diese Frist kann wegen der Komplexität der Angelegenheit um einen weiteren Monat verlängert werden.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.1
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_4_abs_16(2)_satz_1_qa_215",
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "ground_truth": "im Falle eines Auftragsverarbeiters mit Niederlassungen in mehr als einem Mitgliedstaat den Ort seiner Hauptverwaltung in der Union oder, sofern der Auftragsverarbeiter keine Hauptverwaltung in der Union hat, die Niederlassung des Auftragsverarbeiters in der Union, in der die Verarbeitungstätigkeiten im Rahmen der Tätigkeiten einer Niederlassung eines Auftragsverarbeiters hauptsächlich stattfinden, soweit der Auftragsverarbeiter spezifischen Pflichten aus dieser Verordnung unterliegt;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.01818181818181818,
+      "recall": 0.5,
+      "f1": 0.03508771929824561,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.01818181818181818,
+      "answer_relevance": 0.2222222222222222,
+      "context_relevance": 0.15555555555555553
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_30_abs_2_satz_1_qa_1815",
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 30?",
+    "ground_truth": "Jeder Auftragsverarbeiter und gegebenenfalls sein Vertreter führen ein Verzeichnis zu allen Kategorien von im Auftrag eines Verantwortlichen durchgeführten Tätigkeiten der Verarbeitung, das Folgendes enthält:\n\nden Namen und die Kontaktdaten des Auftragsverarbeiters oder der Auftragsverarbeiter und jedes Verantwortlichen, in dessen Auftrag der Auftragsverarbeiter tätig ist, sowie gegebenenfalls des Vertreters des Verantwortlichen oder des Auftragsverarbeiters und eines etwaigen Datenschutzbeauftragten;\ndie Kategorien von Verarbeitungen, die im Auftrag jedes Verantwortlichen durchgeführt werden;\ngegebenenfalls Übermittlungen von personenbezogenen Daten an ein Drittland oder an eine internationale Organisation, einschließlich der Angabe des betreffenden Drittlands oder der betreffenden internationalen Organisation, sowie bei den in Artikel 49 Absatz 1 Unterabsatz 2 genannten Datenübermittlungen die Dokumentierung geeigneter Garantien;\nwenn möglich, eine allgemeine Beschreibung der technischen und organisatorischen Maßnahmen gemäß Artikel 32 Absatz 1.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.21666666666666665
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_60_abs_5_satz_1_qa_3918",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 60?",
+    "ground_truth": "Beabsichtigt die federführende Aufsichtsbehörde, sich dem maßgeblichen und begründeten Einspruch anzuschließen, so legt sie den anderen betroffenen Aufsichtsbehörden einen überarbeiteten Beschlussentwurf zur Stellungnahme vor.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0010004043579101562,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.25
+    },
+    "metadata": {
+      "query_time": 0.0010004043579101562,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_32_abs_4_satz_1_qa_1908",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 32?",
+    "ground_truth": "Der Verantwortliche und der Auftragsverarbeiter unternehmen Schritte, um sicherzustellen, dass ihnen unterstellte natürliche Personen, die Zugang zu personenbezogenen Daten haben, diese nur auf Anweisung des Verantwortlichen verarbeiten, es sei denn, sie sind nach dem Recht der Union oder der Mitgliedstaaten zur Verarbeitung verpflichtet.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.05
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_35_abs_1_satz_1_qa_2022",
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 35?",
+    "ground_truth": "Hat eine Form der Verarbeitung, insbesondere bei Verwendung neuer Technologien, aufgrund der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge, so führt der Verantwortliche vorab eine Abschätzung der Folgen der vorgesehenen Verarbeitungsvorgänge für den Schutz personenbezogener Daten durch.",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.2
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  },
+  {
+    "qa_id": "dsgvo_art_13_abs_2(3)_satz_1_qa_832",
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 3?",
+    "ground_truth": "wenn die Verarbeitung aufArtikel 6Absatz 1 Buchstabe a oderArtikel 9Absatz 2 Buchstabe a beruht, das Bestehen eines Rechts, die Einwilligung jederzeit zu widerrufen, ohne dass die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt wird;",
+    "response": "Error generating response: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
+    "retrieved_chunks": 5,
+    "query_time": 0.0,
+    "evaluation": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "query_time": 0.5,
+      "tokens_per_second": 100.0,
+      "response_length": 493,
+      "faithfulness": 0.03636363636363636,
+      "answer_relevance": 0.0,
+      "context_relevance": 0.25
+    },
+    "metadata": {
+      "query_time": 0.0,
+      "chunks_retrieved": 5,
+      "llm_model": "openai-gpt-4o-mini",
+      "embedding_model": "openai-text-embedding-ada-002",
+      "retrieval_method": "vector-similarity-retrieval"
+    }
+  }
+]

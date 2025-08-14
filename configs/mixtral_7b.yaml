@@ -1,0 +1,38 @@
+# ResearchRAG Mixtral-8x7B Configuration
+# This configuration uses Mixtral-8x7B as a local model
+
+llm:
+  type: local
+  model_name: mixtral:8x7b
+  endpoint: http://localhost:11434  # Ollama default port
+  api_type: ollama
+
+embedding:
+  type: sentence-transformers
+  model_name: all-MiniLM-L6-v2
+  device: cpu
+
+chunking:
+  type: fixed-size
+  chunk_size: 1000
+  chunk_overlap: 200
+  separator: "\n"
+
+retrieval:
+  type: vector-similarity
+  top_k: 5
+  similarity_threshold: 0.0
+
+evaluation:
+  enabled_metrics:
+    - precision-recall
+    - timing
+    - ragas
+
+dataset:
+  evaluation_subset_size: 50
+  save_qa_pairs: true
+
+pipeline:
+  include_context: true
+  max_context_length: 4000

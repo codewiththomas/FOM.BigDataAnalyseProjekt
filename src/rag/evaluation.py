@@ -1,7 +1,7 @@
 from typing import List, Dict, Any
 import time
 import re
-from .interfaces import EvaluationInterface, Chunk
+from interfaces import EvaluationInterface, Chunk
 import logging
 
 logger = logging.getLogger(__name__)

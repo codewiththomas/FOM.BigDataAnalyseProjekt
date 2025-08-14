@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
 import openai
-from .interfaces import LLMInterface
+from interfaces import LLMInterface
 import logging
 
 logger = logging.getLogger(__name__)
@@ -16,16 +16,17 @@ class OpenAILLM(LLMInterface):
         self.max_tokens = config.get('max_tokens', 1000)
 
         if self.api_key:
-            openai.api_key = self.api_key
+            self.client = openai.OpenAI(api_key=self.api_key)
         else:
             logger.warning("No OpenAI API key provided, using environment variable")
+            self.client = openai.OpenAI()
 
     def generate(self, prompt: str, context: str = "") -> str:
         """Generate response using OpenAI API"""
         try:
             full_prompt = f"{context}\n\n{prompt}" if context else prompt
 
-            response = openai.ChatCompletion.create(
+            response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
                     {"role": "system", "content": "You are a helpful assistant that answers questions based on the provided context."},
