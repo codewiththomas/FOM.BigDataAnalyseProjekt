@@ -7,6 +7,16 @@ import argparse
 import logging
 import sys
 from pathlib import Path
+
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+    print("✅ .env file loaded successfully")
+except ImportError:
+    print("⚠️  python-dotenv not installed, using system environment variables")
+    print("   Install with: pip install python-dotenv")
+
 from evaluator import RAGEvaluator
 
 # Configure logging

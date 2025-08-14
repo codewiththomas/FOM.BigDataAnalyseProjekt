@@ -1,0 +1,69 @@
+{
+  "avg_precision": 0.06651515151515151,
+  "min_precision": 0.0,
+  "max_precision": 0.12,
+  "avg_recall": 0.8,
+  "min_recall": 0.0,
+  "max_recall": 1.0,
+  "avg_f1": 0.1218201058201058,
+  "min_f1": 0.0,
+  "max_f1": 0.21428571428571425,
+  "avg_query_time": 0.5,
+  "min_query_time": 0.5,
+  "max_query_time": 0.5,
+  "avg_tokens_per_second": 100.0,
+  "min_tokens_per_second": 100.0,
+  "max_tokens_per_second": 100.0,
+  "avg_response_length": 194.8,
+  "min_response_length": 171,
+  "max_response_length": 213,
+  "avg_faithfulness": 0.3695151515151515,
+  "min_faithfulness": 0.2727272727272727,
+  "max_faithfulness": 0.44,
+  "avg_answer_relevance": 0.711111111111111,
+  "min_answer_relevance": 0.4444444444444444,
+  "max_answer_relevance": 0.8333333333333334,
+  "avg_context_relevance": 0.14444444444444443,
+  "min_context_relevance": 0.08888888888888888,
+  "max_context_relevance": 0.18333333333333332,
+  "pipeline_info": {
+    "llm": {
+      "name": "openai-gpt-4o-mini",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "temperature": 0.1,
+      "max_tokens": 1000
+    },
+    "embedding": {
+      "name": "openai-text-embedding-ada-002",
+      "provider": "openai",
+      "model": "text-embedding-ada-002",
+      "dimensions": 1536
+    },
+    "chunking": {
+      "name": "fixed-size-chunking",
+      "strategy": "fixed_size",
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "separator": "\n"
+    },
+    "retrieval": {
+      "name": "vector-similarity-retrieval",
+      "method": "cosine_similarity",
+      "chunks_indexed": 1000,
+      "top_k": 5,
+      "similarity_threshold": 0.0
+    },
+    "is_indexed": true
+  },
+  "evaluation_info": {
+    "enabled_evaluators": [
+      "precision-recall",
+      "timing",
+      "ragas"
+    ],
+    "total_metrics": 9
+  },
+  "total_evaluation_time": 10.269912958145142,
+  "qa_pairs_evaluated": 5
+}
