@@ -1,0 +1,67 @@
+{
+  "avg_precision": 0.1313061912134115,
+  "min_precision": 0.08576467337418527,
+  "max_precision": 0.20471350832266325,
+  "avg_recall": 0.23415824112428496,
+  "min_recall": 0.11998927230466656,
+  "max_recall": 0.39241404308202155,
+  "avg_f1": 0.1676882340064948,
+  "min_f1": 0.10003055556152704,
+  "max_f1": 0.26906296748635034,
+  "avg_query_time": 2.8723262945810952,
+  "min_query_time": 2.3044650554656982,
+  "max_query_time": 3.267869234085083,
+  "avg_response_length": 418.6666666666667,
+  "min_response_length": 324,
+  "max_response_length": 516,
+  "avg_faithfulness": 0.29797979797979796,
+  "min_faithfulness": 0.12121212121212122,
+  "max_faithfulness": 0.5454545454545454,
+  "avg_answer_relevance": 0.16114375244810028,
+  "min_answer_relevance": 0.14347826086956522,
+  "max_answer_relevance": 0.19130434782608696,
+  "avg_context_relevance": 0.19648148148148148,
+  "min_context_relevance": 0.04444444444444444,
+  "max_context_relevance": 0.325,
+  "pipeline_info": {
+    "llm": {
+      "name": "openai-gpt-4o-mini",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "temperature": 0.1,
+      "max_tokens": 1000
+    },
+    "embedding": {
+      "name": "openai-text-embedding-ada-002",
+      "provider": "openai",
+      "model": "text-embedding-ada-002",
+      "dimensions": 1536
+    },
+    "chunking": {
+      "name": "fixedsizechunking-chunking",
+      "strategy": 1000,
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "separator": "\n"
+    },
+    "retrieval": {
+      "name": "vector-similarity-retrieval",
+      "method": "cosine_similarity",
+      "chunks_indexed": 988,
+      "top_k": 5,
+      "similarity_threshold": 0.0,
+      "embedding_dimensions": 1536
+    },
+    "is_indexed": true
+  },
+  "evaluation_info": {
+    "enabled_evaluators": [
+      "PrecisionRecallEvaluator",
+      "TimingEvaluator",
+      "RAGASEvaluator"
+    ],
+    "total_metrics": 22
+  },
+  "total_evaluation_time": 8.619840860366821,
+  "qa_pairs_evaluated": 3
+}

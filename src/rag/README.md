@@ -1,62 +1,54 @@
-# ResearchRAG - Modular RAG Evaluation System
+# ResearchRAG - Production-Ready RAG System
 
-A modular, configurable RAG (Retrieval-Augmented Generation) system designed for scientific evaluation and experimentation with different components.
+A modular, production-ready Retrieval-Augmented Generation (RAG) system designed for scientific evaluation and experimentation with different language models, embedding strategies, and retrieval methods.
 
-## 🎯 Features
+## 🚀 Features
 
-- **Modular Architecture**: Easily swap LLMs, embeddings, chunking strategies, and retrieval methods
-- **YAML Configuration**: Simple configuration files for different experiments
-- **Automatic Evaluation**: Built-in evaluation metrics (Precision, Recall, F1, RAGAS-style, timing)
-- **DSGVO Dataset**: Pre-configured for DSGVO legal text evaluation
-- **Multiple Models**: Support for OpenAI API and local models (GPT-OSS-20B, Mixtral-7B, Qwen3, Llama3-Sauerkraut)
+- **Modular Architecture**: Easy exchange of LLMs, embeddings, chunking, and retrieval components
+- **Production-Ready**: Robust error handling, caching, and comprehensive evaluation metrics
+- **Multi-Model Support**: OpenAI API and local models (Ollama)
+- **Smart Caching**: Automatic caching of chunks, embeddings, and evaluation results
+- **Comprehensive Evaluation**: Precision/Recall, RAGAS-style metrics, timing, and performance analysis
+- **Experiment Comparison**: Built-in tools to compare multiple RAG configurations
+- **YAML Configuration**: Easy parameter tuning without code changes
+
+## 📋 Requirements
+
+```bash
+pip install -r requirements.txt
+```
 
 ## 🏗️ Architecture
 
 ```
-ResearchRAG/
-├── interfaces.py      # Abstract interfaces for all components
-├── pipeline.py        # Main RAG pipeline orchestrator
-├── config.py          # YAML configuration manager
-├── factory.py         # Component factory
-├── llms.py           # LLM implementations (OpenAI, Local)
-├── embeddings.py     # Embedding implementations (OpenAI, Sentence-Transformers)
-├── chunking.py       # Chunking strategies (Fixed-size, Semantic)
-├── retrieval.py      # Retrieval methods (Vector similarity, Hybrid)
-├── evaluation.py     # Evaluation metrics
-├── dataset.py        # DSGVO dataset management
-├── evaluator.py      # Main evaluation orchestrator
-└── main.py           # CLI interface
+src/rag/
+├── interfaces.py      # Abstract base classes
+├── config.py         # Configuration management
+├── factory.py        # Component factory
+├── pipeline.py       # Main RAG pipeline
+├── llms.py          # Language model implementations
+├── embeddings.py    # Embedding model implementations
+├── chunking.py      # Text chunking strategies
+├── retrieval.py     # Retrieval methods
+├── evaluation.py    # Evaluation metrics
+├── evaluator.py     # Main evaluation orchestrator
+├── compare_experiments.py  # Experiment comparison tool
+├── cache.py         # Caching system
+├── dataset.py       # Dataset handling
+└── main.py          # CLI entry point
 ```
 
-## 🚀 Quick Start
+## ⚙️ Configuration
 
-### 1. Install Dependencies
-
-```bash
-pip install -r requirements_rag.txt
-```
-
-### 2. Set Environment Variables
-
-```bash
-export OPENAI_API_KEY="your-openai-api-key"
-```
-
-### 3. Run Baseline Evaluation
-
-```bash
-python -m rag.main --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl
-```
-
-## 📋 Configuration
-
-### Baseline Configuration (GPT-4o-mini)
+### Basic Configuration Structure
 
 ```yaml
+# configs/baseline.yaml
 llm:
   type: openai
   model: gpt-4o-mini
   temperature: 0.1
+  max_tokens: 1000
 
 embedding:
   type: openai
@@ -70,142 +62,176 @@ chunking:
 retrieval:
   type: vector-similarity
   top_k: 5
+  similarity_threshold: 0.0
+
+evaluation:
+  enabled_metrics:
+    - precision-recall
+    - timing
+    - ragas
 ```
 
-### Local Models Configuration
+### Local Model Configuration
 
 ```yaml
+# configs/mixtral_7b.yaml
 llm:
   type: local
-  model_name: gpt-oss-20b
-  endpoint: http://localhost:8000
-  api_type: ollama
+  model_name: mixtral:8x7b
+  endpoint: http://localhost:11434
+  temperature: 0.1
+  max_tokens: 1000
 
 embedding:
   type: sentence-transformers
   model_name: all-MiniLM-L6-v2
   device: cpu
+
+# ... rest of configuration
 ```
 
-## 🔬 Experiments
+## 🚀 Usage
 
-### 1. Different Language Models
+### Single Experiment Evaluation
 
-- **GPT-4o-mini**: Baseline reference model
-- **GPT-OSS-20B**: Open-source 20B parameter model
-- **Mixtral-7B**: Mixture of experts model
-- **Qwen3**: Alibaba's Qwen model
-- **Llama3-Sauerkraut**: German-optimized Llama model
+```bash
+# Run baseline evaluation
+python src/rag/main.py \
+  --config configs/baseline.yaml \
+  --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl \
+  --num-qa 50
 
-### 2. Embedding & Chunking Experiments
+# Run local model evaluation
+python src/rag/main.py \
+  --config configs/mixtral_7b.yaml \
+  --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl \
+  --num-qa 50
+```
 
-- **Fixed-size chunking**: Different chunk sizes (500, 1000, 2000)
-- **Semantic chunking**: Natural boundary-based chunking
-- **Sentence-based**: Sentence-level chunking
-- **Embedding models**: OpenAI vs. Sentence-Transformers
+### Compare Multiple Experiments
 
-### 3. Retrieval Techniques
+```bash
+# Compare baseline and Mixtral configurations
+python src/rag/compare_experiments.py \
+  --configs configs/baseline.yaml configs/mixtral_7b.yaml \
+  --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl \
+  --num-qa 50
 
-- **Vector similarity**: Different top-k values (3, 5, 10)
-- **Similarity thresholds**: Filtering by relevance
-- **Hybrid retrieval**: Vector + keyword combinations
+# Compare all configurations
+python src/rag/compare_experiments.py \
+  --configs configs/*.yaml \
+  --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl \
+  --num-qa 50 \
+  --output-dir my_comparison_results
+```
 
 ## 📊 Evaluation Metrics
 
-### Traditional Metrics
-- **Precision**: How many retrieved chunks are relevant
-- **Recall**: How many relevant chunks were retrieved
-- **F1**: Harmonic mean of precision and recall
+### Core Metrics
+- **Precision/Recall/F1**: Traditional information retrieval metrics
+- **Sequence Similarity**: Text similarity using difflib
+- **Semantic Similarity**: Word overlap with stemming approximation
 
-### RAG-Specific Metrics
-- **Faithfulness**: How much response is based on retrieved chunks
-- **Answer Relevance**: How relevant response is to query
-- **Context Relevance**: How relevant retrieved chunks are to query
+### RAGAS-Style Metrics
+- **Faithfulness**: How much the answer relies on provided context
+- **Answer Relevance**: Relevance of answer to the question
+- **Context Relevance**: Relevance of retrieved chunks to the question
+- **Context Utilization**: How well the context is used in the answer
 
 ### Performance Metrics
-- **Query Time**: Total time per query
-- **Tokens per Second**: Generation speed
-- **Response Length**: Output size
+- **Query Time**: Response generation time
+- **Tokens per Second**: Processing speed
+- **Response Quality**: Length, word count, average word length
 
-## 🎮 Usage Examples
+## 💾 Caching System
 
-### Run Different Configurations
+The system automatically caches:
+- **Chunks**: Text chunks with configuration-based hashing
+- **Embeddings**: Vector representations of chunks
+- **Evaluation Results**: Complete evaluation outputs
 
-```bash
-# Baseline evaluation
-python -m rag.main --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl
+Cache files are stored in `cache/<experiment_name>/` and automatically reused when configurations match.
 
-# Local models evaluation
-python -m rag.main --config configs/local_models.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl
+## 🔧 Production Features
 
-# Chunking experiments
-python -m rag.main --config configs/chunking_experiments.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl
+### Error Handling
+- Graceful fallbacks for API failures
+- Comprehensive logging and error reporting
+- Connection testing for local services
 
-# Retrieval experiments
-python -m rag.main --config configs/retrieval_experiments.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl
+### Performance
+- Efficient numpy-based vector operations
+- Configurable chunking and retrieval parameters
+- Automatic similarity threshold filtering
+
+### Monitoring
+- Detailed logging at all levels
+- Performance metrics collection
+- Experiment comparison reports
+
+## 📁 Output Structure
+
+```
+project_root/
+├── cache/                    # Cached components
+│   ├── baseline/            # Baseline experiment cache
+│   └── mixtral_7b/         # Mixtral experiment cache
+├── comparison_results/       # Experiment comparison outputs
+│   ├── comparison_results_YYYYMMDD_HHMMSS.json
+│   ├── comparison_data_YYYYMMDD_HHMMSS.csv
+│   └── comparison_report_YYYYMMDD_HHMMSS.txt
+├── baseline_evaluation_results_YYYYMMDD_HHMMSS.json
+├── baseline_evaluation_summary_YYYYMMDD_HHMMSS.json
+├── mixtral_7b_evaluation_results_YYYYMMDD_HHMMSS.json
+└── mixtral_7b_evaluation_summary_YYYYMMDD_HHMMSS.json
 ```
 
-### Custom Evaluation
+## 🧪 Experiment Examples
 
-```bash
-# Evaluate with 100 QA pairs
-python -m rag.main --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --num-qa 100
+### Baseline (GPT-4o-mini)
+- **LLM**: OpenAI GPT-4o-mini
+- **Embedding**: OpenAI text-embedding-ada-002
+- **Chunking**: Fixed-size (1000 chars, 200 overlap)
+- **Retrieval**: Vector similarity with cosine distance
 
-# Run without saving results
-python -m rag.main --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --no-save
+### Mixtral-8x7B (Local)
+- **LLM**: Local Mixtral-8x7B via Ollama
+- **Embedding**: Sentence Transformers (all-MiniLM-L6-v2)
+- **Chunking**: Fixed-size (1000 chars, 200 overlap)
+- **Retrieval**: Vector similarity with cosine distance
 
-# Verbose logging
-python -m rag.main --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --verbose
-```
+## 🔍 Troubleshooting
 
-## 🔧 Customization
+### Common Issues
 
-### Adding New LLM Types
+1. **OpenAI API Errors**: Check your `.env` file and API key
+2. **Local Model Connection**: Ensure Ollama is running on localhost:11434
+3. **Memory Issues**: Reduce chunk size or number of QA pairs
+4. **Cache Issues**: Use `--clear-cache` flag or manually delete cache directory
 
-1. Implement the `LLMInterface` in `llms.py`
-2. Add to `LLMFactory.create_llm()`
-3. Create configuration file
+### Performance Tuning
 
-### Adding New Embedding Models
+- **Chunk Size**: Smaller chunks = better precision, larger chunks = better context
+- **Top-K**: Higher values = more context, lower values = faster retrieval
+- **Similarity Threshold**: Higher values = more relevant results, lower values = more results
 
-1. Implement the `EmbeddingInterface` in `embeddings.py`
-2. Add to `EmbeddingFactory.create_embedding()`
-3. Update configuration
+## 📈 Next Steps
 
-### Adding New Evaluation Metrics
-
-1. Implement the `EvaluationInterface` in `evaluation.py`
-2. Add to `EvaluationManager._setup_evaluators()`
-3. Enable in configuration
-
-## 📁 Output Files
-
-The system generates:
-- `evaluation_results_YYYYMMDD_HHMMSS.json`: Detailed results for each QA pair
-- `evaluation_summary_YYYYMMDD_HHMMSS.json`: Summary statistics and metrics
-
-## 🚧 Current Limitations
-
-- **Local LLMs**: Placeholder implementations - need integration with Ollama, vLLM, etc.
-- **Vector Search**: Simplified similarity calculation - could use FAISS, Chroma, etc.
-- **Advanced Metrics**: RAGAS implementation is simplified - could use full RAGAS library
-
-## 🔮 Future Enhancements
-
-- **Real Vector Database**: Integration with FAISS, Chroma, Pinecone
-- **Advanced Chunking**: NLP-based semantic chunking
-- **Full RAGAS**: Complete RAGAS metric implementation
-- **Batch Processing**: Parallel evaluation for faster results
-- **Web Interface**: Web-based configuration and monitoring
+1. **Run Baseline**: Test with GPT-4o-mini configuration
+2. **Test Local Models**: Ensure Ollama is running and accessible
+3. **Compare Results**: Use comparison tool to analyze performance
+4. **Tune Parameters**: Adjust chunking, retrieval, and evaluation parameters
+5. **Scale Up**: Increase QA pairs for more comprehensive evaluation
 
 ## 🤝 Contributing
 
-1. Follow the modular interface design
-2. Add comprehensive logging
-3. Include error handling
-4. Update configuration examples
-5. Add tests for new components
+The system is designed for easy extension:
+- Add new LLM providers in `llms.py`
+- Implement new embedding models in `embeddings.py`
+- Create custom chunking strategies in `chunking.py`
+- Develop novel retrieval methods in `retrieval.py`
+- Add evaluation metrics in `evaluation.py`
 
 ## 📄 License
 
-This project is part of the FOM Big Data Analysis Project.
+This project is part of the ResearchRAG system for scientific evaluation of RAG configurations.
