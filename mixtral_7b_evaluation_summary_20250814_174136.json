@@ -1,0 +1,66 @@
+{
+  "avg_precision": 0.06043956043956045,
+  "min_precision": 0.0,
+  "max_precision": 0.07692307692307693,
+  "avg_recall": 0.04444444444444444,
+  "min_recall": 0.0,
+  "max_recall": 0.05555555555555555,
+  "avg_f1": 0.05120967741935485,
+  "min_f1": 0.0,
+  "max_f1": 0.06451612903225808,
+  "avg_query_time": 0.000351715087890625,
+  "min_query_time": 0.00027441978454589844,
+  "max_query_time": 0.0004086494445800781,
+  "avg_response_length": 93.6,
+  "min_response_length": 88,
+  "max_response_length": 95,
+  "avg_faithfulness": 0.36483516483516487,
+  "min_faithfulness": 0.15384615384615385,
+  "max_faithfulness": 0.46153846153846156,
+  "avg_answer_relevance": 1.0,
+  "min_answer_relevance": 1.0,
+  "max_answer_relevance": 1.0,
+  "avg_context_relevance": 0.06019341069761238,
+  "min_context_relevance": 0.014285714285714285,
+  "max_context_relevance": 0.10204081632653061,
+  "pipeline_info": {
+    "llm": {
+      "name": "mixtral:8x7b",
+      "provider": "local",
+      "endpoint": "http://localhost:11434",
+      "api_type": "ollama"
+    },
+    "embedding": {
+      "name": "sentence-transformers-all-MiniLM-L6-v2",
+      "provider": "sentence-transformers",
+      "model": "all-MiniLM-L6-v2",
+      "device": "cpu",
+      "dimensions": 384
+    },
+    "chunking": {
+      "name": "fixedsizechunking-chunking",
+      "strategy": 1000,
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "separator": "\n"
+    },
+    "retrieval": {
+      "name": "vector-similarity-retrieval",
+      "method": "cosine_similarity",
+      "chunks_indexed": 988,
+      "top_k": 5,
+      "similarity_threshold": 0.0
+    },
+    "is_indexed": true
+  },
+  "evaluation_info": {
+    "enabled_evaluators": [
+      "PrecisionRecallEvaluator",
+      "TimingEvaluator",
+      "RAGASEvaluator"
+    ],
+    "total_metrics": 22
+  },
+  "total_evaluation_time": 0.0035080909729003906,
+  "qa_pairs_evaluated": 5
+}

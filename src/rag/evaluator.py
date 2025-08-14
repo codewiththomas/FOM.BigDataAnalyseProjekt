@@ -20,8 +20,9 @@ class RAGEvaluator:
         self.pipeline = None
         self.evaluator = None
         self.results = []
+        self.experiment_name = self.factory.experiment_name
 
-        logger.info("RAG Evaluator initialized")
+        logger.info(f"RAG Evaluator initialized for experiment: {self.experiment_name}")
 
     def setup_pipeline(self):
         """Setup the RAG pipeline"""
@@ -30,138 +31,153 @@ class RAGEvaluator:
         self.pipeline = self.factory.create_pipeline()
         self.evaluator = self.factory.create_evaluator()
 
-        # Index documents
-        documents = self.dataset.get_documents()
-        self.pipeline.index_documents(documents)
+        # Index documents (this will use cache if available)
+        self.pipeline.index_documents(self.dataset.documents)
 
         logger.info("Pipeline setup complete")
 
     def run_evaluation(self, num_qa: int = 50, save_results: bool = True) -> Dict[str, Any]:
-        """Run complete evaluation on the RAG system"""
+        """Run the complete evaluation process"""
         if not self.pipeline:
             self.setup_pipeline()
 
-        logger.info(f"Starting evaluation with {num_qa} QA pairs...")
+        # Get subset of QA pairs
+        qa_subset = self.dataset.qa_pairs[:num_qa]
+        logger.info(f"Starting evaluation with {len(qa_subset)} QA pairs...")
 
-        # Get evaluation subset
-        qa_pairs = self.dataset.get_evaluation_subset(num_qa)
-
-        # Run evaluation
         start_time = time.time()
+        results = []
 
-        for i, qa_pair in enumerate(qa_pairs):
-            logger.info(f"Evaluating QA pair {i+1}/{len(qa_pairs)}: {qa_pair['question'][:50]}...")
+        for i, qa_pair in enumerate(qa_subset, 1):
+            question = qa_pair['question']
+            expected_answer = qa_pair['ground_truth']
 
-            try:
-                # Query the pipeline
-                result = self.pipeline.query(qa_pair['question'])
+            logger.info(f"Evaluating QA pair {i}/{len(qa_subset)}: {question[:50]}...")
 
-                # Evaluate the response
-                evaluation = self.evaluator.evaluate_query(
-                    query=qa_pair['question'],
-                    ground_truth=qa_pair['ground_truth'],
-                    response=result.response,
-                    retrieved_chunks=result.chunks
-                )
+            # Query the pipeline
+            query_result = self.pipeline.query(question)
 
-                # Combine results
-                qa_result = {
-                    'qa_id': qa_pair['id'],
-                    'question': qa_pair['question'],
-                    'ground_truth': qa_pair['ground_truth'],
-                    'response': result.response,
-                    'retrieved_chunks': len(result.chunks),
-                    'query_time': result.metadata.get('query_time', 0.0),
-                    'evaluation': evaluation,
-                    'metadata': result.metadata
-                }
+            # Evaluate the result
+            evaluation_result = self.evaluator.evaluate(
+                question=question,
+                expected_answer=expected_answer,
+                actual_answer=query_result.response,
+                context_chunks=query_result.chunks,
+                query_time=query_result.metadata.get('query_time', 0.0)
+            )
 
-                self.results.append(qa_result)
+            # Add metadata
+            evaluation_result.update({
+                'question': question,
+                'expected_answer': expected_answer,
+                'actual_answer': query_result.response,
+                'pipeline_info': self.pipeline.get_pipeline_info()
+            })
 
-            except Exception as e:
-                logger.error(f"Error evaluating QA pair {qa_pair['id']}: {e}")
-                # Add error result
-                error_result = {
-                    'qa_id': qa_pair['id'],
-                    'question': qa_pair['question'],
-                    'ground_truth': qa_pair['ground_truth'],
-                    'response': f"ERROR: {e}",
-                    'retrieved_chunks': 0,
-                    'query_time': 0.0,
-                    'evaluation': {'error': str(e)},
-                    'metadata': {}
-                }
-                self.results.append(error_result)
+            results.append(evaluation_result)
 
         total_time = time.time() - start_time
+        logger.info(f"Evaluation complete. Total time: {total_time:.2f}s")
 
         # Calculate summary statistics
-        summary = self._calculate_summary()
-        summary['total_evaluation_time'] = total_time
-        summary['qa_pairs_evaluated'] = len(qa_pairs)
-
-        logger.info(f"Evaluation complete. Total time: {total_time:.2f}s")
-        logger.info(f"Summary: {summary}")
+        summary = self._calculate_summary(results, total_time)
 
         # Save results if requested
         if save_results:
-            self._save_results(summary)
+            self._save_results(results, summary)
 
         return summary
 
-    def _calculate_summary(self) -> Dict[str, Any]:
+    def _calculate_summary(self, results: List[Dict[str, Any]], total_time: float) -> Dict[str, Any]:
         """Calculate summary statistics from evaluation results"""
-        if not self.results:
+        if not results:
             return {}
 
-        # Initialize metric accumulators
-        metrics = {}
-        for result in self.results:
-            if 'evaluation' in result and isinstance(result['evaluation'], dict):
-                for metric, value in result['evaluation'].items():
-                    if isinstance(value, (int, float)) and value >= 0:  # Skip error indicators
-                        if metric not in metrics:
-                            metrics[metric] = []
-                        metrics[metric].append(value)
+        # Extract metrics
+        precisions = [r.get('precision', 0) for r in results]
+        recalls = [r.get('recall', 0) for r in results]
+        f1_scores = [r.get('f1', 0) for r in results]
+        query_times = [r.get('query_time', 0) for r in results]
+        response_lengths = [len(r.get('actual_answer', '')) for r in results]
 
         # Calculate averages
-        summary = {}
-        for metric, values in metrics.items():
-            if values:
-                summary[f'avg_{metric}'] = sum(values) / len(values)
-                summary[f'min_{metric}'] = min(values)
-                summary[f'max_{metric}'] = max(values)
+        summary = {
+            'avg_precision': sum(precisions) / len(precisions),
+            'min_precision': min(precisions),
+            'max_precision': max(precisions),
+            'avg_recall': sum(recalls) / len(recalls),
+            'min_recall': min(recalls),
+            'max_recall': max(recalls),
+            'avg_f1': sum(f1_scores) / len(f1_scores),
+            'min_f1': min(f1_scores),
+            'max_f1': max(f1_scores),
+            'avg_query_time': sum(query_times) / len(query_times),
+            'min_query_time': min(query_times),
+            'max_query_time': max(query_times),
+            'avg_response_length': sum(response_lengths) / len(response_lengths),
+            'min_response_length': min(response_lengths),
+            'max_response_length': max(response_lengths)
+        }
 
-        # Add pipeline info
-        if self.pipeline:
-            summary['pipeline_info'] = self.pipeline.get_pipeline_info()
+        # Add RAGAS metrics if available
+        if 'faithfulness' in results[0]:
+            faithfulness_scores = [r.get('faithfulness', 0) for r in results]
+            answer_relevance_scores = [r.get('answer_relevance', 0) for r in results]
+            context_relevance_scores = [r.get('context_relevance', 0) for r in results]
 
-        # Add evaluation info
-        if self.evaluator:
-            summary['evaluation_info'] = self.evaluator.get_evaluation_info()
+            summary.update({
+                'avg_faithfulness': sum(faithfulness_scores) / len(faithfulness_scores),
+                'min_faithfulness': min(faithfulness_scores),
+                'max_faithfulness': max(faithfulness_scores),
+                'avg_answer_relevance': sum(answer_relevance_scores) / len(answer_relevance_scores),
+                'min_answer_relevance': min(answer_relevance_scores),
+                'max_answer_relevance': max(answer_relevance_scores),
+                'avg_context_relevance': sum(context_relevance_scores) / len(context_relevance_scores),
+                'min_context_relevance': min(context_relevance_scores),
+                'max_context_relevance': max(context_relevance_scores)
+            })
+
+        # Add pipeline and evaluation info
+        summary.update({
+            'pipeline_info': self.pipeline.get_pipeline_info(),
+            'evaluation_info': {
+                'enabled_evaluators': [e.__class__.__name__ for e in self.evaluator.evaluators],
+                'total_metrics': len(summary) - 2  # Exclude pipeline_info and evaluation_info
+            },
+            'total_evaluation_time': total_time,
+            'qa_pairs_evaluated': len(results)
+        })
 
         return summary
 
-    def _save_results(self, summary: Dict[str, Any]):
-        """Save evaluation results to files"""
+    def _save_results(self, results: List[Dict[str, Any]], summary: Dict[str, Any]):
+        """Save evaluation results and summary to files with experiment name"""
         timestamp = time.strftime("%Y%m%d_%H%M%S")
 
         # Save detailed results
-        results_file = f"evaluation_results_{timestamp}.json"
-        with open(results_file, 'w', encoding='utf-8') as f:
-            json.dump(self.results, f, indent=2, ensure_ascii=False)
+        results_filename = f"{self.experiment_name}_evaluation_results_{timestamp}.json"
+        results_path = Path(results_filename)
+
+        with open(results_path, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
 
         # Save summary
-        summary_file = f"evaluation_summary_{timestamp}.json"
-        with open(summary_file, 'w', encoding='utf-8') as f:
+        summary_filename = f"{self.experiment_name}_evaluation_summary_{timestamp}.json"
+        summary_path = Path(summary_filename)
+
+        with open(summary_path, 'w', encoding='utf-8') as f:
             json.dump(summary, f, indent=2, ensure_ascii=False)
 
-        logger.info(f"Results saved to {results_file} and {summary_file}")
+        # Also save to cache
+        self.factory.cache.save_evaluation_results(results, f"_{timestamp}")
 
-    def get_results(self) -> List[Dict[str, Any]]:
-        """Get all evaluation results"""
-        return self.results
+        logger.info(f"Results saved to {results_filename} and {summary_filename}")
+        logger.info(f"Results also cached for experiment: {self.experiment_name}")
 
-    def get_summary(self) -> Dict[str, Any]:
-        """Get evaluation summary"""
-        return self._calculate_summary()
+    def get_cache_info(self) -> Dict[str, Any]:
+        """Get information about the cache"""
+        return self.factory.get_cache_info()
+
+    def clear_cache(self):
+        """Clear the cache for this experiment"""
+        self.factory.clear_cache()

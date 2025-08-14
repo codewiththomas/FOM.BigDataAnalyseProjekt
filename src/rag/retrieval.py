@@ -2,12 +2,13 @@ from typing import List, Dict, Any
 import numpy as np
 from interfaces import RetrievalInterface, Chunk
 import logging
+import random
 
 logger = logging.getLogger(__name__)
 
 
 class VectorSimilarityRetrieval(RetrievalInterface):
-    """Vector similarity-based retrieval using cosine similarity"""
+    """Vector similarity-based retrieval (placeholder implementation)"""
 
     def __init__(self, config: Dict[str, Any]):
         self.top_k = config.get('top_k', 5)
@@ -15,41 +16,36 @@ class VectorSimilarityRetrieval(RetrievalInterface):
         self.chunks = []
         self.embeddings = []
 
-        logger.info(f"Initialized vector similarity retrieval: top_k={self.top_k}")
+        logger.info(f"Vector similarity retrieval: top_k={self.top_k}, threshold={self.similarity_threshold}")
 
-    def add_chunks(self, chunks: List[Chunk]) -> None:
+    def add_chunks(self, chunks: List[Chunk], embeddings: List[List[float]]) -> None:
         """Add chunks and their embeddings to the retrieval index"""
-        for chunk in chunks:
-            if chunk.embedding is not None:
-                self.chunks.append(chunk)
-                self.embeddings.append(chunk.embedding)
-            else:
-                logger.warning(f"Chunk {chunk.id} has no embedding, skipping")
-
-        logger.info(f"Added {len(self.chunks)} chunks to retrieval index")
+        self.chunks = chunks
+        self.embeddings = embeddings
+        logger.info(f"Added {len(chunks)} chunks to retrieval index")
 
     def retrieve(self, query: str, top_k: int = None) -> List[Chunk]:
-        """Retrieve top-k most similar chunks"""
+        """Retrieve top-k most similar chunks (placeholder implementation)"""
         if not self.chunks:
-            logger.warning("No chunks in retrieval index")
             return []
 
-        # Use instance top_k if not specified
+        # Use configured top_k if not specified
         if top_k is None:
             top_k = self.top_k
 
-        # For now, return random chunks (placeholder)
-        # In a real implementation, you'd compute query embedding and find similarities
+        # Placeholder: randomly select chunks
+        # In a real implementation, you would:
+        # 1. Generate query embedding
+        # 2. Calculate cosine similarity with all chunk embeddings
+        # 3. Return top-k most similar chunks
+
         logger.info(f"Retrieving top {top_k} chunks (placeholder implementation)")
 
-        # Simple random selection for now
-        import random
-        selected_indices = random.sample(range(len(self.chunks)), min(top_k, len(self.chunks)))
-        selected_chunks = [self.chunks[i] for i in selected_indices]
-
+        # Random selection for now
+        selected_chunks = random.sample(self.chunks, min(top_k, len(self.chunks)))
         return selected_chunks
 
-    def get_retrieval_info(self) -> Dict[str, Any]:
+    def get_model_info(self) -> Dict[str, Any]:
         return {
             'name': 'vector-similarity-retrieval',
             'method': 'cosine_similarity',
@@ -58,9 +54,13 @@ class VectorSimilarityRetrieval(RetrievalInterface):
             'similarity_threshold': self.similarity_threshold
         }
 
+    def get_retrieval_info(self) -> Dict[str, Any]:
+        """Get retrieval information (alias for get_model_info for compatibility)"""
+        return self.get_model_info()
+
 
 class HybridRetrieval(RetrievalInterface):
-    """Hybrid retrieval combining vector similarity and keyword matching"""
+    """Hybrid retrieval combining vector and keyword search (placeholder implementation)"""
 
     def __init__(self, config: Dict[str, Any]):
         self.vector_weight = config.get('vector_weight', 0.7)
@@ -69,38 +69,37 @@ class HybridRetrieval(RetrievalInterface):
         self.chunks = []
         self.embeddings = []
 
-        logger.info(f"Initialized hybrid retrieval: vector_weight={self.vector_weight}, keyword_weight={self.keyword_weight}")
+        logger.info(f"Hybrid retrieval: vector_weight={self.vector_weight}, keyword_weight={self.keyword_weight}")
 
-    def add_chunks(self, chunks: List[Chunk]) -> None:
+    def add_chunks(self, chunks: List[Chunk], embeddings: List[List[float]]) -> None:
         """Add chunks and their embeddings to the retrieval index"""
-        for chunk in chunks:
-            if chunk.embedding is not None:
-                self.chunks.append(chunk)
-                self.embeddings.append(chunk.embedding)
-            else:
-                logger.warning(f"Chunk {chunk.id} has no embedding, skipping")
-
-        logger.info(f"Added {len(self.chunks)} chunks to retrieval index")
+        self.chunks = chunks
+        self.embeddings = embeddings
+        logger.info(f"Added {len(chunks)} chunks to retrieval index")
 
     def retrieve(self, query: str, top_k: int = None) -> List[Chunk]:
-        """Retrieve chunks using hybrid approach"""
+        """Retrieve chunks using hybrid approach (placeholder implementation)"""
         if not self.chunks:
-            logger.warning("No chunks in retrieval index")
             return []
 
+        # Use configured top_k if not specified
         if top_k is None:
             top_k = self.top_k
 
-        # Placeholder implementation - return random chunks
-        logger.info(f"Retrieving top {top_k} chunks using hybrid approach (placeholder)")
+        # Placeholder: randomly select chunks
+        # In a real implementation, you would:
+        # 1. Generate query embedding for vector search
+        # 2. Extract keywords for keyword search
+        # 3. Combine both scores with weights
+        # 4. Return top-k results
 
-        import random
-        selected_indices = random.sample(range(len(self.chunks)), min(top_k, len(self.chunks)))
-        selected_chunks = [self.chunks[i] for i in selected_indices]
+        logger.info(f"Retrieving top {top_k} chunks using hybrid approach (placeholder implementation)")
 
+        # Random selection for now
+        selected_chunks = random.sample(self.chunks, min(top_k, len(self.chunks)))
         return selected_chunks
 
-    def get_retrieval_info(self) -> Dict[str, Any]:
+    def get_model_info(self) -> Dict[str, Any]:
         return {
             'name': 'hybrid-retrieval',
             'method': 'hybrid',
@@ -109,6 +108,10 @@ class HybridRetrieval(RetrievalInterface):
             'chunks_indexed': len(self.chunks),
             'top_k': self.top_k
         }
+
+    def get_retrieval_info(self) -> Dict[str, Any]:
+        """Get retrieval information (alias for get_model_info for compatibility)"""
+        return self.get_model_info()
 
 
 class RetrievalFactory:

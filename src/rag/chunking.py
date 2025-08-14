@@ -7,49 +7,66 @@ logger = logging.getLogger(__name__)
 
 
 class FixedSizeChunking(ChunkingInterface):
-    """Fixed-size text chunking strategy"""
+    """Fixed-size chunking strategy"""
 
     def __init__(self, config: Dict[str, Any]):
         self.chunk_size = config.get('chunk_size', 1000)
         self.chunk_overlap = config.get('chunk_overlap', 200)
         self.separator = config.get('separator', '\n')
 
-        logger.info(f"Initialized fixed-size chunking: size={self.chunk_size}, overlap={self.chunk_overlap}")
+        logger.info(f"Fixed-size chunking: size={self.chunk_size}, overlap={self.chunk_overlap}")
 
-    def chunk(self, text: str, metadata: Dict[str, Any]) -> List[Chunk]:
-        """Split text into fixed-size chunks"""
+    def chunk_documents(self, documents: List[Dict[str, Any]]) -> List[Chunk]:
+        """Chunk a list of documents"""
+        all_chunks = []
+        chunk_id = 0
+
+        for doc in documents:
+            doc_chunks = self.chunk(doc['text'], doc.get('metadata', {}), chunk_id)
+            all_chunks.extend(doc_chunks)
+            chunk_id += len(doc_chunks)
+
+        return all_chunks
+
+    def chunk(self, text: str, metadata: Dict[str, Any] = None, start_id: int = 0) -> List[Chunk]:
+        """Split text into fixed-size chunks with overlap"""
+        if not text:
+            return []
+
         chunks = []
         start = 0
-        chunk_id = 0
+        chunk_id = start_id
 
         while start < len(text):
             end = start + self.chunk_size
 
-            # If not the last chunk, try to break at a natural boundary
-            if end < len(text):
-                # Look for the last separator within the chunk
-                last_sep = text.rfind(self.separator, start, end)
-                if last_sep > start:
-                    end = last_sep + 1
+            # Extract chunk text
+            chunk_text = text[start:end]
 
-            chunk_text = text[start:end].strip()
-            if chunk_text:
-                chunk = Chunk(
-                    id=f"{metadata.get('id', 'doc')}_chunk_{chunk_id}",
-                    text=chunk_text,
-                    metadata={
-                        **metadata,
-                        'chunk_start': start,
-                        'chunk_end': end,
-                        'chunk_size': len(chunk_text)
-                    }
-                )
-                chunks.append(chunk)
-                chunk_id += 1
+            # Create chunk with metadata
+            chunk = Chunk(
+                id=f"chunk_{chunk_id}",
+                text=chunk_text,
+                metadata={
+                    'start_pos': start,
+                    'end_pos': end,
+                    'chunk_size': len(chunk_text),
+                    'overlap': self.chunk_overlap if start > 0 else 0,
+                    **(metadata or {})
+                }
+            )
 
-            # Move start position, accounting for overlap
-            start = max(start + 1, end - self.chunk_overlap)
+            chunks.append(chunk)
+            chunk_id += 1
 
+            # Move to next chunk with overlap
+            start = end - self.chunk_overlap
+
+            # Avoid infinite loop for very short texts
+            if start >= len(text):
+                break
+
+        logger.debug(f"Created {len(chunks)} chunks from text of length {len(text)}")
         return chunks
 
     def get_chunking_info(self) -> Dict[str, Any]:
@@ -63,99 +80,92 @@ class FixedSizeChunking(ChunkingInterface):
 
 
 class SemanticChunking(ChunkingInterface):
-    """Semantic text chunking strategy based on natural boundaries"""
+    """Semantic chunking strategy that tries to split at natural boundaries"""
 
     def __init__(self, config: Dict[str, Any]):
-        self.max_chunk_size = config.get('max_chunk_size', 1000)
-        self.min_chunk_size = config.get('min_chunk_size', 200)
-        self.boundary_patterns = config.get('boundary_patterns', [
-            r'\n\n+',  # Multiple newlines
-            r'\.\s+',  # Period followed by space
-            r'!\s+',   # Exclamation followed by space
-            r'\?\s+',  # Question mark followed by space
-            r';\s+',   # Semicolon followed by space
-            r':\s+',   # Colon followed by space
-        ])
+        self.min_chunk_size = config.get('min_chunk_size', 500)
+        self.max_chunk_size = config.get('max_chunk_size', 1500)
+        self.separator = config.get('separator', '\n\n')
 
-        logger.info(f"Initialized semantic chunking: max_size={self.max_chunk_size}, min_size={self.min_chunk_size}")
+        logger.info(f"Semantic chunking: min={self.min_chunk_size}, max={self.max_chunk_size}")
 
-    def chunk(self, text: str, metadata: Dict[str, Any]) -> List[Chunk]:
-        """Split text into semantic chunks"""
-        chunks = []
+    def chunk_documents(self, documents: List[Dict[str, Any]]) -> List[Chunk]:
+        """Chunk a list of documents"""
+        all_chunks = []
         chunk_id = 0
+
+        for doc in documents:
+            doc_chunks = self.chunk(doc['text'], doc.get('metadata', {}), chunk_id)
+            all_chunks.extend(doc_chunks)
+            chunk_id += len(doc_chunks)
+
+        return all_chunks
+
+    def chunk(self, text: str, metadata: Dict[str, Any] = None, start_id: int = 0) -> List[Chunk]:
+        """Split text at natural boundaries while respecting size constraints"""
+        if not text:
+            return []
+
+        # Split by double newlines (paragraphs)
+        paragraphs = text.split(self.separator)
+        chunks = []
         current_chunk = ""
-        current_start = 0
+        current_metadata = metadata or {}
+        chunk_id = start_id
 
-        # Split text into sentences/paragraphs
-        sentences = self._split_into_sentences(text)
+        for i, paragraph in enumerate(paragraphs):
+            paragraph = paragraph.strip()
+            if not paragraph:
+                continue
 
-        for sentence in sentences:
-            # If adding this sentence would exceed max size, create a chunk
-            if len(current_chunk) + len(sentence) > self.max_chunk_size and current_chunk:
+            # Check if adding this paragraph would exceed max size
+            if len(current_chunk) + len(paragraph) > self.max_chunk_size and current_chunk:
+                # Save current chunk if it meets minimum size
                 if len(current_chunk) >= self.min_chunk_size:
                     chunk = Chunk(
-                        id=f"{metadata.get('id', 'doc')}_chunk_{chunk_id}",
+                        id=f"chunk_{chunk_id}",
                         text=current_chunk.strip(),
                         metadata={
-                            **metadata,
-                            'chunk_start': current_start,
-                            'chunk_end': current_start + len(current_chunk),
-                            'chunk_size': len(current_chunk)
+                            'paragraphs': i,
+                            'chunk_size': len(current_chunk),
+                            **(current_metadata or {})
                         }
                     )
                     chunks.append(chunk)
                     chunk_id += 1
 
-                current_chunk = sentence
-                current_start = text.find(sentence, current_start)
+                # Start new chunk
+                current_chunk = paragraph
             else:
-                if not current_chunk:
-                    current_start = text.find(sentence)
-                current_chunk += sentence
+                # Add to current chunk
+                if current_chunk:
+                    current_chunk += "\n\n" + paragraph
+                else:
+                    current_chunk = paragraph
 
-        # Add the last chunk if it meets minimum size
+        # Add final chunk if it meets minimum size
         if current_chunk and len(current_chunk) >= self.min_chunk_size:
             chunk = Chunk(
-                id=f"{metadata.get('id', 'doc')}_chunk_{chunk_id}",
+                id=f"chunk_{chunk_id}",
                 text=current_chunk.strip(),
                 metadata={
-                    **metadata,
-                    'chunk_start': current_start,
-                    'chunk_end': current_start + len(current_chunk),
-                    'chunk_size': len(current_chunk)
+                    'paragraphs': len(paragraphs),
+                    'chunk_size': len(current_chunk),
+                    **(current_metadata or {})
                 }
             )
             chunks.append(chunk)
 
+        logger.debug(f"Created {len(chunks)} semantic chunks from text of length {len(text)}")
         return chunks
-
-    def _split_into_sentences(self, text: str) -> List[str]:
-        """Split text into sentences using boundary patterns"""
-        # Start with the text as one piece
-        pieces = [text]
-
-        # Apply each boundary pattern
-        for pattern in self.boundary_patterns:
-            new_pieces = []
-            for piece in pieces:
-                if len(piece) <= self.max_chunk_size:
-                    new_pieces.append(piece)
-                else:
-                    # Split at boundaries
-                    splits = re.split(pattern, piece)
-                    new_pieces.extend(splits)
-            pieces = new_pieces
-
-        # Clean up and filter empty pieces
-        return [piece.strip() for piece in pieces if piece.strip()]
 
     def get_chunking_info(self) -> Dict[str, Any]:
         return {
             'name': 'semantic-chunking',
             'strategy': 'semantic',
-            'max_chunk_size': self.max_chunk_size,
             'min_chunk_size': self.min_chunk_size,
-            'boundary_patterns': self.boundary_patterns
+            'max_chunk_size': self.max_chunk_size,
+            'separator': self.separator
         }
 
 
