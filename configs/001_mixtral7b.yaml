@@ -10,11 +10,14 @@ llm:
 embedding:
   type: sentence-transformers
   model_name: all-MiniLM-L6-v2
-  device: cpu
+  # device: cpu          # ← vorher
+  device: cuda           # ← nutzt GPU
+  # batch_size: 32       # ← beispielhafter alter/kleiner Wert
+  batch_size: 128        # ← größerer Batch für GPU (64–256 testen)
 
 chunking:
   type: fixed-size
-  chunk_size: 1000
+  chunk_size: 2000
   chunk_overlap: 200
   separator: "\n"
 
@@ -32,6 +35,8 @@ evaluation:
 dataset:
   evaluation_subset_size: 50
   save_qa_pairs: true
+  grouping:
+    enabled: true
 
 pipeline:
   include_context: true
