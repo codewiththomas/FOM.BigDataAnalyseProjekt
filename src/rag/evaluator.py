@@ -16,7 +16,8 @@ class RAGEvaluator:
 
     def __init__(self, config_path: str, dataset_path: str):
         self.factory = RAGFactory(config_path)
-        self.dataset = DSGVODataset(dataset_path)
+        dataset_config = self.factory.config.get_dataset_config()
+        self.dataset = DSGVODataset(dataset_path, dataset_config)  # config hinzufügen
         self.pipeline = None
         self.evaluator = None
         self.results = []

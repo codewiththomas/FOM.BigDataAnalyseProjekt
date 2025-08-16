@@ -36,6 +36,9 @@ class RAGPipeline:
         """Index documents by chunking, embedding, and adding to retrieval"""
         logger.info(f"Indexing {len(documents)} documents...")
 
+        # Dokumente vor Chunking speichern
+        self.documents_before_chunking = documents
+
         # Step 1: Chunking (with caching)
         chunks = self._get_or_create_chunks(documents)
 
@@ -187,5 +190,12 @@ class RAGPipeline:
                 'separator': getattr(self.chunking, 'separator', None)
             },
             'retrieval': self.retrieval.get_model_info(),
-            'is_indexed': self.is_indexed
+            'is_indexed': self.is_indexed,
+            'dataset': {
+                'documents_processed': len(self.documents_before_chunking) if hasattr(self,
+                                                                                      'documents_before_chunking') else 'unknown',
+                'grouping_applied': any(
+                    doc.get('metadata', {}).get('grouped', False) for doc in self.documents_before_chunking) if hasattr(
+                    self, 'documents_before_chunking') else False
+            }
         }
