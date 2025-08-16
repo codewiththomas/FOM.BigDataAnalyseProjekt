@@ -13,7 +13,9 @@ logger = logging.getLogger(__name__)
 
 
 class RAGFactory:
-    """Factory for creating complete RAG systems from configuration"""
+    """
+    Lädt die Konfiguration und erstellt die einzelnen Komponenten, mit denen dann die RAG-Pipeline erstellt wird.
+    """
 
     def __init__(self, config_path: str):
         self.config = RAGConfig(config_path)

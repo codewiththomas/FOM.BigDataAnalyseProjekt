@@ -3,6 +3,9 @@ from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
 import time
 
+######################################################################################################################
+# Definiert, welche Klassen unser RAG besitzen muss und welche Methoden die einzelnen Klassen jeweils haben müssen
+######################################################################################################################
 
 @dataclass
 class Chunk:
