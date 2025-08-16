@@ -1,0 +1,111 @@
+*** a/src/rag/retrieval.py
+--- b/src/rag/retrieval.py
+@@
+ class VectorSimilarityRetrieval(RetrievalInterface):
+     """Vector similarity-based retrieval using cosine similarity"""
+ 
+     def __init__(self, config: Dict[str, Any]):
+         self.top_k = config.get('top_k', 5)
+         self.similarity_threshold = config.get('similarity_threshold', 0.0)
+         self.chunks = []
+         self.embeddings = []
++        self._embedding_model = None  # will be set by pipeline
+ 
+         logger.info(f"Vector similarity retrieval: top_k={self.top_k}, threshold={self.similarity_threshold}")
+ 
++    def set_embedding_model(self, embedding_model):
++        """Link the same embedding model used for chunks to the retriever."""
++        self._embedding_model = embedding_model
++
+     def add_chunks(self, chunks: List[Chunk], embeddings: List[List[float]]) -> None:
+         """Add chunks and their embeddings to the retrieval index"""
+         self.chunks = chunks
+         self.embeddings = embeddings
+ 
+@@
+-    def _get_query_embedding(self, query: str) -> np.ndarray:
+-        """Generate embedding for the query (placeholder - should use the same embedding model)"""
+-        # In production, this should use the same embedding model as the chunks
+-        # For now, we'll create a simple random embedding for demonstration
+-        if not self.embeddings_array.size:
+-            return None
+-
+-        embedding_dim = self.embeddings_array.shape[1]
+-        # Simple hash-based embedding (not production quality, but deterministic)
+-        import hashlib
+-        hash_obj = hashlib.md5(query.encode())
+-        hash_bytes = hash_obj.digest()
+-
+-        # Convert hash to embedding vector
+-        embedding = []
+-        for i in range(embedding_dim):
+-            if i < len(hash_bytes):
+-                embedding.append(float(hash_bytes[i]) / 255.0)
+-            else:
+-                embedding.append(0.0)
+-
+-        return np.array(embedding)
++    def _get_query_embedding(self, query: str) -> np.ndarray:
++        """Generate embedding for the query using the same model as for chunks."""
++        if not hasattr(self, "_embedding_model") or self._embedding_model is None:
++            logger.warning("No embedding model linked to retrieval; cannot embed query.")
++            return None
++        vec = self._embedding_model.embed([query])[0]  # list[float]
++        return np.array(vec, dtype=float)
+ 
+@@
+ class HybridRetrieval(RetrievalInterface):
+     """Hybrid retrieval combining vector and keyword search"""
+ 
+     def __init__(self, config: Dict[str, Any]):
+         self.vector_weight = config.get('vector_weight', 0.7)
+         self.keyword_weight = config.get('keyword_weight', 0.3)
+         self.top_k = config.get('top_k', 5)
+         self.chunks = []
+         self.embeddings = []
++        self._embedding_model = None  # will be set by pipeline
+ 
+         logger.info(f"Hybrid retrieval: vector_weight={self.vector_weight}, keyword_weight={self.keyword_weight}")
+ 
++    def set_embedding_model(self, embedding_model):
++        """Link the same embedding model used for chunks to the retriever."""
++        self._embedding_model = embedding_model
++
+     def add_chunks(self, chunks: List[Chunk], embeddings: List[List[float]]) -> None:
+         """Add chunks and their embeddings to the retrieval index"""
+         self.chunks = chunks
+         self.embeddings = embeddings
+@@
+-    def _get_query_embedding(self, query: str) -> np.ndarray:
+-        """Generate embedding for the query"""
+-        if not self.embeddings_array.size:
+-            return None
+-
+-        embedding_dim = self.embeddings_array.shape[1]
+-        import hashlib
+-        hash_obj = hashlib.md5(query.encode())
+-        hash_bytes = hash_obj.digest()
+-
+-        embedding = []
+-        for i in range(embedding_dim):
+-            if i < len(hash_bytes):
+-                embedding.append(float(hash_bytes[i]) / 255.0)
+-            else:
+-                embedding.append(0.0)
+-
+-        return np.array(embedding)
++    def _get_query_embedding(self, query: str) -> np.ndarray:
++        """Generate embedding for the query using the same model as for chunks."""
++        if not hasattr(self, "_embedding_model") or self._embedding_model is None:
++            logger.warning("No embedding model linked to retrieval; cannot embed query.")
++            return None
++        vec = self._embedding_model.embed([query])[0]
++        return np.array(vec, dtype=float)
+ 
+*** a/src/rag/pipeline.py
+--- b/src/rag/pipeline.py
+@@
+         self.retrieval = retrieval
++        # Ensure retriever uses the same embedding model for query embeddings
++        if hasattr(self.retrieval, "set_embedding_model"):
++            self.retrieval.set_embedding_model(self.embedding)
