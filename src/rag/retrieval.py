@@ -7,7 +7,10 @@ logger = logging.getLogger(__name__)
 
 
 class VectorSimilarityRetrieval(RetrievalInterface):
-    """Vector similarity-based retrieval using cosine similarity"""
+    """
+    Vektorähnlichkeitsbasierte Retrieval-Methode, welche die Ähnlichkeit zwischen Vektoren und einer Abfrage mit
+    Cosinus-Ähnlichkeit berechnet
+    """
 
     def __init__(self, config: Dict[str, Any]):
         self.top_k = config.get('top_k', 5)
@@ -142,7 +145,9 @@ class VectorSimilarityRetrieval(RetrievalInterface):
 
 
 class HybridRetrieval(RetrievalInterface):
-    """Hybrid retrieval combining vector and keyword search"""
+    """
+    Hybrid retrieval combining vector and keyword search
+    """
 
     def __init__(self, config: Dict[str, Any]):
         self.vector_weight = config.get('vector_weight', 0.7)
@@ -291,17 +296,30 @@ class HybridRetrieval(RetrievalInterface):
         return self.get_model_info()
 
 
+class FAISSRetrieval(RetrievalInterface):
+    """
+    Implementierung von FAISS als Retrieval-Methode
+    """
+    raise NotImplementedError("FAISSRetrieval ist noch nicht implementiert")
+
+
 class RetrievalFactory:
-    """Factory for creating retrieval instances based on configuration"""
+    """
+    Factory-Klasse, welche eine Instanz der gewünschten Retrieval-Methode basierend auf der Konfiguration erstellt
+    """
 
     @staticmethod
     def create_retrieval(config: Dict[str, Any]) -> RetrievalInterface:
-        """Create retrieval instance based on configuration"""
+        """
+        Create retrieval instance based on configuration
+        """
         retrieval_type = config.get('type', 'vector-similarity')
 
         if retrieval_type == 'vector-similarity':
             return VectorSimilarityRetrieval(config)
         elif retrieval_type == 'hybrid':
             return HybridRetrieval(config)
+        elif retrieval_type == 'faiss':
+            return FAISSRetrieval(config)
         else:
-            raise ValueError(f"Unknown retrieval type: {retrieval_type}")
+            raise ValueError(f"Unbekannte Retrieval-Methode: {retrieval_type}")
