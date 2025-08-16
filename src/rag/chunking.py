@@ -169,6 +169,13 @@ class SemanticChunking(ChunkingInterface):
         }
 
 
+class RecursiveChunking(ChunkingInterface):
+    """
+    Beschreibung hier
+    """
+    pass # HIER DURCH CODE ERSETZEN
+
+
 class ChunkingFactory:
     """Factory for creating chunking instances based on configuration"""
 
@@ -181,5 +188,7 @@ class ChunkingFactory:
             return FixedSizeChunking(config)
         elif chunking_type == 'semantic':
             return SemanticChunking(config)
+        elif chunking_type == 'recursive':
+            return RecursiveChunking(config)
         else:
             raise ValueError(f"Unknown chunking type: {chunking_type}")
