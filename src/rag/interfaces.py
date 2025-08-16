@@ -73,6 +73,11 @@ class RetrievalInterface(ABC):
         pass
 
     @abstractmethod
+    def set_embedding_model(self, embedding_model: EmbeddingInterface) -> None:
+        """Legt fest, welches Embedding genutzt werden soll"""
+        pass
+
+    @abstractmethod
     def retrieve(self, query: str, top_k: int = 5) -> List[Chunk]:
         """Retrieve top-k relevant chunks for a query"""
         pass

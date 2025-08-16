@@ -17,8 +17,13 @@ class VectorSimilarityRetrieval(RetrievalInterface):
         self.similarity_threshold = config.get('similarity_threshold', 0.0)
         self.chunks = []
         self.embeddings = []
+        self._embedding_model = None # muss vom Typ EmbeddingInterface sein
 
         logger.info(f"Vector similarity retrieval: top_k={self.top_k}, threshold={self.similarity_threshold}")
+
+    def set_embedding_model(self, embedding_model):
+        """Link the same embedding model used for chunks to the retriever."""
+        self._embedding_model = embedding_model
 
     def add_chunks(self, chunks: List[Chunk], embeddings: List[List[float]]) -> None:
         """Add chunks and their embeddings to the retrieval index"""
@@ -78,27 +83,12 @@ class VectorSimilarityRetrieval(RetrievalInterface):
             return self._get_random_chunks(top_k)
 
     def _get_query_embedding(self, query: str) -> np.ndarray:
-        """Generate embedding for the query (placeholder - should use the same embedding model)"""
-        # In production, this should use the same embedding model as the chunks
-        # For now, we'll create a simple random embedding for demonstration
-        if not self.embeddings_array.size:
-            return None
-
-        embedding_dim = self.embeddings_array.shape[1]
-        # Simple hash-based embedding (not production quality, but deterministic)
-        import hashlib
-        hash_obj = hashlib.md5(query.encode())
-        hash_bytes = hash_obj.digest()
-
-        # Convert hash to embedding vector
-        embedding = []
-        for i in range(embedding_dim):
-            if i < len(hash_bytes):
-                embedding.append(float(hash_bytes[i]) / 255.0)
-            else:
-                embedding.append(0.0)
-
-        return np.array(embedding)
+        """Generate embedding for the query using the same model as for chunks."""
+        if not hasattr(self, "_embedding_model") or self._embedding_model is None:
+            logger.warning("No embedding model linked to retrieval; cannot embed query.")
+            return np.ndarray([], dtype=float)
+        vec = self._embedding_model.embed([query])[0]  # list[float]
+        return np.array(vec, dtype=float)
 
     def _calculate_cosine_similarities(self, query_embedding: np.ndarray) -> np.ndarray:
         """Calculate cosine similarities between query and all chunk embeddings"""
@@ -296,11 +286,11 @@ class HybridRetrieval(RetrievalInterface):
         return self.get_model_info()
 
 
-class FAISSRetrieval(RetrievalInterface):
-    """
-    Implementierung von FAISS als Retrieval-Methode
-    """
-    raise NotImplementedError("FAISSRetrieval ist noch nicht implementiert")
+# class FAISSRetrieval(RetrievalInterface):
+#     """
+#     Implementierung von FAISS als Retrieval-Methode
+#     """
+#     raise NotImplementedError("FAISSRetrieval ist noch nicht implementiert")
 
 
 class RetrievalFactory:
@@ -319,7 +309,7 @@ class RetrievalFactory:
             return VectorSimilarityRetrieval(config)
         elif retrieval_type == 'hybrid':
             return HybridRetrieval(config)
-        elif retrieval_type == 'faiss':
-            return FAISSRetrieval(config)
+        # elif retrieval_type == 'faiss':
+        #     return FAISSRetrieval(config)
         else:
             raise ValueError(f"Unbekannte Retrieval-Methode: {retrieval_type}")

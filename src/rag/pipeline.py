@@ -23,6 +23,10 @@ class RAGPipeline:
         self.embedding = embedding
         self.chunking = chunking
         self.retrieval = retrieval
+
+        #if hasattr(self.retrieval, "set_embedding_model"):
+        self.retrieval.set_embedding_model(self.embedding)
+
         self.cache = cache
         self.is_indexed = False
 
