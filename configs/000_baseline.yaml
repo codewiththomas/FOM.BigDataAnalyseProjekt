@@ -9,9 +9,13 @@ llm:
   # api_key: ${OPENAI_API_KEY}  # Set via environment variable
 
 embedding:
-  type: openai
-  model: text-embedding-ada-002
+  # type: openai
+  # model: text-embedding-ada-002
   # api_key: ${OPENAI_API_KEY}  # Set via environment variable
+  type: sentence-transformers # <- für Angleichung embeddings zwischen mixtral und baseline
+  model_name: all-MiniLM-L6-v2 # <- für Angleichung embeddings zwischen mixtral und baseline
+  device: cuda
+  batch_size: 128 # cuda-optimiert für bessere Performance
 
 chunking:
   type: fixed-size
@@ -33,6 +37,8 @@ evaluation:
 dataset:
   evaluation_subset_size: 50
   save_qa_pairs: true
+  grouping:
+    enabled: true # false für Deaktivierung der Gruppierung
 
 pipeline:
   include_context: true

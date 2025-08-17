@@ -3,6 +3,7 @@ import jsonlines
 from typing import List, Dict, Any
 from pathlib import Path
 import logging
+from document_grouper import apply_grouping_if_enabled
 
 logger = logging.getLogger(__name__)
 
@@ -10,8 +11,9 @@ logger = logging.getLogger(__name__)
 class DSGVODataset:
     """DSGVO dataset preparation and management"""
 
-    def __init__(self, data_path: str):
+    def __init__(self, data_path: str, config: Dict[str, Any] = None): # config ergänzt
         self.data_path = Path(data_path)
+        self.config = config or {}  # neu hinzugefügt für Dokumentengruppierung
         self.documents: List[Dict[str, Any]] = []
         self.qa_pairs: List[Dict[str, Any]] = []
 
@@ -64,6 +66,8 @@ class DSGVODataset:
                     self.documents.append(document)
 
             logger.info(f"Loaded {len(self.documents)} DSGVO documents")
+
+            self.documents = apply_grouping_if_enabled(self.documents, self.config) # neu hinzugefügt
 
         except Exception as e:
             logger.error(f"Failed to load DSGVO documents: {e}")

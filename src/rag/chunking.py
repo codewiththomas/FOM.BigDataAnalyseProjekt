@@ -170,10 +170,92 @@ class SemanticChunking(ChunkingInterface):
 
 
 class RecursiveChunking(ChunkingInterface):
-    """
-    Beschreibung hier
-    """
-    pass # HIER DURCH CODE ERSETZEN
+    """Recursive chunking strategy that tries multiple separators in hierarchical order"""
+
+    def __init__(self, config: Dict[str, Any]):
+        self.chunk_size = config.get('chunk_size', 1000)
+        self.chunk_overlap = config.get('chunk_overlap', 100)
+        self.separators = config.get('separators', ['\n\n', '\n', '. ', ' '])
+
+    def chunk_documents(self, documents: List[Dict[str, Any]]) -> List[Chunk]:
+        """Chunk a list of documents"""
+        all_chunks = []
+        chunk_id = 0
+
+        for doc in documents:
+            doc_chunks = self.chunk(doc['text'], doc.get('metadata', {}), chunk_id)
+            all_chunks.extend(doc_chunks)
+            chunk_id += len(doc_chunks)
+
+        return all_chunks
+
+    def chunk(self, text: str, metadata: Dict[str, Any] = None, start_id: int = 0) -> List[Chunk]:
+        """Recursively split text using hierarchical separators"""
+        if not text:
+            return []
+
+        splits = self._split_text(text)
+        chunks = []
+
+        for i, split in enumerate(splits):
+            if split.strip():
+                chunk = Chunk(
+                    id=f"chunk_{start_id + i}",
+                    text=split.strip(),
+                    metadata={'chunk_size': len(split), **(metadata or {})}
+                )
+                chunks.append(chunk)
+
+        return chunks
+
+    def _split_text(self, text: str) -> List[str]:
+        """Split text recursively using separators"""
+        if len(text) <= self.chunk_size:
+            return [text]
+
+        # Try each separator
+        for sep in self.separators:
+            if sep in text:
+                parts = text.split(sep)
+                chunks = []
+                current = ""
+
+                for part in parts:
+                    test = current + sep + part if current else part
+
+                    if len(test) <= self.chunk_size:
+                        current = test
+                    else:
+                        if current:
+                            chunks.append(current)
+                            # Add overlap
+                            if self.chunk_overlap and len(current) > self.chunk_overlap:
+                                current = current[-self.chunk_overlap:] + sep + part
+                            else:
+                                current = part
+                        else:
+                            # Part too big, split recursively
+                            chunks.extend(self._split_text(part))
+                            current = ""
+
+                if current:
+                    chunks.append(current)
+                return chunks
+
+        # Force split if no separators work
+        chunks = []
+        for i in range(0, len(text), self.chunk_size - self.chunk_overlap):
+            chunks.append(text[i:i + self.chunk_size])
+        return chunks
+
+    def get_chunking_info(self) -> Dict[str, Any]:
+        return {
+            'name': 'recursive-chunking',
+            'strategy': 'recursive',
+            'chunk_size': self.chunk_size,
+            'chunk_overlap': self.chunk_overlap,
+            'separators': self.separators
+        }
 
 
 class ChunkingFactory:
