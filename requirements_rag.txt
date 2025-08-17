@@ -1,0 +1,22 @@
+# ResearchRAG Dependencies
+# Core dependencies
+PyYAML>=6.0
+jsonlines>=3.1.0
+
+# OpenAI API
+openai>=1.0.0
+
+# Sentence transformers for local embeddings
+sentence-transformers>=2.2.0
+
+# Vector operations
+numpy>=1.21.0
+
+# Logging and utilities
+tqdm>=4.64.0
+
+# Optional: For advanced evaluation metrics
+# ragas>=0.0.20  # Uncomment when implementing full RAGAS
+# scikit-learn>=1.0.0  # For advanced similarity calculations
+# torch>=1.9.0  # For sentence-transformers GPU support
+# transformers>=4.20.0  # For advanced NLP models

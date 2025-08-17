@@ -1,0 +1,609 @@
+2025-08-11 20:23:59,820 - INFO - Starting EU AI Act Crawler...
+2025-08-11 20:23:59,821 - INFO - Loading page: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202401689 (Attempt 1)
+2025-08-11 20:24:02,806 - INFO - Parsing main EU AI Act page...
+2025-08-11 20:24:02,859 - WARNING - Main content area not found, trying body
+2025-08-11 20:24:02,874 - INFO - Document title: L_202401689DE.000101.fmx.xml
+2025-08-11 20:24:02,942 - INFO - Extracted 900 entries from main page
+2025-08-11 20:24:02,943 - INFO - Crawling completed. Total entries extracted: 900
+2025-08-11 20:24:02,943 - INFO - Saving 900 entries to: data/output/eu_ai_act_crawled_2025-08-11_2023.jsonl
+2025-08-11 20:24:02,958 - INFO - Successfully saved: data/output/eu_ai_act_crawled_2025-08-11_2023.jsonl
+2025-08-11 20:24:02,976 - INFO - === CRAWLING STATISTICS ===
+2025-08-11 20:24:02,976 - INFO - Total entries: 900
+2025-08-11 20:24:02,976 - INFO - Articles processed: 1
+2025-08-11 20:24:02,976 - INFO - Sections processed: 0
+2025-08-11 20:25:04,453 - INFO - Starting EU AI Act Crawler...
+2025-08-11 20:25:04,453 - INFO - Loading page: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202401689 (Attempt 1)
+2025-08-11 20:25:05,593 - INFO - Parsing as XML document
+2025-08-11 20:25:07,594 - INFO - Parsing main EU AI Act page...
+2025-08-11 20:25:07,639 - WARNING - Main content area not found, trying body
+2025-08-11 20:25:07,654 - INFO - Document title: L_202401689DE.000101.fmx.xml
+2025-08-11 20:25:07,729 - INFO - Extracted 900 entries from main page
+2025-08-11 20:25:07,729 - INFO - Crawling completed. Total entries extracted: 900
+2025-08-11 20:25:07,729 - INFO - Saving 900 entries to: data/output/eu_ai_act_crawled_2025-08-11_2025.jsonl
+2025-08-11 20:25:07,741 - INFO - Successfully saved: data/output/eu_ai_act_crawled_2025-08-11_2025.jsonl
+2025-08-11 20:25:07,741 - INFO - === CRAWLING STATISTICS ===
+2025-08-11 20:25:07,742 - INFO - Total entries: 900
+2025-08-11 20:25:07,742 - INFO - Articles processed: 1
+2025-08-11 20:25:07,742 - INFO - Sections processed: 0
+2025-08-11 20:26:37,122 - INFO - Starting EU AI Act Crawler...
+2025-08-11 20:26:37,122 - INFO - Loading page: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202401689 (Attempt 1)
+2025-08-11 20:26:38,362 - INFO - Parsing as XML document
+2025-08-11 20:26:40,363 - INFO - Parsing main EU AI Act page...
+2025-08-11 20:26:40,407 - WARNING - Main content area not found, trying body
+2025-08-11 20:26:40,423 - INFO - Document title: L_202401689DE.000101.fmx.xml
+2025-08-11 20:26:40,426 - INFO - Found Article 16: und 114,
+2025-08-11 20:26:40,433 - INFO - Found Article 6: Absatz 1 eingestuft sind und im Zusammenhang mit Produkten stehen, die unter die in Anhang I Abschnitt B aufgeführten Harmonisierungsrechtsvorschriften der Union fallen, gelten nur Artikel 6 Absatz 1, die Artikel 102 bis 109 und Artikel 112. Artikel 57 gilt nur, soweit die Anforderungen an Hochrisiko-KI-Systeme gemäß dieser Verordnung im Rahmen der genannten Harmonisierungsrechtsvorschriften der Union eingebunden wurden.
+2025-08-11 20:26:40,435 - INFO - Found Article 5: oder 50 fällt, in Verkehr gebracht oder in Betrieb genommen.
+2025-08-11 20:26:40,436 - INFO - Found Article 27: abgeschlossen und das System gemäß Artikel 49 in der EU-Datenbank registriert hat. In hinreichend begründeten dringenden Fällen kann jedoch mit der Verwendung solcher Systeme zunächst ohne Registrierung in der EU-Datenbank begonnen werden, sofern diese Registrierung unverzüglich erfolgt.
+2025-08-11 20:26:40,437 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:26:40,438 - INFO - Found Article 49: Absatz 2. Auf Verlangen der zuständigen nationalen Behörden legt der Anbieter die Dokumentation der Bewertung vor.
+2025-08-11 20:26:40,438 - INFO - Found Article 96: und eine umfassende Liste praktischer Beispiele für Anwendungsfälle für KI-Systeme, die hochriskant oder nicht hochriskant sind, bereit.
+2025-08-11 20:26:40,439 - INFO - Found Article 97: delegierte Rechtsakte zu erlassen, um Absatz 3 Unterabsatz 2 des vorliegenden Artikels zu ändern, indem neue Bedingungen zu den darin genannten Bedingungen hinzugefügt oder diese geändert werden, wenn konkrete und zuverlässige Beweise für das Vorhandensein von KI-Systemen vorliegen, die in den Anwendungsbereich von Anhang III fallen, jedoch kein erhebliches Risiko der Beeinträchtigung in Bezug auf die Gesundheit, Sicherheit oder Grundrechte natürlicher Personen bergen.
+2025-08-11 20:26:40,439 - INFO - Found Article 7: Absatz 1 erlassenen delegierten Rechtsakten sicherzustellen und die Marktentwicklungen und die technologischen Entwicklungen sind zu berücksichtigen.
+2025-08-11 20:26:40,440 - INFO - Found Article 97: delegierte Rechtsakte zur Änderung von Anhang III durch Hinzufügung oder Änderung von Anwendungsfällen für Hochrisiko-KI-Systeme zu erlassen, die beide der folgenden Bedingungen erfüllen:
+2025-08-11 20:26:40,441 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,441 - INFO - Found Article 9: genannten Risikomanagementsystem Rechnung getragen.
+2025-08-11 20:26:40,444 - INFO - Found Article 60: umfassen.
+2025-08-11 20:26:40,446 - INFO - Found Article 97: delegierte Rechtsakte zur Änderung des Anhangs IV zu erlassen, damit die technische Dokumentation in Anbetracht des technischen Fortschritts stets alle Informationen enthält, die erforderlich sind, um zu beurteilen, ob das System die Anforderungen dieses Abschnitts erfüllt.
+2025-08-11 20:26:40,447 - INFO - Found Subsection: ABSCHNITT 3
+2025-08-11 20:26:40,450 - INFO - Found Article 40: genannten harmonisierten Normen berücksichtigt.
+2025-08-11 20:26:40,451 - INFO - Found Article 12: Absatz 1 auf, soweit diese Protokolle ihrer Kontrolle unterliegen. Unbeschadet des geltenden Unionsrechts oder nationalen Rechts werden die Protokolle für einen der Zweckbestimmung des Hochrisiko-KI-Systems angemessenen Zeitraum von mindestens sechs Monaten aufbewahrt, sofern in den geltenden Rechtsvorschriften der Union, insbesondere im Unionsrecht zum Schutz personenbezogener Daten, oder im geltenden nationalen Recht nichts anderes vorgesehen ist.
+2025-08-11 20:26:40,452 - INFO - Found Article 44: ausgestellt hat, insbesondere über die Art der Nichtkonformität und über bereits ergriffene relevante Korrekturmaßnahmen.
+2025-08-11 20:26:40,453 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,453 - INFO - Found Article 12: Absatz 1, soweit diese Protokolle ihrer Kontrolle unterliegen.
+2025-08-11 20:26:40,453 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:26:40,455 - INFO - Found Article 47: genannte EU-Konformitätserklärung bereit.
+2025-08-11 20:26:40,456 - INFO - Found Article 16: 
+2025-08-11 20:26:40,458 - INFO - Found Article 72: entsprechend. Diese Pflicht gilt nicht für sensible operative Daten von Betreibern von KI-Systemen, die Strafverfolgungsbehörden sind.
+2025-08-11 20:26:40,459 - INFO - Found Article 49: nachkommen. Stellen diese Betreiber fest, dass das Hochrisiko-KI-System, dessen Verwendung sie planen, nicht in der in Artikel 71 genannten EU-Datenbank registriert wurde, sehen sie von der Verwendung dieses Systems ab und informieren den Anbieter oder den Händler.
+2025-08-11 20:26:40,459 - INFO - Found Article 13: der vorliegenden Verordnung bereitgestellten Informationen, um ihrer Pflicht zur Durchführung einer Datenschutz-Folgenabschätzung gemäß Artikel 35 der Verordnung (EU) 2016/679 oder Artikel 27 der Richtlinie (EU) 2016/680 nachzukommen.
+2025-08-11 20:26:40,461 - INFO - Found Article 6: Absatz 2 — mit Ausnahme von Hochrisiko-KI-Systemen, die in dem in Anhang III Nummer 2 aufgeführten Bereich verwendet werden sollen — führen Betreiber, bei denen es sich um Einrichtungen des öffentlichen Rechts oder private Einrichtungen, die öffentliche Dienste erbringen, handelt, und Betreiber von Hochrisiko-KI-Systemen gemäß Anhang III Nummer 5 Buchstaben b und c eine Abschätzung der Auswirkungen, die die Verwendung eines solchen Systems auf die Grundrechte haben kann, durch. Zu diesem Zweck führen die Betreiber eine Abschätzung durch, die Folgendes umfasst:
+2025-08-11 20:26:40,461 - INFO - Found Article 46: Absatz 1 genannten Fall können die Betreiber von der Mitteilungspflicht befreit werden.
+2025-08-11 20:26:40,461 - INFO - Found Article 35: der Verordnung (EU) 2016/679 oder Artikel 27 der Richtlinie (EU) 2016/680 durchgeführten Datenschutz-Folgenabschätzung erfüllt, so ergänzt die Grundrechte-Folgenabschätzung gemäß Absatz 1 des vorliegenden Artikels diese Datenschutz-Folgenabschätzung.
+2025-08-11 20:26:40,462 - INFO - Found Subsection: ABSCHNITT 4
+2025-08-11 20:26:40,463 - INFO - Found Article 78: die Vertraulichkeit der von ihnen erlangten Informationen.
+2025-08-11 20:26:40,465 - INFO - Found Article 29: Absatz 2, so legt die notifizierende Behörde der Kommission und den anderen Mitgliedstaaten die Unterlagen vor, die die Kompetenz der Konformitätsbewertungsstelle und die Vereinbarungen nachweisen, die getroffen wurden, um sicherzustellen, dass die Stelle regelmäßig überwacht wird und weiterhin die Anforderungen des Artikels 31 erfüllt.
+2025-08-11 20:26:40,467 - INFO - Found Article 78: wahren, außer wenn ihre Offenlegung gesetzlich vorgeschrieben ist. Informationen, von denen Mitarbeiter der notifizierten Stellen bei der Durchführung ihrer Aufgaben gemäß dieser Verordnung Kenntnis erlangen, unterliegen der beruflichen Schweigepflicht, außer gegenüber den notifizierenden Behörden des Mitgliedstaats, in dem sie ihre Tätigkeiten ausüben.
+2025-08-11 20:26:40,468 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,468 - INFO - Found Article 38: genannten Koordinierungstätigkeiten mit. Sie wirken außerdem unmittelbar oder mittelbar an der Arbeit der europäischen Normungsorganisationen mit oder stellen sicher, dass sie stets über den Stand der einschlägigen Normen unterrichtet sind.
+2025-08-11 20:26:40,471 - INFO - Found Article 43: festgelegten Konformitätsbewertungsverfahren.
+2025-08-11 20:26:40,471 - INFO - Found Article 28: genannten notifizierenden Behörde sämtliche einschlägige Dokumentation, einschließlich der Dokumentation des Anbieters, zugänglich bzw. übermitteln diese auf Anfrage, damit diese Behörde ihre Bewertungs-, Benennungs-, Notifizierungs- und Überwachungstätigkeiten durchführen kann und die Bewertung gemäß diesem Abschnitt erleichtert wird.
+2025-08-11 20:26:40,472 - INFO - Found Article 30: Absatz 2 genannten elektronischen Notifizierungsinstruments über alle relevanten Änderungen der Notifizierung einer notifizierten Stelle.
+2025-08-11 20:26:40,472 - INFO - Found Article 31: festgelegten Anforderungen nicht mehr erfüllt oder dass sie ihren Pflichten nicht nachkommt, so untersucht die notifizierende Behörde den Sachverhalt unverzüglich und mit äußerster Sorgfalt. In diesem Zusammenhang teilt sie der betreffenden notifizierten Stelle die erhobenen Einwände mit und gibt ihr die Möglichkeit, dazu Stellung zu nehmen. Kommt die notifizierende Behörde zu dem Schluss, dass die notifizierte Stelle die in Artikel 31 festgelegten Anforderungen nicht mehr erfüllt oder dass sie ihren Pflichten nicht nachkommt, schränkt sie die Benennung gegebenenfalls ein, setzt sie aus oder widerruft sie, je nach Schwere der Nichterfüllung dieser Anforderungen oder Pflichtverletzung. Sie informiert die Kommission und die anderen Mitgliedstaaten unverzüglich darüber.
+2025-08-11 20:26:40,474 - INFO - Found Article 78: vertraulich behandelt werden.
+2025-08-11 20:26:40,474 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,475 - INFO - Found Article 31: erfüllen oder das gleiche Maß an Konformität gewährleisten.
+2025-08-11 20:26:40,476 - INFO - Found Subsection: ABSCHNITT 5
+2025-08-11 20:26:40,477 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,477 - INFO - Found Article 10: der Verordnung (EU) Nr. 1025/2012 erteilt die Kommission unverzüglich Normungsaufträge, die alle Anforderungen gemäß Abschnitt 2 des vorliegenden Kapitels abdecken und gegebenenfalls Normungsaufträge, die Pflichten gemäß Kapitel V Abschnitte 2 und 3 der vorliegenden Verordnung abdecken. In dem Normungsauftrag werden auch Dokumente zu den Berichterstattungs- und Dokumentationsverfahren im Hinblick auf die Verbesserung der Ressourcenleistung von KI-Systemen z. B. durch die Verringerung des Energie- und sonstigen Ressourcenverbrauchs des Hochrisiko-KI-Systems während seines gesamten Lebenszyklus und zu der energieeffizienten Entwicklung von KI-Modellen mit allgemeinem Verwendungszweck verlangt. Bei der Ausarbeitung des Normungsauftrags konsultiert die Kommission das KI-Gremium und die einschlägigen Interessenträger, darunter das Beratungsforum.
+2025-08-11 20:26:40,477 - INFO - Found Article 24: der Verordnung (EU) Nr. 1025/2012 zu erreichen.
+2025-08-11 20:26:40,478 - INFO - Found Article 67: genannte Beratungsforum.
+2025-08-11 20:26:40,479 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,479 - INFO - Found Article 22: der Verordnung (EU) Nr. 1025/2012 genannten Ausschuss darüber, dass sie die in Absatz 1 des vorliegenden Artikels festgelegten Bedingungen als erfüllt erachtet.
+2025-08-11 20:26:40,480 - INFO - Found Article 10: Absatz 4 festgelegten einschlägigen Anforderungen erfüllen.
+2025-08-11 20:26:40,480 - INFO - Found Article 15: der vorliegenden Verordnung festgelegten Cybersicherheitsanforderungen erfüllen, sofern diese Anforderungen von der Cybersicherheitszertifizierung oder der Konformitätserklärung oder Teilen davon abdeckt sind.
+2025-08-11 20:26:40,481 - INFO - Found Article 40: oder gegebenenfalls gemeinsame Spezifikationen gemäß Artikel 41 angewandt, so entscheidet er sich für eines der folgenden Konformitätsbewertungsverfahren auf der Grundlage
+2025-08-11 20:26:40,481 - INFO - Found Article 74: Absatz 8 bzw. 9 genannte Marktüberwachungsbehörde die Funktion der notifizierten Stelle.
+2025-08-11 20:26:40,482 - INFO - Found Article 31: Absätze 4, 5, 10 und 11 festgelegten Anforderungen erfüllen.
+2025-08-11 20:26:40,482 - INFO - Found Article 41: 
+2025-08-11 20:26:40,482 - INFO - Found Article 97: delegierte Rechtsakte zu erlassen, um die Anhänge VI und VII zu ändern, indem sie sie angesichts des technischen Fortschritts aktualisiert.
+2025-08-11 20:26:40,484 - INFO - Found Article 78: die Vertraulichkeit der von ihnen erlangten Informationen.
+2025-08-11 20:26:40,485 - INFO - Found Article 43: und auf ein hinreichend begründetes Ersuchen kann eine Marktüberwachungsbehörde das Inverkehrbringen oder die Inbetriebnahme bestimmter Hochrisiko-KI-Systeme im Hoheitsgebiet des betreffenden Mitgliedstaats aus außergewöhnlichen Gründen der öffentlichen Sicherheit, des Schutzes des Lebens und der Gesundheit von Personen, des Umweltschutzes oder des Schutzes wichtiger Industrie- und Infrastrukturanlagen genehmigen. Diese Genehmigung wird auf die Dauer der erforderlichen Konformitätsbewertungsverfahren befristet, wobei den außergewöhnlichen Gründen für die Ausnahme Rechnung getragen wird. Der Abschluss dieser Verfahren erfolgt unverzüglich.
+2025-08-11 20:26:40,486 - INFO - Found Article 97: delegierte Rechtsakte zur Aktualisierung des in Anhang V festgelegten Inhalts der EU-Konformitätserklärung zu erlassen, um den genannten Anhang durch die Einführung von Elementen zu ändern, die angesichts des technischen Fortschritts erforderlich werden.
+2025-08-11 20:26:40,486 - INFO - Found Article 30: der Verordnung (EG) Nr. 765/2008 festgelegten allgemeinen Grundsätze.
+2025-08-11 20:26:40,487 - INFO - Found Article 43: festgelegten Konformitätsbewertungsverfahren zuständigen notifizierten Stelle hinzugefügt. Die Identifizierungsnummer der notifizierten Stelle ist entweder von der Stelle selbst oder nach ihren Anweisungen durch den Anbieter oder den Bevollmächtigten des Anbieters anzubringen. Diese Identifizierungsnummer wird auch auf jeglichem Werbematerial angegeben, in dem darauf hingewiesen wird, dass das Hochrisiko-KI-System die Anforderungen für die CE-Kennzeichnung erfüllt.
+2025-08-11 20:26:40,488 - INFO - Found Article 71: genannten EU-Datenbank.
+2025-08-11 20:26:40,488 - INFO - Found Article 6: Absatz 3 ist, registriert dieser Anbieter oder gegebenenfalls sein Bevollmächtigter sich und dieses System in der in Artikel 71 genannten EU-Datenbank.
+2025-08-11 20:26:40,488 - INFO - Found Article 71: genannten EU-Datenbank, wählen das System aus und registrieren es dort.
+2025-08-11 20:26:40,489 - INFO - Found Article 74: Absatz 8 genannten nationalen Behörden haben Zugang zu den jeweiligen beschränkten Teilen der EU-Datenbank gemäß Unterabsatz 1 dieses Absatzes.
+2025-08-11 20:26:40,490 - INFO - Found Article 56: Absatz 6 festgelegten Verfahren erlassen. Hält sie einen Kodex für nicht angemessen, so kann die Kommission einen Durchführungsrechtsakt gemäß dem in Artikel 98 Absatz 2 genannten Prüfverfahren erlassen, in dem gemeinsame Vorschriften für die Umsetzung dieser Pflichten festgelegt werden.
+2025-08-11 20:26:40,491 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:26:40,492 - INFO - Found Article 97: delegierte Rechtsakte zur Änderung der in den Absätzen 1 und 2 des vorliegenden Artikels aufgeführten Schwellenwerte sowie zur Ergänzung von Benchmarks und Indikatoren vor dem Hintergrund sich wandelnder technologischer Entwicklungen, wie z. B. algorithmische Verbesserungen oder erhöhte Hardwareeffizienz, wenn dies erforderlich ist, damit diese Schwellenwerte dem Stand der Technik entsprechen.
+2025-08-11 20:26:40,492 - INFO - Found Article 51: Absatz 1 Buchstabe a, so teilt der betreffende Anbieter dies der Kommission unverzüglich, in jedem Fall jedoch innerhalb von zwei Wochen, nachdem diese Bedingung erfüllt ist oder bekannt wird, dass sie erfüllt wird, mit. Diese Mitteilung muss die Informationen enthalten, die erforderlich sind, um nachzuweisen, dass die betreffende Bedingung erfüllt ist. Erlangt die Kommission Kenntnis von einem KI-Modell mit allgemeinem Verwendungszweck, das systemische Risiken birgt, die ihr nicht mitgeteilt wurden, so kann sie entscheiden, es als Modell mit systemischen Risiken auszuweisen.
+2025-08-11 20:26:40,493 - INFO - Found Article 90: Absatz 1 Buchstabe a auf der Grundlage der in Anhang XIII festgelegten Kriterien als KI-Modell mit systemischen Risiken ausweisen.
+2025-08-11 20:26:40,494 - INFO - Found Article 97: delegierte Rechtsakte zu erlassen, um Anhang XIII zu ändern, indem die in dem genannten Anhang genannten Indikatoren präzisiert und aktualisiert werden.
+2025-08-11 20:26:40,494 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,496 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:26:40,497 - INFO - Found Subsection: ABSCHNITT 3
+2025-08-11 20:26:40,498 - INFO - Found Subsection: ABSCHNITT 4
+2025-08-11 20:26:40,500 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,500 - INFO - Found Article 53: vorgesehenen Pflichten beschränkt werden, es sei denn, sie erklären ausdrücklich ihr Interesse, sich dem ganzen Kodex anzuschließen.
+2025-08-11 20:26:40,500 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,502 - INFO - Found Article 78: enthaltenen Bestimmungen über die Vertraulichkeit und im Einvernehmen mit den Anbietern oder zukünftigen Anbietern, sind die Kommission und das KI-Gremium befugt, die Abschlussberichte einzusehen und tragen diesen gegebenenfalls bei der Wahrnehmung ihrer Aufgaben gemäß dieser Verordnung Rechnung. Wenn der Anbieter oder der zukünftige Anbieter und die zuständige nationale Behörde ihr ausdrückliches Einverständnis erklären, kann der Abschlussbericht über die in diesem Artikel genannte zentrale Informationsplattform veröffentlicht werden.
+2025-08-11 20:26:40,503 - INFO - Found Article 62: Absatz 1 Buchstabe c einzuholen. Die Kommission stimmt sich gegebenenfalls proaktiv mit den zuständigen nationalen Behörden ab.
+2025-08-11 20:26:40,504 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,505 - INFO - Found Article 5: — dem in diesem Artikel genannten Plan für einen Test unter Realbedingungen durchgeführt werden.
+2025-08-11 20:26:40,506 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,507 - INFO - Found Article 75: übertragen die Mitgliedstaaten ihren Marktüberwachungsbehörden die Befugnis, Anbieter und zukünftige Anbieter zur Bereitstellung von Informationen zu verpflichten, unangekündigte Ferninspektionen oder Vor-Ort-Inspektionen durchzuführen und die Durchführung der Tests unter Realbedingungen und damit zusammenhängende Hochrisiko-KI-Systeme zu prüfen. Die Marktüberwachungsbehörden nutzen diese Befugnisse, um für die sichere Entwicklung von Tests unter Realbedingungen zu sorgen.
+2025-08-11 20:26:40,508 - INFO - Found Article 73: zu melden. Der Anbieter oder zukünftige Anbieter trifft Sofortmaßnahmen zur Schadensbegrenzung; andernfalls setzt er den Test unter Realbedingungen so lange aus, bis eine Schadensbegrenzung stattgefunden hat, oder bricht ihn ab. Im Fall eines solchen Abbruchs des Tests unter Realbedingungen richtet der Anbieter oder zukünftige Anbieter ein Verfahren für den sofortigen Rückruf des KI-Systems ein.
+2025-08-11 20:26:40,509 - INFO - Found Article 60: ist von den Testteilnehmern eine freiwillig erteilte informierte Einwilligung einzuholen, bevor sie an dem Test teilnehmen und nachdem sie mit präzisen, klaren, relevanten und verständlichen Informationen über Folgendes ordnungsgemäß informiert wurden:
+2025-08-11 20:26:40,510 - INFO - Found Article 43: werden die besonderen Interessen und Bedürfnisse von KMU, einschließlich Start-up-Unternehmen, berücksichtigt, indem diese Gebühren proportional zur Größe der Unternehmen, der Größe ihres Marktes und anderen einschlägigen Kennzahlen gesenkt werden.
+2025-08-11 20:26:40,511 - INFO - Found Article 17: dieser Verordnung vorgeschriebenen Qualitätsmanagementsystems in vereinfachter Weise einhalten, sofern sie keine Partnerunternehmen oder verbundenen Unternehmen im Sinne dieser Empfehlung haben. Zu diesem Zweck arbeitet die Kommission Leitlinien zu den Elementen des Qualitätsmanagementsystems aus, die unter Berücksichtigung der Bedürfnisse von Kleinstunternehmen in vereinfachter Weise eingehalten werden können, ohne das Schutzniveau oder die Notwendigkeit zur Einhaltung der Anforderungen in Bezug auf Hochrisiko-KI-Systeme zu beeinträchtigen.
+2025-08-11 20:26:40,512 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:26:40,513 - INFO - Found Article 67: genannten Beratungsforums als Beobachter zu diesen Untergruppen oder zu bestimmten Sitzungen dieser Untergruppen eingeladen werden.
+2025-08-11 20:26:40,515 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,516 - INFO - Found Article 68: Absatz 1 genannten Durchführungsrechtsakt festgelegt, wobei die Zielsetzung berücksichtigt wird, für die angemessene Durchführung dieser Verordnung, für Kosteneffizienz sowie dafür zu sorgen, dass alle Mitgliedstaaten effektiven Zugang zu Sachverständigen haben müssen.
+2025-08-11 20:26:40,517 - INFO - Found Article 84: und durch die Sachverständigen gemäß dem vorliegenden Artikel effizient organisiert ist und den bestmöglichen zusätzlichen Nutzen bringt.
+2025-08-11 20:26:40,517 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,519 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten.
+2025-08-11 20:26:40,520 - INFO - Found Article 6: Absatz 2, die gemäß den Artikeln 49 und 60 registriert werden und über KI-Systeme, die nicht als Hochrisiko-KI-Systeme gemäß Artikel 6 Absatz 3 gelten und gemäß Artikel 6 Absatz 4 und Artikel 49 registriert werden. Bei der Festlegung der Funktionsspezifikationen dieser Datenbank konsultiert die Kommission die einschlägigen Sachverständigen und bei der Aktualisierung der Funktionsspezifikationen dieser Datenbank konsultiert sie das KI-Gremium.
+2025-08-11 20:26:40,520 - INFO - Found Article 49: Absätze 3 und 4 in die EU-Datenbank eingegeben.
+2025-08-11 20:26:40,521 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:26:40,522 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,522 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,524 - INFO - Found Article 3: Nummer 49 Buchstabe c genannten schwerwiegenden Vorfall erhält, informiert sie die in Artikel 77 Absatz 1 genannten nationalen Behörden oder öffentlichen Stellen. Zur leichteren Einhaltung der Pflichten nach Absatz 1 dieses Artikels arbeitet die Kommission entsprechende Leitlinien aus. Diese Leitlinien werden bis zum 2. August 2025 veröffentlicht und regelmäßig bewertet.
+2025-08-11 20:26:40,524 - INFO - Found Article 19: der Verordnung (EU) 2019/1020 und befolgt die in der genannten Verordnung vorgesehenen Meldeverfahren.
+2025-08-11 20:26:40,524 - INFO - Found Article 3: Nummer 49 Buchstabe c genannt werden.
+2025-08-11 20:26:40,525 - INFO - Found Article 20: der Verordnung (EU) 2019/1020, unabhängig davon, ob sie diesbezüglich Maßnahmen ergriffen haben.
+2025-08-11 20:26:40,525 - INFO - Found Subsection: ABSCHNITT 3
+2025-08-11 20:26:40,526 - INFO - Found Article 34: Absatz 4 der Verordnung (EU) 2019/1020 melden die Marktüberwachungsbehörden der Kommission und den einschlägigen nationalen Wettbewerbsbehörden jährlich alle Informationen, die sie im Verlauf ihrer Marktüberwachungstätigkeiten erlangt haben und die für die Anwendung von Unionsrecht im Bereich der Wettbewerbsregeln von Interesse sein könnten. Ferner erstatten sie der Kommission jährlich Bericht über die Anwendung verbotener Praktiken in dem betreffenden Jahr und über die ergriffenen Maßnahmen.
+2025-08-11 20:26:40,528 - INFO - Found Article 14: der Verordnung (EU) 2019/1020 können die Marktüberwachungsbehörden für die Zwecke der Sicherstellung der wirksamen Durchsetzung der vorliegenden Verordnung die in Artikel 14 Absatz 4 Buchstaben d und j der genannten Verordnung genannten Befugnisse gegebenenfalls aus der Ferne ausüben.
+2025-08-11 20:26:40,529 - INFO - Found Article 9: der Verordnung (EU) 2019/1020 ein ernstes Risiko darstellen, zu geben. Das Büro für Künstliche Intelligenz unterstützt die Koordinierung der gemeinsamen Untersuchungen.
+2025-08-11 20:26:40,530 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:26:40,531 - INFO - Found Article 58: beaufsichtigt werden, überprüfen die Marktüberwachungsbehörden im Rahmen ihrer Aufsichtsaufgaben für das KI-Reallabor die Einhaltung des Artikels 60. Die Behörden können gegebenenfalls gestatten, dass der Anbieter oder zukünftige Anbieter den Test unter Realbedingungen in Abweichung von den in Artikel 60 Absatz 4 Buchstaben f und g festgelegten Bedingungen durchführt.
+2025-08-11 20:26:40,531 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:26:40,532 - INFO - Found Article 74: Absätze 8 und 9 genannten Marktüberwachungsbehörden auf Anfrage unverzüglich Zugang zu dieser Dokumentation oder eine Kopie davon erhalten. Zugang zu dieser Dokumentation oder zu einer Kopie davon darf nur das Personal der Marktüberwachungsbehörde erhalten, das über eine entsprechende Sicherheitsfreigabe verfügt.
+2025-08-11 20:26:40,533 - INFO - Found Article 77: Absatz 1 genannten einschlägigen nationalen Behörden oder öffentlichen Stellen und arbeitet uneingeschränkt mit ihnen zusammen. Die betreffenden Akteure arbeiten erforderlichenfalls mit der Marktüberwachungsbehörde und den in Artikel 77 Absatz 1 genannten anderen Behörden oder öffentlichen Stellen zusammen.
+2025-08-11 20:26:40,534 - INFO - Found Article 18: der Verordnung (EU) 2019/1020 gilt für die in Unterabsatz 2 des vorliegenden Absatzes genannten Maßnahmen.
+2025-08-11 20:26:40,535 - INFO - Found Article 6: Absatz 3 eingestuftes KI-System tatsächlich hochriskant ist, so prüft die Marktüberwachungsbehörde das betreffende KI-System im Hinblick auf seine Einstufung als Hochrisiko-KI-System auf der Grundlage der in Artikel 6 Absatz 3 festgelegten Bedingungen und den Leitlinien der Kommission.
+2025-08-11 20:26:40,536 - INFO - Found Article 99: verhängt.
+2025-08-11 20:26:40,536 - INFO - Found Article 79: Absätze 5 bis 9 Anwendung.
+2025-08-11 20:26:40,537 - INFO - Found Article 99: verhängt.
+2025-08-11 20:26:40,537 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,538 - INFO - Found Article 11: der Verordnung (EU) 2019/1020 geeignete Überprüfungen durchführen, wobei sie insbesondere Informationen berücksichtigen, die in der EU-Datenbank gemäß Artikel 71 der vorliegenden Verordnung gespeichert sind.
+2025-08-11 20:26:40,538 - INFO - Found Article 79: Absatz 5 genannten Notifizierung — oder bei Nichteinhaltung des Verbots der in Artikel 5 genannten KI-Praktiken innerhalb von 30 Tagen — Einwände gegen eine von der Marktüberwachungsbehörde eines anderen Mitgliedstaats getroffene Maßnahme oder ist die Kommission der Ansicht, dass die Maßnahme mit dem Unionsrecht unvereinbar ist, so nimmt die Kommission unverzüglich Konsultationen mit der Marktüberwachungsbehörde des betreffenden Mitgliedstaats und dem Akteur bzw. den Akteuren auf und prüft die nationale Maßnahme. Anhand der Ergebnisse dieser Prüfung entscheidet die Kommission innerhalb von sechs Monaten — oder bei Nichteinhaltung des Verbots der in Artikel 5 genannten KI-Praktiken innerhalb von 60 Tagen — ab dem Eingang der in Artikel 79 Absatz 5 genannten Notifizierung, ob die nationale Maßnahme gerechtfertigt ist, und teilt der Marktüberwachungsbehörde des betreffenden Mitgliedstaats ihre Entscheidung mit. Die Kommission unterrichtet auch alle übrigen Marktüberwachungsbehörden über ihre Entscheidung.
+2025-08-11 20:26:40,539 - INFO - Found Article 11: der Verordnung (EU) Nr. 1025/2012 festgelegte Verfahren ein.
+2025-08-11 20:26:40,540 - INFO - Found Article 77: Absatz 1 genannten betreffenden nationalen Behörde — nach der gemäß Artikel 79 durchgeführten Prüfung fest, dass ein Hochrisiko-KI-System zwar dieser Verordnung entspricht, aber dennoch ein Risiko für die Gesundheit oder Sicherheit von Personen, für die Grundrechte oder für andere Aspekte des Schutzes öffentlicher Interessen darstellt, so fordert sie unverzüglich den betreffenden Akteur auf, alle geeigneten Maßnahmen zu treffen, damit das betreffende KI-System zum Zeitpunkt des Inverkehrbringens oder der Inbetriebnahme dieses Risiko nicht mehr birgt, und zwar innerhalb einer Frist, die sie vorgeben kann.
+2025-08-11 20:26:40,541 - INFO - Found Article 21: Absatz 6 der Verordnung (EU) 2019/1020 im KI-Bereich wahrnehmen.
+2025-08-11 20:26:40,541 - INFO - Found Subsection: ABSCHNITT 4
+2025-08-11 20:26:40,542 - INFO - Found Subsection: ABSCHNITT 5
+2025-08-11 20:26:40,543 - INFO - Found Article 94: über ausschließliche Befugnisse zur Beaufsichtigung und Durchsetzung von Kapitel V. Unbeschadet der Organisationsbefugnisse der Kommission und der Aufteilung der Zuständigkeiten zwischen den Mitgliedstaaten und der Union auf der Grundlage der Verträge überträgt die Kommission dem Büro für Künstliche Intelligenz die Durchführung dieser Aufgaben.
+2025-08-11 20:26:40,545 - INFO - Found Article 68: Absatz 2 erforderlich und verhältnismäßig ist.
+2025-08-11 20:26:40,546 - INFO - Found Article 101: anzugeben.
+2025-08-11 20:26:40,547 - INFO - Found Article 68: eingesetzten wissenschaftlichen Gremium. Die für diese Aufgabe benannten unabhängigen Sachverständigen erfüllen die in Artikel 68 Absatz 2 umrissenen Kriterien.
+2025-08-11 20:26:40,547 - INFO - Found Article 101: für den Fall, dass der Zugang nicht bereitgestellt wird, anzugeben.
+2025-08-11 20:26:40,548 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,548 - INFO - Found Article 18: der Verordnung (EU) 2019/1020 sinngemäß.
+2025-08-11 20:26:40,549 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,550 - INFO - Found Article 6: Absätze 6 und 7, Artikel 7 Absätze 1 und 3, Artikel 11 Absatz 3, Artikel 43 Absätze 5 und 6, Artikel 47 Absatz 5, Artikel 51 Absatz 3, Artikel 52 Absatz 4 sowie Artikel 53 Absätze 5 und 6 genannte Befugnis zum Erlass delegierter Rechtsakte wird der Kommission für einen Zeitraum von fünf Jahren ab 1. August 2024 übertragen. Die Kommission erstellt spätestens neun Monate vor Ablauf des Zeitraums von fünf Jahren einen Bericht über die Befugnisübertragung. Die Befugnisübertragung verlängert sich stillschweigend um Zeiträume gleicher Länge, es sei denn, das Europäische Parlament oder der Rat widersprechen einer solchen Verlängerung spätestens drei Monate vor Ablauf des jeweiligen Zeitraums.
+2025-08-11 20:26:40,552 - INFO - Found Article 5: der Verordnung (EU) Nr. 182/2011.
+2025-08-11 20:26:40,553 - INFO - Found Article 96: erteilten Leitlinien zu berücksichtigen sind. Die vorgesehenen Sanktionen müssen wirksam, verhältnismäßig und abschreckend sein. Sie berücksichtigen die Interessen von KMU, einschließlich Start-up-Unternehmen, sowie deren wirtschaftliches Überleben.
+2025-08-11 20:26:40,553 - INFO - Found Article 5: genannten KI-Praktiken werden Geldbußen von bis zu 35 000 000 EUR oder — im Falle von Unternehmen — von bis zu 7 % des gesamten weltweiten Jahresumsatzes des vorangegangenen Geschäftsjahres verhängt, je nachdem, welcher Betrag höher ist.
+2025-08-11 20:26:40,554 - INFO - Found Article 100: 
+2025-08-11 20:26:40,555 - INFO - Found Article 5: genannten KI-Praktiken werden Geldbußen von bis zu 1 500 000 EUR verhängt.
+2025-08-11 20:26:40,556 - INFO - Found Article 101: 
+2025-08-11 20:26:40,556 - INFO - Found Article 93: Absatz 3 oder in den einschlägigen Praxisleitfäden nach Artikel 56 gemacht wurden.
+2025-08-11 20:26:40,557 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:26:40,557 - INFO - Found Article 102: 
+2025-08-11 20:26:40,557 - INFO - Found Article 4: Absatz 3 der Verordnung (EG) Nr. 300/2008 wird folgender Unterabsatz angefügt:
+2025-08-11 20:26:40,558 - INFO - Found Article 103: 
+2025-08-11 20:26:40,558 - INFO - Found Article 17: Absatz 5 der Verordnung (EU) Nr. 167/2013 wird folgender Unterabsatz angefügt:
+2025-08-11 20:26:40,559 - INFO - Found Article 104: 
+2025-08-11 20:26:40,559 - INFO - Found Article 22: Absatz 5 der Verordnung (EU) Nr. 168/2013 wird folgender Unterabsatz angefügt:
+2025-08-11 20:26:40,560 - INFO - Found Article 105: 
+2025-08-11 20:26:40,560 - INFO - Found Article 8: der Richtlinie 2014/90/EU wird folgender Absatz angefügt:
+2025-08-11 20:26:40,561 - INFO - Found Article 106: 
+2025-08-11 20:26:40,561 - INFO - Found Article 5: der Richtlinie (EU) 2016/797 wird folgender Absatz angefügt:
+2025-08-11 20:26:40,562 - INFO - Found Article 107: 
+2025-08-11 20:26:40,562 - INFO - Found Article 5: der Verordnung (EU) 2018/858 wird folgender Absatz angefügt:
+2025-08-11 20:26:40,563 - INFO - Found Article 108: 
+2025-08-11 20:26:40,563 - INFO - Found Article 109: 
+2025-08-11 20:26:40,563 - INFO - Found Article 11: der Verordnung (EU) 2019/2144 wird folgender Absatz angefügt:
+2025-08-11 20:26:40,564 - INFO - Found Article 110: 
+2025-08-11 20:26:40,564 - INFO - Found Article 111: 
+2025-08-11 20:26:40,565 - INFO - Found Article 113: Absatz 3 Buchstabe a werden KI-Systeme, bei denen es sich um Komponenten von IT-Großsystemen handelt, die mit den in Anhang X aufgeführten Rechtsakten eingerichtet wurden und vor dem 2. August 2027 in Verkehr gebracht oder in Betrieb genommen wurden, bis zum 31. Dezember 2030 mit dieser Verordnung in Einklang gebracht.
+2025-08-11 20:26:40,565 - INFO - Found Article 112: 
+2025-08-11 20:26:40,566 - INFO - Found Article 97: einmal jährlich, ob eine Änderung der Liste in Anhang III und der Liste der verbotenen Praktiken im KI-Bereich gemäß Artikel 5 erforderlich ist. Die Kommission übermittelt die Ergebnisse dieser Bewertung dem Europäischen Parlament und dem Rat.
+2025-08-11 20:26:40,567 - INFO - Found Article 113: 
+2025-08-11 20:26:40,571 - INFO - Found Article 5: Absatz 1 Unterabsatz 1 Buchstabe h Ziffer iii
+2025-08-11 20:26:40,572 - INFO - Found Article 6: Absatz 2
+2025-08-11 20:26:40,572 - INFO - Found Article 11: Absatz 1
+2025-08-11 20:26:40,573 - INFO - Found Article 47: enthält alle folgenden Angaben:
+2025-08-11 20:26:40,574 - INFO - Found Article 72: mit der technischen Dokumentation im Einklang stehen.
+2025-08-11 20:26:40,574 - INFO - Found Article 17: wird gemäß Nummer 3 geprüft und unterliegt der Überwachung gemäß Nummer 5. Die technische Dokumentation des KI-Systems wird gemäß Nummer 4 geprüft.
+2025-08-11 20:26:40,575 - INFO - Found Article 49: bereitzustellende Informationen
+2025-08-11 20:26:40,575 - INFO - Found Article 60: bei der Registrierung von in Anhang III aufgeführten Hochrisiko-KI-Systemen bereitzustellende Informationen
+2025-08-11 20:26:40,576 - INFO - Found Article 53: Absatz 1 Buchstabe a — technische Dokumentation für Anbieter von KI-Modellen mit allgemeinem Verwendungszweck
+2025-08-11 20:26:40,576 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:26:40,577 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:26:40,579 - INFO - Found Article 51: 
+2025-08-11 20:26:40,579 - INFO - Extracted 900 entries from main page
+2025-08-11 20:26:40,580 - INFO - Crawling completed. Total entries extracted: 900
+2025-08-11 20:26:40,580 - INFO - Saving 900 entries to: data/output/eu_ai_act_crawled_2025-08-11_2026.jsonl
+2025-08-11 20:26:40,596 - INFO - Successfully saved: data/output/eu_ai_act_crawled_2025-08-11_2026.jsonl
+2025-08-11 20:26:40,596 - INFO - === CRAWLING STATISTICS ===
+2025-08-11 20:26:40,596 - INFO - Total entries: 900
+2025-08-11 20:26:40,596 - INFO - Articles processed: 75
+2025-08-11 20:26:40,597 - INFO - Sections processed: 0
+2025-08-11 20:27:07,773 - INFO - Starting EU AI Act Crawler...
+2025-08-11 20:27:07,774 - INFO - Loading page: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202401689 (Attempt 1)
+2025-08-11 20:27:08,808 - INFO - Parsing as XML document
+2025-08-11 20:27:10,809 - INFO - Parsing main EU AI Act page...
+2025-08-11 20:27:10,854 - WARNING - Main content area not found, trying body
+2025-08-11 20:27:10,868 - INFO - Document title: L_202401689DE.000101.fmx.xml
+2025-08-11 20:27:10,870 - INFO - Found Article 16: und 114,
+2025-08-11 20:27:10,877 - INFO - Found Article 6: Absatz 1 eingestuft sind und im Zusammenhang mit Produkten stehen, die unter die in Anhang I Abschnitt B aufgeführten Harmonisierungsrechtsvorschriften der Union fallen, gelten nur Artikel 6 Absatz 1, die Artikel 102 bis 109 und Artikel 112. Artikel 57 gilt nur, soweit die Anforderungen an Hochrisiko-KI-Systeme gemäß dieser Verordnung im Rahmen der genannten Harmonisierungsrechtsvorschriften der Union eingebunden wurden.
+2025-08-11 20:27:10,879 - INFO - Found Article 5: oder 50 fällt, in Verkehr gebracht oder in Betrieb genommen.
+2025-08-11 20:27:10,880 - INFO - Found Article 27: abgeschlossen und das System gemäß Artikel 49 in der EU-Datenbank registriert hat. In hinreichend begründeten dringenden Fällen kann jedoch mit der Verwendung solcher Systeme zunächst ohne Registrierung in der EU-Datenbank begonnen werden, sofern diese Registrierung unverzüglich erfolgt.
+2025-08-11 20:27:10,881 - INFO - Found Section Title: KAPITEL III
+2025-08-11 20:27:10,882 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:27:10,883 - INFO - Found Article 49: Absatz 2. Auf Verlangen der zuständigen nationalen Behörden legt der Anbieter die Dokumentation der Bewertung vor.
+2025-08-11 20:27:10,883 - INFO - Found Article 96: und eine umfassende Liste praktischer Beispiele für Anwendungsfälle für KI-Systeme, die hochriskant oder nicht hochriskant sind, bereit.
+2025-08-11 20:27:10,883 - INFO - Found Article 97: delegierte Rechtsakte zu erlassen, um Absatz 3 Unterabsatz 2 des vorliegenden Artikels zu ändern, indem neue Bedingungen zu den darin genannten Bedingungen hinzugefügt oder diese geändert werden, wenn konkrete und zuverlässige Beweise für das Vorhandensein von KI-Systemen vorliegen, die in den Anwendungsbereich von Anhang III fallen, jedoch kein erhebliches Risiko der Beeinträchtigung in Bezug auf die Gesundheit, Sicherheit oder Grundrechte natürlicher Personen bergen.
+2025-08-11 20:27:10,884 - INFO - Found Article 7: Absatz 1 erlassenen delegierten Rechtsakten sicherzustellen und die Marktentwicklungen und die technologischen Entwicklungen sind zu berücksichtigen.
+2025-08-11 20:27:10,885 - INFO - Found Article 97: delegierte Rechtsakte zur Änderung von Anhang III durch Hinzufügung oder Änderung von Anwendungsfällen für Hochrisiko-KI-Systeme zu erlassen, die beide der folgenden Bedingungen erfüllen:
+2025-08-11 20:27:10,890 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:10,895 - INFO - Found Article 9: genannten Risikomanagementsystem Rechnung getragen.
+2025-08-11 20:27:10,902 - INFO - Found Article 60: umfassen.
+2025-08-11 20:27:10,909 - INFO - Found Article 97: delegierte Rechtsakte zur Änderung des Anhangs IV zu erlassen, damit die technische Dokumentation in Anbetracht des technischen Fortschritts stets alle Informationen enthält, die erforderlich sind, um zu beurteilen, ob das System die Anforderungen dieses Abschnitts erfüllt.
+2025-08-11 20:27:10,917 - INFO - Found Subsection: ABSCHNITT 3
+2025-08-11 20:27:10,928 - INFO - Found Article 40: genannten harmonisierten Normen berücksichtigt.
+2025-08-11 20:27:10,931 - INFO - Found Article 12: Absatz 1 auf, soweit diese Protokolle ihrer Kontrolle unterliegen. Unbeschadet des geltenden Unionsrechts oder nationalen Rechts werden die Protokolle für einen der Zweckbestimmung des Hochrisiko-KI-Systems angemessenen Zeitraum von mindestens sechs Monaten aufbewahrt, sofern in den geltenden Rechtsvorschriften der Union, insbesondere im Unionsrecht zum Schutz personenbezogener Daten, oder im geltenden nationalen Recht nichts anderes vorgesehen ist.
+2025-08-11 20:27:10,933 - INFO - Found Article 44: ausgestellt hat, insbesondere über die Art der Nichtkonformität und über bereits ergriffene relevante Korrekturmaßnahmen.
+2025-08-11 20:27:10,933 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:10,934 - INFO - Found Article 12: Absatz 1, soweit diese Protokolle ihrer Kontrolle unterliegen.
+2025-08-11 20:27:10,935 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:27:10,939 - INFO - Found Article 47: genannte EU-Konformitätserklärung bereit.
+2025-08-11 20:27:10,943 - INFO - Found Article 16: 
+2025-08-11 20:27:10,949 - INFO - Found Article 72: entsprechend. Diese Pflicht gilt nicht für sensible operative Daten von Betreibern von KI-Systemen, die Strafverfolgungsbehörden sind.
+2025-08-11 20:27:10,952 - INFO - Found Article 49: nachkommen. Stellen diese Betreiber fest, dass das Hochrisiko-KI-System, dessen Verwendung sie planen, nicht in der in Artikel 71 genannten EU-Datenbank registriert wurde, sehen sie von der Verwendung dieses Systems ab und informieren den Anbieter oder den Händler.
+2025-08-11 20:27:10,952 - INFO - Found Article 13: der vorliegenden Verordnung bereitgestellten Informationen, um ihrer Pflicht zur Durchführung einer Datenschutz-Folgenabschätzung gemäß Artikel 35 der Verordnung (EU) 2016/679 oder Artikel 27 der Richtlinie (EU) 2016/680 nachzukommen.
+2025-08-11 20:27:10,954 - INFO - Found Article 6: Absatz 2 — mit Ausnahme von Hochrisiko-KI-Systemen, die in dem in Anhang III Nummer 2 aufgeführten Bereich verwendet werden sollen — führen Betreiber, bei denen es sich um Einrichtungen des öffentlichen Rechts oder private Einrichtungen, die öffentliche Dienste erbringen, handelt, und Betreiber von Hochrisiko-KI-Systemen gemäß Anhang III Nummer 5 Buchstaben b und c eine Abschätzung der Auswirkungen, die die Verwendung eines solchen Systems auf die Grundrechte haben kann, durch. Zu diesem Zweck führen die Betreiber eine Abschätzung durch, die Folgendes umfasst:
+2025-08-11 20:27:10,954 - INFO - Found Article 46: Absatz 1 genannten Fall können die Betreiber von der Mitteilungspflicht befreit werden.
+2025-08-11 20:27:10,955 - INFO - Found Article 35: der Verordnung (EU) 2016/679 oder Artikel 27 der Richtlinie (EU) 2016/680 durchgeführten Datenschutz-Folgenabschätzung erfüllt, so ergänzt die Grundrechte-Folgenabschätzung gemäß Absatz 1 des vorliegenden Artikels diese Datenschutz-Folgenabschätzung.
+2025-08-11 20:27:10,958 - INFO - Found Subsection: ABSCHNITT 4
+2025-08-11 20:27:10,960 - INFO - Found Article 78: die Vertraulichkeit der von ihnen erlangten Informationen.
+2025-08-11 20:27:10,964 - INFO - Found Article 29: Absatz 2, so legt die notifizierende Behörde der Kommission und den anderen Mitgliedstaaten die Unterlagen vor, die die Kompetenz der Konformitätsbewertungsstelle und die Vereinbarungen nachweisen, die getroffen wurden, um sicherzustellen, dass die Stelle regelmäßig überwacht wird und weiterhin die Anforderungen des Artikels 31 erfüllt.
+2025-08-11 20:27:10,966 - INFO - Found Article 78: wahren, außer wenn ihre Offenlegung gesetzlich vorgeschrieben ist. Informationen, von denen Mitarbeiter der notifizierten Stellen bei der Durchführung ihrer Aufgaben gemäß dieser Verordnung Kenntnis erlangen, unterliegen der beruflichen Schweigepflicht, außer gegenüber den notifizierenden Behörden des Mitgliedstaats, in dem sie ihre Tätigkeiten ausüben.
+2025-08-11 20:27:10,967 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:10,968 - INFO - Found Article 38: genannten Koordinierungstätigkeiten mit. Sie wirken außerdem unmittelbar oder mittelbar an der Arbeit der europäischen Normungsorganisationen mit oder stellen sicher, dass sie stets über den Stand der einschlägigen Normen unterrichtet sind.
+2025-08-11 20:27:10,969 - INFO - Found Article 43: festgelegten Konformitätsbewertungsverfahren.
+2025-08-11 20:27:10,970 - INFO - Found Article 28: genannten notifizierenden Behörde sämtliche einschlägige Dokumentation, einschließlich der Dokumentation des Anbieters, zugänglich bzw. übermitteln diese auf Anfrage, damit diese Behörde ihre Bewertungs-, Benennungs-, Notifizierungs- und Überwachungstätigkeiten durchführen kann und die Bewertung gemäß diesem Abschnitt erleichtert wird.
+2025-08-11 20:27:10,972 - INFO - Found Article 30: Absatz 2 genannten elektronischen Notifizierungsinstruments über alle relevanten Änderungen der Notifizierung einer notifizierten Stelle.
+2025-08-11 20:27:10,973 - INFO - Found Article 31: festgelegten Anforderungen nicht mehr erfüllt oder dass sie ihren Pflichten nicht nachkommt, so untersucht die notifizierende Behörde den Sachverhalt unverzüglich und mit äußerster Sorgfalt. In diesem Zusammenhang teilt sie der betreffenden notifizierten Stelle die erhobenen Einwände mit und gibt ihr die Möglichkeit, dazu Stellung zu nehmen. Kommt die notifizierende Behörde zu dem Schluss, dass die notifizierte Stelle die in Artikel 31 festgelegten Anforderungen nicht mehr erfüllt oder dass sie ihren Pflichten nicht nachkommt, schränkt sie die Benennung gegebenenfalls ein, setzt sie aus oder widerruft sie, je nach Schwere der Nichterfüllung dieser Anforderungen oder Pflichtverletzung. Sie informiert die Kommission und die anderen Mitgliedstaaten unverzüglich darüber.
+2025-08-11 20:27:10,975 - INFO - Found Article 78: vertraulich behandelt werden.
+2025-08-11 20:27:10,975 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:10,977 - INFO - Found Article 31: erfüllen oder das gleiche Maß an Konformität gewährleisten.
+2025-08-11 20:27:10,980 - INFO - Found Subsection: ABSCHNITT 5
+2025-08-11 20:27:10,980 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:10,981 - INFO - Found Article 10: der Verordnung (EU) Nr. 1025/2012 erteilt die Kommission unverzüglich Normungsaufträge, die alle Anforderungen gemäß Abschnitt 2 des vorliegenden Kapitels abdecken und gegebenenfalls Normungsaufträge, die Pflichten gemäß Kapitel V Abschnitte 2 und 3 der vorliegenden Verordnung abdecken. In dem Normungsauftrag werden auch Dokumente zu den Berichterstattungs- und Dokumentationsverfahren im Hinblick auf die Verbesserung der Ressourcenleistung von KI-Systemen z. B. durch die Verringerung des Energie- und sonstigen Ressourcenverbrauchs des Hochrisiko-KI-Systems während seines gesamten Lebenszyklus und zu der energieeffizienten Entwicklung von KI-Modellen mit allgemeinem Verwendungszweck verlangt. Bei der Ausarbeitung des Normungsauftrags konsultiert die Kommission das KI-Gremium und die einschlägigen Interessenträger, darunter das Beratungsforum.
+2025-08-11 20:27:10,981 - INFO - Found Article 24: der Verordnung (EU) Nr. 1025/2012 zu erreichen.
+2025-08-11 20:27:10,982 - INFO - Found Article 67: genannte Beratungsforum.
+2025-08-11 20:27:10,982 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:10,983 - INFO - Found Article 22: der Verordnung (EU) Nr. 1025/2012 genannten Ausschuss darüber, dass sie die in Absatz 1 des vorliegenden Artikels festgelegten Bedingungen als erfüllt erachtet.
+2025-08-11 20:27:10,984 - INFO - Found Article 10: Absatz 4 festgelegten einschlägigen Anforderungen erfüllen.
+2025-08-11 20:27:10,985 - INFO - Found Article 15: der vorliegenden Verordnung festgelegten Cybersicherheitsanforderungen erfüllen, sofern diese Anforderungen von der Cybersicherheitszertifizierung oder der Konformitätserklärung oder Teilen davon abdeckt sind.
+2025-08-11 20:27:10,985 - INFO - Found Article 40: oder gegebenenfalls gemeinsame Spezifikationen gemäß Artikel 41 angewandt, so entscheidet er sich für eines der folgenden Konformitätsbewertungsverfahren auf der Grundlage
+2025-08-11 20:27:10,986 - INFO - Found Article 74: Absatz 8 bzw. 9 genannte Marktüberwachungsbehörde die Funktion der notifizierten Stelle.
+2025-08-11 20:27:10,986 - INFO - Found Article 31: Absätze 4, 5, 10 und 11 festgelegten Anforderungen erfüllen.
+2025-08-11 20:27:10,988 - INFO - Found Article 41: 
+2025-08-11 20:27:10,989 - INFO - Found Article 97: delegierte Rechtsakte zu erlassen, um die Anhänge VI und VII zu ändern, indem sie sie angesichts des technischen Fortschritts aktualisiert.
+2025-08-11 20:27:10,991 - INFO - Found Article 78: die Vertraulichkeit der von ihnen erlangten Informationen.
+2025-08-11 20:27:10,991 - INFO - Found Article 43: und auf ein hinreichend begründetes Ersuchen kann eine Marktüberwachungsbehörde das Inverkehrbringen oder die Inbetriebnahme bestimmter Hochrisiko-KI-Systeme im Hoheitsgebiet des betreffenden Mitgliedstaats aus außergewöhnlichen Gründen der öffentlichen Sicherheit, des Schutzes des Lebens und der Gesundheit von Personen, des Umweltschutzes oder des Schutzes wichtiger Industrie- und Infrastrukturanlagen genehmigen. Diese Genehmigung wird auf die Dauer der erforderlichen Konformitätsbewertungsverfahren befristet, wobei den außergewöhnlichen Gründen für die Ausnahme Rechnung getragen wird. Der Abschluss dieser Verfahren erfolgt unverzüglich.
+2025-08-11 20:27:10,995 - INFO - Found Article 97: delegierte Rechtsakte zur Aktualisierung des in Anhang V festgelegten Inhalts der EU-Konformitätserklärung zu erlassen, um den genannten Anhang durch die Einführung von Elementen zu ändern, die angesichts des technischen Fortschritts erforderlich werden.
+2025-08-11 20:27:10,996 - INFO - Found Article 30: der Verordnung (EG) Nr. 765/2008 festgelegten allgemeinen Grundsätze.
+2025-08-11 20:27:10,997 - INFO - Found Article 43: festgelegten Konformitätsbewertungsverfahren zuständigen notifizierten Stelle hinzugefügt. Die Identifizierungsnummer der notifizierten Stelle ist entweder von der Stelle selbst oder nach ihren Anweisungen durch den Anbieter oder den Bevollmächtigten des Anbieters anzubringen. Diese Identifizierungsnummer wird auch auf jeglichem Werbematerial angegeben, in dem darauf hingewiesen wird, dass das Hochrisiko-KI-System die Anforderungen für die CE-Kennzeichnung erfüllt.
+2025-08-11 20:27:10,998 - INFO - Found Article 71: genannten EU-Datenbank.
+2025-08-11 20:27:10,998 - INFO - Found Article 6: Absatz 3 ist, registriert dieser Anbieter oder gegebenenfalls sein Bevollmächtigter sich und dieses System in der in Artikel 71 genannten EU-Datenbank.
+2025-08-11 20:27:10,999 - INFO - Found Article 71: genannten EU-Datenbank, wählen das System aus und registrieren es dort.
+2025-08-11 20:27:10,999 - INFO - Found Article 74: Absatz 8 genannten nationalen Behörden haben Zugang zu den jeweiligen beschränkten Teilen der EU-Datenbank gemäß Unterabsatz 1 dieses Absatzes.
+2025-08-11 20:27:11,001 - INFO - Found Article 56: Absatz 6 festgelegten Verfahren erlassen. Hält sie einen Kodex für nicht angemessen, so kann die Kommission einen Durchführungsrechtsakt gemäß dem in Artikel 98 Absatz 2 genannten Prüfverfahren erlassen, in dem gemeinsame Vorschriften für die Umsetzung dieser Pflichten festgelegt werden.
+2025-08-11 20:27:11,002 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:27:11,003 - INFO - Found Article 97: delegierte Rechtsakte zur Änderung der in den Absätzen 1 und 2 des vorliegenden Artikels aufgeführten Schwellenwerte sowie zur Ergänzung von Benchmarks und Indikatoren vor dem Hintergrund sich wandelnder technologischer Entwicklungen, wie z. B. algorithmische Verbesserungen oder erhöhte Hardwareeffizienz, wenn dies erforderlich ist, damit diese Schwellenwerte dem Stand der Technik entsprechen.
+2025-08-11 20:27:11,003 - INFO - Found Article 51: Absatz 1 Buchstabe a, so teilt der betreffende Anbieter dies der Kommission unverzüglich, in jedem Fall jedoch innerhalb von zwei Wochen, nachdem diese Bedingung erfüllt ist oder bekannt wird, dass sie erfüllt wird, mit. Diese Mitteilung muss die Informationen enthalten, die erforderlich sind, um nachzuweisen, dass die betreffende Bedingung erfüllt ist. Erlangt die Kommission Kenntnis von einem KI-Modell mit allgemeinem Verwendungszweck, das systemische Risiken birgt, die ihr nicht mitgeteilt wurden, so kann sie entscheiden, es als Modell mit systemischen Risiken auszuweisen.
+2025-08-11 20:27:11,004 - INFO - Found Article 90: Absatz 1 Buchstabe a auf der Grundlage der in Anhang XIII festgelegten Kriterien als KI-Modell mit systemischen Risiken ausweisen.
+2025-08-11 20:27:11,004 - INFO - Found Article 97: delegierte Rechtsakte zu erlassen, um Anhang XIII zu ändern, indem die in dem genannten Anhang genannten Indikatoren präzisiert und aktualisiert werden.
+2025-08-11 20:27:11,005 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:11,006 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:27:11,006 - INFO - Found Subsection: ABSCHNITT 3
+2025-08-11 20:27:11,007 - INFO - Found Subsection: ABSCHNITT 4
+2025-08-11 20:27:11,008 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:11,009 - INFO - Found Article 53: vorgesehenen Pflichten beschränkt werden, es sei denn, sie erklären ausdrücklich ihr Interesse, sich dem ganzen Kodex anzuschließen.
+2025-08-11 20:27:11,009 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:11,010 - INFO - Found Article 78: enthaltenen Bestimmungen über die Vertraulichkeit und im Einvernehmen mit den Anbietern oder zukünftigen Anbietern, sind die Kommission und das KI-Gremium befugt, die Abschlussberichte einzusehen und tragen diesen gegebenenfalls bei der Wahrnehmung ihrer Aufgaben gemäß dieser Verordnung Rechnung. Wenn der Anbieter oder der zukünftige Anbieter und die zuständige nationale Behörde ihr ausdrückliches Einverständnis erklären, kann der Abschlussbericht über die in diesem Artikel genannte zentrale Informationsplattform veröffentlicht werden.
+2025-08-11 20:27:11,011 - INFO - Found Article 62: Absatz 1 Buchstabe c einzuholen. Die Kommission stimmt sich gegebenenfalls proaktiv mit den zuständigen nationalen Behörden ab.
+2025-08-11 20:27:11,012 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:11,013 - INFO - Found Article 5: — dem in diesem Artikel genannten Plan für einen Test unter Realbedingungen durchgeführt werden.
+2025-08-11 20:27:11,013 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:11,014 - INFO - Found Article 75: übertragen die Mitgliedstaaten ihren Marktüberwachungsbehörden die Befugnis, Anbieter und zukünftige Anbieter zur Bereitstellung von Informationen zu verpflichten, unangekündigte Ferninspektionen oder Vor-Ort-Inspektionen durchzuführen und die Durchführung der Tests unter Realbedingungen und damit zusammenhängende Hochrisiko-KI-Systeme zu prüfen. Die Marktüberwachungsbehörden nutzen diese Befugnisse, um für die sichere Entwicklung von Tests unter Realbedingungen zu sorgen.
+2025-08-11 20:27:11,015 - INFO - Found Article 73: zu melden. Der Anbieter oder zukünftige Anbieter trifft Sofortmaßnahmen zur Schadensbegrenzung; andernfalls setzt er den Test unter Realbedingungen so lange aus, bis eine Schadensbegrenzung stattgefunden hat, oder bricht ihn ab. Im Fall eines solchen Abbruchs des Tests unter Realbedingungen richtet der Anbieter oder zukünftige Anbieter ein Verfahren für den sofortigen Rückruf des KI-Systems ein.
+2025-08-11 20:27:11,016 - INFO - Found Article 60: ist von den Testteilnehmern eine freiwillig erteilte informierte Einwilligung einzuholen, bevor sie an dem Test teilnehmen und nachdem sie mit präzisen, klaren, relevanten und verständlichen Informationen über Folgendes ordnungsgemäß informiert wurden:
+2025-08-11 20:27:11,018 - INFO - Found Article 43: werden die besonderen Interessen und Bedürfnisse von KMU, einschließlich Start-up-Unternehmen, berücksichtigt, indem diese Gebühren proportional zur Größe der Unternehmen, der Größe ihres Marktes und anderen einschlägigen Kennzahlen gesenkt werden.
+2025-08-11 20:27:11,019 - INFO - Found Article 17: dieser Verordnung vorgeschriebenen Qualitätsmanagementsystems in vereinfachter Weise einhalten, sofern sie keine Partnerunternehmen oder verbundenen Unternehmen im Sinne dieser Empfehlung haben. Zu diesem Zweck arbeitet die Kommission Leitlinien zu den Elementen des Qualitätsmanagementsystems aus, die unter Berücksichtigung der Bedürfnisse von Kleinstunternehmen in vereinfachter Weise eingehalten werden können, ohne das Schutzniveau oder die Notwendigkeit zur Einhaltung der Anforderungen in Bezug auf Hochrisiko-KI-Systeme zu beeinträchtigen.
+2025-08-11 20:27:11,020 - INFO - Found Section Title: KAPITEL VII
+2025-08-11 20:27:11,020 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:27:11,023 - INFO - Found Article 67: genannten Beratungsforums als Beobachter zu diesen Untergruppen oder zu bestimmten Sitzungen dieser Untergruppen eingeladen werden.
+2025-08-11 20:27:11,025 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:11,027 - INFO - Found Article 68: Absatz 1 genannten Durchführungsrechtsakt festgelegt, wobei die Zielsetzung berücksichtigt wird, für die angemessene Durchführung dieser Verordnung, für Kosteneffizienz sowie dafür zu sorgen, dass alle Mitgliedstaaten effektiven Zugang zu Sachverständigen haben müssen.
+2025-08-11 20:27:11,028 - INFO - Found Article 84: und durch die Sachverständigen gemäß dem vorliegenden Artikel effizient organisiert ist und den bestmöglichen zusätzlichen Nutzen bringt.
+2025-08-11 20:27:11,029 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:11,031 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten.
+2025-08-11 20:27:11,032 - INFO - Found Section Title: KAPITEL VIII
+2025-08-11 20:27:11,033 - INFO - Found Article 6: Absatz 2, die gemäß den Artikeln 49 und 60 registriert werden und über KI-Systeme, die nicht als Hochrisiko-KI-Systeme gemäß Artikel 6 Absatz 3 gelten und gemäß Artikel 6 Absatz 4 und Artikel 49 registriert werden. Bei der Festlegung der Funktionsspezifikationen dieser Datenbank konsultiert die Kommission die einschlägigen Sachverständigen und bei der Aktualisierung der Funktionsspezifikationen dieser Datenbank konsultiert sie das KI-Gremium.
+2025-08-11 20:27:11,033 - INFO - Found Article 49: Absätze 3 und 4 in die EU-Datenbank eingegeben.
+2025-08-11 20:27:11,034 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:27:11,035 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:11,036 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:11,038 - INFO - Found Article 3: Nummer 49 Buchstabe c genannten schwerwiegenden Vorfall erhält, informiert sie die in Artikel 77 Absatz 1 genannten nationalen Behörden oder öffentlichen Stellen. Zur leichteren Einhaltung der Pflichten nach Absatz 1 dieses Artikels arbeitet die Kommission entsprechende Leitlinien aus. Diese Leitlinien werden bis zum 2. August 2025 veröffentlicht und regelmäßig bewertet.
+2025-08-11 20:27:11,038 - INFO - Found Article 19: der Verordnung (EU) 2019/1020 und befolgt die in der genannten Verordnung vorgesehenen Meldeverfahren.
+2025-08-11 20:27:11,039 - INFO - Found Article 3: Nummer 49 Buchstabe c genannt werden.
+2025-08-11 20:27:11,039 - INFO - Found Article 20: der Verordnung (EU) 2019/1020, unabhängig davon, ob sie diesbezüglich Maßnahmen ergriffen haben.
+2025-08-11 20:27:11,040 - INFO - Found Subsection: ABSCHNITT 3
+2025-08-11 20:27:11,041 - INFO - Found Article 34: Absatz 4 der Verordnung (EU) 2019/1020 melden die Marktüberwachungsbehörden der Kommission und den einschlägigen nationalen Wettbewerbsbehörden jährlich alle Informationen, die sie im Verlauf ihrer Marktüberwachungstätigkeiten erlangt haben und die für die Anwendung von Unionsrecht im Bereich der Wettbewerbsregeln von Interesse sein könnten. Ferner erstatten sie der Kommission jährlich Bericht über die Anwendung verbotener Praktiken in dem betreffenden Jahr und über die ergriffenen Maßnahmen.
+2025-08-11 20:27:11,042 - INFO - Found Article 14: der Verordnung (EU) 2019/1020 können die Marktüberwachungsbehörden für die Zwecke der Sicherstellung der wirksamen Durchsetzung der vorliegenden Verordnung die in Artikel 14 Absatz 4 Buchstaben d und j der genannten Verordnung genannten Befugnisse gegebenenfalls aus der Ferne ausüben.
+2025-08-11 20:27:11,044 - INFO - Found Article 9: der Verordnung (EU) 2019/1020 ein ernstes Risiko darstellen, zu geben. Das Büro für Künstliche Intelligenz unterstützt die Koordinierung der gemeinsamen Untersuchungen.
+2025-08-11 20:27:11,047 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:27:11,049 - INFO - Found Article 58: beaufsichtigt werden, überprüfen die Marktüberwachungsbehörden im Rahmen ihrer Aufsichtsaufgaben für das KI-Reallabor die Einhaltung des Artikels 60. Die Behörden können gegebenenfalls gestatten, dass der Anbieter oder zukünftige Anbieter den Test unter Realbedingungen in Abweichung von den in Artikel 60 Absatz 4 Buchstaben f und g festgelegten Bedingungen durchführt.
+2025-08-11 20:27:11,050 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:27:11,050 - INFO - Found Article 74: Absätze 8 und 9 genannten Marktüberwachungsbehörden auf Anfrage unverzüglich Zugang zu dieser Dokumentation oder eine Kopie davon erhalten. Zugang zu dieser Dokumentation oder zu einer Kopie davon darf nur das Personal der Marktüberwachungsbehörde erhalten, das über eine entsprechende Sicherheitsfreigabe verfügt.
+2025-08-11 20:27:11,051 - INFO - Found Article 77: Absatz 1 genannten einschlägigen nationalen Behörden oder öffentlichen Stellen und arbeitet uneingeschränkt mit ihnen zusammen. Die betreffenden Akteure arbeiten erforderlichenfalls mit der Marktüberwachungsbehörde und den in Artikel 77 Absatz 1 genannten anderen Behörden oder öffentlichen Stellen zusammen.
+2025-08-11 20:27:11,051 - INFO - Found Article 18: der Verordnung (EU) 2019/1020 gilt für die in Unterabsatz 2 des vorliegenden Absatzes genannten Maßnahmen.
+2025-08-11 20:27:11,052 - INFO - Found Article 6: Absatz 3 eingestuftes KI-System tatsächlich hochriskant ist, so prüft die Marktüberwachungsbehörde das betreffende KI-System im Hinblick auf seine Einstufung als Hochrisiko-KI-System auf der Grundlage der in Artikel 6 Absatz 3 festgelegten Bedingungen und den Leitlinien der Kommission.
+2025-08-11 20:27:11,053 - INFO - Found Article 99: verhängt.
+2025-08-11 20:27:11,053 - INFO - Found Article 79: Absätze 5 bis 9 Anwendung.
+2025-08-11 20:27:11,053 - INFO - Found Article 99: verhängt.
+2025-08-11 20:27:11,053 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:11,054 - INFO - Found Article 11: der Verordnung (EU) 2019/1020 geeignete Überprüfungen durchführen, wobei sie insbesondere Informationen berücksichtigen, die in der EU-Datenbank gemäß Artikel 71 der vorliegenden Verordnung gespeichert sind.
+2025-08-11 20:27:11,054 - INFO - Found Article 79: Absatz 5 genannten Notifizierung — oder bei Nichteinhaltung des Verbots der in Artikel 5 genannten KI-Praktiken innerhalb von 30 Tagen — Einwände gegen eine von der Marktüberwachungsbehörde eines anderen Mitgliedstaats getroffene Maßnahme oder ist die Kommission der Ansicht, dass die Maßnahme mit dem Unionsrecht unvereinbar ist, so nimmt die Kommission unverzüglich Konsultationen mit der Marktüberwachungsbehörde des betreffenden Mitgliedstaats und dem Akteur bzw. den Akteuren auf und prüft die nationale Maßnahme. Anhand der Ergebnisse dieser Prüfung entscheidet die Kommission innerhalb von sechs Monaten — oder bei Nichteinhaltung des Verbots der in Artikel 5 genannten KI-Praktiken innerhalb von 60 Tagen — ab dem Eingang der in Artikel 79 Absatz 5 genannten Notifizierung, ob die nationale Maßnahme gerechtfertigt ist, und teilt der Marktüberwachungsbehörde des betreffenden Mitgliedstaats ihre Entscheidung mit. Die Kommission unterrichtet auch alle übrigen Marktüberwachungsbehörden über ihre Entscheidung.
+2025-08-11 20:27:11,054 - INFO - Found Article 11: der Verordnung (EU) Nr. 1025/2012 festgelegte Verfahren ein.
+2025-08-11 20:27:11,055 - INFO - Found Article 77: Absatz 1 genannten betreffenden nationalen Behörde — nach der gemäß Artikel 79 durchgeführten Prüfung fest, dass ein Hochrisiko-KI-System zwar dieser Verordnung entspricht, aber dennoch ein Risiko für die Gesundheit oder Sicherheit von Personen, für die Grundrechte oder für andere Aspekte des Schutzes öffentlicher Interessen darstellt, so fordert sie unverzüglich den betreffenden Akteur auf, alle geeigneten Maßnahmen zu treffen, damit das betreffende KI-System zum Zeitpunkt des Inverkehrbringens oder der Inbetriebnahme dieses Risiko nicht mehr birgt, und zwar innerhalb einer Frist, die sie vorgeben kann.
+2025-08-11 20:27:11,056 - INFO - Found Article 21: Absatz 6 der Verordnung (EU) 2019/1020 im KI-Bereich wahrnehmen.
+2025-08-11 20:27:11,056 - INFO - Found Subsection: ABSCHNITT 4
+2025-08-11 20:27:11,057 - INFO - Found Subsection: ABSCHNITT 5
+2025-08-11 20:27:11,059 - INFO - Found Article 94: über ausschließliche Befugnisse zur Beaufsichtigung und Durchsetzung von Kapitel V. Unbeschadet der Organisationsbefugnisse der Kommission und der Aufteilung der Zuständigkeiten zwischen den Mitgliedstaaten und der Union auf der Grundlage der Verträge überträgt die Kommission dem Büro für Künstliche Intelligenz die Durchführung dieser Aufgaben.
+2025-08-11 20:27:11,063 - INFO - Found Article 68: Absatz 2 erforderlich und verhältnismäßig ist.
+2025-08-11 20:27:11,063 - INFO - Found Article 101: anzugeben.
+2025-08-11 20:27:11,065 - INFO - Found Article 68: eingesetzten wissenschaftlichen Gremium. Die für diese Aufgabe benannten unabhängigen Sachverständigen erfüllen die in Artikel 68 Absatz 2 umrissenen Kriterien.
+2025-08-11 20:27:11,065 - INFO - Found Article 101: für den Fall, dass der Zugang nicht bereitgestellt wird, anzugeben.
+2025-08-11 20:27:11,066 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:11,067 - INFO - Found Article 18: der Verordnung (EU) 2019/1020 sinngemäß.
+2025-08-11 20:27:11,068 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:11,071 - INFO - Found Article 6: Absätze 6 und 7, Artikel 7 Absätze 1 und 3, Artikel 11 Absatz 3, Artikel 43 Absätze 5 und 6, Artikel 47 Absatz 5, Artikel 51 Absatz 3, Artikel 52 Absatz 4 sowie Artikel 53 Absätze 5 und 6 genannte Befugnis zum Erlass delegierter Rechtsakte wird der Kommission für einen Zeitraum von fünf Jahren ab 1. August 2024 übertragen. Die Kommission erstellt spätestens neun Monate vor Ablauf des Zeitraums von fünf Jahren einen Bericht über die Befugnisübertragung. Die Befugnisübertragung verlängert sich stillschweigend um Zeiträume gleicher Länge, es sei denn, das Europäische Parlament oder der Rat widersprechen einer solchen Verlängerung spätestens drei Monate vor Ablauf des jeweiligen Zeitraums.
+2025-08-11 20:27:11,074 - INFO - Found Article 5: der Verordnung (EU) Nr. 182/2011.
+2025-08-11 20:27:11,074 - INFO - Found Section Title: KAPITEL XII
+2025-08-11 20:27:11,075 - INFO - Found Article 96: erteilten Leitlinien zu berücksichtigen sind. Die vorgesehenen Sanktionen müssen wirksam, verhältnismäßig und abschreckend sein. Sie berücksichtigen die Interessen von KMU, einschließlich Start-up-Unternehmen, sowie deren wirtschaftliches Überleben.
+2025-08-11 20:27:11,078 - INFO - Found Article 5: genannten KI-Praktiken werden Geldbußen von bis zu 35 000 000 EUR oder — im Falle von Unternehmen — von bis zu 7 % des gesamten weltweiten Jahresumsatzes des vorangegangenen Geschäftsjahres verhängt, je nachdem, welcher Betrag höher ist.
+2025-08-11 20:27:11,082 - INFO - Found Article 100: 
+2025-08-11 20:27:11,084 - INFO - Found Article 5: genannten KI-Praktiken werden Geldbußen von bis zu 1 500 000 EUR verhängt.
+2025-08-11 20:27:11,085 - INFO - Found Article 101: 
+2025-08-11 20:27:11,086 - INFO - Found Article 93: Absatz 3 oder in den einschlägigen Praxisleitfäden nach Artikel 56 gemacht wurden.
+2025-08-11 20:27:11,087 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:27:11,087 - INFO - Found Section Title: KAPITEL XIII
+2025-08-11 20:27:11,088 - INFO - Found Article 102: 
+2025-08-11 20:27:11,088 - INFO - Found Article 4: Absatz 3 der Verordnung (EG) Nr. 300/2008 wird folgender Unterabsatz angefügt:
+2025-08-11 20:27:11,089 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:11,089 - INFO - Found Article 103: 
+2025-08-11 20:27:11,089 - INFO - Found Article 17: Absatz 5 der Verordnung (EU) Nr. 167/2013 wird folgender Unterabsatz angefügt:
+2025-08-11 20:27:11,090 - INFO - Found Article 104: 
+2025-08-11 20:27:11,090 - INFO - Found Article 22: Absatz 5 der Verordnung (EU) Nr. 168/2013 wird folgender Unterabsatz angefügt:
+2025-08-11 20:27:11,091 - INFO - Found Article 105: 
+2025-08-11 20:27:11,091 - INFO - Found Article 8: der Richtlinie 2014/90/EU wird folgender Absatz angefügt:
+2025-08-11 20:27:11,092 - INFO - Found Article 106: 
+2025-08-11 20:27:11,093 - INFO - Found Article 5: der Richtlinie (EU) 2016/797 wird folgender Absatz angefügt:
+2025-08-11 20:27:11,094 - INFO - Found Article 107: 
+2025-08-11 20:27:11,094 - INFO - Found Article 5: der Verordnung (EU) 2018/858 wird folgender Absatz angefügt:
+2025-08-11 20:27:11,095 - INFO - Found Article 108: 
+2025-08-11 20:27:11,096 - INFO - Found Article 109: 
+2025-08-11 20:27:11,096 - INFO - Found Article 11: der Verordnung (EU) 2019/2144 wird folgender Absatz angefügt:
+2025-08-11 20:27:11,097 - INFO - Found Article 110: 
+2025-08-11 20:27:11,097 - INFO - Found Article 111: 
+2025-08-11 20:27:11,098 - INFO - Found Article 113: Absatz 3 Buchstabe a werden KI-Systeme, bei denen es sich um Komponenten von IT-Großsystemen handelt, die mit den in Anhang X aufgeführten Rechtsakten eingerichtet wurden und vor dem 2. August 2027 in Verkehr gebracht oder in Betrieb genommen wurden, bis zum 31. Dezember 2030 mit dieser Verordnung in Einklang gebracht.
+2025-08-11 20:27:11,098 - INFO - Found Article 112: 
+2025-08-11 20:27:11,099 - INFO - Found Article 97: einmal jährlich, ob eine Änderung der Liste in Anhang III und der Liste der verbotenen Praktiken im KI-Bereich gemäß Artikel 5 erforderlich ist. Die Kommission übermittelt die Ergebnisse dieser Bewertung dem Europäischen Parlament und dem Rat.
+2025-08-11 20:27:11,100 - INFO - Found Article 113: 
+2025-08-11 20:27:11,103 - INFO - Found Article 5: Absatz 1 Unterabsatz 1 Buchstabe h Ziffer iii
+2025-08-11 20:27:11,104 - INFO - Found Article 6: Absatz 2
+2025-08-11 20:27:11,104 - INFO - Found Article 11: Absatz 1
+2025-08-11 20:27:11,105 - INFO - Found Article 47: enthält alle folgenden Angaben:
+2025-08-11 20:27:11,105 - INFO - Found Article 72: mit der technischen Dokumentation im Einklang stehen.
+2025-08-11 20:27:11,106 - INFO - Found Article 17: wird gemäß Nummer 3 geprüft und unterliegt der Überwachung gemäß Nummer 5. Die technische Dokumentation des KI-Systems wird gemäß Nummer 4 geprüft.
+2025-08-11 20:27:11,106 - INFO - Found Article 49: bereitzustellende Informationen
+2025-08-11 20:27:11,107 - INFO - Found Article 60: bei der Registrierung von in Anhang III aufgeführten Hochrisiko-KI-Systemen bereitzustellende Informationen
+2025-08-11 20:27:11,107 - INFO - Found Article 53: Absatz 1 Buchstabe a — technische Dokumentation für Anbieter von KI-Modellen mit allgemeinem Verwendungszweck
+2025-08-11 20:27:11,108 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:27:11,108 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:27:11,108 - INFO - Found Article 51: 
+2025-08-11 20:27:11,109 - INFO - Extracted 900 entries from main page
+2025-08-11 20:27:11,109 - INFO - Crawling completed. Total entries extracted: 900
+2025-08-11 20:27:11,109 - INFO - Saving 900 entries to: data/output/eu_ai_act_crawled_2025-08-11_2027.jsonl
+2025-08-11 20:27:11,130 - INFO - Successfully saved: data/output/eu_ai_act_crawled_2025-08-11_2027.jsonl
+2025-08-11 20:27:11,130 - INFO - === CRAWLING STATISTICS ===
+2025-08-11 20:27:11,130 - INFO - Total entries: 900
+2025-08-11 20:27:11,131 - INFO - Articles processed: 75
+2025-08-11 20:27:11,131 - INFO - Sections processed: 5
+2025-08-11 20:34:14,050 - INFO - Starting EU AI Act Crawler...
+2025-08-11 20:34:14,051 - INFO - Loading page: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202401689 (Attempt 1)
+2025-08-11 20:34:15,152 - INFO - Parsing as XML document
+2025-08-11 20:34:17,152 - INFO - Parsing main EU AI Act page...
+2025-08-11 20:34:17,189 - WARNING - Main content area not found, trying body
+2025-08-11 20:34:17,199 - INFO - Document title: L_202401689DE.000101.fmx.xml
+2025-08-11 20:34:17,201 - INFO - Found Article 16: und 114,
+2025-08-11 20:34:17,208 - INFO - Found Article 6: Absatz 1 eingestuft sind und im Zusammenhang mit Produkten stehen, die unter die in Anhang I Abschnitt B aufgeführten Harmonisierungsrechtsvorschriften der Union fallen, gelten nur Artikel 6 Absatz 1, die Artikel 102 bis 109 und Artikel 112. Artikel 57 gilt nur, soweit die Anforderungen an Hochrisiko-KI-Systeme gemäß dieser Verordnung im Rahmen der genannten Harmonisierungsrechtsvorschriften der Union eingebunden wurden.
+2025-08-11 20:34:17,209 - INFO - Found Article 5: oder 50 fällt, in Verkehr gebracht oder in Betrieb genommen.
+2025-08-11 20:34:17,210 - INFO - Found Article 27: abgeschlossen und das System gemäß Artikel 49 in der EU-Datenbank registriert hat. In hinreichend begründeten dringenden Fällen kann jedoch mit der Verwendung solcher Systeme zunächst ohne Registrierung in der EU-Datenbank begonnen werden, sofern diese Registrierung unverzüglich erfolgt.
+2025-08-11 20:34:17,211 - INFO - Found Section Title: KAPITEL III
+2025-08-11 20:34:17,211 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:34:17,212 - INFO - Found Article 49: Absatz 2. Auf Verlangen der zuständigen nationalen Behörden legt der Anbieter die Dokumentation der Bewertung vor.
+2025-08-11 20:34:17,212 - INFO - Found Article 96: und eine umfassende Liste praktischer Beispiele für Anwendungsfälle für KI-Systeme, die hochriskant oder nicht hochriskant sind, bereit.
+2025-08-11 20:34:17,212 - INFO - Found Article 97: delegierte Rechtsakte zu erlassen, um Absatz 3 Unterabsatz 2 des vorliegenden Artikels zu ändern, indem neue Bedingungen zu den darin genannten Bedingungen hinzugefügt oder diese geändert werden, wenn konkrete und zuverlässige Beweise für das Vorhandensein von KI-Systemen vorliegen, die in den Anwendungsbereich von Anhang III fallen, jedoch kein erhebliches Risiko der Beeinträchtigung in Bezug auf die Gesundheit, Sicherheit oder Grundrechte natürlicher Personen bergen.
+2025-08-11 20:34:17,212 - INFO - Found Article 7: Absatz 1 erlassenen delegierten Rechtsakten sicherzustellen und die Marktentwicklungen und die technologischen Entwicklungen sind zu berücksichtigen.
+2025-08-11 20:34:17,213 - INFO - Found Article 97: delegierte Rechtsakte zur Änderung von Anhang III durch Hinzufügung oder Änderung von Anwendungsfällen für Hochrisiko-KI-Systeme zu erlassen, die beide der folgenden Bedingungen erfüllen:
+2025-08-11 20:34:17,214 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,214 - INFO - Found Article 9: genannten Risikomanagementsystem Rechnung getragen.
+2025-08-11 20:34:17,215 - INFO - Found Article 60: umfassen.
+2025-08-11 20:34:17,216 - INFO - Found Article 97: delegierte Rechtsakte zur Änderung des Anhangs IV zu erlassen, damit die technische Dokumentation in Anbetracht des technischen Fortschritts stets alle Informationen enthält, die erforderlich sind, um zu beurteilen, ob das System die Anforderungen dieses Abschnitts erfüllt.
+2025-08-11 20:34:17,217 - INFO - Found Subsection: ABSCHNITT 3
+2025-08-11 20:34:17,220 - INFO - Found Article 40: genannten harmonisierten Normen berücksichtigt.
+2025-08-11 20:34:17,220 - INFO - Found Article 12: Absatz 1 auf, soweit diese Protokolle ihrer Kontrolle unterliegen. Unbeschadet des geltenden Unionsrechts oder nationalen Rechts werden die Protokolle für einen der Zweckbestimmung des Hochrisiko-KI-Systems angemessenen Zeitraum von mindestens sechs Monaten aufbewahrt, sofern in den geltenden Rechtsvorschriften der Union, insbesondere im Unionsrecht zum Schutz personenbezogener Daten, oder im geltenden nationalen Recht nichts anderes vorgesehen ist.
+2025-08-11 20:34:17,221 - INFO - Found Article 44: ausgestellt hat, insbesondere über die Art der Nichtkonformität und über bereits ergriffene relevante Korrekturmaßnahmen.
+2025-08-11 20:34:17,222 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,222 - INFO - Found Article 12: Absatz 1, soweit diese Protokolle ihrer Kontrolle unterliegen.
+2025-08-11 20:34:17,222 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:34:17,223 - INFO - Found Article 47: genannte EU-Konformitätserklärung bereit.
+2025-08-11 20:34:17,225 - INFO - Found Article 16: 
+2025-08-11 20:34:17,225 - INFO - Found Article 72: entsprechend. Diese Pflicht gilt nicht für sensible operative Daten von Betreibern von KI-Systemen, die Strafverfolgungsbehörden sind.
+2025-08-11 20:34:17,226 - INFO - Found Article 49: nachkommen. Stellen diese Betreiber fest, dass das Hochrisiko-KI-System, dessen Verwendung sie planen, nicht in der in Artikel 71 genannten EU-Datenbank registriert wurde, sehen sie von der Verwendung dieses Systems ab und informieren den Anbieter oder den Händler.
+2025-08-11 20:34:17,226 - INFO - Found Article 13: der vorliegenden Verordnung bereitgestellten Informationen, um ihrer Pflicht zur Durchführung einer Datenschutz-Folgenabschätzung gemäß Artikel 35 der Verordnung (EU) 2016/679 oder Artikel 27 der Richtlinie (EU) 2016/680 nachzukommen.
+2025-08-11 20:34:17,227 - INFO - Found Article 6: Absatz 2 — mit Ausnahme von Hochrisiko-KI-Systemen, die in dem in Anhang III Nummer 2 aufgeführten Bereich verwendet werden sollen — führen Betreiber, bei denen es sich um Einrichtungen des öffentlichen Rechts oder private Einrichtungen, die öffentliche Dienste erbringen, handelt, und Betreiber von Hochrisiko-KI-Systemen gemäß Anhang III Nummer 5 Buchstaben b und c eine Abschätzung der Auswirkungen, die die Verwendung eines solchen Systems auf die Grundrechte haben kann, durch. Zu diesem Zweck führen die Betreiber eine Abschätzung durch, die Folgendes umfasst:
+2025-08-11 20:34:17,227 - INFO - Found Article 46: Absatz 1 genannten Fall können die Betreiber von der Mitteilungspflicht befreit werden.
+2025-08-11 20:34:17,227 - INFO - Found Article 35: der Verordnung (EU) 2016/679 oder Artikel 27 der Richtlinie (EU) 2016/680 durchgeführten Datenschutz-Folgenabschätzung erfüllt, so ergänzt die Grundrechte-Folgenabschätzung gemäß Absatz 1 des vorliegenden Artikels diese Datenschutz-Folgenabschätzung.
+2025-08-11 20:34:17,228 - INFO - Found Subsection: ABSCHNITT 4
+2025-08-11 20:34:17,228 - INFO - Found Article 78: die Vertraulichkeit der von ihnen erlangten Informationen.
+2025-08-11 20:34:17,229 - INFO - Found Article 29: Absatz 2, so legt die notifizierende Behörde der Kommission und den anderen Mitgliedstaaten die Unterlagen vor, die die Kompetenz der Konformitätsbewertungsstelle und die Vereinbarungen nachweisen, die getroffen wurden, um sicherzustellen, dass die Stelle regelmäßig überwacht wird und weiterhin die Anforderungen des Artikels 31 erfüllt.
+2025-08-11 20:34:17,230 - INFO - Found Article 78: wahren, außer wenn ihre Offenlegung gesetzlich vorgeschrieben ist. Informationen, von denen Mitarbeiter der notifizierten Stellen bei der Durchführung ihrer Aufgaben gemäß dieser Verordnung Kenntnis erlangen, unterliegen der beruflichen Schweigepflicht, außer gegenüber den notifizierenden Behörden des Mitgliedstaats, in dem sie ihre Tätigkeiten ausüben.
+2025-08-11 20:34:17,231 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,231 - INFO - Found Article 38: genannten Koordinierungstätigkeiten mit. Sie wirken außerdem unmittelbar oder mittelbar an der Arbeit der europäischen Normungsorganisationen mit oder stellen sicher, dass sie stets über den Stand der einschlägigen Normen unterrichtet sind.
+2025-08-11 20:34:17,232 - INFO - Found Article 43: festgelegten Konformitätsbewertungsverfahren.
+2025-08-11 20:34:17,232 - INFO - Found Article 28: genannten notifizierenden Behörde sämtliche einschlägige Dokumentation, einschließlich der Dokumentation des Anbieters, zugänglich bzw. übermitteln diese auf Anfrage, damit diese Behörde ihre Bewertungs-, Benennungs-, Notifizierungs- und Überwachungstätigkeiten durchführen kann und die Bewertung gemäß diesem Abschnitt erleichtert wird.
+2025-08-11 20:34:17,233 - INFO - Found Article 30: Absatz 2 genannten elektronischen Notifizierungsinstruments über alle relevanten Änderungen der Notifizierung einer notifizierten Stelle.
+2025-08-11 20:34:17,233 - INFO - Found Article 31: festgelegten Anforderungen nicht mehr erfüllt oder dass sie ihren Pflichten nicht nachkommt, so untersucht die notifizierende Behörde den Sachverhalt unverzüglich und mit äußerster Sorgfalt. In diesem Zusammenhang teilt sie der betreffenden notifizierten Stelle die erhobenen Einwände mit und gibt ihr die Möglichkeit, dazu Stellung zu nehmen. Kommt die notifizierende Behörde zu dem Schluss, dass die notifizierte Stelle die in Artikel 31 festgelegten Anforderungen nicht mehr erfüllt oder dass sie ihren Pflichten nicht nachkommt, schränkt sie die Benennung gegebenenfalls ein, setzt sie aus oder widerruft sie, je nach Schwere der Nichterfüllung dieser Anforderungen oder Pflichtverletzung. Sie informiert die Kommission und die anderen Mitgliedstaaten unverzüglich darüber.
+2025-08-11 20:34:17,235 - INFO - Found Article 78: vertraulich behandelt werden.
+2025-08-11 20:34:17,235 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,236 - INFO - Found Article 31: erfüllen oder das gleiche Maß an Konformität gewährleisten.
+2025-08-11 20:34:17,236 - INFO - Found Subsection: ABSCHNITT 5
+2025-08-11 20:34:17,237 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,238 - INFO - Found Article 10: der Verordnung (EU) Nr. 1025/2012 erteilt die Kommission unverzüglich Normungsaufträge, die alle Anforderungen gemäß Abschnitt 2 des vorliegenden Kapitels abdecken und gegebenenfalls Normungsaufträge, die Pflichten gemäß Kapitel V Abschnitte 2 und 3 der vorliegenden Verordnung abdecken. In dem Normungsauftrag werden auch Dokumente zu den Berichterstattungs- und Dokumentationsverfahren im Hinblick auf die Verbesserung der Ressourcenleistung von KI-Systemen z. B. durch die Verringerung des Energie- und sonstigen Ressourcenverbrauchs des Hochrisiko-KI-Systems während seines gesamten Lebenszyklus und zu der energieeffizienten Entwicklung von KI-Modellen mit allgemeinem Verwendungszweck verlangt. Bei der Ausarbeitung des Normungsauftrags konsultiert die Kommission das KI-Gremium und die einschlägigen Interessenträger, darunter das Beratungsforum.
+2025-08-11 20:34:17,238 - INFO - Found Article 24: der Verordnung (EU) Nr. 1025/2012 zu erreichen.
+2025-08-11 20:34:17,239 - INFO - Found Article 67: genannte Beratungsforum.
+2025-08-11 20:34:17,239 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,240 - INFO - Found Article 22: der Verordnung (EU) Nr. 1025/2012 genannten Ausschuss darüber, dass sie die in Absatz 1 des vorliegenden Artikels festgelegten Bedingungen als erfüllt erachtet.
+2025-08-11 20:34:17,241 - INFO - Found Article 10: Absatz 4 festgelegten einschlägigen Anforderungen erfüllen.
+2025-08-11 20:34:17,241 - INFO - Found Article 15: der vorliegenden Verordnung festgelegten Cybersicherheitsanforderungen erfüllen, sofern diese Anforderungen von der Cybersicherheitszertifizierung oder der Konformitätserklärung oder Teilen davon abdeckt sind.
+2025-08-11 20:34:17,242 - INFO - Found Article 40: oder gegebenenfalls gemeinsame Spezifikationen gemäß Artikel 41 angewandt, so entscheidet er sich für eines der folgenden Konformitätsbewertungsverfahren auf der Grundlage
+2025-08-11 20:34:17,242 - INFO - Found Article 74: Absatz 8 bzw. 9 genannte Marktüberwachungsbehörde die Funktion der notifizierten Stelle.
+2025-08-11 20:34:17,243 - INFO - Found Article 31: Absätze 4, 5, 10 und 11 festgelegten Anforderungen erfüllen.
+2025-08-11 20:34:17,243 - INFO - Found Article 41: 
+2025-08-11 20:34:17,243 - INFO - Found Article 97: delegierte Rechtsakte zu erlassen, um die Anhänge VI und VII zu ändern, indem sie sie angesichts des technischen Fortschritts aktualisiert.
+2025-08-11 20:34:17,244 - INFO - Found Article 78: die Vertraulichkeit der von ihnen erlangten Informationen.
+2025-08-11 20:34:17,244 - INFO - Found Article 43: und auf ein hinreichend begründetes Ersuchen kann eine Marktüberwachungsbehörde das Inverkehrbringen oder die Inbetriebnahme bestimmter Hochrisiko-KI-Systeme im Hoheitsgebiet des betreffenden Mitgliedstaats aus außergewöhnlichen Gründen der öffentlichen Sicherheit, des Schutzes des Lebens und der Gesundheit von Personen, des Umweltschutzes oder des Schutzes wichtiger Industrie- und Infrastrukturanlagen genehmigen. Diese Genehmigung wird auf die Dauer der erforderlichen Konformitätsbewertungsverfahren befristet, wobei den außergewöhnlichen Gründen für die Ausnahme Rechnung getragen wird. Der Abschluss dieser Verfahren erfolgt unverzüglich.
+2025-08-11 20:34:17,245 - INFO - Found Article 97: delegierte Rechtsakte zur Aktualisierung des in Anhang V festgelegten Inhalts der EU-Konformitätserklärung zu erlassen, um den genannten Anhang durch die Einführung von Elementen zu ändern, die angesichts des technischen Fortschritts erforderlich werden.
+2025-08-11 20:34:17,245 - INFO - Found Article 30: der Verordnung (EG) Nr. 765/2008 festgelegten allgemeinen Grundsätze.
+2025-08-11 20:34:17,246 - INFO - Found Article 43: festgelegten Konformitätsbewertungsverfahren zuständigen notifizierten Stelle hinzugefügt. Die Identifizierungsnummer der notifizierten Stelle ist entweder von der Stelle selbst oder nach ihren Anweisungen durch den Anbieter oder den Bevollmächtigten des Anbieters anzubringen. Diese Identifizierungsnummer wird auch auf jeglichem Werbematerial angegeben, in dem darauf hingewiesen wird, dass das Hochrisiko-KI-System die Anforderungen für die CE-Kennzeichnung erfüllt.
+2025-08-11 20:34:17,246 - INFO - Found Article 71: genannten EU-Datenbank.
+2025-08-11 20:34:17,247 - INFO - Found Article 6: Absatz 3 ist, registriert dieser Anbieter oder gegebenenfalls sein Bevollmächtigter sich und dieses System in der in Artikel 71 genannten EU-Datenbank.
+2025-08-11 20:34:17,247 - INFO - Found Article 71: genannten EU-Datenbank, wählen das System aus und registrieren es dort.
+2025-08-11 20:34:17,247 - INFO - Found Article 74: Absatz 8 genannten nationalen Behörden haben Zugang zu den jeweiligen beschränkten Teilen der EU-Datenbank gemäß Unterabsatz 1 dieses Absatzes.
+2025-08-11 20:34:17,248 - INFO - Found Article 56: Absatz 6 festgelegten Verfahren erlassen. Hält sie einen Kodex für nicht angemessen, so kann die Kommission einen Durchführungsrechtsakt gemäß dem in Artikel 98 Absatz 2 genannten Prüfverfahren erlassen, in dem gemeinsame Vorschriften für die Umsetzung dieser Pflichten festgelegt werden.
+2025-08-11 20:34:17,249 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:34:17,249 - INFO - Found Article 97: delegierte Rechtsakte zur Änderung der in den Absätzen 1 und 2 des vorliegenden Artikels aufgeführten Schwellenwerte sowie zur Ergänzung von Benchmarks und Indikatoren vor dem Hintergrund sich wandelnder technologischer Entwicklungen, wie z. B. algorithmische Verbesserungen oder erhöhte Hardwareeffizienz, wenn dies erforderlich ist, damit diese Schwellenwerte dem Stand der Technik entsprechen.
+2025-08-11 20:34:17,250 - INFO - Found Article 51: Absatz 1 Buchstabe a, so teilt der betreffende Anbieter dies der Kommission unverzüglich, in jedem Fall jedoch innerhalb von zwei Wochen, nachdem diese Bedingung erfüllt ist oder bekannt wird, dass sie erfüllt wird, mit. Diese Mitteilung muss die Informationen enthalten, die erforderlich sind, um nachzuweisen, dass die betreffende Bedingung erfüllt ist. Erlangt die Kommission Kenntnis von einem KI-Modell mit allgemeinem Verwendungszweck, das systemische Risiken birgt, die ihr nicht mitgeteilt wurden, so kann sie entscheiden, es als Modell mit systemischen Risiken auszuweisen.
+2025-08-11 20:34:17,250 - INFO - Found Article 90: Absatz 1 Buchstabe a auf der Grundlage der in Anhang XIII festgelegten Kriterien als KI-Modell mit systemischen Risiken ausweisen.
+2025-08-11 20:34:17,250 - INFO - Found Article 97: delegierte Rechtsakte zu erlassen, um Anhang XIII zu ändern, indem die in dem genannten Anhang genannten Indikatoren präzisiert und aktualisiert werden.
+2025-08-11 20:34:17,251 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,251 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:34:17,252 - INFO - Found Subsection: ABSCHNITT 3
+2025-08-11 20:34:17,324 - INFO - Found Subsection: ABSCHNITT 4
+2025-08-11 20:34:17,326 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,326 - INFO - Found Article 53: vorgesehenen Pflichten beschränkt werden, es sei denn, sie erklären ausdrücklich ihr Interesse, sich dem ganzen Kodex anzuschließen.
+2025-08-11 20:34:17,327 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,328 - INFO - Found Article 78: enthaltenen Bestimmungen über die Vertraulichkeit und im Einvernehmen mit den Anbietern oder zukünftigen Anbietern, sind die Kommission und das KI-Gremium befugt, die Abschlussberichte einzusehen und tragen diesen gegebenenfalls bei der Wahrnehmung ihrer Aufgaben gemäß dieser Verordnung Rechnung. Wenn der Anbieter oder der zukünftige Anbieter und die zuständige nationale Behörde ihr ausdrückliches Einverständnis erklären, kann der Abschlussbericht über die in diesem Artikel genannte zentrale Informationsplattform veröffentlicht werden.
+2025-08-11 20:34:17,330 - INFO - Found Article 62: Absatz 1 Buchstabe c einzuholen. Die Kommission stimmt sich gegebenenfalls proaktiv mit den zuständigen nationalen Behörden ab.
+2025-08-11 20:34:17,330 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,331 - INFO - Found Article 5: — dem in diesem Artikel genannten Plan für einen Test unter Realbedingungen durchgeführt werden.
+2025-08-11 20:34:17,332 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,332 - INFO - Found Article 75: übertragen die Mitgliedstaaten ihren Marktüberwachungsbehörden die Befugnis, Anbieter und zukünftige Anbieter zur Bereitstellung von Informationen zu verpflichten, unangekündigte Ferninspektionen oder Vor-Ort-Inspektionen durchzuführen und die Durchführung der Tests unter Realbedingungen und damit zusammenhängende Hochrisiko-KI-Systeme zu prüfen. Die Marktüberwachungsbehörden nutzen diese Befugnisse, um für die sichere Entwicklung von Tests unter Realbedingungen zu sorgen.
+2025-08-11 20:34:17,332 - INFO - Found Article 73: zu melden. Der Anbieter oder zukünftige Anbieter trifft Sofortmaßnahmen zur Schadensbegrenzung; andernfalls setzt er den Test unter Realbedingungen so lange aus, bis eine Schadensbegrenzung stattgefunden hat, oder bricht ihn ab. Im Fall eines solchen Abbruchs des Tests unter Realbedingungen richtet der Anbieter oder zukünftige Anbieter ein Verfahren für den sofortigen Rückruf des KI-Systems ein.
+2025-08-11 20:34:17,334 - INFO - Found Article 60: ist von den Testteilnehmern eine freiwillig erteilte informierte Einwilligung einzuholen, bevor sie an dem Test teilnehmen und nachdem sie mit präzisen, klaren, relevanten und verständlichen Informationen über Folgendes ordnungsgemäß informiert wurden:
+2025-08-11 20:34:17,334 - INFO - Found Article 43: werden die besonderen Interessen und Bedürfnisse von KMU, einschließlich Start-up-Unternehmen, berücksichtigt, indem diese Gebühren proportional zur Größe der Unternehmen, der Größe ihres Marktes und anderen einschlägigen Kennzahlen gesenkt werden.
+2025-08-11 20:34:17,335 - INFO - Found Article 17: dieser Verordnung vorgeschriebenen Qualitätsmanagementsystems in vereinfachter Weise einhalten, sofern sie keine Partnerunternehmen oder verbundenen Unternehmen im Sinne dieser Empfehlung haben. Zu diesem Zweck arbeitet die Kommission Leitlinien zu den Elementen des Qualitätsmanagementsystems aus, die unter Berücksichtigung der Bedürfnisse von Kleinstunternehmen in vereinfachter Weise eingehalten werden können, ohne das Schutzniveau oder die Notwendigkeit zur Einhaltung der Anforderungen in Bezug auf Hochrisiko-KI-Systeme zu beeinträchtigen.
+2025-08-11 20:34:17,335 - INFO - Found Section Title: KAPITEL VII
+2025-08-11 20:34:17,336 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:34:17,337 - INFO - Found Article 67: genannten Beratungsforums als Beobachter zu diesen Untergruppen oder zu bestimmten Sitzungen dieser Untergruppen eingeladen werden.
+2025-08-11 20:34:17,339 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,340 - INFO - Found Article 68: Absatz 1 genannten Durchführungsrechtsakt festgelegt, wobei die Zielsetzung berücksichtigt wird, für die angemessene Durchführung dieser Verordnung, für Kosteneffizienz sowie dafür zu sorgen, dass alle Mitgliedstaaten effektiven Zugang zu Sachverständigen haben müssen.
+2025-08-11 20:34:17,340 - INFO - Found Article 84: und durch die Sachverständigen gemäß dem vorliegenden Artikel effizient organisiert ist und den bestmöglichen zusätzlichen Nutzen bringt.
+2025-08-11 20:34:17,341 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,342 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten.
+2025-08-11 20:34:17,343 - INFO - Found Section Title: KAPITEL VIII
+2025-08-11 20:34:17,344 - INFO - Found Article 6: Absatz 2, die gemäß den Artikeln 49 und 60 registriert werden und über KI-Systeme, die nicht als Hochrisiko-KI-Systeme gemäß Artikel 6 Absatz 3 gelten und gemäß Artikel 6 Absatz 4 und Artikel 49 registriert werden. Bei der Festlegung der Funktionsspezifikationen dieser Datenbank konsultiert die Kommission die einschlägigen Sachverständigen und bei der Aktualisierung der Funktionsspezifikationen dieser Datenbank konsultiert sie das KI-Gremium.
+2025-08-11 20:34:17,344 - INFO - Found Article 49: Absätze 3 und 4 in die EU-Datenbank eingegeben.
+2025-08-11 20:34:17,345 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:34:17,346 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,346 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,347 - INFO - Found Article 3: Nummer 49 Buchstabe c genannten schwerwiegenden Vorfall erhält, informiert sie die in Artikel 77 Absatz 1 genannten nationalen Behörden oder öffentlichen Stellen. Zur leichteren Einhaltung der Pflichten nach Absatz 1 dieses Artikels arbeitet die Kommission entsprechende Leitlinien aus. Diese Leitlinien werden bis zum 2. August 2025 veröffentlicht und regelmäßig bewertet.
+2025-08-11 20:34:17,347 - INFO - Found Article 19: der Verordnung (EU) 2019/1020 und befolgt die in der genannten Verordnung vorgesehenen Meldeverfahren.
+2025-08-11 20:34:17,347 - INFO - Found Article 3: Nummer 49 Buchstabe c genannt werden.
+2025-08-11 20:34:17,348 - INFO - Found Article 20: der Verordnung (EU) 2019/1020, unabhängig davon, ob sie diesbezüglich Maßnahmen ergriffen haben.
+2025-08-11 20:34:17,348 - INFO - Found Subsection: ABSCHNITT 3
+2025-08-11 20:34:17,348 - INFO - Found Article 34: Absatz 4 der Verordnung (EU) 2019/1020 melden die Marktüberwachungsbehörden der Kommission und den einschlägigen nationalen Wettbewerbsbehörden jährlich alle Informationen, die sie im Verlauf ihrer Marktüberwachungstätigkeiten erlangt haben und die für die Anwendung von Unionsrecht im Bereich der Wettbewerbsregeln von Interesse sein könnten. Ferner erstatten sie der Kommission jährlich Bericht über die Anwendung verbotener Praktiken in dem betreffenden Jahr und über die ergriffenen Maßnahmen.
+2025-08-11 20:34:17,349 - INFO - Found Article 14: der Verordnung (EU) 2019/1020 können die Marktüberwachungsbehörden für die Zwecke der Sicherstellung der wirksamen Durchsetzung der vorliegenden Verordnung die in Artikel 14 Absatz 4 Buchstaben d und j der genannten Verordnung genannten Befugnisse gegebenenfalls aus der Ferne ausüben.
+2025-08-11 20:34:17,349 - INFO - Found Article 9: der Verordnung (EU) 2019/1020 ein ernstes Risiko darstellen, zu geben. Das Büro für Künstliche Intelligenz unterstützt die Koordinierung der gemeinsamen Untersuchungen.
+2025-08-11 20:34:17,350 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:34:17,350 - INFO - Found Article 58: beaufsichtigt werden, überprüfen die Marktüberwachungsbehörden im Rahmen ihrer Aufsichtsaufgaben für das KI-Reallabor die Einhaltung des Artikels 60. Die Behörden können gegebenenfalls gestatten, dass der Anbieter oder zukünftige Anbieter den Test unter Realbedingungen in Abweichung von den in Artikel 60 Absatz 4 Buchstaben f und g festgelegten Bedingungen durchführt.
+2025-08-11 20:34:17,351 - INFO - Found Article 78: festgelegten Vertraulichkeitspflichten behandelt.
+2025-08-11 20:34:17,352 - INFO - Found Article 74: Absätze 8 und 9 genannten Marktüberwachungsbehörden auf Anfrage unverzüglich Zugang zu dieser Dokumentation oder eine Kopie davon erhalten. Zugang zu dieser Dokumentation oder zu einer Kopie davon darf nur das Personal der Marktüberwachungsbehörde erhalten, das über eine entsprechende Sicherheitsfreigabe verfügt.
+2025-08-11 20:34:17,352 - INFO - Found Article 77: Absatz 1 genannten einschlägigen nationalen Behörden oder öffentlichen Stellen und arbeitet uneingeschränkt mit ihnen zusammen. Die betreffenden Akteure arbeiten erforderlichenfalls mit der Marktüberwachungsbehörde und den in Artikel 77 Absatz 1 genannten anderen Behörden oder öffentlichen Stellen zusammen.
+2025-08-11 20:34:17,352 - INFO - Found Article 18: der Verordnung (EU) 2019/1020 gilt für die in Unterabsatz 2 des vorliegenden Absatzes genannten Maßnahmen.
+2025-08-11 20:34:17,354 - INFO - Found Article 6: Absatz 3 eingestuftes KI-System tatsächlich hochriskant ist, so prüft die Marktüberwachungsbehörde das betreffende KI-System im Hinblick auf seine Einstufung als Hochrisiko-KI-System auf der Grundlage der in Artikel 6 Absatz 3 festgelegten Bedingungen und den Leitlinien der Kommission.
+2025-08-11 20:34:17,354 - INFO - Found Article 99: verhängt.
+2025-08-11 20:34:17,355 - INFO - Found Article 79: Absätze 5 bis 9 Anwendung.
+2025-08-11 20:34:17,355 - INFO - Found Article 99: verhängt.
+2025-08-11 20:34:17,355 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,356 - INFO - Found Article 11: der Verordnung (EU) 2019/1020 geeignete Überprüfungen durchführen, wobei sie insbesondere Informationen berücksichtigen, die in der EU-Datenbank gemäß Artikel 71 der vorliegenden Verordnung gespeichert sind.
+2025-08-11 20:34:17,356 - INFO - Found Article 79: Absatz 5 genannten Notifizierung — oder bei Nichteinhaltung des Verbots der in Artikel 5 genannten KI-Praktiken innerhalb von 30 Tagen — Einwände gegen eine von der Marktüberwachungsbehörde eines anderen Mitgliedstaats getroffene Maßnahme oder ist die Kommission der Ansicht, dass die Maßnahme mit dem Unionsrecht unvereinbar ist, so nimmt die Kommission unverzüglich Konsultationen mit der Marktüberwachungsbehörde des betreffenden Mitgliedstaats und dem Akteur bzw. den Akteuren auf und prüft die nationale Maßnahme. Anhand der Ergebnisse dieser Prüfung entscheidet die Kommission innerhalb von sechs Monaten — oder bei Nichteinhaltung des Verbots der in Artikel 5 genannten KI-Praktiken innerhalb von 60 Tagen — ab dem Eingang der in Artikel 79 Absatz 5 genannten Notifizierung, ob die nationale Maßnahme gerechtfertigt ist, und teilt der Marktüberwachungsbehörde des betreffenden Mitgliedstaats ihre Entscheidung mit. Die Kommission unterrichtet auch alle übrigen Marktüberwachungsbehörden über ihre Entscheidung.
+2025-08-11 20:34:17,357 - INFO - Found Article 11: der Verordnung (EU) Nr. 1025/2012 festgelegte Verfahren ein.
+2025-08-11 20:34:17,357 - INFO - Found Article 77: Absatz 1 genannten betreffenden nationalen Behörde — nach der gemäß Artikel 79 durchgeführten Prüfung fest, dass ein Hochrisiko-KI-System zwar dieser Verordnung entspricht, aber dennoch ein Risiko für die Gesundheit oder Sicherheit von Personen, für die Grundrechte oder für andere Aspekte des Schutzes öffentlicher Interessen darstellt, so fordert sie unverzüglich den betreffenden Akteur auf, alle geeigneten Maßnahmen zu treffen, damit das betreffende KI-System zum Zeitpunkt des Inverkehrbringens oder der Inbetriebnahme dieses Risiko nicht mehr birgt, und zwar innerhalb einer Frist, die sie vorgeben kann.
+2025-08-11 20:34:17,358 - INFO - Found Article 21: Absatz 6 der Verordnung (EU) 2019/1020 im KI-Bereich wahrnehmen.
+2025-08-11 20:34:17,359 - INFO - Found Subsection: ABSCHNITT 4
+2025-08-11 20:34:17,359 - INFO - Found Subsection: ABSCHNITT 5
+2025-08-11 20:34:17,360 - INFO - Found Article 94: über ausschließliche Befugnisse zur Beaufsichtigung und Durchsetzung von Kapitel V. Unbeschadet der Organisationsbefugnisse der Kommission und der Aufteilung der Zuständigkeiten zwischen den Mitgliedstaaten und der Union auf der Grundlage der Verträge überträgt die Kommission dem Büro für Künstliche Intelligenz die Durchführung dieser Aufgaben.
+2025-08-11 20:34:17,361 - INFO - Found Article 68: Absatz 2 erforderlich und verhältnismäßig ist.
+2025-08-11 20:34:17,361 - INFO - Found Article 101: anzugeben.
+2025-08-11 20:34:17,362 - INFO - Found Article 68: eingesetzten wissenschaftlichen Gremium. Die für diese Aufgabe benannten unabhängigen Sachverständigen erfüllen die in Artikel 68 Absatz 2 umrissenen Kriterien.
+2025-08-11 20:34:17,362 - INFO - Found Article 101: für den Fall, dass der Zugang nicht bereitgestellt wird, anzugeben.
+2025-08-11 20:34:17,363 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,363 - INFO - Found Article 18: der Verordnung (EU) 2019/1020 sinngemäß.
+2025-08-11 20:34:17,364 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,364 - INFO - Found Article 6: Absätze 6 und 7, Artikel 7 Absätze 1 und 3, Artikel 11 Absatz 3, Artikel 43 Absätze 5 und 6, Artikel 47 Absatz 5, Artikel 51 Absatz 3, Artikel 52 Absatz 4 sowie Artikel 53 Absätze 5 und 6 genannte Befugnis zum Erlass delegierter Rechtsakte wird der Kommission für einen Zeitraum von fünf Jahren ab 1. August 2024 übertragen. Die Kommission erstellt spätestens neun Monate vor Ablauf des Zeitraums von fünf Jahren einen Bericht über die Befugnisübertragung. Die Befugnisübertragung verlängert sich stillschweigend um Zeiträume gleicher Länge, es sei denn, das Europäische Parlament oder der Rat widersprechen einer solchen Verlängerung spätestens drei Monate vor Ablauf des jeweiligen Zeitraums.
+2025-08-11 20:34:17,365 - INFO - Found Article 5: der Verordnung (EU) Nr. 182/2011.
+2025-08-11 20:34:17,366 - INFO - Found Section Title: KAPITEL XII
+2025-08-11 20:34:17,366 - INFO - Found Article 96: erteilten Leitlinien zu berücksichtigen sind. Die vorgesehenen Sanktionen müssen wirksam, verhältnismäßig und abschreckend sein. Sie berücksichtigen die Interessen von KMU, einschließlich Start-up-Unternehmen, sowie deren wirtschaftliches Überleben.
+2025-08-11 20:34:17,366 - INFO - Found Article 5: genannten KI-Praktiken werden Geldbußen von bis zu 35 000 000 EUR oder — im Falle von Unternehmen — von bis zu 7 % des gesamten weltweiten Jahresumsatzes des vorangegangenen Geschäftsjahres verhängt, je nachdem, welcher Betrag höher ist.
+2025-08-11 20:34:17,367 - INFO - Found Article 100: 
+2025-08-11 20:34:17,368 - INFO - Found Article 5: genannten KI-Praktiken werden Geldbußen von bis zu 1 500 000 EUR verhängt.
+2025-08-11 20:34:17,368 - INFO - Found Article 101: 
+2025-08-11 20:34:17,368 - INFO - Found Article 93: Absatz 3 oder in den einschlägigen Praxisleitfäden nach Artikel 56 gemacht wurden.
+2025-08-11 20:34:17,369 - INFO - Found Article 98: Absatz 2 genannten Prüfverfahren erlassen.
+2025-08-11 20:34:17,369 - INFO - Found Section Title: KAPITEL XIII
+2025-08-11 20:34:17,369 - INFO - Found Article 102: 
+2025-08-11 20:34:17,370 - INFO - Found Article 4: Absatz 3 der Verordnung (EG) Nr. 300/2008 wird folgender Unterabsatz angefügt:
+2025-08-11 20:34:17,370 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,370 - INFO - Found Article 103: 
+2025-08-11 20:34:17,370 - INFO - Found Article 17: Absatz 5 der Verordnung (EU) Nr. 167/2013 wird folgender Unterabsatz angefügt:
+2025-08-11 20:34:17,370 - INFO - Found Article 104: 
+2025-08-11 20:34:17,370 - INFO - Found Article 22: Absatz 5 der Verordnung (EU) Nr. 168/2013 wird folgender Unterabsatz angefügt:
+2025-08-11 20:34:17,371 - INFO - Found Article 105: 
+2025-08-11 20:34:17,371 - INFO - Found Article 8: der Richtlinie 2014/90/EU wird folgender Absatz angefügt:
+2025-08-11 20:34:17,371 - INFO - Found Article 106: 
+2025-08-11 20:34:17,371 - INFO - Found Article 5: der Richtlinie (EU) 2016/797 wird folgender Absatz angefügt:
+2025-08-11 20:34:17,372 - INFO - Found Article 107: 
+2025-08-11 20:34:17,372 - INFO - Found Article 5: der Verordnung (EU) 2018/858 wird folgender Absatz angefügt:
+2025-08-11 20:34:17,374 - INFO - Found Article 108: 
+2025-08-11 20:34:17,374 - INFO - Found Article 109: 
+2025-08-11 20:34:17,375 - INFO - Found Article 11: der Verordnung (EU) 2019/2144 wird folgender Absatz angefügt:
+2025-08-11 20:34:17,375 - INFO - Found Article 110: 
+2025-08-11 20:34:17,376 - INFO - Found Article 111: 
+2025-08-11 20:34:17,376 - INFO - Found Article 113: Absatz 3 Buchstabe a werden KI-Systeme, bei denen es sich um Komponenten von IT-Großsystemen handelt, die mit den in Anhang X aufgeführten Rechtsakten eingerichtet wurden und vor dem 2. August 2027 in Verkehr gebracht oder in Betrieb genommen wurden, bis zum 31. Dezember 2030 mit dieser Verordnung in Einklang gebracht.
+2025-08-11 20:34:17,377 - INFO - Found Article 112: 
+2025-08-11 20:34:17,377 - INFO - Found Article 97: einmal jährlich, ob eine Änderung der Liste in Anhang III und der Liste der verbotenen Praktiken im KI-Bereich gemäß Artikel 5 erforderlich ist. Die Kommission übermittelt die Ergebnisse dieser Bewertung dem Europäischen Parlament und dem Rat.
+2025-08-11 20:34:17,378 - INFO - Found Article 113: 
+2025-08-11 20:34:17,380 - INFO - Found Article 5: Absatz 1 Unterabsatz 1 Buchstabe h Ziffer iii
+2025-08-11 20:34:17,381 - INFO - Found Article 6: Absatz 2
+2025-08-11 20:34:17,381 - INFO - Found Article 11: Absatz 1
+2025-08-11 20:34:17,381 - INFO - Found Article 47: enthält alle folgenden Angaben:
+2025-08-11 20:34:17,382 - INFO - Found Article 72: mit der technischen Dokumentation im Einklang stehen.
+2025-08-11 20:34:17,382 - INFO - Found Article 17: wird gemäß Nummer 3 geprüft und unterliegt der Überwachung gemäß Nummer 5. Die technische Dokumentation des KI-Systems wird gemäß Nummer 4 geprüft.
+2025-08-11 20:34:17,383 - INFO - Found Article 49: bereitzustellende Informationen
+2025-08-11 20:34:17,383 - INFO - Found Article 60: bei der Registrierung von in Anhang III aufgeführten Hochrisiko-KI-Systemen bereitzustellende Informationen
+2025-08-11 20:34:17,384 - INFO - Found Article 53: Absatz 1 Buchstabe a — technische Dokumentation für Anbieter von KI-Modellen mit allgemeinem Verwendungszweck
+2025-08-11 20:34:17,384 - INFO - Found Subsection: ABSCHNITT 1
+2025-08-11 20:34:17,384 - INFO - Found Subsection: ABSCHNITT 2
+2025-08-11 20:34:17,384 - INFO - Found Article 51: 
+2025-08-11 20:34:17,384 - INFO - Extracted 900 entries from main page
+2025-08-11 20:34:17,385 - INFO - Crawling completed. Total entries extracted: 900
+2025-08-11 20:34:17,385 - INFO - Saving 900 entries to: data/output/eu_ai_act_crawled_2025-08-11_2034.jsonl
+2025-08-11 20:34:17,400 - INFO - Successfully saved: data/output/eu_ai_act_crawled_2025-08-11_2034.jsonl
+2025-08-11 20:34:17,400 - INFO - === CRAWLING STATISTICS ===
+2025-08-11 20:34:17,400 - INFO - Total entries: 900
+2025-08-11 20:34:17,400 - INFO - Articles processed: 75
+2025-08-11 20:34:17,401 - INFO - Sections processed: 5

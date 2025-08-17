@@ -1,0 +1,2652 @@
+[
+  {
+    "precision": 0.20904594226376472,
+    "recall": 0.3939980626468017,
+    "f1": 0.2731598211255356,
+    "word_precision": 0.3023255813953488,
+    "word_recall": 0.7647058823529411,
+    "sequence_similarity": 0.017123287671232876,
+    "semantic_similarity": 0.2765957446808511,
+    "query_time": 2.5995428562164307,
+    "tokens_per_second": 41.54576630338431,
+    "response_length": 432,
+    "word_count": 57,
+    "avg_word_length": 6.5964912280701755,
+    "estimated_tokens": 108,
+    "faithfulness": 0.5581395348837209,
+    "answer_relevance": 0.14666666666666667,
+    "context_relevance": 0.325,
+    "context_utilization": 0.15483870967741936,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Der Hauptzweck von Artikel 1 der Datenschutz-Grundverordnung (DSGVO) besteht darin, den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zu gewährleisten und den freien Verkehr solcher Daten innerhalb der Europäischen Union zu fördern. Artikel 1 legt fest, dass die Verordnung die Grundrechte und -freiheiten von Personen, insbesondere deren Recht auf den Schutz ihrer personenbezogenen Daten, schützen soll.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.08267234826336102,
+    "recall": 0.11796646591041984,
+    "f1": 0.097215135499127,
+    "word_precision": 0.08823529411764706,
+    "word_recall": 0.17647058823529413,
+    "sequence_similarity": 0.09542743538767395,
+    "semantic_similarity": 0.0625,
+    "query_time": 2.646071195602417,
+    "tokens_per_second": 32.878933924600304,
+    "response_length": 351,
+    "word_count": 46,
+    "avg_word_length": 6.6521739130434785,
+    "estimated_tokens": 87,
+    "faithfulness": 0.11764705882352941,
+    "answer_relevance": 0.14473684210526316,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.06557377049180328,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine Informationen über die spezifischen Rechte betroffener Personen gemäß Artikel 1 der Datenschutz-Grundverordnung (DSGVO). Um die Rechte betroffener Personen zu erfahren, wäre es notwendig, den genauen Wortlaut von Artikel 1 der DSGVO oder relevante Informationen aus anderen Artikeln der DSGVO zu konsultieren.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.10344039194338595,
+    "recall": 0.19007140798616673,
+    "f1": 0.13397117897160699,
+    "word_precision": 0.13636363636363635,
+    "word_recall": 0.35294117647058826,
+    "sequence_similarity": 0.05389221556886228,
+    "semantic_similarity": 0.10909090909090909,
+    "query_time": 3.6285548210144043,
+    "tokens_per_second": 35.55134381680268,
+    "response_length": 516,
+    "word_count": 63,
+    "avg_word_length": 7.2063492063492065,
+    "estimated_tokens": 129,
+    "faithfulness": 0.22727272727272727,
+    "answer_relevance": 0.19130434782608696,
+    "context_relevance": 0.22000000000000003,
+    "context_utilization": 0.12345679012345678,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Verpflichtungen des Verantwortlichen nach Artikel 1 der Datenschutz-Grundverordnung (DSGVO). Um die Verpflichtungen des Verantwortlichen zu verstehen, wäre es notwendig, den genauen Wortlaut von Artikel 1 der DSGVO zu konsultieren. Generell umfasst die DSGVO jedoch Pflichten wie die Gewährleistung des Schutzes personenbezogener Daten, die Einhaltung von Transparenzanforderungen und die Sicherstellung der Rechte der betroffenen Personen.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.1505339435545385,
+    "recall": 0.22504374747610717,
+    "f1": 0.18039795008541082,
+    "word_precision": 0.16666666666666666,
+    "word_recall": 0.35294117647058826,
+    "sequence_similarity": 0.14912280701754385,
+    "semantic_similarity": 0.13043478260869565,
+    "query_time": 1.9281988143920898,
+    "tokens_per_second": 39.41502267957819,
+    "response_length": 304,
+    "word_count": 41,
+    "avg_word_length": 6.439024390243903,
+    "estimated_tokens": 76,
+    "faithfulness": 0.2777777777777778,
+    "answer_relevance": 0.2894736842105263,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.18181818181818182,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Ausnahmen für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 1. Um diese Frage zu beantworten, wäre es notwendig, auf den genauen Wortlaut des Artikels oder auf andere relevante Informationen zur DSGVO zuzugreifen.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.04474762301477103,
+    "recall": 0.18612017203437886,
+    "f1": 0.07214895686828611,
+    "word_precision": 0.058333333333333334,
+    "word_recall": 0.4117647058823529,
+    "sequence_similarity": 0.017534811758638472,
+    "semantic_similarity": 0.05384615384615385,
+    "query_time": 11.035622119903564,
+    "tokens_per_second": 40.41457700835967,
+    "response_length": 1787,
+    "word_count": 218,
+    "avg_word_length": 7.165137614678899,
+    "estimated_tokens": 446,
+    "faithfulness": 0.15,
+    "answer_relevance": 0.08048780487804878,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.2608695652173913,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Die Grundsätze für die Verarbeitung personenbezogener Daten nach der Datenschutz-Grundverordnung (DSGVO) sind in Artikel 5 festgelegt. Diese Grundsätze sind:\n\n1. **Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz**: Die Verarbeitung personenbezogener Daten muss rechtmäßig und nach Treu und Glauben erfolgen. Die betroffenen Personen müssen über die Verarbeitung informiert werden.\n\n2. **Zweckbindung**: Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken nicht vereinbaren Weise weiterverarbeitet werden.\n\n3. **Datenminimierung**: Es dürfen nur solche personenbezogenen Daten verarbeitet werden, die für die Zwecke der Verarbeitung erforderlich sind.\n\n4. **Richtigkeit**: Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein. Es sind angemessene Maßnahmen zu treffen, um sicherzustellen, dass unrichtige Daten unverzüglich gelöscht oder berichtigt werden.\n\n5. **Speicherbegrenzung**: Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist. Danach sind sie zu löschen oder anonymisieren.\n\n6. **Integrität und Vertraulichkeit**: Die Verarbeitung muss so erfolgen, dass die Sicherheit der personenbezogenen Daten gewährleistet ist, einschließlich des Schutzes vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, Zerstörung oder Schädigung.\n\n7. **Rechenschaftspflicht**: Der Verantwortliche ist dafür verantwortlich, dass die oben genannten Grundsätze eingehalten werden, und muss deren Einhaltung nachweisen können.\n\nDiese Grundsätze bilden die Grundlage für die rechtmäßige Verarbeitung personenbezogener Daten unter der DSGVO.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.0880062511588483,
+    "recall": 0.34827456901230547,
+    "f1": 0.14050738779079228,
+    "word_precision": 0.11403508771929824,
+    "word_recall": 0.7647058823529411,
+    "sequence_similarity": 0.03019627579265224,
+    "semantic_similarity": 0.1111111111111111,
+    "query_time": 9.473124742507935,
+    "tokens_per_second": 48.3472995921669,
+    "response_length": 1835,
+    "word_count": 237,
+    "avg_word_length": 6.7215189873417724,
+    "estimated_tokens": 458,
+    "faithfulness": 0.2807017543859649,
+    "answer_relevance": 0.0765217391304348,
+    "context_relevance": 0.15555555555555559,
+    "context_utilization": 0.2601626016260163,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.",
+    "actual_answer": "Das Kapitel 1 der Datenschutz-Grundverordnung (DSGVO) befasst sich mit den allgemeinen Bestimmungen und enthält grundlegende Regelungen, die für das gesamte Regelwerk von Bedeutung sind. Die wichtigsten Bestimmungen in Kapitel 1 sind:\n\n1. **Artikel 1 - Gegenstand und Ziele**: Dieser Artikel legt den Zweck der Verordnung fest, nämlich den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und die Gewährleistung des freien Datenverkehrs innerhalb der EU.\n\n2. **Artikel 2 - Anwendungsbereich**: Hier wird definiert, dass die Verordnung für die Verarbeitung personenbezogener Daten durch automatisierte Mittel sowie für nicht automatisierte Verarbeitung in einem Dateisystem gilt, sofern die Daten sich auf Personen in der EU beziehen.\n\n3. **Artikel 3 - Räumlicher Anwendungsbereich**: Dieser Artikel beschreibt, dass die Verordnung für die Verarbeitung personenbezogener Daten von Verantwortlichen oder Auftragsverarbeitern gilt, die in der EU ansässig sind, sowie für die Verarbeitung von Daten, die sich auf die Angebote von Waren oder Dienstleistungen an Personen in der EU beziehen.\n\n4. **Artikel 4 - Begriffsbestimmungen**: In diesem Artikel werden zentrale Begriffe definiert, wie z.B. „personenbezogene Daten“, „Verarbeitung“, „Verantwortlicher“, „Auftragsverarbeiter“ und „Einwilligung“.\n\n5. **Artikel 5 - Grundsätze der Verarbeitung personenbezogener Daten**: Dieser Artikel legt die Grundsätze fest, die bei der Verarbeitung personenbezogener Daten beachtet werden müssen, darunter Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit.\n\nDiese Bestimmungen bilden die Grundlage für den Datenschutz in der EU und sind entscheidend für das Verständnis der Rechte und Pflichten im Rahmen der DSGVO.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.2140173395236879,
+    "recall": 0.4180871069655484,
+    "f1": 0.28311109285463903,
+    "word_precision": 0.3023255813953488,
+    "word_recall": 0.8125,
+    "sequence_similarity": 0.02768166089965398,
+    "semantic_similarity": 0.2826086956521739,
+    "query_time": 2.180584669113159,
+    "tokens_per_second": 49.52800115022521,
+    "response_length": 432,
+    "word_count": 57,
+    "avg_word_length": 6.5964912280701755,
+    "estimated_tokens": 108,
+    "faithfulness": 0.5581395348837209,
+    "answer_relevance": 0.14666666666666667,
+    "context_relevance": 0.325,
+    "context_utilization": 0.15483870967741936,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Der Hauptzweck von Artikel 1 der Datenschutz-Grundverordnung (DSGVO) besteht darin, den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zu gewährleisten und den freien Verkehr solcher Daten innerhalb der Europäischen Union zu fördern. Artikel 1 legt fest, dass die Verordnung die Grundrechte und -freiheiten von Personen, insbesondere deren Recht auf den Schutz ihrer personenbezogenen Daten, schützen soll.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.09500000000000001,
+    "recall": 0.1325,
+    "f1": 0.11065934065934067,
+    "word_precision": 0.09375,
+    "word_recall": 0.1875,
+    "sequence_similarity": 0.125,
+    "semantic_similarity": 0.06666666666666667,
+    "query_time": 2.0328919887542725,
+    "tokens_per_second": 38.8608939565009,
+    "response_length": 318,
+    "word_count": 40,
+    "avg_word_length": 6.975,
+    "estimated_tokens": 79,
+    "faithfulness": 0.125,
+    "answer_relevance": 0.1527777777777778,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.06557377049180328,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen über die Rechte betroffener Personen gemäß Artikel 1 der Datenschutz-Grundverordnung (DSGVO). Um die Rechte betroffener Personen zu verstehen, wäre es notwendig, auf den genauen Wortlaut der DSGVO oder auf andere relevante Informationen zuzugreifen.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.09943910628355691,
+    "recall": 0.17792747837658018,
+    "f1": 0.12757808915398777,
+    "word_precision": 0.11627906976744186,
+    "word_recall": 0.3125,
+    "sequence_similarity": 0.08383233532934131,
+    "semantic_similarity": 0.09259259259259259,
+    "query_time": 2.288383722305298,
+    "tokens_per_second": 56.80865439343325,
+    "response_length": 522,
+    "word_count": 63,
+    "avg_word_length": 7.301587301587301,
+    "estimated_tokens": 130,
+    "faithfulness": 0.23255813953488372,
+    "answer_relevance": 0.19555555555555557,
+    "context_relevance": 0.22000000000000003,
+    "context_utilization": 0.12345679012345678,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Verpflichtungen des Verantwortlichen nach Artikel 1 der Datenschutz-Grundverordnung (DSGVO). Um die Verpflichtungen des Verantwortlichen zu verstehen, wäre es notwendig, den genauen Wortlaut von Artikel 1 der DSGVO zu konsultieren. Generell umfasst die DSGVO jedoch Verpflichtungen wie die Gewährleistung des Schutzes personenbezogener Daten, die Einhaltung von Transparenzanforderungen und die Sicherstellung der Rechte der betroffenen Personen.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.1557261045590565,
+    "recall": 0.19418764302059494,
+    "f1": 0.1728430815323614,
+    "word_precision": 0.15384615384615385,
+    "word_recall": 0.25,
+    "sequence_similarity": 0.20869565217391303,
+    "semantic_similarity": 0.10526315789473684,
+    "query_time": 1.9340870380401611,
+    "tokens_per_second": 25.33495082499101,
+    "response_length": 199,
+    "word_count": 26,
+    "avg_word_length": 6.6923076923076925,
+    "estimated_tokens": 49,
+    "faithfulness": 0.41538461538461535,
+    "answer_relevance": 0.3928571428571429,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.16363636363636364,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Ausnahmen für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 1. Daher kann ich diese Frage nicht beantworten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.04902580780691995,
+    "recall": 0.20107498813478883,
+    "f1": 0.07883112635413163,
+    "word_precision": 0.05737704918032787,
+    "word_recall": 0.4375,
+    "sequence_similarity": 0.0326530612244898,
+    "semantic_similarity": 0.05426356589147287,
+    "query_time": 11.2245934009552,
+    "tokens_per_second": 40.357809304829715,
+    "response_length": 1814,
+    "word_count": 227,
+    "avg_word_length": 6.960352422907489,
+    "estimated_tokens": 453,
+    "faithfulness": 0.16393442622950818,
+    "answer_relevance": 0.0792,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.2898550724637681,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Die Grundsätze für die Verarbeitung personenbezogener Daten nach der Datenschutz-Grundverordnung (DSGVO) sind in Artikel 5 festgelegt. Diese Grundsätze sind:\n\n1. **Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz**: Die Verarbeitung personenbezogener Daten muss rechtmäßig und nach Treu und Glauben erfolgen. Die betroffenen Personen müssen über die Verarbeitung informiert werden.\n\n2. **Zweckbindung**: Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken nicht vereinbaren Weise weiterverarbeitet werden.\n\n3. **Datenminimierung**: Es dürfen nur solche personenbezogenen Daten verarbeitet werden, die für die Zwecke der Verarbeitung erforderlich sind.\n\n4. **Richtigkeit**: Die personenbezogenen Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein. Es sind angemessene Maßnahmen zu treffen, um sicherzustellen, dass unrichtige Daten unverzüglich gelöscht oder berichtigt werden.\n\n5. **Speicherbegrenzung**: Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist. Danach sind sie zu löschen oder anonymisieren.\n\n6. **Integrität und Vertraulichkeit**: Die Verarbeitung muss so erfolgen, dass die Sicherheit der personenbezogenen Daten gewährleistet ist, einschließlich des Schutzes vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, Zerstörung oder Schädigung.\n\n7. **Rechenschaftspflicht**: Der Verantwortliche ist dafür verantwortlich, dass die Grundsätze eingehalten werden, und muss in der Lage sein, dies nachzuweisen.\n\nDiese Grundsätze bilden das Fundament für den Umgang mit personenbezogenen Daten in der EU und sollen die Rechte der betroffenen Personen schützen.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.07532415660494479,
+    "recall": 0.2908413979842551,
+    "f1": 0.11965834980597745,
+    "word_precision": 0.08620689655172414,
+    "word_recall": 0.625,
+    "sequence_similarity": 0.04522890237175951,
+    "semantic_similarity": 0.09090909090909091,
+    "query_time": 8.464977264404297,
+    "tokens_per_second": 49.143664183163644,
+    "response_length": 1667,
+    "word_count": 214,
+    "avg_word_length": 6.766355140186916,
+    "estimated_tokens": 416,
+    "faithfulness": 0.23275862068965517,
+    "answer_relevance": 0.07521367521367522,
+    "context_relevance": 0.15555555555555559,
+    "context_utilization": 0.21951219512195122,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.",
+    "actual_answer": "Das Kapitel 1 der Datenschutz-Grundverordnung (DSGVO) behandelt die allgemeinen Bestimmungen und legt die grundlegenden Prinzipien und Begriffe fest, die für den Datenschutz in der Europäischen Union gelten. Die wichtigsten Bestimmungen in diesem Kapitel sind:\n\n1. **Anwendungsbereich**: Die DSGVO gilt für die Verarbeitung personenbezogener Daten, die im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder Auftragsverarbeiters in der EU erfolgt, unabhängig davon, ob die Verarbeitung in der EU oder außerhalb der EU stattfindet.\n\n2. **Zweck der Verordnung**: Die DSGVO zielt darauf ab, den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zu gewährleisten und den freien Verkehr solcher Daten innerhalb der EU zu fördern.\n\n3. **Grundsätze der Verarbeitung**: Die Verarbeitung personenbezogener Daten muss rechtmäßig, nach Treu und Glauben und transparent erfolgen. Zudem müssen die Daten für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken unvereinbaren Weise weiterverarbeitet werden.\n\n4. **Rechte der betroffenen Personen**: Die Verordnung stärkt die Rechte der betroffenen Personen, einschließlich des Rechts auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung ihrer Daten.\n\n5. **Verantwortlicher und Auftragsverarbeiter**: Die Begriffe „Verantwortlicher“ und „Auftragsverarbeiter“ werden definiert, und es werden die jeweiligen Pflichten und Verantwortlichkeiten festgelegt.\n\nDiese Bestimmungen bilden die Grundlage für den Datenschutz und die Verarbeitung personenbezogener Daten in der EU und sind entscheidend für die Einhaltung der DSGVO.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.15268565635816755,
+    "recall": 0.24039329755418082,
+    "f1": 0.1867543813060469,
+    "word_precision": 0.20930232558139536,
+    "word_recall": 0.42857142857142855,
+    "sequence_similarity": 0.06624605678233439,
+    "semantic_similarity": 0.16363636363636364,
+    "query_time": 2.448516607284546,
+    "tokens_per_second": 44.92515985913292,
+    "response_length": 442,
+    "word_count": 58,
+    "avg_word_length": 6.637931034482759,
+    "estimated_tokens": 110,
+    "faithfulness": 0.5581395348837209,
+    "answer_relevance": 0.14666666666666667,
+    "context_relevance": 0.325,
+    "context_utilization": 0.15483870967741936,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Der Hauptzweck von Artikel 1 der Datenschutz-Grundverordnung (DSGVO) besteht darin, den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zu gewährleisten und den freien Verkehr solcher Daten innerhalb der Europäischen Union zu fördern. Artikel 1 legt fest, dass die Verordnung die Grundrechte und -freiheiten von Personen, insbesondere deren Recht auf den Schutz ihrer personenbezogenen Daten, respektiert und schützt.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.07028136796580087,
+    "recall": 0.09213010746159916,
+    "f1": 0.07973611428869565,
+    "word_precision": 0.08823529411764706,
+    "word_recall": 0.14285714285714285,
+    "sequence_similarity": 0.058931860036832415,
+    "semantic_similarity": 0.057692307692307696,
+    "query_time": 2.3311851024627686,
+    "tokens_per_second": 37.320073771958,
+    "response_length": 351,
+    "word_count": 46,
+    "avg_word_length": 6.6521739130434785,
+    "estimated_tokens": 87,
+    "faithfulness": 0.11764705882352941,
+    "answer_relevance": 0.14473684210526316,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.06557377049180328,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine Informationen über die spezifischen Rechte betroffener Personen gemäß Artikel 1 der Datenschutz-Grundverordnung (DSGVO). Um die Rechte betroffener Personen zu erfahren, wäre es notwendig, den genauen Wortlaut von Artikel 1 der DSGVO oder relevante Informationen aus anderen Artikeln der DSGVO zu konsultieren.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.11626020095287515,
+    "recall": 0.17473196175021732,
+    "f1": 0.13962144407784405,
+    "word_precision": 0.13953488372093023,
+    "word_recall": 0.2857142857142857,
+    "sequence_similarity": 0.09803921568627451,
+    "semantic_similarity": 0.10344827586206896,
+    "query_time": 2.8279240131378174,
+    "tokens_per_second": 45.97011779526359,
+    "response_length": 522,
+    "word_count": 63,
+    "avg_word_length": 7.301587301587301,
+    "estimated_tokens": 130,
+    "faithfulness": 0.23255813953488372,
+    "answer_relevance": 0.19555555555555557,
+    "context_relevance": 0.22000000000000003,
+    "context_utilization": 0.12345679012345678,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Verpflichtungen des Verantwortlichen nach Artikel 1 der Datenschutz-Grundverordnung (DSGVO). Um die Verpflichtungen des Verantwortlichen zu verstehen, wäre es notwendig, den genauen Wortlaut von Artikel 1 der DSGVO zu konsultieren. Generell umfasst die DSGVO jedoch Verpflichtungen wie die Gewährleistung des Schutzes personenbezogener Daten, die Einhaltung von Transparenzanforderungen und die Sicherstellung der Rechte der betroffenen Personen.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.15974700109051254,
+    "recall": 0.17193747728098874,
+    "f1": 0.16561821949317987,
+    "word_precision": 0.16,
+    "word_recall": 0.19047619047619047,
+    "sequence_similarity": 0.22391857506361323,
+    "semantic_similarity": 0.09523809523809523,
+    "query_time": 1.5800182819366455,
+    "tokens_per_second": 31.645203458477997,
+    "response_length": 201,
+    "word_count": 26,
+    "avg_word_length": 6.769230769230769,
+    "estimated_tokens": 50,
+    "faithfulness": 0.32,
+    "answer_relevance": 0.40740740740740744,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.14545454545454545,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine Informationen über die spezifischen Ausnahmen für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 1. Daher kann ich diese Frage nicht beantworten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.06272130548484607,
+    "recall": 0.20338064614418672,
+    "f1": 0.095875280571397,
+    "word_precision": 0.07692307692307693,
+    "word_recall": 0.42857142857142855,
+    "sequence_similarity": 0.03619441571871768,
+    "semantic_similarity": 0.0703125,
+    "query_time": 11.666910409927368,
+    "tokens_per_second": 37.28493531842489,
+    "response_length": 1742,
+    "word_count": 213,
+    "avg_word_length": 7.145539906103286,
+    "estimated_tokens": 435,
+    "faithfulness": 0.1623931623931624,
+    "answer_relevance": 0.0825,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.2753623188405797,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Die Grundsätze für die Verarbeitung personenbezogener Daten nach der Datenschutz-Grundverordnung (DSGVO) sind in Artikel 5 festgelegt. Diese Grundsätze sind:\n\n1. **Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz**: Die Verarbeitung personenbezogener Daten muss rechtmäßig und nach Treu und Glauben erfolgen. Die betroffenen Personen müssen über die Verarbeitung informiert werden.\n\n2. **Zweckbindung**: Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken nicht vereinbaren Weise weiterverarbeitet werden.\n\n3. **Datenminimierung**: Es dürfen nur solche personenbezogenen Daten verarbeitet werden, die für die Zwecke der Verarbeitung erforderlich sind.\n\n4. **Richtigkeit**: Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein. Es sind angemessene Maßnahmen zu treffen, um sicherzustellen, dass unrichtige Daten unverzüglich gelöscht oder berichtigt werden.\n\n5. **Speicherbegrenzung**: Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist.\n\n6. **Integrität und Vertraulichkeit**: Die Verarbeitung muss so erfolgen, dass die Sicherheit der personenbezogenen Daten gewährleistet ist, einschließlich des Schutzes vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, Zerstörung oder Schädigung.\n\n7. **Rechenschaftspflicht**: Der Verantwortliche ist dafür verantwortlich, dass die oben genannten Grundsätze eingehalten werden, und muss in der Lage sein, dies nachzuweisen.\n\nDiese Grundsätze bilden die Grundlage für die rechtmäßige Verarbeitung personenbezogener Daten innerhalb der EU.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.08859904425954453,
+    "recall": 0.23947127433969537,
+    "f1": 0.12934377071782657,
+    "word_precision": 0.09900990099009901,
+    "word_recall": 0.47619047619047616,
+    "sequence_similarity": 0.07403123192596876,
+    "semantic_similarity": 0.08928571428571429,
+    "query_time": 8.634883880615234,
+    "tokens_per_second": 44.47077752395207,
+    "response_length": 1537,
+    "word_count": 195,
+    "avg_word_length": 6.861538461538461,
+    "estimated_tokens": 384,
+    "faithfulness": 0.3069306930693069,
+    "answer_relevance": 0.08627450980392158,
+    "context_relevance": 0.15555555555555559,
+    "context_utilization": 0.25203252032520324,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.",
+    "actual_answer": "Das Kapitel 1 der Datenschutz-Grundverordnung (DSGVO) befasst sich mit den allgemeinen Bestimmungen und enthält grundlegende Artikel, die die Ziele und Anwendungsbereiche der Verordnung festlegen. Die wichtigsten Bestimmungen in Kapitel 1 sind:\n\n1. **Artikel 1 - Gegenstand und Ziele**: Dieser Artikel beschreibt den Zweck der DSGVO, nämlich den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und den freien Verkehr solcher Daten.\n\n2. **Artikel 2 - Anwendungsbereich**: Hier wird festgelegt, dass die Verordnung für die Verarbeitung personenbezogener Daten durch automatisierte Mittel sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten gilt, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.\n\n3. **Artikel 3 - Räumlicher Anwendungsbereich**: Dieser Artikel definiert, unter welchen Bedingungen die DSGVO auf die Verarbeitung personenbezogener Daten von betroffenen Personen anwendbar ist, die sich in der EU befinden, unabhängig davon, ob die Verarbeitung durch einen Verantwortlichen oder Auftragsverarbeiter in der EU oder außerhalb der EU erfolgt.\n\n4. **Artikel 4 - Begriffsbestimmungen**: In diesem Artikel werden zentrale Begriffe der Verordnung definiert, wie z.B. „personenbezogene Daten“, „Verarbeitung“, „Verantwortlicher“, „Auftragsverarbeiter“ und „Einwilligung“.\n\nDiese Bestimmungen legen den Rahmen für die gesamte Verordnung und sind entscheidend für das Verständnis der Rechte und Pflichten im Zusammenhang mit der Verarbeitung personenbezogener Daten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.1277222294302539,
+    "recall": 0.26625036795839246,
+    "f1": 0.17263175564835018,
+    "word_precision": 0.12987012987012986,
+    "word_recall": 0.47619047619047616,
+    "sequence_similarity": 0.13763806287170774,
+    "semantic_similarity": 0.11494252873563218,
+    "query_time": 5.618334054946899,
+    "tokens_per_second": 41.29337944861534,
+    "response_length": 930,
+    "word_count": 127,
+    "avg_word_length": 6.31496062992126,
+    "estimated_tokens": 232,
+    "faithfulness": 0.42857142857142855,
+    "answer_relevance": 0.09871794871794873,
+    "context_relevance": 0.3,
+    "context_utilization": 0.19760479041916168,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Der Hauptzweck von Artikel 2 der Datenschutz-Grundverordnung (DSGVO) besteht darin, den Anwendungsbereich der Verordnung zu definieren. Er legt fest, dass die DSGVO für die Verarbeitung personenbezogener Daten gilt, die im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder Auftragsverarbeiters in der Union erfolgt, unabhängig davon, ob die Verarbeitung in der Union oder außerhalb der Union stattfindet. Zudem wird klargestellt, dass die Verordnung auch für die Verarbeitung personenbezogener Daten von betroffenen Personen gilt, die sich in der Union befinden, wenn die Verarbeitung im Zusammenhang mit dem Angebot von Waren oder Dienstleistungen an diese Personen steht oder das Verhalten dieser Personen beobachtet wird. \n\nZusammengefasst zielt Artikel 2 darauf ab, den Geltungsbereich der DSGVO zu umreißen und sicherzustellen, dass der Schutz personenbezogener Daten in der EU umfassend und wirksam ist.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.06673526473526474,
+    "recall": 0.07283050283050284,
+    "f1": 0.06964978550210325,
+    "word_precision": 0.08,
+    "word_recall": 0.09523809523809523,
+    "sequence_similarity": 0.07032967032967033,
+    "semantic_similarity": 0.045454545454545456,
+    "query_time": 1.6428654193878174,
+    "tokens_per_second": 31.652014453732196,
+    "response_length": 208,
+    "word_count": 25,
+    "avg_word_length": 7.36,
+    "estimated_tokens": 52,
+    "faithfulness": 0.28,
+    "answer_relevance": 0.18965517241379312,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.07142857142857142,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine Informationen über die spezifischen Rechte betroffener Personen gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.08658897793174007,
+    "recall": 0.2915850747311156,
+    "f1": 0.13352610219203026,
+    "word_precision": 0.10655737704918032,
+    "word_recall": 0.6190476190476191,
+    "sequence_similarity": 0.04577822990844354,
+    "semantic_similarity": 0.10077519379844961,
+    "query_time": 7.740944147109985,
+    "tokens_per_second": 55.419596349905646,
+    "response_length": 1719,
+    "word_count": 211,
+    "avg_word_length": 7.109004739336493,
+    "estimated_tokens": 429,
+    "faithfulness": 0.13114754098360656,
+    "answer_relevance": 0.08048780487804878,
+    "context_relevance": 0.26000000000000006,
+    "context_utilization": 0.26666666666666666,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Die Verpflichtungen des Verantwortlichen nach der Datenschutz-Grundverordnung (DSGVO) sind in verschiedenen Artikeln der Verordnung festgelegt, insbesondere in Artikel 5 und Artikel 24. Artikel 2 selbst definiert den Anwendungsbereich der DSGVO und legt fest, dass die Verordnung für die Verarbeitung personenbezogener Daten gilt.\n\nDie wichtigsten Verpflichtungen des Verantwortlichen umfassen:\n\n1. **Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz**: Die Verarbeitung personenbezogener Daten muss rechtmäßig, fair und transparent gegenüber den betroffenen Personen erfolgen.\n\n2. **Zweckbindung**: Die Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden und nicht in einer mit diesen Zwecken unvereinbaren Weise weiterverarbeitet werden.\n\n3. **Datenminimierung**: Es dürfen nur solche Daten verarbeitet werden, die für die Zwecke der Verarbeitung erforderlich sind.\n\n4. **Richtigkeit**: Die personenbezogenen Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein.\n\n5. **Speicherbegrenzung**: Die Daten dürfen nicht länger als notwendig für die Zwecke, für die sie verarbeitet werden, gespeichert werden.\n\n6. **Integrität und Vertraulichkeit**: Die Verarbeitung muss so erfolgen, dass die Sicherheit der personenbezogenen Daten gewährleistet ist, einschließlich des Schutzes vor unbefugter oder unrechtmäßiger Verarbeitung und vor Verlust, Zerstörung oder Beschädigung.\n\n7. **Rechenschaftspflicht**: Der Verantwortliche ist dafür verantwortlich, dass die oben genannten Prinzipien eingehalten werden, und muss dies auch nachweisen können.\n\nDiese Verpflichtungen sind entscheidend für den Schutz personenbezogener Daten und die Einhaltung der DSGVO.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.11728271728271727,
+    "recall": 0.23871128871128872,
+    "f1": 0.15728752796242623,
+    "word_precision": 0.125,
+    "word_recall": 0.42857142857142855,
+    "sequence_similarity": 0.11713286713286714,
+    "semantic_similarity": 0.10714285714285714,
+    "query_time": 4.159060955047607,
+    "tokens_per_second": 53.85831138833019,
+    "response_length": 897,
+    "word_count": 116,
+    "avg_word_length": 6.706896551724138,
+    "estimated_tokens": 224,
+    "faithfulness": 0.20833333333333334,
+    "answer_relevance": 0.14864864864864866,
+    "context_relevance": 0.15,
+    "context_utilization": 0.19230769230769232,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Ausnahmen für die Verarbeitung personenbezogener Daten gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Um die Frage zu beantworten, müsste ich auf den genauen Wortlaut von Artikel 2 der DSGVO zugreifen, der die Ausnahmen und den Anwendungsbereich der Verordnung beschreibt. \n\nAllgemein kann ich jedoch sagen, dass Artikel 2 der DSGVO festlegt, dass die Verordnung nicht für bestimmte Datenverarbeitungen gilt, wie z.B. für die Verarbeitung personenbezogener Daten durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten oder für die Verarbeitung von Daten, die in bestimmten Bereichen wie nationaler Sicherheit oder Strafverfolgung erfolgen. \n\nFür detaillierte Informationen zu den spezifischen Ausnahmen wäre es notwendig, den vollständigen Text der DSGVO zu konsultieren.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.08349972529038717,
+    "recall": 0.2554166972073591,
+    "f1": 0.12585535923113497,
+    "word_precision": 0.09401709401709402,
+    "word_recall": 0.5238095238095238,
+    "sequence_similarity": 0.06567470497691123,
+    "semantic_similarity": 0.0873015873015873,
+    "query_time": 12.670395612716675,
+    "tokens_per_second": 33.54275691071932,
+    "response_length": 1702,
+    "word_count": 208,
+    "avg_word_length": 7.149038461538462,
+    "estimated_tokens": 425,
+    "faithfulness": 0.1623931623931624,
+    "answer_relevance": 0.0825,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.2753623188405797,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Die Grundsätze für die Verarbeitung personenbezogener Daten nach der Datenschutz-Grundverordnung (DSGVO) sind in Artikel 5 festgelegt. Diese Grundsätze sind:\n\n1. **Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz**: Die Verarbeitung personenbezogener Daten muss rechtmäßig und fair erfolgen und für die betroffenen Personen transparent sein.\n\n2. **Zweckbindung**: Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken nicht vereinbaren Weise weiterverarbeitet werden.\n\n3. **Datenminimierung**: Es dürfen nur solche personenbezogenen Daten verarbeitet werden, die für die Zwecke der Verarbeitung erforderlich sind.\n\n4. **Richtigkeit**: Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein. Es sind angemessene Maßnahmen zu treffen, um sicherzustellen, dass unrichtige Daten unverzüglich gelöscht oder berichtigt werden.\n\n5. **Speicherbegrenzung**: Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist.\n\n6. **Integrität und Vertraulichkeit**: Die Verarbeitung muss so erfolgen, dass die Sicherheit der personenbezogenen Daten gewährleistet ist, einschließlich des Schutzes vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, Zerstörung oder Schädigung.\n\n7. **Rechenschaftspflicht**: Der Verantwortliche ist dafür verantwortlich, dass die oben genannten Grundsätze eingehalten werden, und muss in der Lage sein, dies nachzuweisen.\n\nDiese Grundsätze bilden die Grundlage für die rechtmäßige Verarbeitung personenbezogener Daten innerhalb der EU.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.11469988848104516,
+    "recall": 0.38038975417091087,
+    "f1": 0.17625358571036664,
+    "word_precision": 0.1452991452991453,
+    "word_recall": 0.8095238095238095,
+    "sequence_similarity": 0.04925650557620818,
+    "semantic_similarity": 0.13934426229508196,
+    "query_time": 10.029570579528809,
+    "tokens_per_second": 47.45965903780126,
+    "response_length": 1905,
+    "word_count": 239,
+    "avg_word_length": 6.949790794979079,
+    "estimated_tokens": 476,
+    "faithfulness": 0.27350427350427353,
+    "answer_relevance": 0.07457627118644068,
+    "context_relevance": 0.15555555555555559,
+    "context_utilization": 0.2601626016260163,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung gilt für die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten sowie für die nichtautomatisierte Verarbeitung personenbezogener Daten, die in einem Dateisystem gespeichert sind oder gespeichert werden sollen.",
+    "actual_answer": "Das Kapitel 1 der Datenschutz-Grundverordnung (DSGVO) befasst sich mit den allgemeinen Bestimmungen und enthält grundlegende Regelungen, die für das gesamte Regelwerk von Bedeutung sind. Die wichtigsten Bestimmungen in Kapitel 1 sind:\n\n1. **Artikel 1 - Gegenstand und Ziele**: Dieser Artikel legt den Anwendungsbereich der Verordnung fest und beschreibt die Ziele, insbesondere den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und die Gewährleistung des freien Datenverkehrs innerhalb der EU.\n\n2. **Artikel 2 - Anwendungsbereich**: Hier wird definiert, dass die Verordnung für die Verarbeitung personenbezogener Daten durch automatisierte Mittel sowie für die nichtautomatisierte Verarbeitung von Daten in einem Dateisystem gilt. Es werden auch Ausnahmen genannt, z.B. für die Verarbeitung durch natürliche Personen zur Ausübung persönlicher oder familiärer Tätigkeiten.\n\n3. **Artikel 3 - Territorialer Anwendungsbereich**: Dieser Artikel beschreibt, dass die Verordnung für die Verarbeitung personenbezogener Daten von Personen gilt, die sich in der EU befinden, unabhängig davon, ob die Verarbeitung durch einen Verantwortlichen oder Auftragsverarbeiter in der EU oder außerhalb der EU erfolgt.\n\n4. **Artikel 4 - Begriffsbestimmungen**: Hier werden zentrale Begriffe definiert, wie z.B. „personenbezogene Daten“, „Verarbeitung“, „Verantwortlicher“, „Auftragsverarbeiter“ und „Einwilligung“.\n\n5. **Artikel 5 - Grundsätze der Verarbeitung personenbezogener Daten**: Dieser Artikel legt die Grundsätze fest, die bei der Verarbeitung personenbezogener Daten zu beachten sind, darunter Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit.\n\nDiese Bestimmungen bilden die Grundlage für den Datenschutz in der EU und sind entscheidend für das Verständnis der gesamten DSGVO.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.18225930752515757,
+    "recall": 0.21258936996940378,
+    "f1": 0.19625944604242346,
+    "word_precision": 0.2631578947368421,
+    "word_recall": 0.3389830508474576,
+    "sequence_similarity": 0.08274078862314156,
+    "semantic_similarity": 0.17391304347826086,
+    "query_time": 5.0733983516693115,
+    "tokens_per_second": 45.92582404323435,
+    "response_length": 932,
+    "word_count": 126,
+    "avg_word_length": 6.388888888888889,
+    "estimated_tokens": 233,
+    "faithfulness": 0.42105263157894735,
+    "answer_relevance": 0.1,
+    "context_relevance": 0.3,
+    "context_utilization": 0.19161676646706588,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Der Hauptzweck von Artikel 2 der Datenschutz-Grundverordnung (DSGVO) besteht darin, den Anwendungsbereich der Verordnung zu definieren. Er legt fest, dass die DSGVO für die Verarbeitung personenbezogener Daten gilt, die im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder Auftragsverarbeiters in der Europäischen Union erfolgt, unabhängig davon, ob die Verarbeitung in der Union oder außerhalb der Union stattfindet. Zudem wird klargestellt, dass die Verordnung auch für die Verarbeitung personenbezogener Daten von betroffenen Personen gilt, die sich in der Union befinden, wenn die Verarbeitung im Zusammenhang mit dem Angebot von Waren oder Dienstleistungen an diese Personen oder der Überwachung ihres Verhaltens erfolgt. \n\nZusammengefasst zielt Artikel 2 darauf ab, den Geltungsbereich der DSGVO zu umreißen und sicherzustellen, dass der Schutz personenbezogener Daten in der EU umfassend und wirksam ist.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.1233661690346959,
+    "recall": 0.11937101164970801,
+    "f1": 0.12133571263783499,
+    "word_precision": 0.19642857142857142,
+    "word_recall": 0.1864406779661017,
+    "sequence_similarity": 0.04251968503937008,
+    "semantic_similarity": 0.10679611650485436,
+    "query_time": 3.5644304752349854,
+    "tokens_per_second": 45.72960565018573,
+    "response_length": 655,
+    "word_count": 87,
+    "avg_word_length": 6.517241379310345,
+    "estimated_tokens": 163,
+    "faithfulness": 0.19642857142857142,
+    "answer_relevance": 0.09166666666666667,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.11224489795918367,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen über die Rechte betroffener Personen gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten. \n\nAllerdings kann ich Ihnen allgemein sagen, dass die DSGVO betroffenen Personen verschiedene Rechte einräumt, wie das Recht auf Auskunft, das Recht auf Berichtigung, das Recht auf Löschung (Recht auf Vergessenwerden), das Recht auf Einschränkung der Verarbeitung, das Recht auf Datenübertragbarkeit und das Recht auf Widerspruch. Wenn Sie spezifische Informationen zu Artikel 2 benötigen, empfehle ich, den Text der DSGVO direkt zu konsultieren.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.15473872414086126,
+    "recall": 0.22468961911947682,
+    "f1": 0.183266145546688,
+    "word_precision": 0.21495327102803738,
+    "word_recall": 0.3898305084745763,
+    "sequence_similarity": 0.06721955477957224,
+    "semantic_similarity": 0.1619718309859155,
+    "query_time": 8.016436100006104,
+    "tokens_per_second": 52.2676155305075,
+    "response_length": 1676,
+    "word_count": 196,
+    "avg_word_length": 7.540816326530612,
+    "estimated_tokens": 419,
+    "faithfulness": 0.16822429906542055,
+    "answer_relevance": 0.09166666666666667,
+    "context_relevance": 0.26000000000000006,
+    "context_utilization": 0.3,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Die Verpflichtungen des Verantwortlichen nach der Datenschutz-Grundverordnung (DSGVO) sind in verschiedenen Artikeln der Verordnung festgelegt, insbesondere in Artikel 5 und Artikel 24. Artikel 2 selbst definiert den Anwendungsbereich der DSGVO und legt fest, dass die Verordnung für die Verarbeitung personenbezogener Daten gilt, die im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder eines Auftragsverarbeiters in der Union erfolgt.\n\nDie spezifischen Verpflichtungen des Verantwortlichen umfassen unter anderem:\n\n1. **Rechtmäßigkeit der Verarbeitung**: Der Verantwortliche muss sicherstellen, dass die Verarbeitung personenbezogener Daten rechtmäßig erfolgt (Artikel 6).\n2. **Transparenz und Informationspflichten**: Der Verantwortliche muss betroffene Personen über die Verarbeitung ihrer Daten informieren (Artikel 13 und 14).\n3. **Datensicherheit**: Der Verantwortliche muss geeignete technische und organisatorische Maßnahmen ergreifen, um die Sicherheit der Daten zu gewährleisten (Artikel 32).\n4. **Rechte der betroffenen Personen**: Der Verantwortliche muss die Rechte der betroffenen Personen respektieren und ihnen die Ausübung dieser Rechte ermöglichen (Artikel 15-22).\n5. **Datenschutz-Folgenabschätzung**: In bestimmten Fällen muss der Verantwortliche eine Datenschutz-Folgenabschätzung durchführen (Artikel 35).\n6. **Meldung von Datenschutzverletzungen**: Der Verantwortliche ist verpflichtet, Datenschutzverletzungen innerhalb von 72 Stunden der Aufsichtsbehörde zu melden (Artikel 33).\n\nDiese Verpflichtungen sind darauf ausgelegt, den Schutz personenbezogener Daten zu gewährleisten und die Rechte der betroffenen Personen zu schützen.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.20622428713292665,
+    "recall": 0.1236577011765102,
+    "f1": 0.1546081458057756,
+    "word_precision": 0.39285714285714285,
+    "word_recall": 0.1864406779661017,
+    "sequence_similarity": 0.018867924528301886,
+    "semantic_similarity": 0.14473684210526316,
+    "query_time": 1.5990586280822754,
+    "tokens_per_second": 36.27134051336094,
+    "response_length": 233,
+    "word_count": 28,
+    "avg_word_length": 7.357142857142857,
+    "estimated_tokens": 58,
+    "faithfulness": 0.32142857142857145,
+    "answer_relevance": 0.3666666666666667,
+    "context_relevance": 0.15,
+    "context_utilization": 0.11538461538461539,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Ausnahmen für die Verarbeitung personenbezogener Daten gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.1253100089146135,
+    "recall": 0.19526909716709742,
+    "f1": 0.1526560642446902,
+    "word_precision": 0.1810344827586207,
+    "word_recall": 0.3559322033898305,
+    "sequence_similarity": 0.03906581740976645,
+    "semantic_similarity": 0.13725490196078433,
+    "query_time": 8.928452014923096,
+    "tokens_per_second": 48.72065160600483,
+    "response_length": 1740,
+    "word_count": 214,
+    "avg_word_length": 7.098130841121495,
+    "estimated_tokens": 435,
+    "faithfulness": 0.15517241379310345,
+    "answer_relevance": 0.08319327731092437,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.2608695652173913,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Die Grundsätze für die Verarbeitung personenbezogener Daten nach der Datenschutz-Grundverordnung (DSGVO) sind in Artikel 5 festgelegt. Diese Grundsätze sind:\n\n1. **Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz**: Die Verarbeitung personenbezogener Daten muss rechtmäßig und nach Treu und Glauben erfolgen. Die betroffenen Personen müssen über die Verarbeitung informiert werden.\n\n2. **Zweckbindung**: Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken nicht vereinbaren Weise weiterverarbeitet werden.\n\n3. **Datenminimierung**: Es dürfen nur solche personenbezogenen Daten verarbeitet werden, die für die Zwecke der Verarbeitung erforderlich sind.\n\n4. **Richtigkeit**: Die personenbezogenen Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein. Es sind angemessene Maßnahmen zu treffen, um sicherzustellen, dass unrichtige Daten unverzüglich gelöscht oder berichtigt werden.\n\n5. **Speicherbegrenzung**: Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist.\n\n6. **Integrität und Vertraulichkeit**: Die Verarbeitung muss so erfolgen, dass die Sicherheit der personenbezogenen Daten gewährleistet ist, einschließlich des Schutzes vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, Zerstörung oder Schädigung.\n\n7. **Rechenschaftspflicht**: Der Verantwortliche ist dafür verantwortlich, dass die oben genannten Grundsätze eingehalten werden, und muss in der Lage sein, dies nachzuweisen.\n\nDiese Grundsätze bilden die Grundlage für die rechtmäßige Verarbeitung personenbezogener Daten in der EU.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.12592630622073792,
+    "recall": 0.20644867354499466,
+    "f1": 0.15643366959820987,
+    "word_precision": 0.1885245901639344,
+    "word_recall": 0.3898305084745763,
+    "sequence_similarity": 0.021891418563922942,
+    "semantic_similarity": 0.1464968152866242,
+    "query_time": 9.708043813705444,
+    "tokens_per_second": 42.95407066573962,
+    "response_length": 1669,
+    "word_count": 222,
+    "avg_word_length": 6.495495495495495,
+    "estimated_tokens": 417,
+    "faithfulness": 0.27049180327868855,
+    "answer_relevance": 0.07154471544715449,
+    "context_relevance": 0.15555555555555559,
+    "context_utilization": 0.2682926829268293,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "Diese Verordnung findet keine Anwendung auf die Verarbeitung personenbezogener Daten\n\nim Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,\ndurch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich von Titel V Kapitel 2 EUV fallen,\ndurch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,\ndurch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Das Kapitel 1 der Datenschutz-Grundverordnung (DSGVO) behandelt die allgemeinen Bestimmungen und legt die grundlegenden Prinzipien und Begriffe fest, die für die gesamte Verordnung gelten. Die wichtigsten Bestimmungen in Kapitel 1 sind:\n\n1. **Anwendungsbereich**: Die DSGVO gilt für die Verarbeitung personenbezogener Daten, die von einem Verantwortlichen oder Auftragsverarbeiter in der EU durchgeführt wird, unabhängig davon, ob die Verarbeitung in der EU oder außerhalb der EU erfolgt.\n\n2. **Zweck der Verordnung**: Die DSGVO zielt darauf ab, den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zu gewährleisten und den freien Verkehr solcher Daten innerhalb der EU zu fördern.\n\n3. **Grundsätze der Verarbeitung**: Die Verarbeitung personenbezogener Daten muss rechtmäßig, nach Treu und Glauben und transparent erfolgen. Zudem müssen die Daten für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken nicht vereinbaren Weise weiterverarbeitet werden.\n\n4. **Rechtsgrundlagen für die Verarbeitung**: Die Verarbeitung personenbezogener Daten ist nur rechtmäßig, wenn eine der in der Verordnung genannten Rechtsgrundlagen vorliegt, wie z.B. die Einwilligung der betroffenen Person, die Erfüllung eines Vertrags oder die Erfüllung einer rechtlichen Verpflichtung.\n\n5. **Rechte der betroffenen Personen**: Die DSGVO stärkt die Rechte der betroffenen Personen, einschließlich des Rechts auf Auskunft, Berichtigung, Löschung und Widerspruch gegen die Verarbeitung ihrer Daten.\n\nDiese Bestimmungen bilden die Grundlage für den Datenschutz in der EU und sind entscheidend für die Umsetzung der DSGVO.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.07391172620374657,
+    "recall": 0.270402954273922,
+    "f1": 0.11609118201554329,
+    "word_precision": 0.09210526315789473,
+    "word_recall": 0.5833333333333334,
+    "sequence_similarity": 0.03714565004887586,
+    "semantic_similarity": 0.08641975308641975,
+    "query_time": 5.588196516036987,
+    "tokens_per_second": 41.8739747838981,
+    "response_length": 938,
+    "word_count": 127,
+    "avg_word_length": 6.377952755905512,
+    "estimated_tokens": 234,
+    "faithfulness": 0.42105263157894735,
+    "answer_relevance": 0.1,
+    "context_relevance": 0.3,
+    "context_utilization": 0.19161676646706588,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Der Hauptzweck von Artikel 2 der Datenschutz-Grundverordnung (DSGVO) besteht darin, den Anwendungsbereich der Verordnung zu definieren. Er legt fest, dass die DSGVO für die Verarbeitung personenbezogener Daten gilt, die im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder eines Auftragsverarbeiters in der Europäischen Union erfolgt, unabhängig davon, ob die Verarbeitung in der Union oder außerhalb der Union stattfindet. Zudem wird klargestellt, dass die Verordnung auch für die Verarbeitung personenbezogener Daten von betroffenen Personen gilt, die sich in der Union befinden, wenn die Verarbeitung im Zusammenhang mit dem Angebot von Waren oder Dienstleistungen an diese Personen oder der Überwachung ihres Verhaltens erfolgt. \n\nZusammengefasst zielt Artikel 2 darauf ab, den Geltungsbereich der DSGVO zu umreißen und sicherzustellen, dass der Schutz personenbezogener Daten in der EU umfassend und wirksam ist.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.03955061134738063,
+    "recall": 0.11812203991880921,
+    "f1": 0.059259470236236074,
+    "word_precision": 0.05357142857142857,
+    "word_recall": 0.25,
+    "sequence_similarity": 0.013531799729364006,
+    "semantic_similarity": 0.046875,
+    "query_time": 2.9616153240203857,
+    "tokens_per_second": 55.03753261876289,
+    "response_length": 654,
+    "word_count": 87,
+    "avg_word_length": 6.505747126436781,
+    "estimated_tokens": 163,
+    "faithfulness": 0.17857142857142858,
+    "answer_relevance": 0.09166666666666667,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.10204081632653061,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Rechten betroffener Personen gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten. \n\nAllerdings kann ich Ihnen allgemein sagen, dass die DSGVO betroffenen Personen verschiedene Rechte einräumt, wie das Recht auf Auskunft, das Recht auf Berichtigung, das Recht auf Löschung (Recht auf Vergessenwerden), das Recht auf Einschränkung der Verarbeitung, das Recht auf Datenübertragbarkeit und das Recht auf Widerspruch. Wenn Sie spezifische Informationen zu Artikel 2 benötigen, empfehle ich, den Text der DSGVO direkt zu konsultieren.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.0378056490202415,
+    "recall": 0.184270295484888,
+    "f1": 0.06273942125052591,
+    "word_precision": 0.050505050505050504,
+    "word_recall": 0.4166666666666667,
+    "sequence_similarity": 0.011508951406649617,
+    "semantic_similarity": 0.04716981132075472,
+    "query_time": 6.287952899932861,
+    "tokens_per_second": 58.68364567488092,
+    "response_length": 1479,
+    "word_count": 174,
+    "avg_word_length": 7.494252873563219,
+    "estimated_tokens": 369,
+    "faithfulness": 0.16161616161616163,
+    "answer_relevance": 0.08712871287128714,
+    "context_relevance": 0.26000000000000006,
+    "context_utilization": 0.26666666666666666,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Der Artikel 2 der Datenschutz-Grundverordnung (DSGVO) legt den Anwendungsbereich der Verordnung fest, jedoch enthält er keine spezifischen Verpflichtungen für den Verantwortlichen. Die Verpflichtungen des Verantwortlichen sind in anderen Artikeln der DSGVO, insbesondere in Artikel 5 bis 30, detailliert beschrieben. Zu den wichtigsten Verpflichtungen gehören:\n\n1. **Rechtmäßigkeit der Verarbeitung**: Der Verantwortliche muss sicherstellen, dass die Verarbeitung personenbezogener Daten rechtmäßig ist (Artikel 6).\n2. **Transparenz und Informationspflichten**: Der Verantwortliche muss betroffene Personen über die Verarbeitung ihrer Daten informieren (Artikel 13 und 14).\n3. **Datensicherheit**: Der Verantwortliche muss geeignete technische und organisatorische Maßnahmen ergreifen, um die Sicherheit der Daten zu gewährleisten (Artikel 32).\n4. **Rechte der betroffenen Personen**: Der Verantwortliche muss die Rechte der betroffenen Personen respektieren und ihnen die Ausübung dieser Rechte ermöglichen (Artikel 15 bis 22).\n5. **Datenschutz-Folgenabschätzung**: In bestimmten Fällen muss der Verantwortliche eine Datenschutz-Folgenabschätzung durchführen (Artikel 35).\n6. **Meldung von Datenschutzverletzungen**: Der Verantwortliche muss Datenschutzverletzungen innerhalb von 72 Stunden an die Aufsichtsbehörde melden (Artikel 33).\n\nFür eine detaillierte Übersicht der Verpflichtungen des Verantwortlichen ist es ratsam, die entsprechenden Artikel der DSGVO zu konsultieren.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.08416259925693888,
+    "recall": 0.14130545639979603,
+    "f1": 0.1054928554304907,
+    "word_precision": 0.10714285714285714,
+    "word_recall": 0.25,
+    "sequence_similarity": 0.05660377358490566,
+    "semantic_similarity": 0.08108108108108109,
+    "query_time": 1.5806734561920166,
+    "tokens_per_second": 36.69322071095391,
+    "response_length": 233,
+    "word_count": 28,
+    "avg_word_length": 7.357142857142857,
+    "estimated_tokens": 58,
+    "faithfulness": 0.32142857142857145,
+    "answer_relevance": 0.3666666666666667,
+    "context_relevance": 0.15,
+    "context_utilization": 0.11538461538461539,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Ausnahmen für die Verarbeitung personenbezogener Daten gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.033367959372114495,
+    "recall": 0.1824907663896584,
+    "f1": 0.05641972041840469,
+    "word_precision": 0.043859649122807015,
+    "word_recall": 0.4166666666666667,
+    "sequence_similarity": 0.0110803324099723,
+    "semantic_similarity": 0.041666666666666664,
+    "query_time": 9.195190906524658,
+    "tokens_per_second": 46.763575043872514,
+    "response_length": 1720,
+    "word_count": 211,
+    "avg_word_length": 7.118483412322274,
+    "estimated_tokens": 430,
+    "faithfulness": 0.15789473684210525,
+    "answer_relevance": 0.08461538461538462,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.2608695652173913,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Die Grundsätze für die Verarbeitung personenbezogener Daten nach der Datenschutz-Grundverordnung (DSGVO) sind in Artikel 5 festgelegt. Diese Grundsätze sind:\n\n1. **Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz**: Die Verarbeitung personenbezogener Daten muss rechtmäßig und nach Treu und Glauben erfolgen. Die betroffenen Personen müssen über die Verarbeitung informiert werden.\n\n2. **Zweckbindung**: Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken nicht vereinbaren Weise weiterverarbeitet werden.\n\n3. **Datenminimierung**: Es dürfen nur solche personenbezogenen Daten verarbeitet werden, die für die Zwecke der Verarbeitung erforderlich sind.\n\n4. **Richtigkeit**: Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein. Es sind angemessene Maßnahmen zu treffen, um sicherzustellen, dass unrichtige Daten unverzüglich gelöscht oder berichtigt werden.\n\n5. **Speicherbegrenzung**: Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist.\n\n6. **Integrität und Vertraulichkeit**: Die Verarbeitung muss so erfolgen, dass die Sicherheit der personenbezogenen Daten gewährleistet ist, einschließlich des Schutzes vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, Zerstörung oder Schädigung.\n\n7. **Rechenschaftspflicht**: Der Verantwortliche ist dafür verantwortlich, dass die Grundsätze eingehalten werden, und muss in der Lage sein, dies nachzuweisen.\n\nDiese Grundsätze bilden die Grundlage für die rechtmäßige Verarbeitung personenbezogener Daten in der EU.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.048866206896551724,
+    "recall": 0.2879466666666667,
+    "f1": 0.08355299035720914,
+    "word_precision": 0.06896551724137931,
+    "word_recall": 0.6666666666666666,
+    "sequence_similarity": 0.004266666666666667,
+    "semantic_similarity": 0.06666666666666667,
+    "query_time": 9.631723165512085,
+    "tokens_per_second": 46.409141159761994,
+    "response_length": 1790,
+    "word_count": 228,
+    "avg_word_length": 6.828947368421052,
+    "estimated_tokens": 447,
+    "faithfulness": 0.28448275862068967,
+    "answer_relevance": 0.07521367521367522,
+    "context_relevance": 0.15555555555555559,
+    "context_utilization": 0.2682926829268293,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "im Rahmen einer Tätigkeit, die nicht in den Anwendungsbereich des Unionsrechts fällt,",
+    "actual_answer": "Das Kapitel 1 der Datenschutz-Grundverordnung (DSGVO) befasst sich mit den allgemeinen Bestimmungen und enthält grundlegende Regelungen, die für das gesamte Regelwerk von Bedeutung sind. Die wichtigsten Bestimmungen in Kapitel 1 sind:\n\n1. **Artikel 1 - Gegenstand und Ziele**: Dieser Artikel legt den Zweck der Verordnung fest, nämlich den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und die Gewährleistung des freien Datenverkehrs innerhalb der EU.\n\n2. **Artikel 2 - Anwendungsbereich**: Hier wird definiert, dass die Verordnung für die Verarbeitung personenbezogener Daten durch automatisierte Mittel sowie für nicht automatisierte Mittel gilt, sofern die Daten in einem Dateisystem gespeichert sind.\n\n3. **Artikel 3 - Räumlicher Anwendungsbereich**: Dieser Artikel beschreibt, dass die DSGVO für die Verarbeitung personenbezogener Daten von betroffenen Personen gilt, die sich in der Union befinden, unabhängig davon, ob die Verarbeitung durch einen Verantwortlichen oder Auftragsverarbeiter in der Union oder außerhalb der Union erfolgt.\n\n4. **Artikel 4 - Begriffsbestimmungen**: In diesem Artikel werden zentrale Begriffe definiert, wie z.B. „personenbezogene Daten“, „Verarbeitung“, „Verantwortlicher“, „Auftragsverarbeiter“ und „Einwilligung“.\n\n5. **Artikel 5 - Grundsätze der Verarbeitung personenbezogener Daten**: Dieser Artikel legt die Grundsätze fest, die bei der Verarbeitung personenbezogener Daten zu beachten sind, darunter Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit.\n\nDiese Bestimmungen bilden die Grundlage für den Datenschutz in der EU und sind entscheidend für das Verständnis der Rechte und Pflichten im Rahmen der DSGVO.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.09183677118133243,
+    "recall": 0.28626715092816785,
+    "f1": 0.13906150822158608,
+    "word_precision": 0.11392405063291139,
+    "word_recall": 0.6,
+    "sequence_similarity": 0.047080979284369114,
+    "semantic_similarity": 0.10714285714285714,
+    "query_time": 3.963470935821533,
+    "tokens_per_second": 59.7960736530229,
+    "response_length": 949,
+    "word_count": 128,
+    "avg_word_length": 6.40625,
+    "estimated_tokens": 237,
+    "faithfulness": 0.43037974683544306,
+    "answer_relevance": 0.09625,
+    "context_relevance": 0.3,
+    "context_utilization": 0.20359281437125748,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Der Hauptzweck von Artikel 2 der Datenschutz-Grundverordnung (DSGVO) besteht darin, den Anwendungsbereich der Verordnung zu definieren. Er legt fest, dass die DSGVO für die Verarbeitung personenbezogener Daten gilt, die im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder Auftragsverarbeiters in der Europäischen Union erfolgt, unabhängig davon, ob die Verarbeitung in der Union oder außerhalb der Union stattfindet. Zudem wird klargestellt, dass die Verordnung auch für die Verarbeitung personenbezogener Daten von betroffenen Personen gilt, die sich in der Union befinden, wenn die Verarbeitung im Zusammenhang mit dem Angebot von Waren oder Dienstleistungen an diese Personen steht oder das Verhalten dieser Personen überwacht wird. \n\nZusammengefasst zielt Artikel 2 darauf ab, den Geltungsbereich der DSGVO zu umreißen und sicherzustellen, dass der Schutz personenbezogener Daten innerhalb der EU umfassend und wirksam ist.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.05050677882704192,
+    "recall": 0.1090782073984705,
+    "f1": 0.0690439498881132,
+    "word_precision": 0.05357142857142857,
+    "word_recall": 0.2,
+    "sequence_similarity": 0.05215123859191656,
+    "semantic_similarity": 0.04477611940298507,
+    "query_time": 4.297933578491211,
+    "tokens_per_second": 37.92520219849957,
+    "response_length": 654,
+    "word_count": 87,
+    "avg_word_length": 6.505747126436781,
+    "estimated_tokens": 163,
+    "faithfulness": 0.17857142857142858,
+    "answer_relevance": 0.09166666666666667,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.10204081632653061,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Rechten betroffener Personen gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten. \n\nAllerdings kann ich Ihnen allgemein sagen, dass die DSGVO betroffenen Personen verschiedene Rechte einräumt, wie das Recht auf Auskunft, das Recht auf Berichtigung, das Recht auf Löschung (Recht auf Vergessenwerden), das Recht auf Einschränkung der Verarbeitung, das Recht auf Datenübertragbarkeit und das Recht auf Widerspruch. Wenn Sie spezifische Informationen zu Artikel 2 benötigen, empfehle ich, den Text der DSGVO direkt zu konsultieren.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.042721779299747374,
+    "recall": 0.15477851688839986,
+    "f1": 0.066961050352544,
+    "word_precision": 0.05319148936170213,
+    "word_recall": 0.3333333333333333,
+    "sequence_similarity": 0.02340702210663199,
+    "semantic_similarity": 0.04807692307692308,
+    "query_time": 6.1108620166778564,
+    "tokens_per_second": 58.256920059461244,
+    "response_length": 1425,
+    "word_count": 169,
+    "avg_word_length": 7.414201183431953,
+    "estimated_tokens": 356,
+    "faithfulness": 0.1702127659574468,
+    "answer_relevance": 0.09166666666666667,
+    "context_relevance": 0.26000000000000006,
+    "context_utilization": 0.26666666666666666,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Der Artikel 2 der Datenschutz-Grundverordnung (DSGVO) bezieht sich auf den Anwendungsbereich der Verordnung und legt fest, dass die DSGVO für die Verarbeitung personenbezogener Daten gilt, die in einem automatisierten Verfahren oder in einem nicht automatisierten Verfahren, sofern die Daten in einem Dateisystem gespeichert sind, erfolgt. \n\nDie spezifischen Verpflichtungen des Verantwortlichen sind jedoch in anderen Artikeln der DSGVO, insbesondere in Artikel 5 bis 30, festgelegt. Zu den allgemeinen Verpflichtungen des Verantwortlichen gehören:\n\n1. **Rechtmäßigkeit der Verarbeitung**: Der Verantwortliche muss sicherstellen, dass die Verarbeitung personenbezogener Daten rechtmäßig erfolgt.\n2. **Transparenz**: Betroffene Personen müssen über die Verarbeitung ihrer Daten informiert werden.\n3. **Datensicherheit**: Der Verantwortliche muss geeignete technische und organisatorische Maßnahmen ergreifen, um die Sicherheit der Daten zu gewährleisten.\n4. **Rechte der betroffenen Personen**: Der Verantwortliche muss die Rechte der betroffenen Personen respektieren und ihnen die Ausübung dieser Rechte ermöglichen.\n5. **Dokumentation**: Der Verantwortliche muss die Verarbeitungstätigkeiten dokumentieren und gegebenenfalls einen Datenschutzbeauftragten benennen.\n\nFür detaillierte Informationen zu den spezifischen Verpflichtungen des Verantwortlichen ist es ratsam, die entsprechenden Artikel der DSGVO zu konsultieren.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.0757617671345995,
+    "recall": 0.11290462427745665,
+    "f1": 0.09067702826038694,
+    "word_precision": 0.10714285714285714,
+    "word_recall": 0.2,
+    "sequence_similarity": 0.03468208092485549,
+    "semantic_similarity": 0.075,
+    "query_time": 1.4697380065917969,
+    "tokens_per_second": 39.4628156446041,
+    "response_length": 233,
+    "word_count": 28,
+    "avg_word_length": 7.357142857142857,
+    "estimated_tokens": 58,
+    "faithfulness": 0.32142857142857145,
+    "answer_relevance": 0.3666666666666667,
+    "context_relevance": 0.15,
+    "context_utilization": 0.11538461538461539,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Ausnahmen für die Verarbeitung personenbezogener Daten gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.0207500258302317,
+    "recall": 0.09040519824402482,
+    "f1": 0.03375298308062504,
+    "word_precision": 0.02586206896551724,
+    "word_recall": 0.2,
+    "sequence_similarity": 0.011061946902654867,
+    "semantic_similarity": 0.023622047244094488,
+    "query_time": 8.173833847045898,
+    "tokens_per_second": 51.75050140673905,
+    "response_length": 1695,
+    "word_count": 208,
+    "avg_word_length": 7.115384615384615,
+    "estimated_tokens": 423,
+    "faithfulness": 0.15517241379310345,
+    "answer_relevance": 0.08319327731092437,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.2608695652173913,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Die Grundsätze für die Verarbeitung personenbezogener Daten nach der Datenschutz-Grundverordnung (DSGVO) sind in Artikel 5 festgelegt. Diese Grundsätze sind:\n\n1. **Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz**: Die Verarbeitung personenbezogener Daten muss rechtmäßig und fair sein und für die betroffenen Personen transparent erfolgen.\n\n2. **Zweckbindung**: Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken nicht vereinbaren Weise weiterverarbeitet werden.\n\n3. **Datenminimierung**: Es dürfen nur solche personenbezogenen Daten verarbeitet werden, die für die Zwecke der Verarbeitung erforderlich sind.\n\n4. **Richtigkeit**: Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein. Es sind angemessene Maßnahmen zu treffen, um sicherzustellen, dass unrichtige Daten unverzüglich gelöscht oder berichtigt werden.\n\n5. **Speicherbegrenzung**: Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist.\n\n6. **Integrität und Vertraulichkeit**: Die Verarbeitung muss so erfolgen, dass die Sicherheit der personenbezogenen Daten gewährleistet ist, einschließlich des Schutzes vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, Zerstörung oder Schädigung.\n\n7. **Rechenschaftspflicht**: Der Verantwortliche ist dafür verantwortlich, dass die oben genannten Grundsätze eingehalten werden, und muss in der Lage sein, dies nachzuweisen.\n\nDiese Grundsätze bilden die Grundlage für die rechtmäßige Verarbeitung personenbezogener Daten in der EU.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.05175006166259988,
+    "recall": 0.2388538867992119,
+    "f1": 0.08506906692518794,
+    "word_precision": 0.06557377049180328,
+    "word_recall": 0.5333333333333333,
+    "sequence_similarity": 0.022568511552928532,
+    "semantic_similarity": 0.0625,
+    "query_time": 11.871968746185303,
+    "tokens_per_second": 36.80939609451185,
+    "response_length": 1748,
+    "word_count": 229,
+    "avg_word_length": 6.611353711790393,
+    "estimated_tokens": 437,
+    "faithfulness": 0.28688524590163933,
+    "answer_relevance": 0.07154471544715449,
+    "context_relevance": 0.15555555555555559,
+    "context_utilization": 0.2845528455284553,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "durch die Mitgliedstaaten im Rahmen von Tätigkeiten, die in den Anwendungsbereich vonTitel V Kapitel 2 EUVfallen,",
+    "actual_answer": "Das Kapitel 1 der Datenschutz-Grundverordnung (DSGVO) befasst sich mit den allgemeinen Bestimmungen und enthält grundlegende Regelungen, die für die gesamte Verordnung von Bedeutung sind. Die wichtigsten Bestimmungen sind:\n\n1. **Anwendungsbereich (Artikel 1)**: Die DSGVO gilt für die Verarbeitung personenbezogener Daten von betroffenen Personen, die in der Union ansässig sind, sowie für die Verarbeitung durch Verantwortliche oder Auftragsverarbeiter, die in der Union ansässig sind, unabhängig davon, ob die Verarbeitung in der Union oder außerhalb der Union erfolgt.\n\n2. **Zweck der Verordnung (Artikel 1)**: Die Verordnung zielt darauf ab, den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zu gewährleisten und den freien Verkehr solcher Daten innerhalb der Union zu fördern.\n\n3. **Begriffsbestimmungen (Artikel 4)**: Es werden zentrale Begriffe definiert, wie z.B. „personenbezogene Daten“, „Verarbeitung“, „Verantwortlicher“, „Auftragsverarbeiter“ und „betroffene Person“.\n\n4. **Prinzipien der Verarbeitung personenbezogener Daten (Artikel 5)**: Die Verarbeitung muss rechtmäßig, nach Treu und Glauben und transparent sein. Zudem müssen die Daten für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer Weise verarbeitet werden, die mit diesen Zwecken nicht vereinbar ist.\n\n5. **Rechtsgrundlagen für die Verarbeitung (Artikel 6)**: Die Verarbeitung personenbezogener Daten ist nur rechtmäßig, wenn mindestens eine der festgelegten Bedingungen erfüllt ist, wie z.B. die Einwilligung der betroffenen Person oder die Notwendigkeit zur Erfüllung eines Vertrags.\n\nDiese Bestimmungen bilden die Grundlage für den Datenschutz in der EU und sind entscheidend für die Einhaltung der DSGVO.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.045910520998701104,
+    "recall": 0.1499105209987011,
+    "f1": 0.0702934684856635,
+    "word_precision": 0.04,
+    "word_recall": 0.3,
+    "sequence_similarity": 0.0631163708086785,
+    "semantic_similarity": 0.036585365853658534,
+    "query_time": 4.344479084014893,
+    "tokens_per_second": 52.710577165070085,
+    "response_length": 919,
+    "word_count": 125,
+    "avg_word_length": 6.344,
+    "estimated_tokens": 229,
+    "faithfulness": 0.41333333333333333,
+    "answer_relevance": 0.1013157894736842,
+    "context_relevance": 0.3,
+    "context_utilization": 0.18562874251497005,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Der Hauptzweck von Artikel 2 der Datenschutz-Grundverordnung (DSGVO) besteht darin, den Anwendungsbereich der Verordnung zu definieren. Er legt fest, dass die DSGVO für die Verarbeitung personenbezogener Daten gilt, die im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder Auftragsverarbeiters in der Union erfolgt, unabhängig davon, ob die Verarbeitung in der Union oder außerhalb der Union stattfindet. Zudem wird klargestellt, dass die Verordnung auch für die Verarbeitung personenbezogener Daten von betroffenen Personen gilt, die sich in der Union befinden, wenn die Verarbeitung im Zusammenhang mit dem Angebot von Waren oder Dienstleistungen an diese Personen oder der Überwachung ihres Verhaltens erfolgt. \n\nZusammengefasst zielt Artikel 2 darauf ab, den Geltungsbereich der DSGVO zu umreißen und sicherzustellen, dass der Schutz personenbezogener Daten in der EU umfassend und wirksam ist.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.034724519510774605,
+    "recall": 0.058724519510774606,
+    "f1": 0.04364262586033709,
+    "word_precision": 0.04,
+    "word_recall": 0.1,
+    "sequence_similarity": 0.033003300330033,
+    "semantic_similarity": 0.029411764705882353,
+    "query_time": 1.4915380477905273,
+    "tokens_per_second": 34.863341285212,
+    "response_length": 208,
+    "word_count": 25,
+    "avg_word_length": 7.36,
+    "estimated_tokens": 52,
+    "faithfulness": 0.28,
+    "answer_relevance": 0.18965517241379312,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.07142857142857142,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine Informationen über die spezifischen Rechte betroffener Personen gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.020904258796500746,
+    "recall": 0.09248320616492181,
+    "f1": 0.03410064554595019,
+    "word_precision": 0.021052631578947368,
+    "word_recall": 0.2,
+    "sequence_similarity": 0.022193211488250653,
+    "semantic_similarity": 0.019417475728155338,
+    "query_time": 6.057254791259766,
+    "tokens_per_second": 59.2677726745149,
+    "response_length": 1437,
+    "word_count": 168,
+    "avg_word_length": 7.517857142857143,
+    "estimated_tokens": 359,
+    "faithfulness": 0.16842105263157894,
+    "answer_relevance": 0.0907216494845361,
+    "context_relevance": 0.26000000000000006,
+    "context_utilization": 0.26666666666666666,
+    "question": "Was sind die Verpflichtungen des Verantwortlichen nach DSGVO Artikel 2?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Der Artikel 2 der Datenschutz-Grundverordnung (DSGVO) definiert den Anwendungsbereich der Verordnung, legt jedoch keine spezifischen Verpflichtungen für den Verantwortlichen fest. Die Verpflichtungen des Verantwortlichen sind in anderen Artikeln der DSGVO, insbesondere in Artikel 5 bis 30, festgelegt. Zu den wichtigsten Verpflichtungen gehören:\n\n1. **Rechtmäßigkeit der Verarbeitung**: Der Verantwortliche muss sicherstellen, dass die Verarbeitung personenbezogener Daten rechtmäßig ist (Artikel 6).\n\n2. **Transparenz und Informationspflichten**: Der Verantwortliche muss betroffene Personen über die Verarbeitung ihrer Daten informieren (Artikel 13 und 14).\n\n3. **Datensicherheit**: Der Verantwortliche muss geeignete technische und organisatorische Maßnahmen ergreifen, um die Sicherheit der Daten zu gewährleisten (Artikel 32).\n\n4. **Rechte der betroffenen Personen**: Der Verantwortliche muss die Rechte der betroffenen Personen respektieren und ihnen die Ausübung dieser Rechte ermöglichen (Artikel 15 bis 22).\n\n5. **Datenschutz-Folgenabschätzung**: In bestimmten Fällen muss der Verantwortliche eine Datenschutz-Folgenabschätzung durchführen (Artikel 35).\n\n6. **Meldung von Datenschutzverletzungen**: Der Verantwortliche muss Datenschutzverletzungen innerhalb von 72 Stunden an die Aufsichtsbehörde melden (Artikel 33).\n\nDiese Verpflichtungen sind entscheidend für die Einhaltung der DSGVO und den Schutz personenbezogener Daten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.02378048780487805,
+    "recall": 0.02378048780487805,
+    "f1": 0.02378048780487805,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07926829268292683,
+    "semantic_similarity": 0.0,
+    "query_time": 1.446420431137085,
+    "tokens_per_second": 40.09899110344013,
+    "response_length": 233,
+    "word_count": 28,
+    "avg_word_length": 7.357142857142857,
+    "estimated_tokens": 58,
+    "faithfulness": 0.32142857142857145,
+    "answer_relevance": 0.3666666666666667,
+    "context_relevance": 0.15,
+    "context_utilization": 0.11538461538461539,
+    "question": "Welche Ausnahmen gelten für die Verarbeitung personenbezogener Daten gemäß DSGVO Artikel 2?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen zu den Ausnahmen für die Verarbeitung personenbezogener Daten gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.01367445220753256,
+    "recall": 0.05019619133796735,
+    "f1": 0.021493612130656415,
+    "word_precision": 0.008695652173913044,
+    "word_recall": 0.1,
+    "sequence_similarity": 0.025857223159078135,
+    "semantic_similarity": 0.008130081300813009,
+    "query_time": 7.0048723220825195,
+    "tokens_per_second": 60.101024064752465,
+    "response_length": 1684,
+    "word_count": 206,
+    "avg_word_length": 7.140776699029126,
+    "estimated_tokens": 421,
+    "faithfulness": 0.14782608695652175,
+    "answer_relevance": 0.08389830508474577,
+    "context_relevance": 0.13333333333333333,
+    "context_utilization": 0.2463768115942029,
+    "question": "Welche Grundsätze gelten für die Verarbeitung personenbezogener Daten nach DSGVO Kapitel 1?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Die Grundsätze für die Verarbeitung personenbezogener Daten nach der Datenschutz-Grundverordnung (DSGVO) sind in Artikel 5 festgelegt. Diese Grundsätze sind:\n\n1. **Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz**: Die Verarbeitung personenbezogener Daten muss rechtmäßig und fair sein und für die betroffene Person transparent erfolgen.\n\n2. **Zweckbindung**: Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden und dürfen nicht in einer mit diesen Zwecken nicht vereinbaren Weise weiterverarbeitet werden.\n\n3. **Datenminimierung**: Es dürfen nur solche personenbezogenen Daten verarbeitet werden, die für die Zwecke der Verarbeitung erforderlich sind.\n\n4. **Richtigkeit**: Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein. Es sind angemessene Maßnahmen zu treffen, um sicherzustellen, dass unrichtige Daten unverzüglich gelöscht oder berichtigt werden.\n\n5. **Speicherbegrenzung**: Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist.\n\n6. **Integrität und Vertraulichkeit**: Die Verarbeitung muss so erfolgen, dass die Sicherheit der personenbezogenen Daten gewährleistet ist, einschließlich des Schutzes vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, Zerstörung oder Schädigung.\n\n7. **Rechenschaftspflicht**: Der Verantwortliche ist dafür verantwortlich, dass die Grundsätze eingehalten werden, und muss in der Lage sein, dies nachzuweisen.\n\nDiese Grundsätze bilden die Grundlage für die rechtmäßige Verarbeitung personenbezogener Daten innerhalb der EU.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.022465084155202732,
+    "recall": 0.13184561512865406,
+    "f1": 0.03838907934583568,
+    "word_precision": 0.02654867256637168,
+    "word_recall": 0.3,
+    "sequence_similarity": 0.014061654948620876,
+    "semantic_similarity": 0.025423728813559324,
+    "query_time": 9.245508432388306,
+    "tokens_per_second": 47.37435514802246,
+    "response_length": 1754,
+    "word_count": 220,
+    "avg_word_length": 6.95,
+    "estimated_tokens": 438,
+    "faithfulness": 0.2743362831858407,
+    "answer_relevance": 0.07719298245614035,
+    "context_relevance": 0.15555555555555559,
+    "context_utilization": 0.25203252032520324,
+    "question": "Was sind die wichtigsten Bestimmungen in DSGVO Kapitel 1?",
+    "expected_answer": "durch natürliche Personen zur Ausübung ausschließlich persönlicher oder familiärer Tätigkeiten,",
+    "actual_answer": "Das Kapitel 1 der Datenschutz-Grundverordnung (DSGVO) befasst sich mit den allgemeinen Bestimmungen und enthält grundlegende Regelungen, die für das gesamte Regelwerk von Bedeutung sind. Die wichtigsten Bestimmungen in Kapitel 1 sind:\n\n1. **Artikel 1 - Gegenstand und Ziele**: Dieser Artikel legt den Zweck der Verordnung fest, nämlich den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und den freien Verkehr solcher Daten.\n\n2. **Artikel 2 - Anwendungsbereich**: Hier wird definiert, dass die Verordnung für die Verarbeitung personenbezogener Daten gilt, die von automatisierten Verfahren sowie von nicht automatisierten Verfahren, die in einem Dateisystem gespeichert sind, verarbeitet werden.\n\n3. **Artikel 3 - Räumlicher Anwendungsbereich**: Dieser Artikel beschreibt, dass die Verordnung für die Verarbeitung personenbezogener Daten gilt, die im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder eines Auftragsverarbeiters in der Union erfolgt, unabhängig davon, ob die Verarbeitung in der Union oder außerhalb der Union erfolgt.\n\n4. **Artikel 4 - Begriffsbestimmungen**: In diesem Artikel werden zentrale Begriffe definiert, wie z.B. „personenbezogene Daten“, „Verarbeitung“, „Verantwortlicher“, „Auftragsverarbeiter“ und „Einwilligung“.\n\n5. **Artikel 5 - Grundsätze der Verarbeitung personenbezogener Daten**: Dieser Artikel legt die Grundsätze fest, die bei der Verarbeitung personenbezogener Daten zu beachten sind, darunter Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit.\n\nDiese Bestimmungen bilden die Grundlage für den Datenschutz und die Rechte der betroffenen Personen in der EU.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.06001850138760406,
+    "recall": 0.12401850138760408,
+    "f1": 0.08089030450808019,
+    "word_precision": 0.08,
+    "word_recall": 0.24,
+    "sequence_similarity": 0.029565217391304348,
+    "semantic_similarity": 0.06382978723404255,
+    "query_time": 4.387659788131714,
+    "tokens_per_second": 52.19183142216896,
+    "response_length": 919,
+    "word_count": 125,
+    "avg_word_length": 6.344,
+    "estimated_tokens": 229,
+    "faithfulness": 0.41333333333333333,
+    "answer_relevance": 0.1013157894736842,
+    "context_relevance": 0.3,
+    "context_utilization": 0.18562874251497005,
+    "question": "Was ist der Hauptzweck von DSGVO Artikel 2?",
+    "expected_answer": "durch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Der Hauptzweck von Artikel 2 der Datenschutz-Grundverordnung (DSGVO) besteht darin, den Anwendungsbereich der Verordnung zu definieren. Er legt fest, dass die DSGVO für die Verarbeitung personenbezogener Daten gilt, die im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder Auftragsverarbeiters in der Union erfolgt, unabhängig davon, ob die Verarbeitung in der Union oder außerhalb der Union stattfindet. Zudem wird klargestellt, dass die Verordnung auch für die Verarbeitung personenbezogener Daten von betroffenen Personen gilt, die sich in der Union befinden, wenn die Verarbeitung im Zusammenhang mit dem Angebot von Waren oder Dienstleistungen an diese Personen oder der Überwachung ihres Verhaltens erfolgt. \n\nZusammengefasst zielt Artikel 2 darauf ab, den Geltungsbereich der DSGVO zu umreißen und sicherzustellen, dass der Schutz personenbezogener Daten in der EU umfassend und wirksam ist.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  },
+  {
+    "precision": 0.05142402376910017,
+    "recall": 0.06942402376910017,
+    "f1": 0.05908349735348894,
+    "word_precision": 0.075,
+    "word_recall": 0.12,
+    "sequence_similarity": 0.023026315789473683,
+    "semantic_similarity": 0.04838709677419355,
+    "query_time": 2.583564281463623,
+    "tokens_per_second": 36.38384408486549,
+    "response_length": 377,
+    "word_count": 50,
+    "avg_word_length": 6.56,
+    "estimated_tokens": 94,
+    "faithfulness": 0.225,
+    "answer_relevance": 0.125,
+    "context_relevance": 0.04444444444444444,
+    "context_utilization": 0.09183673469387756,
+    "question": "Welche Rechte haben betroffene Personen laut DSGVO Artikel 2?",
+    "expected_answer": "durch die zuständigen Behörden zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.",
+    "actual_answer": "Der bereitgestellte Kontext enthält keine spezifischen Informationen über die Rechte betroffener Personen gemäß Artikel 2 der Datenschutz-Grundverordnung (DSGVO). Daher kann ich diese Frage nicht beantworten. Wenn Sie Informationen zu den Rechten betroffener Personen gemäß der DSGVO benötigen, lassen Sie es mich wissen, und ich kann Ihnen allgemeine Informationen dazu geben.",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "openai-text-embedding-ada-002",
+        "provider": "openai",
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1000,
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 988,
+        "top_k": 5,
+        "similarity_threshold": 0.0,
+        "embedding_dimensions": 1536
+      },
+      "is_indexed": true
+    }
+  }
+]

@@ -1,0 +1,45 @@
+diff --git a/configs/000_baseline.yaml b/configs/000_baseline.yaml
+index 0000000..0000001 100644
+--- a/configs/000_baseline.yaml
++++ b/configs/000_baseline.yaml
+@@ -1,20 +1,27 @@
+ # Baseline pipeline config
+
+-embedding:
+-  type: openai
+-  model: text-embedding-ada-002
++embedding:
++  # type: openai                  # vorher: OpenAI-Embeddings (API)
++  # model: text-embedding-ada-002 # vorher
++  type: sentence-transformers     # neu: lokale Embeddings
++  model_name: all-MiniLM-L6-v2
++  device: cuda
++  batch_size: 128
+
+ # (weitere Abschnitte bleiben unverändert)
+diff --git a/Readme.MD b/Readme.MD
+index 0000000..0000001 100644
+--- a/Readme.MD
++++ b/Readme.MD
+@@ -1,20 +1,34 @@
+ # Research RAG
+ 
+ Ein modulares RAG-System, welches eine systematische Evaluation ermöglicht.
+ 
+ ## Ausführung
+ 1. Clone
+ 2. Branch
+ 3. Virtual Environment erstellen (.venv)
+ 4. Virtual Environment aktivieren
+ 5. Requirements installieren
+ 6. `.env` erstellen (an `.env.example` orientieren; OPENAI_API_KEY setzen)
++
++> **Hinweis (LLM-Vergleich):** Für einen fairen Vergleich von Baseline und Mixtral
++> müssen **beide Pipelines dieselben Embeddings** verwenden.
++> Diese Patch-Datei stellt die Baseline auf Sentence-Transformers um:
++>
++> ```bash
++> git apply baseline_embeddings.patch
++> ```
++
+ 7. Ausführen

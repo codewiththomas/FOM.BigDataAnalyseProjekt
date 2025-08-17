@@ -1,43 +1,43 @@
-# Core Dependencies
-python-dotenv==1.1.1
-pydantic==2.11.7
+# Core RAG System Dependencies
+PyYAML>=6.0
+jsonlines>=3.1.0
+numpy>=1.21.0
+tqdm>=4.64.0
+pandas>=1.3.0
 
 # OpenAI Integration
-openai==1.93.0
+openai>=1.0.0
 
-# Embeddings
-sentence-transformers==5.0.0
-transformers==4.53.1
-torch==2.7.1
+# Local Model Support
+requests>=2.28.0
+sentence-transformers>=2.2.0
 
-# Vector Stores
-chromadb==0.4.22
-faiss-cpu==1.7.4
+# Environment Management
+python-dotenv>=0.19.0
 
-# Language Models
-requests==2.32.4
+# Logging and Utilities
+colorama>=0.4.5
 
-# Data Processing
-numpy==2.3.1
-pandas==2.2.3
-scikit-learn==1.7.0
-scipy==1.16.0
 
-# Evaluation
-ragas==0.2.0
+# ResearchRAG Dependencies
+# Core dependencies
+PyYAML>=6.0
+jsonlines>=3.1.0
 
-# Development & Testing
-pytest==8.0.0
-pytest-cov==4.1.0
+# OpenAI API
+openai>=1.0.0
 
-# Documentation
-mkdocs==1.6.1
-mkdocs-material==9.5.0
+# Sentence transformers for local embeddings
+sentence-transformers>=2.2.0
 
-# Jupyter
-jupyter==1.0.0
-ipykernel==6.29.5
+# Vector operations
+numpy>=1.21.0
 
-# Utilities
-tqdm==4.67.1
-colorama==0.4.6
+# Logging and utilities
+tqdm>=4.64.0
+
+# Optional: For advanced evaluation metrics
+# ragas>=0.0.20  # Uncomment when implementing full RAGAS
+# scikit-learn>=1.0.0  # For advanced similarity calculations
+# torch>=1.9.0  # For sentence-transformers GPU support
+# transformers>=4.20.0  # For advanced NLP models
