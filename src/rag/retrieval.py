@@ -24,6 +24,8 @@ class VectorSimilarityRetrieval(RetrievalInterface):
     def set_embedding_model(self, embedding_model):
         """Link the same embedding model used for chunks to the retriever."""
         self._embedding_model = embedding_model
+        if embedding_model is None:
+            logger.warning("Embedding model set to None - retrieval may fail")
 
     def add_chunks(self, chunks: List[Chunk], embeddings: List[List[float]]) -> None:
         """Add chunks and their embeddings to the retrieval index"""
@@ -32,6 +34,10 @@ class VectorSimilarityRetrieval(RetrievalInterface):
 
         # Convert embeddings to numpy array for efficient computation
         if embeddings:
+            emb_dims = set(len(emb) for emb in embeddings)
+            if len(emb_dims) > 1:
+                raise ValueError(f"Inconsistent embedding dimensions: {emb_dims}")
+
             self.embeddings_array = np.array(embeddings)
             logger.info(f"Added {len(chunks)} chunks to retrieval index with {self.embeddings_array.shape[1]}-dimensional embeddings")
         else:
@@ -85,8 +91,9 @@ class VectorSimilarityRetrieval(RetrievalInterface):
     def _get_query_embedding(self, query: str) -> np.ndarray:
         """Generate embedding for the query using the same model as for chunks."""
         if not hasattr(self, "_embedding_model") or self._embedding_model is None:
-            logger.warning("No embedding model linked to retrieval; cannot embed query.")
-            return np.ndarray([], dtype=float)
+            logger.error("No embedding model linked to retrieval; cannot embed query.")
+            raise RuntimeError("Embedding model must be set before retrieval")  # ← FIX
+            # return np.ndarray([], dtype=float) # leeres Array wird zurückgegeben -> Problem bei Berechnung cosine similarity (Division durch 0) -> Fallback auf Random Chunks
         vec = self._embedding_model.embed([query])[0]  # list[float]
         return np.array(vec, dtype=float)
 
