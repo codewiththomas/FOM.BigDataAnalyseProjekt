@@ -26,7 +26,15 @@ class RAGCache:
 
     def _get_config_hash(self, config: Dict[str, Any]) -> str:
         """Generate hash from configuration to detect changes"""
-        config_str = json.dumps(config, sort_keys=True)
+        # Normalisiere config für konsistente Hashes
+        normalized = {}
+        for key, value in config.items():
+            if value is None:
+                normalized[key] = "null"
+            else:
+                normalized[key] = str(value)
+
+        config_str = json.dumps(normalized, sort_keys=True)
         return hashlib.md5(config_str.encode()).hexdigest()[:8]
 
     def save_embeddings(self, embeddings: List[List[float]], config: Dict[str, Any]) -> None:
@@ -57,7 +65,7 @@ class RAGCache:
 
         return None
 
-    def save_chunks(self, chunks: List[Dict[str, Any]], config: Dict[str, Any]) -> None:
+    def save_chunks(self, chunks: List[Any], config: Dict[str, Any]) -> None: # ← Korrektur aufgrund Cache-Inkompatibilität: List[Any]
         """Save chunks to cache"""
         config_hash = self._get_config_hash(config)
         cache_path = self._get_cache_path("chunks", f"_{config_hash}.pkl")
@@ -69,7 +77,7 @@ class RAGCache:
         except Exception as e:
             logger.error(f"Failed to save chunks to cache: {e}")
 
-    def load_chunks(self, config: Dict[str, Any]) -> Optional[List[Dict[str, Any]]]:
+    def load_chunks(self, config: Dict[str, Any]) -> Optional[List[Any]]: # ← Korrektur: List[Any] statt List[Dict]
         """Load chunks from cache if available"""
         config_hash = self._get_config_hash(config)
         cache_path = self._get_cache_path("chunks", f"_{config_hash}.pkl")
