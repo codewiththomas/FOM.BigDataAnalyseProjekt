@@ -59,7 +59,7 @@ class RAGPipeline:
                 'type': self.chunking.__class__.__name__,
                 'chunk_size': getattr(self.chunking, 'chunk_size', None),
                 'chunk_overlap': getattr(self.chunking, 'chunk_overlap', None),
-                'separator': getattr(self.chunking, 'separator', None)
+                'separator': getattr(self.chunking, 'separator', None),
                 'embedding_type': self.embedding.__class__.__name__  # ← NEU
             }
 
@@ -78,7 +78,7 @@ class RAGPipeline:
                 'type': self.chunking.__class__.__name__,
                 'chunk_size': getattr(self.chunking, 'chunk_size', None),
                 'chunk_overlap': getattr(self.chunking, 'chunk_overlap', None),
-                'separator': getattr(self.chunking, 'separator', None)
+                'separator': getattr(self.chunking, 'separator', None),
                 'embedding_type': self.embedding.__class__.__name__  # ← NEU
             }
             self.cache.save_chunks(chunks, chunking_config)
