@@ -60,6 +60,7 @@ class RAGPipeline:
                 'chunk_size': getattr(self.chunking, 'chunk_size', None),
                 'chunk_overlap': getattr(self.chunking, 'chunk_overlap', None),
                 'separator': getattr(self.chunking, 'separator', None)
+                'embedding_type': self.embedding.__class__.__name__  # ← NEU
             }
 
             cached_chunks = self.cache.load_chunks(chunking_config)
@@ -78,6 +79,7 @@ class RAGPipeline:
                 'chunk_size': getattr(self.chunking, 'chunk_size', None),
                 'chunk_overlap': getattr(self.chunking, 'chunk_overlap', None),
                 'separator': getattr(self.chunking, 'separator', None)
+                'embedding_type': self.embedding.__class__.__name__  # ← NEU
             }
             self.cache.save_chunks(chunks, chunking_config)
 
@@ -108,6 +110,7 @@ class RAGPipeline:
 
             # Add type
             embedding_config['type'] = self.embedding.__class__.__name__
+            embedding_config['chunk_size'] = getattr(self.chunking, 'chunk_size', None)  # ← NEU
 
             cached_embeddings = self.cache.load_embeddings(embedding_config)
             if cached_embeddings:
@@ -143,6 +146,7 @@ class RAGPipeline:
 
             # Add type
             embedding_config['type'] = self.embedding.__class__.__name__
+            embedding_config['chunk_size'] = getattr(self.chunking, 'chunk_size', None)  # ← NEU
 
             self.cache.save_embeddings(embeddings, embedding_config)
 
