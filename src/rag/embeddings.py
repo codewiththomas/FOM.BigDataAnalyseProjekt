@@ -42,7 +42,9 @@ class OpenAIEmbedding(EmbeddingInterface):
         except Exception as e:
             logger.error(f"OpenAI embedding error: {e}")
             # Return zero vectors as fallback
-            return [[0.0] * 1536] * len(texts)  # OpenAI embeddings are 1536-dimensional
+            # return [[0.0] * 1536] * len(texts)  # OpenAI embeddings are 1536-dimensional
+            dims = self.get_model_info().get('dimensions', 1536)  # ← Dynamisch!
+            return [[0.0] * dims] * len(texts)
 
     def get_model_info(self) -> Dict[str, Any]:
         return {
@@ -59,6 +61,8 @@ class SentenceTransformersEmbedding(EmbeddingInterface):
     def __init__(self, config: Dict[str, Any]):
         self.model_name = config.get('model_name', 'all-MiniLM-L6-v2')
         self.device = config.get('device', 'cpu')
+        # self.batch_size = 32  # ← vorher evtl. implizit klein
+        self.batch_size = config.get('batch_size', 128 if self.device == 'cuda' else 32)  # ← neu
 
         try:
             from sentence_transformers import SentenceTransformer
@@ -74,13 +78,25 @@ class SentenceTransformersEmbedding(EmbeddingInterface):
     def embed(self, texts: List[str]) -> List[List[float]]:
         """Generate embeddings using sentence-transformers"""
         try:
-            embeddings = self.model.encode(texts, convert_to_tensor=False)
+            # embeddings = self.model.encode(texts, convert_to_tensor=False)  # ← vorher
+            embeddings = self.model.encode(
+                texts,
+                convert_to_tensor=False,
+                batch_size=self.batch_size,  # ← neu: nutzt größere Batches auf GPU
+                show_progress_bar=True  # ← neu: besseres Feedback
+            )
             return embeddings.tolist() if hasattr(embeddings, 'tolist') else embeddings
 
         except Exception as e:
-            logger.error(f"Sentence-transformers embedding error: {e}")
+            error_str = str(e).lower()  # ← NEU
+            if "invalid_api_key" in error_str or "unauthorized" in error_str:  # ← NEU
+                logger.error(f"STOPPING EVALUATION - Invalid OpenAI API key: {e}")  # ← NEU
+                raise SystemExit("Invalid OpenAI API key - fix .env file")  # ← NEU
+            logger.error(f"OpenAI embedding error: {e}")
             # Return zero vectors as fallback
-            return [[0.0] * 384] * len(texts)  # Default dimension for all-MiniLM-L6-v2
+            # return [[0.0] * 384] * len(texts)  # Default dimension for all-MiniLM-L6-v2
+            dims = self.model.get_sentence_embedding_dimension()  # ← Dynamisch!
+            return [[0.0] * dims] * len(texts)
 
     def get_model_info(self) -> Dict[str, Any]:
         return {
