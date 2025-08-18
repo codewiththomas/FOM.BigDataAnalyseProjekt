@@ -18,7 +18,7 @@ class DSGVODataset:
         self.qa_pairs: List[Dict[str, Any]] = []
 
         # Check if evaluation dataset exists, otherwise load raw data
-        evaluation_path = Path("data/evaluation/dsgvo_evaluation_dataset.jsonl.backup")
+        evaluation_path = Path("data/evaluation/dsgvo_evaluation_dataset.jsonl")
         if evaluation_path.exists():
             logger.info("Loading pre-prepared evaluation dataset")
             self._load_evaluation_dataset(evaluation_path)
