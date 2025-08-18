@@ -2,7 +2,7 @@
 
 Ein modulates RAG-System, welches eine systematische Evaluation ermöglicht.
 
-## Ausführung
+## Nutzung
 
 1. Clone
 

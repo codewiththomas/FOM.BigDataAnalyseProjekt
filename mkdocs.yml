@@ -1,1 +1,5 @@
 site_name: Big-Data-Analyseprojekt
+
+plugins:
+    - search
+    - mermaid2
