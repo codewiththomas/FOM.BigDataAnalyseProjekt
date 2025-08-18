@@ -60,6 +60,7 @@ class DSGVODataset:
                             'artikel_nr': obj.get('Artikel_nr', 0),
                             'artikel_name': obj.get('Artikel_Name', ''),
                             'absatz_nr': obj.get('Absatz_nr', 0),
+                            'unterabsatz_nr': obj.get('Unterabsatz_nr', 0),
                             'satz_nr': obj.get('Satz_nr', 0)
                         }
                     }
