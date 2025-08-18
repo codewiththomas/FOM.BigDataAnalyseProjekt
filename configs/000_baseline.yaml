@@ -11,15 +11,15 @@ llm:
 embedding:
   # type: openai
   # model: text-embedding-ada-002
-  # api_key: ${OPENAI_API_KEY}  # Set via environment variable
   type: sentence-transformers # <- für Angleichung embeddings zwischen mixtral und baseline
   model_name: all-MiniLM-L6-v2 # <- für Angleichung embeddings zwischen mixtral und baseline
+  # model_name: all-mpnet-base-v2 # besser als all-MiniLM-L6-v2
   device: cuda
   batch_size: 128 # cuda-optimiert für bessere Performance
 
 chunking:
   type: fixed-size
-  chunk_size: 1000
+  chunk_size: 1500
   chunk_overlap: 200
   separator: "\n"
 

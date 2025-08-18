@@ -34,13 +34,13 @@ def main():
         epilog="""
 Examples:
   # Run evaluation with default config
-  python src/rag/main.py --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl
+  python src/rag/main.py --config configs/000_baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl
 
   # Run evaluation with custom number of QA pairs
-  python src/rag/main.py --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --num-qa 100
+  python src/rag/main.py --config configs/000_baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --num-qa 20
 
   # Run evaluation without saving results
-  python src/rag/main.py --config configs/baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --no-save
+  python src/rag/main.py --config configs/baseline.yaml --datasetdata/output/dsgvo_crawled_2025-08-14_1535.jsonl --no-save
         """
     )
 
