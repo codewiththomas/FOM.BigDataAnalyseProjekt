@@ -37,13 +37,26 @@ class RAGEvaluator:
 
         logger.info("Pipeline setup complete")
 
-    def run_evaluation(self, num_qa: int = 50, save_results: bool = True) -> Dict[str, Any]:
+    def run_evaluation(self, num_qa: int = 100, save_results: bool = True) -> Dict[str, Any]:
         """Run the complete evaluation process"""
         if not self.pipeline:
             self.setup_pipeline()
 
-        # Get subset of QA pairs
-        qa_subset = self.dataset.qa_pairs[:num_qa]
+        # Set random seed for reproducible results
+        import random
+        self.current_seed = 42
+        random.seed(self.current_seed)
+
+        # Get random subset of QA pairs
+        if num_qa >= len(self.dataset.qa_pairs):
+            qa_subset = self.dataset.qa_pairs
+            logger.info(f"Using all {len(qa_subset)} QA pairs")
+        else:
+            qa_indices = random.sample(range(len(self.dataset.qa_pairs)), num_qa)
+            qa_subset = [self.dataset.qa_pairs[i] for i in qa_indices]
+            logger.info(
+                f"Using random subset with seed={self.current_seed}: {len(qa_subset)} QA pairs from {len(self.dataset.qa_pairs)} total")
+
         logger.info(f"Starting evaluation with {len(qa_subset)} QA pairs...")
 
         start_time = time.time()
@@ -125,6 +138,7 @@ class RAGEvaluator:
             faithfulness_scores = [r.get('faithfulness', 0) for r in results]
             answer_relevance_scores = [r.get('answer_relevance', 0) for r in results]
             context_relevance_scores = [r.get('context_relevance', 0) for r in results]
+            dsgvo_scores = [r.get('dsgvo_score', 0) for r in results]
 
             summary.update({
                 'avg_faithfulness': sum(faithfulness_scores) / len(faithfulness_scores),
@@ -135,7 +149,10 @@ class RAGEvaluator:
                 'max_answer_relevance': max(answer_relevance_scores),
                 'avg_context_relevance': sum(context_relevance_scores) / len(context_relevance_scores),
                 'min_context_relevance': min(context_relevance_scores),
-                'max_context_relevance': max(context_relevance_scores)
+                'max_context_relevance': max(context_relevance_scores),
+                'avg_dsgvo_score': sum(dsgvo_scores) / len(dsgvo_scores),
+                'min_dsgvo_score': min(dsgvo_scores),
+                'max_dsgvo_score': max(dsgvo_scores)
             })
 
         # Add pipeline and evaluation info
@@ -146,7 +163,8 @@ class RAGEvaluator:
                 'total_metrics': len(summary) - 2  # Exclude pipeline_info and evaluation_info
             },
             'total_evaluation_time': total_time,
-            'qa_pairs_evaluated': len(results)
+            'qa_pairs_evaluated': len(results),
+            'random_seed': self.current_seed  # Verwendet die Instance Variable
         })
 
         return summary

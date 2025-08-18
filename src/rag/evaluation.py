@@ -169,7 +169,8 @@ class RAGASEvaluator(EvaluationInterface):
                 'faithfulness': 0.0,
                 'answer_relevance': 0.0,
                 'context_relevance': 0.0,
-                'context_utilization': 0.0
+                'context_utilization': 0.0,
+                'dsgvo_score': 0.0
             }
 
         # Faithfulness: How much the answer relies on the context
@@ -184,11 +185,17 @@ class RAGASEvaluator(EvaluationInterface):
         # Context Utilization: How well the context is used
         context_utilization = self._calculate_context_utilization(actual_answer, context_chunks)
 
+        # DSGVO Score: Weighted combination of key metrics
+        dsgvo_score = (faithfulness * 0.5 +
+                       answer_relevance * 0.3 +
+                       context_relevance * 0.2)
+
         return {
             'faithfulness': faithfulness,
             'answer_relevance': answer_relevance,
             'context_relevance': context_relevance,
-            'context_utilization': context_utilization
+            'context_utilization': context_utilization,
+            'dsgvo_score': dsgvo_score
         }
 
     def _calculate_faithfulness(self, answer: str, chunks: List[Chunk]) -> float:
@@ -280,7 +287,7 @@ class RAGASEvaluator(EvaluationInterface):
         return {
             'name': 'ragas',
             'description': 'Improved RAGAS-style evaluation metrics',
-            'metrics': ['faithfulness', 'answer_relevance', 'context_relevance', 'context_utilization']
+            'metrics': ['faithfulness', 'answer_relevance', 'context_relevance', 'context_utilization', 'dsgvo_score']
         }
 
 

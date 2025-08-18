@@ -18,14 +18,14 @@ class DSGVODataset:
         self.qa_pairs: List[Dict[str, Any]] = []
 
         # Check if evaluation dataset exists, otherwise load raw data
-        evaluation_path = Path("data/evaluation/dsgvo_evaluation_dataset.jsonl")
+        evaluation_path = Path("data/evaluation/dsgvo_evaluation_dataset.jsonl.backup")
         if evaluation_path.exists():
             logger.info("Loading pre-prepared evaluation dataset")
             self._load_evaluation_dataset(evaluation_path)
         else:
             logger.info("Loading raw DSGVO documents and generating QA pairs")
-            self._load_documents()
-            self._generate_qa_pairs()
+            self._load_documents() # ← Lädt rohe Dokumente
+            self._generate_qa_pairs() # ← Generiert QA-Paare automatisch
 
     def _load_evaluation_dataset(self, evaluation_path: Path):
         """Load pre-prepared evaluation dataset"""
@@ -79,18 +79,18 @@ class DSGVODataset:
         # This is a simplified approach - in practice you might want more sophisticated QA generation
         qa_templates = [
             {
-                'question': 'What is the main purpose of DSGVO Article {artikel_nr}?',
+                'question': 'Was ist der Hauptzweck von DSGVO Artikel {artikel_nr}?',
                 'context_field': 'artikel_name',
                 'answer_field': 'text'
             },
             {
-                'question': 'What does DSGVO Article {artikel_nr} say about {topic}?',
+                'question': 'Was sagt DSGVO Artikel {artikel_nr} über {topic}?',
                 'context_field': 'artikel_name',
                 'answer_field': 'text',
                 'topic_extraction': True
             },
             {
-                'question': 'What are the key requirements in DSGVO Chapter {kapitel_nr}?',
+                'question': 'Was sind die wichtigsten Anforderungen in DSGVO Kapitel {kapitel_nr}?',
                 'context_field': 'kapitel_name',
                 'answer_field': 'text'
             }
@@ -103,7 +103,8 @@ class DSGVODataset:
             for template in qa_templates:
                 question = template['question'].format(
                     artikel_nr=metadata['artikel_nr'],
-                    kapitel_nr=metadata['kapitel_nr']
+                    kapitel_nr=metadata['kapitel_nr'],
+                    topic='data processing'  # Placeholder wird mit einem Standard-Wert gefüllt
                 )
 
                 # For topic extraction, create more specific questions
