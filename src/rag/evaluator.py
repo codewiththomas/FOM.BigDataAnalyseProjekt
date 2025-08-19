@@ -37,10 +37,15 @@ class RAGEvaluator:
 
         logger.info("Pipeline setup complete")
 
-    def run_evaluation(self, num_qa: int = 100, save_results: bool = True) -> Dict[str, Any]:
+    def run_evaluation(self, num_qa: int = None, save_results: bool = True) -> Dict[str, Any]:
         """Run the complete evaluation process"""
         if not self.pipeline:
             self.setup_pipeline()
+
+        # Get num_qa from config if not provided
+        if num_qa is None:
+            dataset_config = self.factory.config.get_dataset_config()
+            num_qa = dataset_config.get('evaluation_subset_size', 100)
 
         # Set random seed for reproducible results
         import random
