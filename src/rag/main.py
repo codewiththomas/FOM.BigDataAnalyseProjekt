@@ -59,7 +59,7 @@ Examples:
     parser.add_argument(
         '--num-qa', '-n',
         type=int,
-        default=50,
+        default=None,
         help='Number of QA pairs to evaluate (default: 50)'
     )
 

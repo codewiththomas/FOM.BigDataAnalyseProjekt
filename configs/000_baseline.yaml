@@ -42,4 +42,4 @@ dataset:
 
 pipeline:
   include_context: true
-  max_context_length: 1000
+  max_context_length: 3500 # Empfehlung: top_k * chunksize / 4 (Umrechnung char zu token)
