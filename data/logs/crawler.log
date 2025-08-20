@@ -8481,3 +8481,435 @@
 2025-08-14 15:37:26,156 - INFO - Total entries: 915
 2025-08-14 15:37:26,156 - INFO - Articles processed: 99
 2025-08-14 15:37:26,156 - INFO - Chapters processed: 11
+2025-08-20 18:24:47,634 - INFO - Starting DSGVO Crawler...
+2025-08-20 18:24:47,635 - INFO - Loading page: https://dsgvo-gesetz.de (Attempt 1)
+2025-08-20 18:24:48,827 - INFO - Found: Chapter 1 - Allgemeine Bestimmungen
+2025-08-20 18:24:48,827 - INFO - Found: Chapter 2 - Grundsätze
+2025-08-20 18:24:48,828 - INFO - Found: Chapter 3 - Rechte der betroffenen Person
+2025-08-20 18:24:48,828 - INFO - Found: Section 1 - Transparenz und Modalitäten
+2025-08-20 18:24:48,828 - INFO - Found: Section 2 - Informationspflicht und Recht auf Auskunft zu personenbezogenen Daten
+2025-08-20 18:24:48,828 - INFO - Found: Section 3 - Berichtigung und Löschung
+2025-08-20 18:24:48,829 - INFO - Found: Section 4 - Widerspruchsrecht und automatisierte Entscheidungsfindung im Einzelfall
+2025-08-20 18:24:48,829 - INFO - Found: Section 5 - Beschränkungen
+2025-08-20 18:24:48,829 - INFO - Found: Chapter 4 - Verantwortlicher und Auftragsverarbeiter
+2025-08-20 18:24:48,830 - INFO - Found: Section 1 - Allgemeine Pflichten
+2025-08-20 18:24:48,830 - INFO - Found: Section 2 - Sicherheit personenbezogener Daten
+2025-08-20 18:24:48,830 - INFO - Found: Section 3 - Datenschutz-Folgenabschätzung und vorherige Konsultation
+2025-08-20 18:24:48,831 - INFO - Found: Section 4 - Datenschutzbeauftragter
+2025-08-20 18:24:48,831 - INFO - Found: Section 5 - Verhaltensregeln und Zertifizierung
+2025-08-20 18:24:48,831 - INFO - Found: Chapter 5 - Übermittlungen personenbezogener Daten an Drittländer oder an internationale Organisationen
+2025-08-20 18:24:48,831 - INFO - Found: Chapter 6 - Unabhängige Aufsichtsbehörden
+2025-08-20 18:24:48,832 - INFO - Found: Section 1 - Unabhängigkeit
+2025-08-20 18:24:48,832 - INFO - Found: Section 2 - Zuständigkeit, Aufgaben und Befugnisse
+2025-08-20 18:24:48,832 - INFO - Found: Chapter 7 - Zusammenarbeit und Kohärenz
+2025-08-20 18:24:48,832 - INFO - Found: Section 1 - Zusammenarbeit
+2025-08-20 18:24:48,833 - INFO - Found: Section 2 - Kohärenz
+2025-08-20 18:24:48,833 - INFO - Found: Section 3 - Europäischer Datenschutzausschuss
+2025-08-20 18:24:48,833 - INFO - Found: Chapter 8 - Rechtsbehelfe, Haftung und Sanktionen
+2025-08-20 18:24:48,834 - INFO - Found: Chapter 9 - Vorschriften für besondere Verarbeitungssituationen
+2025-08-20 18:24:48,834 - INFO - Found: Chapter 10 - Delegierte Rechtsakte und Durchführungsrechtsakte
+2025-08-20 18:24:48,835 - INFO - Found: Chapter 11 - Schlussbestimmungen
+2025-08-20 18:24:48,835 - INFO - Total 99 articles found
+2025-08-20 18:24:48,835 - INFO - Processing article 1/99: https://dsgvo-gesetz.de/art-1-dsgvo/
+2025-08-20 18:24:48,835 - INFO - Loading page: https://dsgvo-gesetz.de/art-1-dsgvo/ (Attempt 1)
+2025-08-20 18:24:49,885 - INFO - Parse Article 1: Gegenstand und Ziele
+2025-08-20 18:24:49,887 - INFO - Article 1: 3 entries extracted
+2025-08-20 18:24:49,887 - INFO - Processing article 2/99: https://dsgvo-gesetz.de/art-2-dsgvo/
+2025-08-20 18:24:49,887 - INFO - Loading page: https://dsgvo-gesetz.de/art-2-dsgvo/ (Attempt 1)
+2025-08-20 18:24:50,940 - INFO - Parse Article 2: Sachlicher Anwendungsbereich
+2025-08-20 18:24:50,942 - INFO - Article 2: 9 entries extracted
+2025-08-20 18:24:50,943 - INFO - Processing article 3/99: https://dsgvo-gesetz.de/art-3-dsgvo/
+2025-08-20 18:24:50,943 - INFO - Loading page: https://dsgvo-gesetz.de/art-3-dsgvo/ (Attempt 1)
+2025-08-20 18:24:51,997 - INFO - Parse Article 3: Räumlicher Anwendungsbereich
+2025-08-20 18:24:51,999 - INFO - Article 3: 5 entries extracted
+2025-08-20 18:24:51,999 - INFO - Processing article 4/99: https://dsgvo-gesetz.de/art-4-dsgvo/
+2025-08-20 18:24:51,999 - INFO - Loading page: https://dsgvo-gesetz.de/art-4-dsgvo/ (Attempt 1)
+2025-08-20 18:24:53,055 - INFO - Parse Article 4: Begriffsbestimmungen
+2025-08-20 18:24:53,057 - INFO - Article 4: 34 entries extracted
+2025-08-20 18:24:53,057 - INFO - Processing article 5/99: https://dsgvo-gesetz.de/art-5-dsgvo/
+2025-08-20 18:24:53,057 - INFO - Loading page: https://dsgvo-gesetz.de/art-5-dsgvo/ (Attempt 1)
+2025-08-20 18:24:54,109 - INFO - Parse Article 5: Grundsätze für die Verarbeitung personenbezogener Daten
+2025-08-20 18:24:54,111 - INFO - Article 5: 8 entries extracted
+2025-08-20 18:24:54,112 - INFO - Processing article 6/99: https://dsgvo-gesetz.de/art-6-dsgvo/
+2025-08-20 18:24:54,112 - INFO - Loading page: https://dsgvo-gesetz.de/art-6-dsgvo/ (Attempt 1)
+2025-08-20 18:24:55,175 - INFO - Parse Article 6: Rechtmäßigkeit der Verarbeitung
+2025-08-20 18:24:55,177 - INFO - Article 6: 17 entries extracted
+2025-08-20 18:24:55,177 - INFO - Processing article 7/99: https://dsgvo-gesetz.de/art-7-dsgvo/
+2025-08-20 18:24:55,178 - INFO - Loading page: https://dsgvo-gesetz.de/art-7-dsgvo/ (Attempt 1)
+2025-08-20 18:24:56,224 - INFO - Parse Article 7: Bedingungen für die Einwilligung
+2025-08-20 18:24:56,226 - INFO - Article 7: 8 entries extracted
+2025-08-20 18:24:56,226 - INFO - Processing article 8/99: https://dsgvo-gesetz.de/art-8-dsgvo/
+2025-08-20 18:24:56,227 - INFO - Loading page: https://dsgvo-gesetz.de/art-8-dsgvo/ (Attempt 1)
+2025-08-20 18:24:57,272 - INFO - Parse Article 8: Bedingungen für die Einwilligung eines Kindes in Bezug auf Dienste der Informationsgesellschaft
+2025-08-20 18:24:57,274 - INFO - Article 8: 5 entries extracted
+2025-08-20 18:24:57,274 - INFO - Processing article 9/99: https://dsgvo-gesetz.de/art-9-dsgvo/
+2025-08-20 18:24:57,274 - INFO - Loading page: https://dsgvo-gesetz.de/art-9-dsgvo/ (Attempt 1)
+2025-08-20 18:24:58,334 - INFO - Parse Article 9: Verarbeitung besonderer Kategorien personenbezogener Daten
+2025-08-20 18:24:58,335 - INFO - Article 9: 14 entries extracted
+2025-08-20 18:24:58,336 - INFO - Processing article 10/99: https://dsgvo-gesetz.de/art-10-dsgvo/
+2025-08-20 18:24:58,336 - INFO - Loading page: https://dsgvo-gesetz.de/art-10-dsgvo/ (Attempt 1)
+2025-08-20 18:24:59,393 - INFO - Parse Article 10: Verarbeitung von personenbezogenen Daten über strafrechtliche Verurteilungen und Straftaten
+2025-08-20 18:24:59,395 - INFO - Article 10: 2 entries extracted
+2025-08-20 18:24:59,395 - INFO - Processing article 11/99: https://dsgvo-gesetz.de/art-11-dsgvo/
+2025-08-20 18:24:59,395 - INFO - Loading page: https://dsgvo-gesetz.de/art-11-dsgvo/ (Attempt 1)
+2025-08-20 18:25:00,443 - INFO - Parse Article 11: Verarbeitung, für die eine Identifizierung der betroffenen Person nicht erforderlich ist
+2025-08-20 18:25:00,444 - INFO - Article 11: 3 entries extracted
+2025-08-20 18:25:00,444 - INFO - Processing article 12/99: https://dsgvo-gesetz.de/art-12-dsgvo/
+2025-08-20 18:25:00,445 - INFO - Loading page: https://dsgvo-gesetz.de/art-12-dsgvo/ (Attempt 1)
+2025-08-20 18:25:01,495 - INFO - Parse Article 12: Transparente Information, Kommunikation und Modalitäten für die Ausübung der Rechte der betroffenen Person
+2025-08-20 18:25:01,497 - INFO - Article 12: 15 entries extracted
+2025-08-20 18:25:01,498 - INFO - Processing article 13/99: https://dsgvo-gesetz.de/art-13-dsgvo/
+2025-08-20 18:25:01,498 - INFO - Loading page: https://dsgvo-gesetz.de/art-13-dsgvo/ (Attempt 1)
+2025-08-20 18:25:02,549 - INFO - Parse Article 13: Informationspflicht bei Erhebung von personenbezogenen Daten bei der betroffenen Person
+2025-08-20 18:25:02,551 - INFO - Article 13: 16 entries extracted
+2025-08-20 18:25:02,551 - INFO - Processing article 14/99: https://dsgvo-gesetz.de/art-14-dsgvo/
+2025-08-20 18:25:02,552 - INFO - Loading page: https://dsgvo-gesetz.de/art-14-dsgvo/ (Attempt 1)
+2025-08-20 18:25:03,601 - INFO - Parse Article 14: Informationspflicht, wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben wurden
+2025-08-20 18:25:03,604 - INFO - Article 14: 25 entries extracted
+2025-08-20 18:25:03,604 - INFO - Processing article 15/99: https://dsgvo-gesetz.de/art-15-dsgvo/
+2025-08-20 18:25:03,604 - INFO - Loading page: https://dsgvo-gesetz.de/art-15-dsgvo/ (Attempt 1)
+2025-08-20 18:25:04,657 - INFO - Parse Article 15: Auskunftsrecht der betroffenen Person
+2025-08-20 18:25:04,658 - INFO - Article 15: 14 entries extracted
+2025-08-20 18:25:04,658 - INFO - Processing article 16/99: https://dsgvo-gesetz.de/art-16-dsgvo/
+2025-08-20 18:25:04,659 - INFO - Loading page: https://dsgvo-gesetz.de/art-16-dsgvo/ (Attempt 1)
+2025-08-20 18:25:05,704 - INFO - Parse Article 16: Recht auf Berichtigung
+2025-08-20 18:25:05,706 - INFO - Article 16: 2 entries extracted
+2025-08-20 18:25:05,706 - INFO - Processing article 17/99: https://dsgvo-gesetz.de/art-17-dsgvo/
+2025-08-20 18:25:05,706 - INFO - Loading page: https://dsgvo-gesetz.de/art-17-dsgvo/ (Attempt 1)
+2025-08-20 18:25:06,753 - INFO - Parse Article 17: Recht auf Löschung ("Recht auf Vergessenwerden")
+2025-08-20 18:25:06,755 - INFO - Article 17: 14 entries extracted
+2025-08-20 18:25:06,755 - INFO - Processing article 18/99: https://dsgvo-gesetz.de/art-18-dsgvo/
+2025-08-20 18:25:06,755 - INFO - Loading page: https://dsgvo-gesetz.de/art-18-dsgvo/ (Attempt 1)
+2025-08-20 18:25:07,811 - INFO - Parse Article 18: Recht auf Einschränkung der Verarbeitung
+2025-08-20 18:25:07,813 - INFO - Article 18: 7 entries extracted
+2025-08-20 18:25:07,813 - INFO - Processing article 19/99: https://dsgvo-gesetz.de/art-19-dsgvo/
+2025-08-20 18:25:07,813 - INFO - Loading page: https://dsgvo-gesetz.de/art-19-dsgvo/ (Attempt 1)
+2025-08-20 18:25:08,859 - INFO - Parse Article 19: Mitteilungspflicht im Zusammenhang mit der Berichtigung oder Löschung personenbezogener Daten oder der Einschränkung der Verarbeitung
+2025-08-20 18:25:08,860 - INFO - Article 19: 2 entries extracted
+2025-08-20 18:25:08,861 - INFO - Processing article 20/99: https://dsgvo-gesetz.de/art-20-dsgvo/
+2025-08-20 18:25:08,861 - INFO - Loading page: https://dsgvo-gesetz.de/art-20-dsgvo/ (Attempt 1)
+2025-08-20 18:25:09,915 - INFO - Parse Article 20: Recht auf Datenübertragbarkeit
+2025-08-20 18:25:09,917 - INFO - Article 20: 7 entries extracted
+2025-08-20 18:25:09,917 - INFO - Processing article 21/99: https://dsgvo-gesetz.de/art-21-dsgvo/
+2025-08-20 18:25:09,917 - INFO - Loading page: https://dsgvo-gesetz.de/art-21-dsgvo/ (Attempt 1)
+2025-08-20 18:25:10,965 - INFO - Parse Article 21: Widerspruchsrecht
+2025-08-20 18:25:10,967 - INFO - Article 21: 7 entries extracted
+2025-08-20 18:25:10,967 - INFO - Processing article 22/99: https://dsgvo-gesetz.de/art-22-dsgvo/
+2025-08-20 18:25:10,967 - INFO - Loading page: https://dsgvo-gesetz.de/art-22-dsgvo/ (Attempt 1)
+2025-08-20 18:25:12,034 - INFO - Parse Article 22: Automatisierte Entscheidungen im Einzelfall einschließlich Profiling
+2025-08-20 18:25:12,036 - INFO - Article 22: 7 entries extracted
+2025-08-20 18:25:12,036 - INFO - Processing article 23/99: https://dsgvo-gesetz.de/art-23-dsgvo/
+2025-08-20 18:25:12,036 - INFO - Loading page: https://dsgvo-gesetz.de/art-23-dsgvo/ (Attempt 1)
+2025-08-20 18:25:13,089 - INFO - Parse Article 23: Beschränkungen
+2025-08-20 18:25:13,091 - INFO - Article 23: 20 entries extracted
+2025-08-20 18:25:13,091 - INFO - Processing article 24/99: https://dsgvo-gesetz.de/art-24-dsgvo/
+2025-08-20 18:25:13,091 - INFO - Loading page: https://dsgvo-gesetz.de/art-24-dsgvo/ (Attempt 1)
+2025-08-20 18:25:14,139 - INFO - Parse Article 24: Verantwortung des für die Verarbeitung Verantwortlichen
+2025-08-20 18:25:14,141 - INFO - Article 24: 4 entries extracted
+2025-08-20 18:25:14,141 - INFO - Processing article 25/99: https://dsgvo-gesetz.de/art-25-dsgvo/
+2025-08-20 18:25:14,141 - INFO - Loading page: https://dsgvo-gesetz.de/art-25-dsgvo/ (Attempt 1)
+2025-08-20 18:25:15,190 - INFO - Parse Article 25: Datenschutz durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen
+2025-08-20 18:25:15,192 - INFO - Article 25: 5 entries extracted
+2025-08-20 18:25:15,192 - INFO - Processing article 26/99: https://dsgvo-gesetz.de/art-26-dsgvo/
+2025-08-20 18:25:15,193 - INFO - Loading page: https://dsgvo-gesetz.de/art-26-dsgvo/ (Attempt 1)
+2025-08-20 18:25:16,243 - INFO - Parse Article 26: Gemeinsam Verantwortliche
+2025-08-20 18:25:16,245 - INFO - Article 26: 6 entries extracted
+2025-08-20 18:25:16,245 - INFO - Processing article 27/99: https://dsgvo-gesetz.de/art-27-dsgvo/
+2025-08-20 18:25:16,245 - INFO - Loading page: https://dsgvo-gesetz.de/art-27-dsgvo/ (Attempt 1)
+2025-08-20 18:25:17,299 - INFO - Parse Article 27: Vertreter von nicht in der Union niedergelassenen Verantwortlichen oder Auftragsverarbeitern
+2025-08-20 18:25:17,301 - INFO - Article 27: 7 entries extracted
+2025-08-20 18:25:17,301 - INFO - Processing article 28/99: https://dsgvo-gesetz.de/art-28-dsgvo/
+2025-08-20 18:25:17,301 - INFO - Loading page: https://dsgvo-gesetz.de/art-28-dsgvo/ (Attempt 1)
+2025-08-20 18:25:18,362 - INFO - Parse Article 28: Auftragsverarbeiter
+2025-08-20 18:25:18,364 - INFO - Article 28: 20 entries extracted
+2025-08-20 18:25:18,364 - INFO - Processing article 29/99: https://dsgvo-gesetz.de/art-29-dsgvo/
+2025-08-20 18:25:18,364 - INFO - Loading page: https://dsgvo-gesetz.de/art-29-dsgvo/ (Attempt 1)
+2025-08-20 18:25:19,416 - INFO - Parse Article 29: Verarbeitung unter der Aufsicht des Verantwortlichen oder des Auftragsverarbeiters
+2025-08-20 18:25:19,417 - INFO - Article 29: 1 entries extracted
+2025-08-20 18:25:19,417 - INFO - Processing article 30/99: https://dsgvo-gesetz.de/art-30-dsgvo/
+2025-08-20 18:25:19,417 - INFO - Loading page: https://dsgvo-gesetz.de/art-30-dsgvo/ (Attempt 1)
+2025-08-20 18:25:20,466 - INFO - Parse Article 30: Verzeichnis von Verarbeitungstätigkeiten
+2025-08-20 18:25:20,468 - INFO - Article 30: 16 entries extracted
+2025-08-20 18:25:20,468 - INFO - Processing article 31/99: https://dsgvo-gesetz.de/art-31-dsgvo/
+2025-08-20 18:25:20,468 - INFO - Loading page: https://dsgvo-gesetz.de/art-31-dsgvo/ (Attempt 1)
+2025-08-20 18:25:21,514 - INFO - Parse Article 31: Zusammenarbeit mit der Aufsichtsbehörde
+2025-08-20 18:25:21,515 - INFO - Article 31: 1 entries extracted
+2025-08-20 18:25:21,516 - INFO - Processing article 32/99: https://dsgvo-gesetz.de/art-32-dsgvo/
+2025-08-20 18:25:21,516 - INFO - Loading page: https://dsgvo-gesetz.de/art-32-dsgvo/ (Attempt 1)
+2025-08-20 18:25:22,571 - INFO - Parse Article 32: Sicherheit der Verarbeitung
+2025-08-20 18:25:22,573 - INFO - Article 32: 8 entries extracted
+2025-08-20 18:25:22,574 - INFO - Processing article 33/99: https://dsgvo-gesetz.de/art-33-dsgvo/
+2025-08-20 18:25:22,574 - INFO - Loading page: https://dsgvo-gesetz.de/art-33-dsgvo/ (Attempt 1)
+2025-08-20 18:25:23,629 - INFO - Parse Article 33: Meldung von Verletzungen des Schutzes personenbezogener Daten an die Aufsichtsbehörde
+2025-08-20 18:25:23,631 - INFO - Article 33: 11 entries extracted
+2025-08-20 18:25:23,632 - INFO - Processing article 34/99: https://dsgvo-gesetz.de/art-34-dsgvo/
+2025-08-20 18:25:23,632 - INFO - Loading page: https://dsgvo-gesetz.de/art-34-dsgvo/ (Attempt 1)
+2025-08-20 18:25:24,690 - INFO - Parse Article 34: Benachrichtigung der von einer Verletzung des Schutzes personenbezogener Daten betroffenen Person
+2025-08-20 18:25:24,691 - INFO - Article 34: 7 entries extracted
+2025-08-20 18:25:24,692 - INFO - Processing article 35/99: https://dsgvo-gesetz.de/art-35-dsgvo/
+2025-08-20 18:25:24,692 - INFO - Loading page: https://dsgvo-gesetz.de/art-35-dsgvo/ (Attempt 1)
+2025-08-20 18:25:25,776 - INFO - Parse Article 35: Datenschutz-Folgenabschätzung
+2025-08-20 18:25:25,779 - INFO - Article 35: 21 entries extracted
+2025-08-20 18:25:25,779 - INFO - Processing article 36/99: https://dsgvo-gesetz.de/art-36-dsgvo/
+2025-08-20 18:25:25,780 - INFO - Loading page: https://dsgvo-gesetz.de/art-36-dsgvo/ (Attempt 1)
+2025-08-20 18:25:26,832 - INFO - Parse Article 36: Vorherige Konsultation
+2025-08-20 18:25:26,835 - INFO - Article 36: 14 entries extracted
+2025-08-20 18:25:26,835 - INFO - Processing article 37/99: https://dsgvo-gesetz.de/art-37-dsgvo/
+2025-08-20 18:25:26,835 - INFO - Loading page: https://dsgvo-gesetz.de/art-37-dsgvo/ (Attempt 1)
+2025-08-20 18:25:27,884 - INFO - Parse Article 37: Benennung eines Datenschutzbeauftragten
+2025-08-20 18:25:27,887 - INFO - Article 37: 11 entries extracted
+2025-08-20 18:25:27,887 - INFO - Processing article 38/99: https://dsgvo-gesetz.de/art-38-dsgvo/
+2025-08-20 18:25:27,887 - INFO - Loading page: https://dsgvo-gesetz.de/art-38-dsgvo/ (Attempt 1)
+2025-08-20 18:25:28,941 - INFO - Parse Article 38: Stellung des Datenschutzbeauftragten
+2025-08-20 18:25:28,943 - INFO - Article 38: 9 entries extracted
+2025-08-20 18:25:28,943 - INFO - Processing article 39/99: https://dsgvo-gesetz.de/art-39-dsgvo/
+2025-08-20 18:25:28,944 - INFO - Loading page: https://dsgvo-gesetz.de/art-39-dsgvo/ (Attempt 1)
+2025-08-20 18:25:29,996 - INFO - Parse Article 39: Aufgaben des Datenschutzbeauftragten
+2025-08-20 18:25:29,997 - INFO - Article 39: 7 entries extracted
+2025-08-20 18:25:29,997 - INFO - Processing article 40/99: https://dsgvo-gesetz.de/art-40-dsgvo/
+2025-08-20 18:25:29,997 - INFO - Loading page: https://dsgvo-gesetz.de/art-40-dsgvo/ (Attempt 1)
+2025-08-20 18:25:31,058 - INFO - Parse Article 40: Verhaltensregeln
+2025-08-20 18:25:31,061 - INFO - Article 40: 25 entries extracted
+2025-08-20 18:25:31,062 - INFO - Processing article 41/99: https://dsgvo-gesetz.de/art-41-dsgvo/
+2025-08-20 18:25:31,062 - INFO - Loading page: https://dsgvo-gesetz.de/art-41-dsgvo/ (Attempt 1)
+2025-08-20 18:25:32,118 - INFO - Parse Article 41: Überwachung der genehmigten Verhaltensregeln
+2025-08-20 18:25:32,120 - INFO - Article 41: 11 entries extracted
+2025-08-20 18:25:32,120 - INFO - Processing article 42/99: https://dsgvo-gesetz.de/art-42-dsgvo/
+2025-08-20 18:25:32,120 - INFO - Loading page: https://dsgvo-gesetz.de/art-42-dsgvo/ (Attempt 1)
+2025-08-20 18:25:33,170 - INFO - Parse Article 42: Zertifizierung
+2025-08-20 18:25:33,171 - INFO - Article 42: 12 entries extracted
+2025-08-20 18:25:33,172 - INFO - Processing article 43/99: https://dsgvo-gesetz.de/art-43-dsgvo/
+2025-08-20 18:25:33,172 - INFO - Loading page: https://dsgvo-gesetz.de/art-43-dsgvo/ (Attempt 1)
+2025-08-20 18:25:34,223 - INFO - Parse Article 43: Zertifizierungsstellen
+2025-08-20 18:25:34,226 - INFO - Article 43: 20 entries extracted
+2025-08-20 18:25:34,226 - INFO - Processing article 44/99: https://dsgvo-gesetz.de/art-44-dsgvo/
+2025-08-20 18:25:34,226 - INFO - Loading page: https://dsgvo-gesetz.de/art-44-dsgvo/ (Attempt 1)
+2025-08-20 18:25:35,275 - INFO - Parse Article 44: Allgemeine Grundsätze der Datenübermittlung
+2025-08-20 18:25:35,276 - INFO - Article 44: 2 entries extracted
+2025-08-20 18:25:35,277 - INFO - Processing article 45/99: https://dsgvo-gesetz.de/art-45-dsgvo/
+2025-08-20 18:25:35,277 - INFO - Loading page: https://dsgvo-gesetz.de/art-45-dsgvo/ (Attempt 1)
+2025-08-20 18:25:36,325 - INFO - Parse Article 45: Datenübermittlung auf der Grundlage eines Angemessenheitsbeschlusses
+2025-08-20 18:25:36,328 - INFO - Article 45: 18 entries extracted
+2025-08-20 18:25:36,328 - INFO - Processing article 46/99: https://dsgvo-gesetz.de/art-46-dsgvo/
+2025-08-20 18:25:36,329 - INFO - Loading page: https://dsgvo-gesetz.de/art-46-dsgvo/ (Attempt 1)
+2025-08-20 18:25:37,385 - INFO - Parse Article 46: Datenübermittlung vorbehaltlich geeigneter Garantien
+2025-08-20 18:25:37,387 - INFO - Article 46: 14 entries extracted
+2025-08-20 18:25:37,387 - INFO - Processing article 47/99: https://dsgvo-gesetz.de/art-47-dsgvo/
+2025-08-20 18:25:37,387 - INFO - Loading page: https://dsgvo-gesetz.de/art-47-dsgvo/ (Attempt 1)
+2025-08-20 18:25:38,479 - INFO - Parse Article 47: Verbindliche interne Datenschutzvorschriften
+2025-08-20 18:25:38,481 - INFO - Article 47: 21 entries extracted
+2025-08-20 18:25:38,482 - INFO - Processing article 48/99: https://dsgvo-gesetz.de/art-48-dsgvo/
+2025-08-20 18:25:38,482 - INFO - Loading page: https://dsgvo-gesetz.de/art-48-dsgvo/ (Attempt 1)
+2025-08-20 18:25:39,535 - INFO - Parse Article 48: Nach dem Unionsrecht nicht zulässige Übermittlung oder Offenlegung
+2025-08-20 18:25:39,536 - INFO - Article 48: 1 entries extracted
+2025-08-20 18:25:39,537 - INFO - Processing article 49/99: https://dsgvo-gesetz.de/art-49-dsgvo/
+2025-08-20 18:25:39,537 - INFO - Loading page: https://dsgvo-gesetz.de/art-49-dsgvo/ (Attempt 1)
+2025-08-20 18:25:40,590 - INFO - Parse Article 49: Ausnahmen für bestimmte Fälle
+2025-08-20 18:25:40,593 - INFO - Article 49: 15 entries extracted
+2025-08-20 18:25:40,593 - INFO - Processing article 50/99: https://dsgvo-gesetz.de/art-50-dsgvo/
+2025-08-20 18:25:40,593 - INFO - Loading page: https://dsgvo-gesetz.de/art-50-dsgvo/ (Attempt 1)
+2025-08-20 18:25:41,646 - INFO - Parse Article 50: Internationale Zusammenarbeit zum Schutz personenbezogener Daten
+2025-08-20 18:25:41,647 - INFO - Article 50: 5 entries extracted
+2025-08-20 18:25:41,647 - INFO - Processing article 51/99: https://dsgvo-gesetz.de/art-51-dsgvo/
+2025-08-20 18:25:41,647 - INFO - Loading page: https://dsgvo-gesetz.de/art-51-dsgvo/ (Attempt 1)
+2025-08-20 18:25:42,695 - INFO - Parse Article 51: Aufsichtsbehörde
+2025-08-20 18:25:42,696 - INFO - Article 51: 5 entries extracted
+2025-08-20 18:25:42,697 - INFO - Processing article 52/99: https://dsgvo-gesetz.de/art-52-dsgvo/
+2025-08-20 18:25:42,697 - INFO - Loading page: https://dsgvo-gesetz.de/art-52-dsgvo/ (Attempt 1)
+2025-08-20 18:25:43,762 - INFO - Parse Article 52: Unabhängigkeit
+2025-08-20 18:25:43,764 - INFO - Article 52: 6 entries extracted
+2025-08-20 18:25:43,764 - INFO - Processing article 53/99: https://dsgvo-gesetz.de/art-53-dsgvo/
+2025-08-20 18:25:43,765 - INFO - Loading page: https://dsgvo-gesetz.de/art-53-dsgvo/ (Attempt 1)
+2025-08-20 18:25:44,823 - INFO - Parse Article 53: Allgemeine Bedingungen für die Mitglieder der Aufsichtsbehörde
+2025-08-20 18:25:44,825 - INFO - Article 53: 4 entries extracted
+2025-08-20 18:25:44,825 - INFO - Processing article 54/99: https://dsgvo-gesetz.de/art-54-dsgvo/
+2025-08-20 18:25:44,826 - INFO - Loading page: https://dsgvo-gesetz.de/art-54-dsgvo/ (Attempt 1)
+2025-08-20 18:25:45,921 - INFO - Parse Article 54: Errichtung der Aufsichtsbehörde
+2025-08-20 18:25:45,923 - INFO - Article 54: 9 entries extracted
+2025-08-20 18:25:45,923 - INFO - Processing article 55/99: https://dsgvo-gesetz.de/art-55-dsgvo/
+2025-08-20 18:25:45,923 - INFO - Loading page: https://dsgvo-gesetz.de/art-55-dsgvo/ (Attempt 1)
+2025-08-20 18:25:46,971 - INFO - Parse Article 55: Zuständigkeit
+2025-08-20 18:25:46,973 - INFO - Article 55: 4 entries extracted
+2025-08-20 18:25:46,973 - INFO - Processing article 56/99: https://dsgvo-gesetz.de/art-56-dsgvo/
+2025-08-20 18:25:46,974 - INFO - Loading page: https://dsgvo-gesetz.de/art-56-dsgvo/ (Attempt 1)
+2025-08-20 18:25:48,035 - INFO - Parse Article 56: Zuständigkeit der federführenden Aufsichtsbehörde
+2025-08-20 18:25:48,037 - INFO - Article 56: 9 entries extracted
+2025-08-20 18:25:48,037 - INFO - Processing article 57/99: https://dsgvo-gesetz.de/art-57-dsgvo/
+2025-08-20 18:25:48,037 - INFO - Loading page: https://dsgvo-gesetz.de/art-57-dsgvo/ (Attempt 1)
+2025-08-20 18:25:49,089 - INFO - Parse Article 57: Aufgaben
+2025-08-20 18:25:49,091 - INFO - Article 57: 27 entries extracted
+2025-08-20 18:25:49,091 - INFO - Processing article 58/99: https://dsgvo-gesetz.de/art-58-dsgvo/
+2025-08-20 18:25:49,091 - INFO - Loading page: https://dsgvo-gesetz.de/art-58-dsgvo/ (Attempt 1)
+2025-08-20 18:25:50,150 - INFO - Parse Article 58: Befugnisse
+2025-08-20 18:25:50,154 - INFO - Article 58: 33 entries extracted
+2025-08-20 18:25:50,154 - INFO - Processing article 59/99: https://dsgvo-gesetz.de/art-59-dsgvo/
+2025-08-20 18:25:50,154 - INFO - Loading page: https://dsgvo-gesetz.de/art-59-dsgvo/ (Attempt 1)
+2025-08-20 18:25:51,207 - INFO - Parse Article 59: Tätigkeitsbericht
+2025-08-20 18:25:51,209 - INFO - Article 59: 3 entries extracted
+2025-08-20 18:25:51,209 - INFO - Processing article 60/99: https://dsgvo-gesetz.de/art-60-dsgvo/
+2025-08-20 18:25:51,209 - INFO - Loading page: https://dsgvo-gesetz.de/art-60-dsgvo/ (Attempt 1)
+2025-08-20 18:25:52,287 - INFO - Parse Article 60: Zusammenarbeit zwischen der federführenden Aufsichtsbehörde und den anderen betroffenen Aufsichtsbehörden
+2025-08-20 18:25:52,289 - INFO - Article 60: 18 entries extracted
+2025-08-20 18:25:52,331 - INFO - Processing article 61/99: https://dsgvo-gesetz.de/art-61-dsgvo/
+2025-08-20 18:25:52,331 - INFO - Loading page: https://dsgvo-gesetz.de/art-61-dsgvo/ (Attempt 1)
+2025-08-20 18:25:53,378 - INFO - Parse Article 61: Gegenseitige Amtshilfe
+2025-08-20 18:25:53,380 - INFO - Article 61: 18 entries extracted
+2025-08-20 18:25:53,380 - INFO - Processing article 62/99: https://dsgvo-gesetz.de/art-62-dsgvo/
+2025-08-20 18:25:53,380 - INFO - Loading page: https://dsgvo-gesetz.de/art-62-dsgvo/ (Attempt 1)
+2025-08-20 18:25:54,435 - INFO - Parse Article 62: Gemeinsame Maßnahmen der Aufsichtsbehörden
+2025-08-20 18:25:54,437 - INFO - Article 62: 12 entries extracted
+2025-08-20 18:25:54,438 - INFO - Processing article 63/99: https://dsgvo-gesetz.de/art-63-dsgvo/
+2025-08-20 18:25:54,438 - INFO - Loading page: https://dsgvo-gesetz.de/art-63-dsgvo/ (Attempt 1)
+2025-08-20 18:25:55,486 - INFO - Parse Article 63: Kohärenzverfahren
+2025-08-20 18:25:55,487 - INFO - Article 63: 1 entries extracted
+2025-08-20 18:25:55,487 - INFO - Processing article 64/99: https://dsgvo-gesetz.de/art-64-dsgvo/
+2025-08-20 18:25:55,487 - INFO - Loading page: https://dsgvo-gesetz.de/art-64-dsgvo/ (Attempt 1)
+2025-08-20 18:25:56,538 - INFO - Parse Article 64: Stellungnahme des Ausschusses
+2025-08-20 18:25:56,540 - INFO - Article 64: 19 entries extracted
+2025-08-20 18:25:56,541 - INFO - Processing article 65/99: https://dsgvo-gesetz.de/art-65-dsgvo/
+2025-08-20 18:25:56,541 - INFO - Loading page: https://dsgvo-gesetz.de/art-65-dsgvo/ (Attempt 1)
+2025-08-20 18:25:57,589 - INFO - Parse Article 65: Streitbeilegung durch den Ausschuss
+2025-08-20 18:25:57,592 - INFO - Article 65: 18 entries extracted
+2025-08-20 18:25:57,592 - INFO - Processing article 66/99: https://dsgvo-gesetz.de/art-66-dsgvo/
+2025-08-20 18:25:57,592 - INFO - Loading page: https://dsgvo-gesetz.de/art-66-dsgvo/ (Attempt 1)
+2025-08-20 18:25:58,653 - INFO - Parse Article 66: Dringlichkeitsverfahren
+2025-08-20 18:25:58,655 - INFO - Article 66: 5 entries extracted
+2025-08-20 18:25:58,655 - INFO - Processing article 67/99: https://dsgvo-gesetz.de/art-67-dsgvo/
+2025-08-20 18:25:58,655 - INFO - Loading page: https://dsgvo-gesetz.de/art-67-dsgvo/ (Attempt 1)
+2025-08-20 18:25:59,703 - INFO - Parse Article 67: Informationsaustausch
+2025-08-20 18:25:59,704 - INFO - Article 67: 2 entries extracted
+2025-08-20 18:25:59,705 - INFO - Processing article 68/99: https://dsgvo-gesetz.de/art-68-dsgvo/
+2025-08-20 18:25:59,705 - INFO - Loading page: https://dsgvo-gesetz.de/art-68-dsgvo/ (Attempt 1)
+2025-08-20 18:26:00,753 - INFO - Parse Article 68: Europäischer Datenschutzausschuss
+2025-08-20 18:26:00,754 - INFO - Article 68: 8 entries extracted
+2025-08-20 18:26:00,755 - INFO - Processing article 69/99: https://dsgvo-gesetz.de/art-69-dsgvo/
+2025-08-20 18:26:00,755 - INFO - Loading page: https://dsgvo-gesetz.de/art-69-dsgvo/ (Attempt 1)
+2025-08-20 18:26:01,807 - INFO - Parse Article 69: Unabhängigkeit
+2025-08-20 18:26:01,809 - INFO - Article 69: 2 entries extracted
+2025-08-20 18:26:01,809 - INFO - Processing article 70/99: https://dsgvo-gesetz.de/art-70-dsgvo/
+2025-08-20 18:26:01,809 - INFO - Loading page: https://dsgvo-gesetz.de/art-70-dsgvo/ (Attempt 1)
+2025-08-20 18:26:02,861 - INFO - Parse Article 70: Aufgaben des Ausschusses
+2025-08-20 18:26:02,865 - INFO - Article 70: 30 entries extracted
+2025-08-20 18:26:02,866 - INFO - Processing article 71/99: https://dsgvo-gesetz.de/art-71-dsgvo/
+2025-08-20 18:26:02,866 - INFO - Loading page: https://dsgvo-gesetz.de/art-71-dsgvo/ (Attempt 1)
+2025-08-20 18:26:03,917 - INFO - Parse Article 71: Berichterstattung
+2025-08-20 18:26:03,918 - INFO - Article 71: 3 entries extracted
+2025-08-20 18:26:03,918 - INFO - Processing article 72/99: https://dsgvo-gesetz.de/art-72-dsgvo/
+2025-08-20 18:26:03,918 - INFO - Loading page: https://dsgvo-gesetz.de/art-72-dsgvo/ (Attempt 1)
+2025-08-20 18:26:04,987 - INFO - Parse Article 72: Verfahrensweise
+2025-08-20 18:26:04,988 - INFO - Article 72: 2 entries extracted
+2025-08-20 18:26:04,989 - INFO - Processing article 73/99: https://dsgvo-gesetz.de/art-73-dsgvo/
+2025-08-20 18:26:04,989 - INFO - Loading page: https://dsgvo-gesetz.de/art-73-dsgvo/ (Attempt 1)
+2025-08-20 18:26:06,038 - INFO - Parse Article 73: Vorsitz
+2025-08-20 18:26:06,039 - INFO - Article 73: 2 entries extracted
+2025-08-20 18:26:06,039 - INFO - Processing article 74/99: https://dsgvo-gesetz.de/art-74-dsgvo/
+2025-08-20 18:26:06,040 - INFO - Loading page: https://dsgvo-gesetz.de/art-74-dsgvo/ (Attempt 1)
+2025-08-20 18:26:07,088 - INFO - Parse Article 74: Aufgaben des Vorsitzes
+2025-08-20 18:26:07,089 - INFO - Article 74: 5 entries extracted
+2025-08-20 18:26:07,089 - INFO - Processing article 75/99: https://dsgvo-gesetz.de/art-75-dsgvo/
+2025-08-20 18:26:07,090 - INFO - Loading page: https://dsgvo-gesetz.de/art-75-dsgvo/ (Attempt 1)
+2025-08-20 18:26:08,141 - INFO - Parse Article 75: Sekretariat
+2025-08-20 18:26:08,143 - INFO - Article 75: 13 entries extracted
+2025-08-20 18:26:08,143 - INFO - Processing article 76/99: https://dsgvo-gesetz.de/art-76-dsgvo/
+2025-08-20 18:26:08,143 - INFO - Loading page: https://dsgvo-gesetz.de/art-76-dsgvo/ (Attempt 1)
+2025-08-20 18:26:09,196 - INFO - Parse Article 76: Vertraulichkeit
+2025-08-20 18:26:09,197 - INFO - Article 76: 2 entries extracted
+2025-08-20 18:26:09,197 - INFO - Processing article 77/99: https://dsgvo-gesetz.de/art-77-dsgvo/
+2025-08-20 18:26:09,197 - INFO - Loading page: https://dsgvo-gesetz.de/art-77-dsgvo/ (Attempt 1)
+2025-08-20 18:26:10,248 - INFO - Parse Article 77: Recht auf Beschwerde bei einer Aufsichtsbehörde
+2025-08-20 18:26:10,249 - INFO - Article 77: 2 entries extracted
+2025-08-20 18:26:10,249 - INFO - Processing article 78/99: https://dsgvo-gesetz.de/art-78-dsgvo/
+2025-08-20 18:26:10,249 - INFO - Loading page: https://dsgvo-gesetz.de/art-78-dsgvo/ (Attempt 1)
+2025-08-20 18:26:11,298 - INFO - Parse Article 78: Recht auf wirksamen gerichtlichen Rechtsbehelf gegen eine Aufsichtsbehörde
+2025-08-20 18:26:11,300 - INFO - Article 78: 4 entries extracted
+2025-08-20 18:26:11,300 - INFO - Processing article 79/99: https://dsgvo-gesetz.de/art-79-dsgvo/
+2025-08-20 18:26:11,300 - INFO - Loading page: https://dsgvo-gesetz.de/art-79-dsgvo/ (Attempt 1)
+2025-08-20 18:26:12,361 - INFO - Parse Article 79: Recht auf wirksamen gerichtlichen Rechtsbehelf gegen Verantwortliche oder Auftragsverarbeiter
+2025-08-20 18:26:12,363 - INFO - Article 79: 3 entries extracted
+2025-08-20 18:26:12,364 - INFO - Processing article 80/99: https://dsgvo-gesetz.de/art-80-dsgvo/
+2025-08-20 18:26:12,364 - INFO - Loading page: https://dsgvo-gesetz.de/art-80-dsgvo/ (Attempt 1)
+2025-08-20 18:26:13,413 - INFO - Parse Article 80: Vertretung von betroffenen Personen
+2025-08-20 18:26:13,415 - INFO - Article 80: 2 entries extracted
+2025-08-20 18:26:13,415 - INFO - Processing article 81/99: https://dsgvo-gesetz.de/art-81-dsgvo/
+2025-08-20 18:26:13,415 - INFO - Loading page: https://dsgvo-gesetz.de/art-81-dsgvo/ (Attempt 1)
+2025-08-20 18:26:14,670 - INFO - Parse Article 81: Aussetzung des Verfahrens
+2025-08-20 18:26:14,671 - INFO - Article 81: 3 entries extracted
+2025-08-20 18:26:14,672 - INFO - Processing article 82/99: https://dsgvo-gesetz.de/art-82-dsgvo/
+2025-08-20 18:26:14,672 - INFO - Loading page: https://dsgvo-gesetz.de/art-82-dsgvo/ (Attempt 1)
+2025-08-20 18:26:15,925 - INFO - Parse Article 82: Haftung und Recht auf Schadenersatz
+2025-08-20 18:26:15,927 - INFO - Article 82: 7 entries extracted
+2025-08-20 18:26:15,927 - INFO - Processing article 83/99: https://dsgvo-gesetz.de/art-83-dsgvo/
+2025-08-20 18:26:15,927 - INFO - Loading page: https://dsgvo-gesetz.de/art-83-dsgvo/ (Attempt 1)
+2025-08-20 18:26:16,982 - INFO - Parse Article 83: Allgemeine Bedingungen für die Verhängung von Geldbußen
+2025-08-20 18:26:16,984 - INFO - Article 83: 30 entries extracted
+2025-08-20 18:26:16,985 - INFO - Processing article 84/99: https://dsgvo-gesetz.de/art-84-dsgvo/
+2025-08-20 18:26:16,985 - INFO - Loading page: https://dsgvo-gesetz.de/art-84-dsgvo/ (Attempt 1)
+2025-08-20 18:26:18,038 - INFO - Parse Article 84: Sanktionen
+2025-08-20 18:26:18,039 - INFO - Article 84: 3 entries extracted
+2025-08-20 18:26:18,039 - INFO - Processing article 85/99: https://dsgvo-gesetz.de/art-85-dsgvo/
+2025-08-20 18:26:18,039 - INFO - Loading page: https://dsgvo-gesetz.de/art-85-dsgvo/ (Attempt 1)
+2025-08-20 18:26:19,093 - INFO - Parse Article 85: Verarbeitung und Freiheit der Meinungsäußerung und Informationsfreiheit
+2025-08-20 18:26:19,095 - INFO - Article 85: 3 entries extracted
+2025-08-20 18:26:19,095 - INFO - Processing article 86/99: https://dsgvo-gesetz.de/art-86-dsgvo/
+2025-08-20 18:26:19,096 - INFO - Loading page: https://dsgvo-gesetz.de/art-86-dsgvo/ (Attempt 1)
+2025-08-20 18:26:20,148 - INFO - Parse Article 86: Verarbeitung und Zugang der Öffentlichkeit zu amtlichen Dokumenten
+2025-08-20 18:26:20,150 - INFO - Article 86: 1 entries extracted
+2025-08-20 18:26:20,150 - INFO - Processing article 87/99: https://dsgvo-gesetz.de/art-87-dsgvo/
+2025-08-20 18:26:20,150 - INFO - Loading page: https://dsgvo-gesetz.de/art-87-dsgvo/ (Attempt 1)
+2025-08-20 18:26:21,204 - INFO - Parse Article 87: Verarbeitung der nationalen Kennziffer
+2025-08-20 18:26:21,205 - INFO - Article 87: 2 entries extracted
+2025-08-20 18:26:21,205 - INFO - Processing article 88/99: https://dsgvo-gesetz.de/art-88-dsgvo/
+2025-08-20 18:26:21,205 - INFO - Loading page: https://dsgvo-gesetz.de/art-88-dsgvo/ (Attempt 1)
+2025-08-20 18:26:22,254 - INFO - Parse Article 88: Datenverarbeitung im Beschäftigungskontext
+2025-08-20 18:26:22,256 - INFO - Article 88: 3 entries extracted
+2025-08-20 18:26:22,256 - INFO - Processing article 89/99: https://dsgvo-gesetz.de/art-89-dsgvo/
+2025-08-20 18:26:22,256 - INFO - Loading page: https://dsgvo-gesetz.de/art-89-dsgvo/ (Attempt 1)
+2025-08-20 18:26:23,305 - INFO - Parse Article 89: Garantien und Ausnahmen in Bezug auf die Verarbeitung zu im öffentlichen Interesse liegenden Archivzwecken, zu wissenschaftlichen oder historischen Forschungszwecken und zu statistischen Zwecken
+2025-08-20 18:26:23,307 - INFO - Article 89: 7 entries extracted
+2025-08-20 18:26:23,307 - INFO - Processing article 90/99: https://dsgvo-gesetz.de/art-90-dsgvo/
+2025-08-20 18:26:23,307 - INFO - Loading page: https://dsgvo-gesetz.de/art-90-dsgvo/ (Attempt 1)
+2025-08-20 18:26:24,360 - INFO - Parse Article 90: Geheimhaltungspflichten
+2025-08-20 18:26:24,362 - INFO - Article 90: 3 entries extracted
+2025-08-20 18:26:24,362 - INFO - Processing article 91/99: https://dsgvo-gesetz.de/art-91-dsgvo/
+2025-08-20 18:26:24,362 - INFO - Loading page: https://dsgvo-gesetz.de/art-91-dsgvo/ (Attempt 1)
+2025-08-20 18:26:25,415 - INFO - Parse Article 91: Bestehende Datenschutzvorschriften von Kirchen und religiösen Vereinigungen oder Gemeinschaften
+2025-08-20 18:26:25,416 - INFO - Article 91: 2 entries extracted
+2025-08-20 18:26:25,417 - INFO - Processing article 92/99: https://dsgvo-gesetz.de/art-92-dsgvo/
+2025-08-20 18:26:25,417 - INFO - Loading page: https://dsgvo-gesetz.de/art-92-dsgvo/ (Attempt 1)
+2025-08-20 18:26:26,475 - INFO - Parse Article 92: Ausübung der Befugnisübertragung
+2025-08-20 18:26:26,477 - INFO - Article 92: 9 entries extracted
+2025-08-20 18:26:26,477 - INFO - Processing article 93/99: https://dsgvo-gesetz.de/art-93-dsgvo/
+2025-08-20 18:26:26,477 - INFO - Loading page: https://dsgvo-gesetz.de/art-93-dsgvo/ (Attempt 1)
+2025-08-20 18:26:27,532 - INFO - Parse Article 93: Ausschussverfahren
+2025-08-20 18:26:27,533 - INFO - Article 93: 4 entries extracted
+2025-08-20 18:26:27,533 - INFO - Processing article 94/99: https://dsgvo-gesetz.de/art-94-dsgvo/
+2025-08-20 18:26:27,533 - INFO - Loading page: https://dsgvo-gesetz.de/art-94-dsgvo/ (Attempt 1)
+2025-08-20 18:26:28,584 - INFO - Parse Article 94: Aufhebung der Richtlinie 95/46/EG
+2025-08-20 18:26:28,585 - INFO - Article 94: 3 entries extracted
+2025-08-20 18:26:28,585 - INFO - Processing article 95/99: https://dsgvo-gesetz.de/art-95-dsgvo/
+2025-08-20 18:26:28,585 - INFO - Loading page: https://dsgvo-gesetz.de/art-95-dsgvo/ (Attempt 1)
+2025-08-20 18:26:29,645 - INFO - Parse Article 95: Verhältnis zur Richtlinie 2002/58/EG
+2025-08-20 18:26:29,647 - INFO - Article 95: 1 entries extracted
+2025-08-20 18:26:29,647 - INFO - Processing article 96/99: https://dsgvo-gesetz.de/art-96-dsgvo/
+2025-08-20 18:26:29,647 - INFO - Loading page: https://dsgvo-gesetz.de/art-96-dsgvo/ (Attempt 1)
+2025-08-20 18:26:30,698 - INFO - Parse Article 96: Verhältnis zu bereits geschlossenen Übereinkünften
+2025-08-20 18:26:30,699 - INFO - Article 96: 1 entries extracted
+2025-08-20 18:26:30,700 - INFO - Processing article 97/99: https://dsgvo-gesetz.de/art-97-dsgvo/
+2025-08-20 18:26:30,700 - INFO - Loading page: https://dsgvo-gesetz.de/art-97-dsgvo/ (Attempt 1)
+2025-08-20 18:26:31,747 - INFO - Parse Article 97: Berichte der Kommission
+2025-08-20 18:26:31,749 - INFO - Article 97: 8 entries extracted
+2025-08-20 18:26:31,749 - INFO - Processing article 98/99: https://dsgvo-gesetz.de/art-98-dsgvo/
+2025-08-20 18:26:31,749 - INFO - Loading page: https://dsgvo-gesetz.de/art-98-dsgvo/ (Attempt 1)
+2025-08-20 18:26:32,809 - INFO - Parse Article 98: Überprüfung anderer Rechtsakte der Union zum Datenschutz
+2025-08-20 18:26:32,810 - INFO - Article 98: 2 entries extracted
+2025-08-20 18:26:32,810 - INFO - Processing article 99/99: https://dsgvo-gesetz.de/art-99-dsgvo/
+2025-08-20 18:26:32,810 - INFO - Loading page: https://dsgvo-gesetz.de/art-99-dsgvo/ (Attempt 1)
+2025-08-20 18:26:33,869 - INFO - Parse Article 99: Inkrafttreten und Anwendung
+2025-08-20 18:26:33,870 - INFO - Article 99: 2 entries extracted
+2025-08-20 18:26:33,870 - INFO - Crawling completed. Total 901 entries extracted.
+2025-08-20 18:26:33,871 - INFO - Saving 901 entries to: data/output/dsgvo_crawled_2025-08-20_1824.jsonl
+2025-08-20 18:26:33,883 - INFO - Successfully saved: data/output/dsgvo_crawled_2025-08-20_1824.jsonl
+2025-08-20 18:26:33,883 - INFO - === CRAWLING STATISTICS ===
+2025-08-20 18:26:33,883 - INFO - Total entries: 901
+2025-08-20 18:26:33,883 - INFO - Articles processed: 99
+2025-08-20 18:26:33,884 - INFO - Chapters processed: 11

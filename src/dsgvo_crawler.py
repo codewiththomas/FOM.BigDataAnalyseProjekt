@@ -196,7 +196,7 @@ class ContentParser:
         intro_text = li_copy.get_text(strip=True)
         if intro_text:
             # Introduction text of paragraph
-            sentences = self.sentence_parser.parse_sentences_from_element(li_element)
+            sentences = self.sentence_parser.parse_sentences_from_text(intro_text)
             for satz_nr, satz_text in sentences:
                 entry = DSGVOEntry(
                     kapitel_nr=context['kapitel_nr'],
@@ -498,7 +498,7 @@ class DSGVOCrawler:
         """Run complete crawl and save results"""
         if output_path is None:
             timestamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-            output_path = f"../data/output/dsgvo_crawled_{timestamp}.jsonl"
+            output_path = f"data/output/dsgvo_crawled_{timestamp}.jsonl"
 
         try:
             # Crawl all articles
@@ -539,7 +539,7 @@ def setup_logging():
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler('../data/logs/crawler.log'),
+            logging.FileHandler('data/logs/crawler.log'),
             logging.StreamHandler()
         ]
     )
