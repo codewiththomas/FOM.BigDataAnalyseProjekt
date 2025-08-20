@@ -112,7 +112,7 @@ class DSGVODataset:
                     # Extract key topics from the text
                     topics = self._extract_topics(doc['text'])
                     for topic in topics[:2]:  # Limit to 2 topics per document
-                        specific_question = f"What does DSGVO Article {metadata['artikel_nr']} say about {topic}?"
+                        specific_question = f"Was sagt DSGVO Artikel {metadata['artikel_nr']} über {topic}?"
                         qa_pair = {
                             'id': f"{doc['id']}_qa_{len(self.qa_pairs)}",
                             'question': specific_question,

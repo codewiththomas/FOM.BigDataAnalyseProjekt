@@ -35,11 +35,11 @@ evaluation:
     - ragas
 
 dataset:
-  evaluation_subset_size: 50
+  evaluation_subset_size: 100 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
   save_qa_pairs: true
   grouping:
     enabled: true # false für Deaktivierung der Gruppierung
 
 pipeline:
   include_context: true
-  max_context_length: 1000
+  max_context_length: 3500 # Empfehlung: top_k * chunksize / 4 (Umrechnung char zu token)

@@ -51,6 +51,7 @@ class RAGFactory:
             embedding=embedding,
             chunking=chunking,
             retrieval=retrieval,
+            config=self.config.get_pipeline_config(),
             cache=self.cache
         )
 

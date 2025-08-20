@@ -37,10 +37,15 @@ class RAGEvaluator:
 
         logger.info("Pipeline setup complete")
 
-    def run_evaluation(self, num_qa: int = 100, save_results: bool = True) -> Dict[str, Any]:
+    def run_evaluation(self, num_qa: int = None, save_results: bool = True) -> Dict[str, Any]:
         """Run the complete evaluation process"""
         if not self.pipeline:
             self.setup_pipeline()
+
+        # Get num_qa from config if not provided
+        if num_qa is None:
+            dataset_config = self.factory.config.get_dataset_config()
+            num_qa = dataset_config.get('evaluation_subset_size', 100)
 
         # Set random seed for reproducible results
         import random
@@ -85,6 +90,7 @@ class RAGEvaluator:
                 'question': question,
                 'expected_answer': expected_answer,
                 'actual_answer': query_result.response,
+                **query_result.metadata,  # ← NEU: Pipeline-Metadaten übernehmen
                 'pipeline_info': self.pipeline.get_pipeline_info()
             })
 
@@ -155,12 +161,23 @@ class RAGEvaluator:
                 'max_dsgvo_score': max(dsgvo_scores)
             })
 
+        # NEU: Context-Optimization Metadaten
+        context_stats = {
+            'truncation_rate': sum(1 for r in results if r.get('truncated', False)) / len(
+                results) if results else 0,
+            'avg_context_utilization': sum(r.get('context_utilization', 0) for r in results) / len(
+                results) if results else 0,
+            'avg_chunks_used': sum(r.get('chunks_used', 0) for r in results) / len(results) if results else 0,
+            'total_chunks_wasted': sum(max(0, r.get('chunks_total', 0) - r.get('chunks_used', 0)) for r in results)
+        }
+
         # Add pipeline and evaluation info
         summary.update({
             'pipeline_info': self.pipeline.get_pipeline_info(),
+            'context_optimization': context_stats,
             'evaluation_info': {
                 'enabled_evaluators': [e.__class__.__name__ for e in self.evaluator.evaluators],
-                'total_metrics': len(summary) - 2  # Exclude pipeline_info and evaluation_info
+                'total_metrics': len(summary) - 3  # Exclude pipeline_info and evaluation_info
             },
             'total_evaluation_time': total_time,
             'qa_pairs_evaluated': len(results),

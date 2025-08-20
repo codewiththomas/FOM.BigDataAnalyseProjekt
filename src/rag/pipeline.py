@@ -18,11 +18,13 @@ class RAGPipeline:
                  embedding: EmbeddingInterface,
                  chunking: ChunkingInterface,
                  retrieval: RetrievalInterface,
+                 config: Dict[str, Any] = None,
                  cache: Optional[RAGCache] = None):
         self.llm = llm
         self.embedding = embedding
         self.chunking = chunking
         self.retrieval = retrieval
+        self.config = config or {}
 
         #if hasattr(self.retrieval, "set_embedding_model"):
         self.retrieval.set_embedding_model(self.embedding)
@@ -163,7 +165,7 @@ class RAGPipeline:
         retrieved_chunks = self.retrieval.retrieve(question, top_k)
 
         # Generate response
-        context = "\n\n".join([chunk.text for chunk in retrieved_chunks])
+        context, context_metadata = self._build_limited_context(retrieved_chunks)
         response = self.llm.generate(question, context)
 
         query_time = time.time() - start_time
@@ -175,11 +177,53 @@ class RAGPipeline:
             metadata={
                 'query_time': query_time,
                 'chunks_retrieved': len(retrieved_chunks),
+                'context_length': len(context),
+                **context_metadata,
                 'llm_model': self.llm.get_model_info().get('name', 'unknown'),
                 'embedding_model': self.embedding.get_model_info().get('name', 'unknown'),
                 'retrieval_method': self.retrieval.get_model_info().get('name', 'unknown')
             }
         )
+
+    def _build_limited_context(self, chunks: List[Chunk]) -> tuple[str, Dict[str, Any]]:
+        """Build context string with length limit"""
+        max_context_length = self.config.get('max_context_length', 4000) # max_context_length aus Config lesen
+
+        if not chunks:
+            return "", {}
+
+        context_parts = []
+        current_length = 0
+        truncated = False
+
+        for chunk in chunks:
+            chunk_text = chunk.text
+            chunk_length = len(chunk_text) // 4  # 1 Token ≈ 4 Zeichen
+
+            if current_length + chunk_length <= max_context_length:
+                context_parts.append(chunk_text)
+                current_length += chunk_length
+            else:
+                truncated = True
+                remaining_length = max_context_length - current_length
+                if remaining_length > 50:
+                    truncated_text = chunk_text[:remaining_length * 4]
+                    context_parts.append(truncated_text + "...")
+                break
+
+        context = "\n\n".join(context_parts)
+
+        # Logging-Metadaten
+        context_metadata = {
+            'tokens_used': current_length,
+            'max_context_length': max_context_length,
+            'truncated': truncated,
+            'chunks_used': len(context_parts),
+            'chunks_total': len(chunks),
+            'context_utilization': current_length / max_context_length if max_context_length > 0 else 0
+        }
+
+        return context, context_metadata
 
     def get_pipeline_info(self) -> Dict[str, Any]:
         """Get information about the pipeline configuration"""
@@ -194,6 +238,10 @@ class RAGPipeline:
                 'separator': getattr(self.chunking, 'separator', None)
             },
             'retrieval': self.retrieval.get_model_info(),
+            'pipeline': {  # ← NEU
+                'max_context_length': self.config.get('max_context_length', 4000),
+                'include_context': self.config.get('include_context', True)
+            },
             'is_indexed': self.is_indexed,
             'dataset': {
                 'documents_processed': len(self.documents_before_chunking) if hasattr(self,
