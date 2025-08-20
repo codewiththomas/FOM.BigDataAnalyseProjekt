@@ -1,17 +1,29 @@
+### TODOS 20.08.2025
+
+Celine
+- [ ] Kapitel 2
+Thomas
+- [ ] Abschnitt Design fertig schreiben
+- [ ] Baselines testen (Embedding Modelle)
+Ulrike
+- [ ] Baselines testen (Chunker mit verschiedenen Größen)
+- [ ] Evaluierungskapitel weiter schreiben
+
+
 ### TODOs 16.08.2025
 
 - Crawler
-  [ ] DSGVO zu Artikeln zusammenfassen [TB]
-  [ ] Unterabsätze sind doppelt
+  [x] DSGVO zu Artikeln zusammenfassen [TB]
+  [x] Unterabsätze sind doppelt
 - Chunker
-  [ ] RecursiveChunker implementieren
+  [x] RecursiveChunker implementieren
 - FAISS als Datenbank hinterlegen
 - Kapitel Design schreiben
   [ ] Crawler
-  [ ] Architektur
+  [o] Architektur
 - Evaluation
-  [ ] Kapitel 5 Evaluationsdesign beschreiben (welche Metriken, was haben vor)
-  [ ] testen mit Baseline
+  [o] Kapitel 5 Evaluationsdesign beschreiben (welche Metriken, was haben vor)
+  [o] testen mit Baseline
 - Notizen bzgl. Hyperparameter in OneNote
 
 Beispiel-Modelle:
