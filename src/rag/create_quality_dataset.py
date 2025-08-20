@@ -184,12 +184,17 @@ Antworte nur mit "VALID" oder "INVALID" und einer kurzen Begründung.
             logger.error(f"Fehler bei Validierung: {e}")
             return True  # Fallback: Akzeptiere bei Fehlern
 
-    def generate_qa_pairs(self, max_documents: int = 5):
-        """Generiert QA-Paare mit LLM-Unterstützung (begrenzt auf max_documents)"""
-        logger.info(f"Generiere QA-Paare mit GPT-4o (max. {max_documents} Dokumente)...")
+    def generate_qa_pairs(self, max_documents: int = None):
+        """Generiert QA-Paare mit LLM-Unterstützung (alle Dokumente oder begrenzt auf max_documents)"""
+        if max_documents is None:
+            logger.info(f"Generiere QA-Paare mit GPT-4o für alle {len(self.documents)} Dokumente...")
+            documents_to_process = self.documents
+        else:
+            logger.info(f"Generiere QA-Paare mit GPT-4o (max. {max_documents} Dokumente)...")
+            documents_to_process = self.documents[:max_documents]
 
-        for i, doc in enumerate(self.documents[:max_documents]):
-            logger.info(f"Verarbeite Dokument {i+1}/{min(max_documents, len(self.documents))}")
+        for i, doc in enumerate(documents_to_process):
+            logger.info(f"Verarbeite Dokument {i+1}/{len(documents_to_process)}")
 
             text = doc.get('Text', '').strip()
             if not text or len(text) < 10:
@@ -239,9 +244,15 @@ Antworte nur mit "VALID" oder "INVALID" und einer kurzen Begründung.
 
             self.qa_pairs.append(qa_pair)
 
-            # Speichere nach jedem erfolgreichen Durchlauf
+                        # Speichere nach jedem erfolgreichen Durchlauf
             logger.info(f"QA-Paar {i+1} erfolgreich generiert und gespeichert")
             self._save_progress()
+
+            # Optional: Pause nach jedem X-ten Dokument um API-Limits zu respektieren
+            if (i + 1) % 10 == 0:
+                logger.info(f"Pause nach {i+1} Dokumenten...")
+                import time
+                time.sleep(2)  # 2 Sekunden Pause alle 10 Dokumente
 
         logger.info(f"Generiert: {len(self.qa_pairs)} QA-Paare")
 
@@ -314,7 +325,7 @@ def main():
     # Konfiguration
     input_file = "data/output/dsgvo_crawled_2025-08-20_1824.jsonl"
     output_file = "data/evaluation/dsgvo_llm_quality_dataset.jsonl"
-    max_documents = 5  # ← Nur die ersten 5 Sätze
+    max_documents = None  # ← None = alle Dokumente, oder Zahl für Test
 
     # Prüfe API-Key
     if not os.getenv('OPENAI_API_KEY'):
@@ -327,13 +338,23 @@ def main():
     # Generiere Datensatz
     generator = LLMQAGenerator()
     generator.load_documents(input_file)
-    generator.generate_qa_pairs(max_documents=max_documents)  # ← Begrenzte Anzahl
+
+    if max_documents:
+        logger.info(f"TEST-Modus: Verarbeite nur {max_documents} Dokumente")
+        generator.generate_qa_pairs(max_documents=max_documents)
+    else:
+        logger.info("VOLL-Modus: Verarbeite alle Dokumente")
+        generator.generate_qa_pairs()  # Alle Dokumente
+
     generator.save_dataset(output_file)
 
     # Zeige Zusammenfassung
     summary = generator._create_summary()
     print("\n" + "="*50)
-    print("LLM-GENERIERTER QUALITÄTS-DATENSATZ (TEST)")
+    if max_documents:
+        print("LLM-GENERIERTER QUALITÄTS-DATENSATZ (TEST)")
+    else:
+        print("LLM-GENERIERTER QUALITÄTS-DATENSATZ (VOLL)")
     print("="*50)
     print(f"QA-Paare: {summary['total_qa_pairs']}")
     print(f"Artikel abgedeckt: {summary['articles_covered']}")
