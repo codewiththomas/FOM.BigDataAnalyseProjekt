@@ -31,7 +31,7 @@ pip install -r requirements.txt
 6. Ausführen
 
 ```bash
- python src/rag/main.py --config configs/000_baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-14_1535.jsonl --num-qa 50
+ python src/rag/main.py --config configs/000_baseline.yaml --dataset data/output/dsgvo_crawled_2025-08-20_1824.jsonl --num-qa 5
  ```
 
 ---
