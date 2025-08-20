@@ -184,13 +184,12 @@ Antworte nur mit "VALID" oder "INVALID" und einer kurzen Begründung.
             logger.error(f"Fehler bei Validierung: {e}")
             return True  # Fallback: Akzeptiere bei Fehlern
 
-    def generate_qa_pairs(self):
-        """Generiert alle QA-Paare mit LLM-Unterstützung"""
-        logger.info("Generiere QA-Paare mit GPT-4o...")
+    def generate_qa_pairs(self, max_documents: int = 5):
+        """Generiert QA-Paare mit LLM-Unterstützung (begrenzt auf max_documents)"""
+        logger.info(f"Generiere QA-Paare mit GPT-4o (max. {max_documents} Dokumente)...")
 
-        for i, doc in enumerate(self.documents):
-            if i % 10 == 0:
-                logger.info(f"Verarbeite Dokument {i+1}/{len(self.documents)}")
+        for i, doc in enumerate(self.documents[:max_documents]):
+            logger.info(f"Verarbeite Dokument {i+1}/{min(max_documents, len(self.documents))}")
 
             text = doc.get('Text', '').strip()
             if not text or len(text) < 10:
@@ -208,11 +207,12 @@ Antworte nur mit "VALID" oder "INVALID" und einer kurzen Begründung.
             llm_result = self.generate_question_with_llm(text, article_nr, artikel_name, article_context)
 
             if not llm_result:
+                logger.warning(f"Keine Frage generiert für Dokument {i+1}")
                 continue
 
             # Validiere QA-Paar mit LLM
             if not self.validate_qa_pair_with_llm(llm_result['question'], text, article_context):
-                logger.debug(f"QA-Paar validiert nicht: {llm_result['question']}")
+                logger.warning(f"QA-Paar validiert nicht für Dokument {i+1}")
                 continue
 
             # Erstelle QA-Paar
@@ -239,10 +239,29 @@ Antworte nur mit "VALID" oder "INVALID" und einer kurzen Begründung.
 
             self.qa_pairs.append(qa_pair)
 
+            # Speichere nach jedem erfolgreichen Durchlauf
+            logger.info(f"QA-Paar {i+1} erfolgreich generiert und gespeichert")
+            self._save_progress()
+
         logger.info(f"Generiert: {len(self.qa_pairs)} QA-Paare")
 
+    def _save_progress(self):
+        """Speichert den aktuellen Fortschritt"""
+        if not self.qa_pairs:
+            return
+
+        # Erstelle temporäre Datei mit aktuellem Stand
+        temp_file = Path("data/evaluation/dsgvo_llm_quality_dataset_temp.jsonl")
+        temp_file.parent.mkdir(parents=True, exist_ok=True)
+
+        with jsonlines.open(temp_file, 'w') as writer:
+            for qa_pair in self.qa_pairs:
+                writer.write(qa_pair)
+
+        logger.info(f"Fortschritt gespeichert: {temp_file} ({len(self.qa_pairs)} QA-Paare)")
+
     def save_dataset(self, output_path: str):
-        """Speichert den generierten Datensatz"""
+        """Speichert den finalen Datensatz"""
         output_file = Path(output_path)
 
         # Speichere QA-Paare
@@ -257,7 +276,12 @@ Antworte nur mit "VALID" oder "INVALID" und einer kurzen Begründung.
         with open(summary_file, 'w', encoding='utf-8') as f:
             json.dump(summary, f, indent=2, ensure_ascii=False)
 
-        logger.info(f"Datensatz gespeichert: {output_file}")
+        # Lösche temporäre Datei
+        temp_file = Path("data/evaluation/dsgvo_llm_quality_dataset_temp.jsonl")
+        if temp_file.exists():
+            temp_file.unlink()
+
+        logger.info(f"Finaler Datensatz gespeichert: {output_file}")
         logger.info(f"Zusammenfassung gespeichert: {summary_file}")
 
     def _create_summary(self) -> Dict[str, Any]:
@@ -290,6 +314,7 @@ def main():
     # Konfiguration
     input_file = "data/output/dsgvo_crawled_2025-08-20_1824.jsonl"
     output_file = "data/evaluation/dsgvo_llm_quality_dataset.jsonl"
+    max_documents = 5  # ← Nur die ersten 5 Sätze
 
     # Prüfe API-Key
     if not os.getenv('OPENAI_API_KEY'):
@@ -302,13 +327,13 @@ def main():
     # Generiere Datensatz
     generator = LLMQAGenerator()
     generator.load_documents(input_file)
-    generator.generate_qa_pairs()
+    generator.generate_qa_pairs(max_documents=max_documents)  # ← Begrenzte Anzahl
     generator.save_dataset(output_file)
 
     # Zeige Zusammenfassung
     summary = generator._create_summary()
     print("\n" + "="*50)
-    print("LLM-GENERIERTER QUALITÄTS-DATENSATZ")
+    print("LLM-GENERIERTER QUALITÄTS-DATENSATZ (TEST)")
     print("="*50)
     print(f"QA-Paare: {summary['total_qa_pairs']}")
     print(f"Artikel abgedeckt: {summary['articles_covered']}")
