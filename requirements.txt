@@ -36,6 +36,11 @@ numpy>=1.21.0
 # Logging and utilities
 tqdm>=4.64.0
 
+# Tabellarische Darstellung + Output
+pandas
+matplotlib
+xlsxwriter   # für Excel-Export der Gruppentabellen
+
 # Optional: For advanced evaluation metrics
 # ragas>=0.0.20  # Uncomment when implementing full RAGAS
 # scikit-learn>=1.0.0  # For advanced similarity calculations
