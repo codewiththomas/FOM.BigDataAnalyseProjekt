@@ -16,8 +16,8 @@ import pandas as pd
 
 # Dieses Skript liegt unter: results/retrieval_results_table.py
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-SUMMARY_DIR  = PROJECT_ROOT / "results" / "runs" / "retrieval"
-OUT_DIR      = PROJECT_ROOT / "results" / "tables" / "retrieval"
+SUMMARY_DIR  = PROJECT_ROOT / "results" / "runs" / "llm"
+OUT_DIR      = PROJECT_ROOT / "results" / "tables" / "llm"
 
 
 def safe_get(d: Dict[str, Any], path: str, default: Any = None) -> Any:
@@ -143,8 +143,8 @@ def main():
     if sort_col in df.columns:
         df = df.sort_values(sort_col, ascending=False, na_position="last")
 
-    csv_path = out_dir / "retrieval_results.csv"
-    md_path  = out_dir / "retrieval_results.md"
+    csv_path = out_dir / "llm_results.csv"
+    md_path  = out_dir / "llm_results.md"
 
     df.to_csv(csv_path, index=False, encoding="utf-8")
     try:

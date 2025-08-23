@@ -20,7 +20,7 @@ from evaluator import RAGEvaluator  # unverändert verwenden
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]  # .../FOM.BigDataAnalyseProjekt
 BASELINE_PATH = PROJECT_ROOT / "configs" / "000_baseline.yaml"
-OUT_DIR = PROJECT_ROOT / "results" / "runs"  # Plural!
+OUT_DIR = PROJECT_ROOT / "results" / "runs" / "retrieval"
 
 # Grid NUR für Retrieval-Ebene (Embedding & LLM-Params bleiben fix)
 PARAMETER_GRID = {
@@ -117,6 +117,8 @@ def main():
 
     base_cfg = load_baseline_config()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    print(f"📁 Output (retrieval runs): {OUT_DIR.resolve()}")
 
     # Informationen aus Baseline (Embedding bleibt fix; Abkürzung kommt aus Config)
     emb_abbr = get_embedding_abbr(base_cfg)

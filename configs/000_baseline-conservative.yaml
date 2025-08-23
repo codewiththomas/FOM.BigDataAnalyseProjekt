@@ -1,0 +1,48 @@
+# ResearchRAG Baseline Configuration
+# This configuration uses GPT-4o-mini as the baseline model
+
+llm:
+  type: openai
+  model: gpt-4o-mini
+  abbr: g4o-mini # für Benennung der Ausgabe-Datei. Für jedes neue Modell ergänzen.
+  temperature: 0.1
+  max_tokens: 1000
+  # api_key: ${OPENAI_API_KEY}  # Set via environment variable
+
+embedding:
+  # type: openai
+  # model: text-embedding-ada-002
+  type: sentence-transformers
+  model_name: all-MiniLM-L6-v2
+  abbr: st-mini # für Benennung der Ausgabe-Datei. Für jedes neue Modell ergänzen.
+  # model_name: all-mpnet-base-v2
+  device: cuda
+  batch_size: 128 # cuda-optimiert
+
+chunking:
+  type: fixedsize
+  chunk_size: 1200
+  chunk_overlap: 180 # Standard 15 %
+  separator: "\n"
+
+retrieval:
+  type: vector-similarity
+  top_k: 3
+  similarity_threshold: 0.10
+
+evaluation:
+  enabled_metrics:
+    - precision-recall
+    - timing
+    - ragas
+
+dataset:
+  path: data/output/dsgvo_crawled_2025-08-20_1824.jsonl
+  evaluation_subset_size: 1 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
+  save_qa_pairs: true
+  grouping:
+    enabled: true # false für Deaktivierung der Gruppierung
+
+pipeline:
+  include_context: true
+  max_context_length: 2500 # Empfehlung: top_k * chunksize / 4 (Umrechnung char zu token)
