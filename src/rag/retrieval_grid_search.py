@@ -25,10 +25,10 @@ OUT_DIR = PROJECT_ROOT / "results" / "runs"  # Plural!
 # Grid NUR für Retrieval-Ebene (Embedding & LLM-Params bleiben fix)
 PARAMETER_GRID = {
     "chunking_type": ["fixedsize", "recursive", "semantic"],
-    "chunk_size": [800, 1200, 1500, 1800, 2000],  # nur für fixedsize/recursive
+    "chunk_size": [1800, 2000],  # nur für fixedsize/recursive
     "top_k": [3, 5, 7],
-    "similarity_threshold": [0.00, 0.10, 0.25],
-    "grouping_enabled": [True, False],
+    "similarity_threshold": [0.00, 0.10],
+    "grouping_enabled": [True], # True oder False oder True, False
 }
 
 
@@ -79,8 +79,14 @@ def build_run_config(
     ch["type"] = chunking_type
     if chunking_type in ("fixedsize", "recursive"):
         ch["chunk_size"] = int(chunk_size)
+        # >>> 15% Overlap aus chunk_size berechnen
+        overlap = int(round(ch["chunk_size"] * 0.15))
+        # zur Sicherheit clampen (Overlap < chunk_size, >= 0)
+        overlap = max(0, min(overlap, ch["chunk_size"] - 1))
+        ch["chunk_overlap"] = overlap
     else:
         ch.pop("chunk_size", None)  # semantic ignoriert chunk_size
+        ch.pop("chunk_overlap", None)
 
     # Retrieval
     ret = cfg.setdefault("retrieval", {})

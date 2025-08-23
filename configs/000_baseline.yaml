@@ -21,7 +21,7 @@ embedding:
 chunking:
   type: fixedsize
   chunk_size: 1200
-  chunk_overlap: 180
+  chunk_overlap: 180 # Standard 15 %
   separator: "\n"
 
 retrieval:
@@ -37,7 +37,7 @@ evaluation:
 
 dataset:
   path: data/output/dsgvo_crawled_2025-08-20_1824.jsonl
-  evaluation_subset_size: 1 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
+  evaluation_subset_size: 100 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
   save_qa_pairs: true
   grouping:
     enabled: true # false für Deaktivierung der Gruppierung

@@ -51,4 +51,4 @@ results/runs/
 results/tables/
 results/*.json
 results/*.md
-!results/results_table.py
+!results/retrieval_results_table.py

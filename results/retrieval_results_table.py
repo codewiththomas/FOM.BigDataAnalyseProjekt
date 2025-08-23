@@ -14,10 +14,10 @@ import json
 import pandas as pd
 
 
-# Dieses Skript liegt unter: results/results_table.py
+# Dieses Skript liegt unter: results/retrieval_results_table.py
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SUMMARY_DIR  = PROJECT_ROOT / "results" / "runs"
-OUT_DIR      = PROJECT_ROOT / "results" / "tables"
+OUT_DIR      = PROJECT_ROOT / "results" / "tables" / "retrieval"
 
 
 def safe_get(d: Dict[str, Any], path: str, default: Any = None) -> Any:
@@ -90,7 +90,6 @@ def collect_results(summary_dir: Path) -> pd.DataFrame:
             "llm_max_tokens": llm_tokens,
             # Embedding
             "embedding_model": emb_model,
-            "embedding_abbr": emb_abbr,
             # Chunking/Retrieval
             "chunking_type": ch_type,
             "chunk_size": ch_size,
@@ -103,7 +102,7 @@ def collect_results(summary_dir: Path) -> pd.DataFrame:
             "avg_precision": data.get("avg_precision"),
             "avg_recall": data.get("avg_recall"),
             "avg_f1": data.get("avg_f1"),
-            # RAGAS + DSGVO (bei dir vorhanden)
+            # RAGAS + DSGVO
             "avg_faithfulness": data.get("avg_faithfulness"),
             "avg_answer_relevance": data.get("avg_answer_relevance"),
             "avg_context_relevance": data.get("avg_context_relevance"),
@@ -111,6 +110,12 @@ def collect_results(summary_dir: Path) -> pd.DataFrame:
             # Performance
             "avg_query_time": data.get("avg_query_time"),
             "avg_response_length": data.get("avg_response_length"),
+            # Validation / Kontext-Diagnostik
+            "chunks_indexed": safe_get(data, "pipeline_info.retrieval.chunks_indexed"),
+            "truncation_rate": safe_get(data, "context_optimization.truncation_rate"),
+            "avg_context_utilization": safe_get(data, "context_optimization.avg_context_utilization"),
+            "avg_chunks_used": safe_get(data, "context_optimization.avg_chunks_used"),
+            "total_chunks_wasted": safe_get(data, "context_optimization.total_chunks_wasted"),
             # Meta
             "qa_pairs_evaluated": data.get("qa_pairs_evaluated"),
             "total_evaluation_time": data.get("total_evaluation_time"),
