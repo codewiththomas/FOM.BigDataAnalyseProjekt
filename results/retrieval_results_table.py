@@ -16,7 +16,7 @@ import pandas as pd
 
 # Dieses Skript liegt unter: results/retrieval_results_table.py
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-SUMMARY_DIR  = PROJECT_ROOT / "results" / "runs" / "retrieval"
+SUMMARY_DIR  = PROJECT_ROOT / "results" / "runs"
 OUT_DIR      = PROJECT_ROOT / "results" / "tables" / "retrieval"
 
 
