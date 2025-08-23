@@ -52,3 +52,4 @@ results/tables/
 results/*.json
 results/*.md
 !results/retrieval_results_table.py
+!results/llm_results_table.py
