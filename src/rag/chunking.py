@@ -266,7 +266,7 @@ class ChunkingFactory:
         """Create chunking instance based on configuration"""
         chunking_type = config.get('type', 'fixed-size')
 
-        if chunking_type == 'fixed-size':
+        if chunking_type == 'fixedsize':
             return FixedSizeChunking(config)
         elif chunking_type == 'semantic':
             return SemanticChunking(config)

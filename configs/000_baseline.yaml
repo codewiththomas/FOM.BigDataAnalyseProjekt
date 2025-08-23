@@ -11,21 +11,22 @@ llm:
 embedding:
   # type: openai
   # model: text-embedding-ada-002
-  type: sentence-transformers # <- für Angleichung embeddings zwischen mixtral und baseline
-  model_name: all-MiniLM-L6-v2 # <- für Angleichung embeddings zwischen mixtral und baseline
-  # model_name: all-mpnet-base-v2 # besser als all-MiniLM-L6-v2
+  type: sentence-transformers
+  model_name: all-MiniLM-L6-v2
+  abbr: st-mini # für Benennung der Ausgabe-Datei. Für jedes neue Modell ergänzen.
+  # model_name: all-mpnet-base-v2
   device: cuda
-  batch_size: 128 # cuda-optimiert für bessere Performance
+  batch_size: 128 # cuda-optimiert
 
 chunking:
-  type: fixed-size
-  chunk_size: 1500
-  chunk_overlap: 200
+  type: fixedsize
+  chunk_size: 1200
+  chunk_overlap: 180
   separator: "\n"
 
 retrieval:
   type: vector-similarity
-  top_k: 5
+  top_k: 3
   similarity_threshold: 0.00
 
 evaluation:
@@ -35,7 +36,8 @@ evaluation:
     - ragas
 
 dataset:
-  evaluation_subset_size: 100 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
+  path: data/output/dsgvo_crawled_2025-08-20_1824.jsonl
+  evaluation_subset_size: 1 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
   save_qa_pairs: true
   grouping:
     enabled: true # false für Deaktivierung der Gruppierung
