@@ -45,3 +45,10 @@ ENV/
 .env.*.local
 /data/processed/
 /data/embeddings/
+
+# Results
+results/runs/
+results/tables/
+results/*.json
+results/*.md
+!results/results_table.py
