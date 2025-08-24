@@ -46,22 +46,8 @@ ENV/
 /data/processed/
 /data/embeddings/
 
-# Results (ignore everything by default)
-results/runs/
-results/tables/
-results/*.json
-results/*.md
-
-# Allow specific helper scripts
-!results/retrieval_results_table.py
-!results/llm_results_table.py
-
-# --- allow selected evaluation artifacts ---
-!results/runs/retrieval/
-!results/runs/retrieval/*.json
-!results/tables/retrieval/
-!results/tables/retrieval/retrieval_results.csv
-
-# --- keep cache folders ignored ---
-results/runs/retrieval/cache/
+# Results (nur Cache- und Data-Ordner ausschließen)
 results/runs/llm/cache/
+results/runs/llm/data/
+results/runs/retrieval/cache/
+results/runs/retrieval/data/
