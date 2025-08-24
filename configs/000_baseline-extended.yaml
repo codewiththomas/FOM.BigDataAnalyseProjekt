@@ -4,6 +4,7 @@
 llm:
   type: openai
   model: gpt-4o-mini
+  abbr: g4o-mini # für Benennung der Ausgabe-Datei. Für jedes neue Modell ergänzen.
   temperature: 0.1
   max_tokens: 1000
   # api_key: ${OPENAI_API_KEY}  # Set via environment variable
@@ -19,14 +20,14 @@ embedding:
   batch_size: 128 # cuda-optimiert
 
 chunking:
-  type: fixedsize
-  chunk_size: 1200
-  chunk_overlap: 180 # Standard 15 %
+  type: recursive
+  chunk_size: 2000
+  chunk_overlap: 300 # Standard 15 %
   separator: "\n"
 
 retrieval:
   type: vector-similarity
-  top_k: 3
+  top_k: 7
   similarity_threshold: 0.00
 
 evaluation:
@@ -37,7 +38,7 @@ evaluation:
 
 dataset:
   path: data/output/dsgvo_crawled_2025-08-20_1824.jsonl
-  evaluation_subset_size: 100 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
+  evaluation_subset_size: 1 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
   save_qa_pairs: true
   grouping:
     enabled: true # false für Deaktivierung der Gruppierung

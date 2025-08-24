@@ -1,6 +1,7 @@
 from typing import List, Dict, Any
 import json
 import logging
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -93,11 +94,14 @@ def group_documents_by_article(documents: List[Dict[str, Any]]) -> List[Dict[str
 
     logger.info(f"Gruppierung abgeschlossen: {len(documents)} → {len(result)} Dokumente")
 
-    result_path = 'data/output/dsgvo_grouped.txt'
-    logger.info(f"Speichere gruppierten Dokumentenkorpus in {result_path} (nur zum Debuggen erforderlich).")
-
-    with open(result_path, "w") as datei:
-        datei.write(json.dumps(result))
+    result_path = Path('data/output/dsgvo_grouped.txt')
+    try:
+        result_path.parent.mkdir(parents=True, exist_ok=True)
+        logger.info(f"Speichere gruppierten Dokumentenkorpus in {result_path} (nur Debug).")
+        with open(result_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False)
+    except Exception as e:
+        logger.warning(f"Konnte Debug-Datei {result_path} nicht schreiben: {e}")
 
     return result
 

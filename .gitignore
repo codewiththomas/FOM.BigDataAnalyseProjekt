@@ -45,3 +45,9 @@ ENV/
 .env.*.local
 /data/processed/
 /data/embeddings/
+
+# Results (nur Cache- und Data-Ordner ausschließen)
+results/runs/llm/cache/
+results/runs/llm/data/
+results/runs/retrieval/cache/
+results/runs/retrieval/data/

@@ -4,6 +4,7 @@
 llm:
   type: openai
   model: gpt-4o-mini
+  abbr: g4o-mini # für Benennung der Ausgabe-Datei. Für jedes neue Modell ergänzen.
   temperature: 0.1
   max_tokens: 1000
   # api_key: ${OPENAI_API_KEY}  # Set via environment variable
@@ -37,7 +38,7 @@ evaluation:
 
 dataset:
   path: data/output/dsgvo_crawled_2025-08-20_1824.jsonl
-  evaluation_subset_size: 100 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
+  evaluation_subset_size: 1 # Legt fest, wieviele QA-Paare aus dem Dataset für die Evaluation verwendet werden
   save_qa_pairs: true
   grouping:
     enabled: true # false für Deaktivierung der Gruppierung
