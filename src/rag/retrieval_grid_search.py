@@ -24,11 +24,11 @@ OUT_DIR = PROJECT_ROOT / "results" / "runs" / "retrieval"
 
 # Grid NUR für Retrieval-Ebene (Embedding & LLM-Params bleiben fix)
 PARAMETER_GRID = {
-    "chunking_type": ["fixedsize", "recursive", "semantic"],
-    "chunk_size": [1800, 2000],  # nur für fixedsize/recursive
-    "top_k": [3, 5, 7],
+    "chunking_type": ["fixedsize", "recursive", "semantic"], # "fixedsize", "recursive", "semantic"
+    "chunk_size": [1200, 1800, 2000],  # nur für fixedsize/recursive
+    "top_k": [3, 5, 7], # 3, 5, 7
     "similarity_threshold": [0.00, 0.10],
-    "grouping_enabled": [True], # True oder False oder True, False
+    "grouping_enabled": [True, False], # True oder False oder True, False
 }
 
 

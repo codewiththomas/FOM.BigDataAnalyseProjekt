@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+
+# Standard (CSV + optional MD, zusätzlich Konsolen-Print)
+# python results/retrieval_results_table.py
+
 """
 Aggregiert alle *_evaluation_summary_*.json zu einer Tabelle.
 Liest ausschließlich aus dem Dateiinhalt (pipeline_info + avg_* Metrics).
@@ -16,7 +20,7 @@ import pandas as pd
 
 # Dieses Skript liegt unter: results/retrieval_results_table.py
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-SUMMARY_DIR  = PROJECT_ROOT / "results" / "runs"
+SUMMARY_DIR  = PROJECT_ROOT / "results" / "runs" / "retrieval"
 OUT_DIR      = PROJECT_ROOT / "results" / "tables" / "retrieval"
 
 
