@@ -20,15 +20,15 @@ embedding:
   batch_size: 128 # cuda-optimiert
 
 chunking:
-  type: fixedsize
+  type: recursive
   chunk_size: 2000
   chunk_overlap: 300 # Standard 15 %
   separator: "\n"
 
 retrieval:
   type: vector-similarity
-  top_k: 5
-  similarity_threshold: 0.10
+  top_k: 7
+  similarity_threshold: 0.00
 
 evaluation:
   enabled_metrics:

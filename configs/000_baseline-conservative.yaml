@@ -28,7 +28,7 @@ chunking:
 retrieval:
   type: vector-similarity
   top_k: 3
-  similarity_threshold: 0.10
+  similarity_threshold: 0.00
 
 evaluation:
   enabled_metrics:
@@ -45,4 +45,4 @@ dataset:
 
 pipeline:
   include_context: true
-  max_context_length: 2500 # Empfehlung: top_k * chunksize / 4 (Umrechnung char zu token)
+  max_context_length: 3500 # Empfehlung: top_k * chunksize / 4 (Umrechnung char zu token)
