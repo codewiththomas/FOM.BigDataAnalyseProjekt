@@ -88,14 +88,9 @@ class SentenceTransformersEmbedding(EmbeddingInterface):
             return embeddings.tolist() if hasattr(embeddings, 'tolist') else embeddings
 
         except Exception as e:
-            error_str = str(e).lower()  # ← NEU
-            if "invalid_api_key" in error_str or "unauthorized" in error_str:  # ← NEU
-                logger.error(f"STOPPING EVALUATION - Invalid OpenAI API key: {e}")  # ← NEU
-                raise SystemExit("Invalid OpenAI API key - fix .env file")  # ← NEU
-            logger.error(f"OpenAI embedding error: {e}")
+            logger.error(f"Sentence-transformers embedding error: {e}")
             # Return zero vectors as fallback
-            # return [[0.0] * 384] * len(texts)  # Default dimension for all-MiniLM-L6-v2
-            dims = self.model.get_sentence_embedding_dimension()  # ← Dynamisch!
+            dims = self.model.get_sentence_embedding_dimension()  # Dynamic dimension detection
             return [[0.0] * dims] * len(texts)
 
     def get_model_info(self) -> Dict[str, Any]:
@@ -104,7 +99,7 @@ class SentenceTransformersEmbedding(EmbeddingInterface):
             'provider': 'sentence-transformers',
             'model': self.model_name,
             'device': self.device,
-            'dimensions': 384  # Default for all-MiniLM-L6-v2
+            'dimensions': self.model.get_sentence_embedding_dimension()  # Dynamic dimension detection
         }
 
 
