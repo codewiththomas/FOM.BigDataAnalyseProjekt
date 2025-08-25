@@ -1,7 +1,8 @@
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Union
 import openai
 from interfaces import EmbeddingInterface
 import logging
+import numpy as np
 
 logger = logging.getLogger(__name__)
 
@@ -85,12 +86,23 @@ class SentenceTransformersEmbedding(EmbeddingInterface):
                 batch_size=self.batch_size,  # ← neu: nutzt größere Batches auf GPU
                 show_progress_bar=True  # ← neu: besseres Feedback
             )
-            return embeddings.tolist() if hasattr(embeddings, 'tolist') else embeddings
+            # Ensure we return a list of lists of floats
+            if isinstance(embeddings, np.ndarray):
+                return embeddings.tolist()
+            elif isinstance(embeddings, list):
+                return embeddings
+            else:
+                return embeddings.tolist() if hasattr(embeddings, 'tolist') else embeddings
 
         except Exception as e:
             logger.error(f"Sentence-transformers embedding error: {e}")
             # Return zero vectors as fallback
-            dims = self.model.get_sentence_embedding_dimension()  # Dynamic dimension detection
+            try:
+                dims = self.model.get_sentence_embedding_dimension()  # Dynamic dimension detection
+                if dims is None:
+                    dims = 768  # Default for BERT models
+            except:
+                dims = 768  # Fallback for BERT models
             return [[0.0] * dims] * len(texts)
 
     def get_model_info(self) -> Dict[str, Any]:

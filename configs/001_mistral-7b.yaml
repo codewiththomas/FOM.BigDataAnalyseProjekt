@@ -1,0 +1,43 @@
+# ResearchRAG Baseline Configuration
+# This configuration uses GPT-4o-mini as the baseline model
+
+llm:
+  type: local
+  model_name: mistral:7b
+  endpoint: http://localhost:11434  # Ollama default port
+  api_type: ollama
+
+embedding:
+  type: sentence-transformers
+  model_name: all-MiniLM-L6-v2
+  # device: cpu          # ← vorher
+  device: cpu           # ← nutzt GPU
+  # batch_size: 32       # ← beispielhafter alter/kleiner Wert
+  batch_size: 32        # ← größerer Batch für GPU (64–256 testen)
+
+chunking:
+  type: fixedsize
+  chunk_size: 1200
+  chunk_overlap: 180
+  separator: "\n"
+
+retrieval:
+  type: vector-similarity
+  top_k: 5
+  similarity_threshold: 0.15
+
+evaluation:
+  enabled_metrics:
+    - precision-recall
+    - timing
+    - ragas
+
+dataset:
+  evaluation_subset_size: 50
+  save_qa_pairs: true
+  grouping:
+    enabled: true
+
+pipeline:
+  include_context: true
+  max_context_length: 1000
