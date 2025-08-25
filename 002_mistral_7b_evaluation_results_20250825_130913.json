@@ -1,0 +1,150 @@
+[
+  {
+    "precision": 0.15965006207295013,
+    "recall": 0.36085730553371476,
+    "f1": 0.2213643641312308,
+    "word_precision": 0.2112676056338028,
+    "word_recall": 0.7142857142857143,
+    "sequence_similarity": 0.055671537926235214,
+    "semantic_similarity": 0.19480519480519481,
+    "query_time": 30.44332790374756,
+    "tokens_per_second": 9.920071844800646,
+    "response_length": 1209,
+    "word_count": 135,
+    "avg_word_length": 7.955555555555556,
+    "estimated_tokens": 302,
+    "faithfulness": 0.704225352112676,
+    "answer_relevance": 0.12054794520547946,
+    "context_relevance": 0.31999999999999995,
+    "context_utilization": 0.868,
+    "dsgvo_score": 0.45227705961798187,
+    "question": "Welche spezifischen Maßnahmen umfasst die Amtshilfe nach DSGVO Artikel 61?",
+    "expected_answer": "Die Amtshilfe bezieht sich insbesondere auf Auskunftsersuchen und aufsichtsbezogene Maßnahmen, beispielsweise Ersuchen um vorherige Genehmigungen und eine vorherige Konsultation, um Vornahme von Nachprüfungen und Untersuchungen.",
+    "actual_answer": "Die Amtshilfe nach der Datenschutz-Grundverordnung (DSGVO) im Artikel 61 umfasst folgende spezifische Maßnahmen:\n\n1. Übermittlung maßgeblicher Informationen: Eine Aufsichtsbehörde übermittelt anderen Aufsichtsbehörden die notwendigen Informationen, um die Verordnung einheitlich durchzuführen und anzuwenden.\n2. Auskunftsersuchen: Eine Aufsichtsbehörde kann andere Aufsichtsbehörden um Auskünfte bitten, z.B. um vorherige Genehmigungen oder eine vorherige Konsultation zu erhalten.\n3. Vorprüfungen und Untersuchungen: Eine Aufsichtsbehörde kann andere Aufsichtsbehörden um die Vornahme von Nachprüfungen und Untersuchungen bitten.\n4. Amtshilfe für aufsichtsbezogene Maßnahmen: Eine Aufsichtsbehörde kann andere Aufsichtsbehörden um Hilfe bei der Durchführung von aufsichtsbezogenen Maßnahmen bitten, z.B. um die Ergreifung von Sanktionen oder die Durchführung von Verfahren.\n5. Übermittlung maßgeblicher Informationen über die Durchführung einer Untersuchung: Eine Aufsichtsbehörde kann andere Aufsichtsbehörden über die Durchführung einer Untersuchung informieren.\n6. Vorkehrungen für eine wirksame Zusammenarbeit: Die Aufsichtsbehörden treffen Vorkehrungen, um eine wirksame Zusammenarbeit zu gewährleisten.",
+    "chunks_retrieved": 5,
+    "context_length": 3487,
+    "tokens_used": 868,
+    "max_context_length": 1000,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "mistral:7b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "mistral:7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.13476718513557095,
+    "recall": 0.4263015766699625,
+    "f1": 0.20479295023229016,
+    "word_precision": 0.17592592592592593,
+    "word_recall": 0.9047619047619048,
+    "sequence_similarity": 0.029470864032150032,
+    "semantic_similarity": 0.18518518518518517,
+    "query_time": 38.35378956794739,
+    "tokens_per_second": 8.73446936466384,
+    "response_length": 1340,
+    "word_count": 191,
+    "avg_word_length": 6.010471204188482,
+    "estimated_tokens": 335,
+    "faithfulness": 0.75,
+    "answer_relevance": 0.15137614678899083,
+    "context_relevance": 0.375,
+    "context_utilization": 0.708,
+    "dsgvo_score": 0.4954128440366973,
+    "question": "Unter welchen Bedingungen kann die Frist zur Beantwortung eines Antrags gemäß DSGVO Artikel 12 verlängert werden?",
+    "expected_answer": "Diese Frist kann um weitere zwei Monate verlängert werden, wenn dies unter Berücksichtigung der Komplexität und der Anzahl von Anträgen erforderlich ist.",
+    "actual_answer": "Die Frist zur Beantwortung eines Antrags gemäß der Datenschutz-Grundverordnung (DSGVO) Artikel 12 kann unter folgenden Bedingungen verlängert werden:\n\n1. Wenn die Komplexität und die Anzahl von Anträgen erfordern, dass die Frist um weitere zwei Monate verlängert wird. In diesem Fall muss der Verantwortliche innerhalb eines Monats nach Eingang des Antrags über eine Fristverlängerung informieren und die Gründe für die Verzögerung mitteilen.\n2. Wenn der Verantwortliche nicht in der Lage ist, die betroffene Person zu identifizieren, kann er weigern, aufgrund des Antrags tätig zu werden. In diesem Fall muss er jedoch ohne Verzögerung informieren, warum er nicht tätig wird.\n3. Wenn es unter Berücksichtigung der Stands der Technik, Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeit und Schwere des Risikos für die Rechte und Freiheiten natürlicher Personen erforderlich ist, um hinreichende Garantien im Sinne der DSGVO Artikel 12 Absatz 4 nachzuweisen. In diesem Fall muss der Verantwortliche innerhalb eines Monats nach Eingang des Antrags informieren, welche Maßnahmen er ergriffen hat, um die Frist zu verlängern.\n\nIn allen Fällen sollte die betroffene Person so schnell wie möglich über die Verlängerung der Frist informiert werden.",
+    "chunks_retrieved": 5,
+    "context_length": 4009,
+    "tokens_used": 708,
+    "max_context_length": 1000,
+    "truncated": true,
+    "chunks_used": 4,
+    "chunks_total": 5,
+    "llm_model": "mistral:7b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "mistral:7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  }
+]

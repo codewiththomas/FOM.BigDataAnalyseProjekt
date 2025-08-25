@@ -1,0 +1,150 @@
+[
+  {
+    "precision": 0.13196449638200494,
+    "recall": 0.33033848012184236,
+    "f1": 0.18859039798768457,
+    "word_precision": 0.17073170731707318,
+    "word_recall": 0.6666666666666666,
+    "sequence_similarity": 0.05314846909300982,
+    "semantic_similarity": 0.1590909090909091,
+    "query_time": 45.46918749809265,
+    "tokens_per_second": 8.247343324877546,
+    "response_length": 1503,
+    "word_count": 168,
+    "avg_word_length": 7.946428571428571,
+    "estimated_tokens": 375,
+    "faithfulness": 0.7317073170731707,
+    "answer_relevance": 0.10476190476190476,
+    "context_relevance": 0.31999999999999995,
+    "context_utilization": 0.868,
+    "dsgvo_score": 0.4612822299651568,
+    "question": "Welche spezifischen Maßnahmen umfasst die Amtshilfe nach DSGVO Artikel 61?",
+    "expected_answer": "Die Amtshilfe bezieht sich insbesondere auf Auskunftsersuchen und aufsichtsbezogene Maßnahmen, beispielsweise Ersuchen um vorherige Genehmigungen und eine vorherige Konsultation, um Vornahme von Nachprüfungen und Untersuchungen.",
+    "actual_answer": "Die Amtshilfe nach der Datenschutz-Grundverordnung (DSGVO) im Artikel 61 umfasst folgende spezifische Maßnahmen:\n\n1. Übermittlung maßgeblicher Informationen: Eine Aufsichtsbehörde übermittelt anderen Aufsichtsbehörden die notwendigen Informationen, um die DSGVO einheitlich durchzuführen und anzuwenden.\n2. Ersuchen um vorherige Genehmigungen: Eine Aufsichtsbehörde kann von einer anderen Aufsichtsbehörde um eine vorherige Genehmigung für bestimmte Maßnahmen ersucht werden.\n3. Vorherige Konsultation: Eine Aufsichtsbehörde kann von einer anderen Aufsichtsbehörde um eine vorherige Konsultation zur Durchführung von Nachprüfungen und Untersuchungen ersucht werden.\n4. Übermittlung maßgeblicher Informationen über die Durchführung einer Untersuchung: Eine Aufsichtsbehörde kann anderen Aufsichtsbehörden Informationen über die Durchführung einer Untersuchung übermitteln.\n5. Amtshilfe für aufsichtsbezogene Maßnahmen: Eine Aufsichtsbehörde gewährt anderen Aufsichtsbehörden Amtshilfe bei der Durchführung von aufsichtsbezogenen Maßnahmen, wie z.B. Nachprüfungen und Untersuchungen.\n6. Amtshilfeersuchen enthalten alle erforderlichen Informationen: Ein Amtshilfeersuchen muss alle notwendigen Informationen enthalten, einschließlich Zweck und Begründung des Ersuchens.\n7. Die übermittelten Informationen werden ausschließlich für den Zweck verwendet, für den sie angefordert wurden: Die übermittelten Informationen dürfen nur für den ursprünglichen Zweck verwendet werden, für den sie angefordert wurden.",
+    "chunks_retrieved": 5,
+    "context_length": 3487,
+    "tokens_used": 868,
+    "max_context_length": 1000,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "mistral:7b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "mistral:7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.308651325521534,
+    "recall": 0.5736616774884077,
+    "f1": 0.40135742430106447,
+    "word_precision": 0.2898550724637681,
+    "word_recall": 0.9523809523809523,
+    "sequence_similarity": 0.3482466747279323,
+    "semantic_similarity": 0.29411764705882354,
+    "query_time": 20.27204394340515,
+    "tokens_per_second": 8.2872748534394,
+    "response_length": 674,
+    "word_count": 97,
+    "avg_word_length": 5.948453608247423,
+    "estimated_tokens": 168,
+    "faithfulness": 0.8405797101449275,
+    "answer_relevance": 0.21690140845070424,
+    "context_relevance": 0.375,
+    "context_utilization": 0.708,
+    "dsgvo_score": 0.560360277607675,
+    "question": "Unter welchen Bedingungen kann die Frist zur Beantwortung eines Antrags gemäß DSGVO Artikel 12 verlängert werden?",
+    "expected_answer": "Diese Frist kann um weitere zwei Monate verlängert werden, wenn dies unter Berücksichtigung der Komplexität und der Anzahl von Anträgen erforderlich ist.",
+    "actual_answer": "Die Frist zur Beantwortung eines Antrags gemäß DSGVO Artikel 12 kann um weitere zwei Monate verlängert werden, wenn dies unter Berücksichtigung der Komplexität und der Anzahl von Anträgen erforderlich ist. Dieser Fall muss innerhalb eines Monats nach Eingang des Antrags der betroffenen Person angewiesen werden, zusammen mit den Gründen für die Verzögerung.\n\nDie betroffene Person sollte in diesem Fall ohne Verzögerung informiert werden, spätestens aber innerhalb eines Monats nach Eingang des Antrags über die Fristverlängerung. Wird der Verantwortliche auf den Antrag der betroffenen Person hin nicht tätig, so unterrichtet er sie ohne Verzögerung über die Gründe dafür.",
+    "chunks_retrieved": 5,
+    "context_length": 4009,
+    "tokens_used": 708,
+    "max_context_length": 1000,
+    "truncated": true,
+    "chunks_used": 4,
+    "chunks_total": 5,
+    "llm_model": "mistral:7b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "mistral:7b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  }
+]

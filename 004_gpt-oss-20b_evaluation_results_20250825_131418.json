@@ -1,0 +1,742 @@
+[
+  {
+    "precision": 0.02231404958677686,
+    "recall": 0.02231404958677686,
+    "f1": 0.02231404958677686,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.0743801652892562,
+    "semantic_similarity": 0.0,
+    "query_time": 2.091810464859009,
+    "tokens_per_second": 1.4341643520758487,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.31999999999999995,
+    "context_utilization": 0.868,
+    "dsgvo_score": 0.06399999999999999,
+    "question": "Welche spezifischen Maßnahmen umfasst die Amtshilfe nach DSGVO Artikel 61?",
+    "expected_answer": "Die Amtshilfe bezieht sich insbesondere auf Auskunftsersuchen und aufsichtsbezogene Maßnahmen, beispielsweise Ersuchen um vorherige Genehmigungen und eine vorherige Konsultation, um Vornahme von Nachprüfungen und Untersuchungen.",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 3487,
+    "tokens_used": 868,
+    "max_context_length": 1000,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.025149700598802394,
+    "recall": 0.025149700598802394,
+    "f1": 0.025149700598802394,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08383233532934131,
+    "semantic_similarity": 0.0,
+    "query_time": 2.0623562335968018,
+    "tokens_per_second": 1.4546468505918222,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.375,
+    "context_utilization": 0.708,
+    "dsgvo_score": 0.07500000000000001,
+    "question": "Unter welchen Bedingungen kann die Frist zur Beantwortung eines Antrags gemäß DSGVO Artikel 12 verlängert werden?",
+    "expected_answer": "Diese Frist kann um weitere zwei Monate verlängert werden, wenn dies unter Berücksichtigung der Komplexität und der Anzahl von Anträgen erforderlich ist.",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 4009,
+    "tokens_used": 708,
+    "max_context_length": 1000,
+    "truncated": true,
+    "chunks_used": 4,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.010526315789473684,
+    "recall": 0.010526315789473684,
+    "f1": 0.010526315789473684,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.03508771929824561,
+    "semantic_similarity": 0.0,
+    "query_time": 2.079679012298584,
+    "tokens_per_second": 1.4425303050417493,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.275,
+    "context_utilization": 0.807,
+    "dsgvo_score": 0.05500000000000001,
+    "question": "Was versteht die DSGVO unter dem Begriff \"Empfänger\"?",
+    "expected_answer": "„Empfänger“ eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, der personenbezogene Daten offengelegt werden, unabhängig davon, ob es sich bei ihr um einen Dritten handelt oder nicht.",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 4015,
+    "tokens_used": 807,
+    "max_context_length": 1000,
+    "truncated": true,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.020224719101123594,
+    "recall": 0.020224719101123594,
+    "f1": 0.020224719101123594,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.06741573033707865,
+    "semantic_similarity": 0.0,
+    "query_time": 2.101607322692871,
+    "tokens_per_second": 1.4274788480257024,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.43076923076923074,
+    "context_utilization": 0.9,
+    "dsgvo_score": 0.08615384615384615,
+    "question": "Was fördert der Ausschuss gemäß Artikel 70 der DSGVO zur Zusammenarbeit zwischen den Aufsichtsbehörden?",
+    "expected_answer": "Förderung der Zusammenarbeit und eines wirksamen bilateralen und multilateralen Austauschs von Informationen und bewährten Verfahren zwischen den Aufsichtsbehörden;",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 4009,
+    "tokens_used": 900,
+    "max_context_length": 1000,
+    "truncated": true,
+    "chunks_used": 4,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.007453416149068322,
+    "recall": 0.007453416149068322,
+    "f1": 0.007453416149068322,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.024844720496894408,
+    "semantic_similarity": 0.0,
+    "query_time": 2.1157548427581787,
+    "tokens_per_second": 1.417933656287458,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.31111111111111106,
+    "context_utilization": 0.917,
+    "dsgvo_score": 0.062222222222222213,
+    "question": "Wie können Verträge zwischen Verantwortlichen und Auftragsverarbeitern standardisiert werden?",
+    "expected_answer": "Unbeschadet eines individuellen Vertrags zwischen dem Verantwortlichen und dem Auftragsverarbeiter kann der Vertrag oder das andere Rechtsinstrument im Sinne der Absätze 3 und 4 des vorliegenden Artikels ganz oder teilweise auf den in den Absätzen 7 und 8 des vorliegenden Artikels genannten Standardvertragsklauseln beruhen, auch wenn diese Bestandteil einer dem Verantwortlichen oder dem Auftragsverarbeiter gemäß den Artikeln 42 und 43 erteilten Zertifizierung sind.",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 3683,
+    "tokens_used": 917,
+    "max_context_length": 1000,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.021686746987951807,
+    "recall": 0.021686746987951807,
+    "f1": 0.021686746987951807,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07228915662650602,
+    "semantic_similarity": 0.0,
+    "query_time": 2.058926582336426,
+    "tokens_per_second": 1.4570699245602359,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.3857142857142857,
+    "context_utilization": 0.73,
+    "dsgvo_score": 0.07714285714285714,
+    "question": "Welche Aspekte der personenbezogenen Daten fallen unter die Verpflichtung der Datenschutzfreundlichkeit gemäß Artikel 25 der DSGVO?",
+    "expected_answer": "Diese Verpflichtung gilt für die Menge der erhobenen personenbezogenen Daten, den Umfang ihrer Verarbeitung, ihre Speicherfrist und ihre Zugänglichkeit.",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 4016,
+    "tokens_used": 730,
+    "max_context_length": 1000,
+    "truncated": true,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.023645320197044333,
+    "recall": 0.023645320197044333,
+    "f1": 0.023645320197044333,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07881773399014778,
+    "semantic_similarity": 0.0,
+    "query_time": 2.068361282348633,
+    "tokens_per_second": 1.450423591662617,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.2,
+    "context_utilization": 0.905,
+    "dsgvo_score": 0.04000000000000001,
+    "question": "Welche kriminalitätsbezogenen Gründe können nach DSGVO Artikel 23 zur Einschränkung von Rechten und Pflichten führen?",
+    "expected_answer": "die Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder die Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit;",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 3630,
+    "tokens_used": 905,
+    "max_context_length": 1000,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.026470588235294117,
+    "recall": 0.026470588235294117,
+    "f1": 0.026470588235294117,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.08823529411764706,
+    "semantic_similarity": 0.0,
+    "query_time": 2.0915982723236084,
+    "tokens_per_second": 1.4343098479744036,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.48571428571428565,
+    "context_utilization": 0.707,
+    "dsgvo_score": 0.09714285714285714,
+    "question": "Welche Informationen über die Zwecke und die Rechtsgrundlage der Datenverarbeitung muss der Verantwortliche bereitstellen, wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden?",
+    "expected_answer": "die Zwecke, für die die personenbezogenen Daten verarbeitet werden sollen, sowie die Rechtsgrundlage für die Verarbeitung;",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 4010,
+    "tokens_used": 707,
+    "max_context_length": 1000,
+    "truncated": true,
+    "chunks_used": 4,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.03137254901960784,
+    "recall": 0.03137254901960784,
+    "f1": 0.03137254901960784,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.10457516339869281,
+    "semantic_similarity": 0.0,
+    "query_time": 2.0593318939208984,
+    "tokens_per_second": 1.4567831483870728,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.6352941176470589,
+    "context_utilization": 0.9,
+    "dsgvo_score": 0.12705882352941178,
+    "question": "Welche Anforderungen genehmigt der Ausschuss im Hinblick auf die Akkreditierung von Zertifizierungsstellen gemäß Artikel 43 Absatz 3?",
+    "expected_answer": "Genehmigung der inArtikel 43Absatz 3 genannten Anforderungen im Hinblick auf die Akkreditierung von Zertifizierungsstellen gemäßArtikel 43;",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 4009,
+    "tokens_used": 900,
+    "max_context_length": 1000,
+    "truncated": true,
+    "chunks_used": 4,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.023622047244094488,
+    "recall": 0.023622047244094488,
+    "f1": 0.023622047244094484,
+    "word_precision": 0.0,
+    "word_recall": 0.0,
+    "sequence_similarity": 0.07874015748031496,
+    "semantic_similarity": 0.0,
+    "query_time": 2.0661556720733643,
+    "tokens_per_second": 1.451971911191732,
+    "response_length": 14,
+    "word_count": 3,
+    "avg_word_length": 4.0,
+    "estimated_tokens": 3,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_relevance": 0.2444444444444444,
+    "context_utilization": 0.858,
+    "dsgvo_score": 0.048888888888888885,
+    "question": "Wer darf ein umfassendes Register der strafrechtlichen Verurteilungen führen?",
+    "expected_answer": "Ein umfassendes Register der strafrechtlichen Verurteilungen darf nur unter behördlicher Aufsicht geführt werden.",
+    "actual_answer": "API error: 404",
+    "chunks_retrieved": 5,
+    "context_length": 3446,
+    "tokens_used": 858,
+    "max_context_length": 1000,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "gpt-oss-:20b",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "gpt-oss-:20b",
+        "provider": "local",
+        "endpoint": "http://localhost:11434",
+        "api_type": "ollama",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 5,
+        "similarity_threshold": 0.15,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 1000,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  }
+]
