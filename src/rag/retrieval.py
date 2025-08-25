@@ -106,15 +106,13 @@ class VectorSimilarityRetrieval(RetrievalInterface):
 
         query_normalized = query_embedding / query_norm
 
-        # Calculate cosine similarities
-        similarities = np.dot(self.embeddings_array, query_normalized)
-
         # Normalize chunk embeddings
         chunk_norms = np.linalg.norm(self.embeddings_array, axis=1)
         chunk_norms[chunk_norms == 0] = 1  # Avoid division by zero
+        chunk_normalized = self.embeddings_array / chunk_norms[:, np.newaxis]
 
-        # Normalize and calculate final similarities
-        similarities = similarities / chunk_norms
+        # Calculate cosine similarities (dot product of normalized vectors)
+        similarities = np.dot(chunk_normalized, query_normalized)
 
         return similarities
 

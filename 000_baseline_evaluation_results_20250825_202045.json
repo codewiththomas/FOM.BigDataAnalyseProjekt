@@ -1,0 +1,732 @@
+[
+  {
+    "precision": 0.1548714660448849,
+    "recall": 0.3224905136639325,
+    "f1": 0.2092524363468014,
+    "word_precision": 0.2,
+    "word_recall": 0.6190476190476191,
+    "sequence_similarity": 0.07148936170212766,
+    "semantic_similarity": 0.1780821917808219,
+    "query_time": 4.5443761348724365,
+    "tokens_per_second": 51.932320960184924,
+    "response_length": 947,
+    "word_count": 102,
+    "avg_word_length": 8.245098039215685,
+    "estimated_tokens": 236,
+    "faithfulness": 0.6307692307692307,
+    "answer_relevance": 0.13134328358208955,
+    "context_relevance": 0.31999999999999995,
+    "context_utilization": 0.248,
+    "dsgvo_score": 0.41878760045924224,
+    "question": "Welche spezifischen Maßnahmen umfasst die Amtshilfe nach DSGVO Artikel 61?",
+    "expected_answer": "Die Amtshilfe bezieht sich insbesondere auf Auskunftsersuchen und aufsichtsbezogene Maßnahmen, beispielsweise Ersuchen um vorherige Genehmigungen und eine vorherige Konsultation, um Vornahme von Nachprüfungen und Untersuchungen.",
+    "actual_answer": "Die Amtshilfe nach DSGVO Artikel 61 umfasst insbesondere folgende spezifische Maßnahmen:\n\n1. **Übermittlung maßgeblicher Informationen**: Die Aufsichtsbehörden übermitteln einander relevante Informationen, um die Verordnung einheitlich durchzuführen und anzuwenden.\n\n2. **Ersuchen um vorherige Genehmigungen**: Aufsichtsbehörden können um Genehmigungen bitten, bevor bestimmte Maßnahmen ergriffen werden.\n\n3. **Vorherige Konsultationen**: Es können Konsultationen zwischen den Aufsichtsbehörden stattfinden, um sicherzustellen, dass alle relevanten Aspekte berücksichtigt werden.\n\n4. **Durchführung von Nachprüfungen und Untersuchungen**: Die Aufsichtsbehörden können Informationen anfordern, die für die Durchführung von Nachprüfungen und Untersuchungen erforderlich sind.\n\nDie Amtshilfe soll eine wirksame Zusammenarbeit zwischen den Aufsichtsbehörden gewährleisten und sicherstellen, dass die Regelungen der DSGVO einheitlich angewendet werden.",
+    "chunks_retrieved": 5,
+    "context_length": 3487,
+    "tokens_used": 868,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.4581691864366636,
+    "recall": 0.6689088014315977,
+    "f1": 0.5438370807540979,
+    "word_precision": 0.425531914893617,
+    "word_recall": 0.9523809523809523,
+    "sequence_similarity": 0.5343228200371057,
+    "semantic_similarity": 0.425531914893617,
+    "query_time": 3.1751928329467773,
+    "tokens_per_second": 30.23438419357542,
+    "response_length": 386,
+    "word_count": 54,
+    "avg_word_length": 6.166666666666667,
+    "estimated_tokens": 96,
+    "faithfulness": 0.8936170212765957,
+    "answer_relevance": 0.3142857142857143,
+    "context_relevance": 0.375,
+    "context_utilization": 0.3737142857142857,
+    "dsgvo_score": 0.6160942249240122,
+    "question": "Unter welchen Bedingungen kann die Frist zur Beantwortung eines Antrags gemäß DSGVO Artikel 12 verlängert werden?",
+    "expected_answer": "Diese Frist kann um weitere zwei Monate verlängert werden, wenn dies unter Berücksichtigung der Komplexität und der Anzahl von Anträgen erforderlich ist.",
+    "actual_answer": "Die Frist zur Beantwortung eines Antrags gemäß DSGVO Artikel 12 kann um weitere zwei Monate verlängert werden, wenn dies unter Berücksichtigung der Komplexität und der Anzahl von Anträgen erforderlich ist. Der Verantwortliche muss die betroffene Person innerhalb eines Monats nach Eingang des Antrags über die Fristverlängerung informieren, zusammen mit den Gründen für die Verzögerung.",
+    "chunks_retrieved": 5,
+    "context_length": 5240,
+    "tokens_used": 1308,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.2540396812489836,
+    "recall": 0.48780367780367784,
+    "f1": 0.33409071958149417,
+    "word_precision": 0.26744186046511625,
+    "word_recall": 0.8518518518518519,
+    "sequence_similarity": 0.22884615384615384,
+    "semantic_similarity": 0.26136363636363635,
+    "query_time": 2.328922986984253,
+    "tokens_per_second": 88.45290340268039,
+    "response_length": 826,
+    "word_count": 112,
+    "avg_word_length": 6.348214285714286,
+    "estimated_tokens": 206,
+    "faithfulness": 0.38372093023255816,
+    "answer_relevance": 0.04888888888888889,
+    "context_relevance": 0.275,
+    "context_utilization": 0.3162857142857143,
+    "dsgvo_score": 0.26152713178294573,
+    "question": "Was versteht die DSGVO unter dem Begriff \"Empfänger\"?",
+    "expected_answer": "„Empfänger“ eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, der personenbezogene Daten offengelegt werden, unabhängig davon, ob es sich bei ihr um einen Dritten handelt oder nicht.",
+    "actual_answer": "Der Begriff \"Empfänger\" wird in der Datenschutz-Grundverordnung (DSGVO) nicht explizit definiert, jedoch wird er im Kontext der Verarbeitung personenbezogener Daten verwendet. In der Regel bezieht sich \"Empfänger\" auf eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten erhält, unabhängig davon, ob es sich um einen Dritten handelt oder nicht. \n\nDas bedeutet, dass ein Empfänger jede Entität sein kann, die Zugang zu den personenbezogenen Daten hat, sei es im Rahmen einer Datenverarbeitung oder einer anderen Form der Datenübermittlung. Dies schließt auch Auftragsverarbeiter ein, die im Auftrag des Verantwortlichen handeln. \n\nWenn Sie spezifische Informationen oder eine detaillierte Definition suchen, könnte ich Ihnen dabei helfen, wenn Sie mir mehr Kontext geben.",
+    "chunks_retrieved": 5,
+    "context_length": 4440,
+    "tokens_used": 1107,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.08939538079382697,
+    "recall": 0.30017969451931714,
+    "f1": 0.137763834488431,
+    "word_precision": 0.09803921568627451,
+    "word_recall": 0.625,
+    "sequence_similarity": 0.06349206349206349,
+    "semantic_similarity": 0.10377358490566038,
+    "query_time": 6.051921129226685,
+    "tokens_per_second": 58.163348874471964,
+    "response_length": 1411,
+    "word_count": 170,
+    "avg_word_length": 7.276470588235294,
+    "estimated_tokens": 352,
+    "faithfulness": 0.5686274509803921,
+    "answer_relevance": 0.14019607843137255,
+    "context_relevance": 0.43076923076923074,
+    "context_utilization": 0.348,
+    "dsgvo_score": 0.41252639517345396,
+    "question": "Was fördert der Ausschuss gemäß Artikel 70 der DSGVO zur Zusammenarbeit zwischen den Aufsichtsbehörden?",
+    "expected_answer": "Förderung der Zusammenarbeit und eines wirksamen bilateralen und multilateralen Austauschs von Informationen und bewährten Verfahren zwischen den Aufsichtsbehörden;",
+    "actual_answer": "Der Ausschuss fördert gemäß Artikel 70 der DSGVO die Zusammenarbeit zwischen den Aufsichtsbehörden, indem er verschiedene Maßnahmen und Verfahren zur Unterstützung der Kohärenz und des Austauschs von Informationen zwischen den Aufsichtsbehörden einführt. Dazu gehören:\n\n1. **Stellungnahmen und Empfehlungen**: Der Ausschuss kann Stellungnahmen, Leitlinien und Empfehlungen abgeben, die den Aufsichtsbehörden helfen, einheitliche Praktiken zu entwickeln und anzuwenden.\n\n2. **Konsultation interessierter Kreise**: Der Ausschuss hat die Möglichkeit, interessierte Kreise zu konsultieren und ihnen Gelegenheit zu geben, innerhalb einer angemessenen Frist Stellung zu nehmen, was den Austausch von Informationen und Perspektiven fördert.\n\n3. **Öffentliche Zugänglichkeit**: Die Ergebnisse der Konsultationen und die Tätigkeiten des Ausschusses werden der Öffentlichkeit zugänglich gemacht, was Transparenz und Vertrauen in die Zusammenarbeit zwischen den Aufsichtsbehörden stärkt.\n\n4. **Jahresberichte**: Jede Aufsichtsbehörde erstellt einen Jahresbericht über ihre Tätigkeit, der Informationen über Verstöße und Maßnahmen enthält, die ebenfalls zur Transparenz und zur Verbesserung der Zusammenarbeit beitragen.\n\nDiese Maßnahmen zielen darauf ab, eine kohärente Anwendung der Datenschutzvorschriften in der gesamten EU zu gewährleisten und den Austausch von Informationen zwischen den Aufsichtsbehörden zu fördern.",
+    "chunks_retrieved": 5,
+    "context_length": 4882,
+    "tokens_used": 1218,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.08709404036127713,
+    "recall": 0.17754996741294887,
+    "f1": 0.11686298252556028,
+    "word_precision": 0.11428571428571428,
+    "word_recall": 0.3404255319148936,
+    "sequence_similarity": 0.024160060400151,
+    "semantic_similarity": 0.11377245508982035,
+    "query_time": 11.522122621536255,
+    "tokens_per_second": 47.30031244254669,
+    "response_length": 2180,
+    "word_count": 248,
+    "avg_word_length": 7.766129032258065,
+    "estimated_tokens": 545,
+    "faithfulness": 0.3357142857142857,
+    "answer_relevance": 0.0624113475177305,
+    "context_relevance": 0.31111111111111106,
+    "context_utilization": 0.262,
+    "dsgvo_score": 0.2488027693346842,
+    "question": "Wie können Verträge zwischen Verantwortlichen und Auftragsverarbeitern standardisiert werden?",
+    "expected_answer": "Unbeschadet eines individuellen Vertrags zwischen dem Verantwortlichen und dem Auftragsverarbeiter kann der Vertrag oder das andere Rechtsinstrument im Sinne der Absätze 3 und 4 des vorliegenden Artikels ganz oder teilweise auf den in den Absätzen 7 und 8 des vorliegenden Artikels genannten Standardvertragsklauseln beruhen, auch wenn diese Bestandteil einer dem Verantwortlichen oder dem Auftragsverarbeiter gemäß den Artikeln 42 und 43 erteilten Zertifizierung sind.",
+    "actual_answer": "Die Standardisierung von Verträgen zwischen Verantwortlichen und Auftragsverarbeitern kann durch verschiedene Ansätze erfolgen:\n\n1. **Vorlagen und Musterverträge**: Die Erstellung von standardisierten Vertragsvorlagen, die die wesentlichen Anforderungen der Datenschutz-Grundverordnung (DSGVO) berücksichtigen, kann helfen. Diese Vorlagen sollten klare Regelungen zu den Rechten und Pflichten beider Parteien, den technischen und organisatorischen Maßnahmen sowie den Bedingungen für die Beauftragung weiterer Auftragsverarbeiter enthalten.\n\n2. **Branchenspezifische Standards**: Die Entwicklung von branchenspezifischen Standards oder Verhaltensregeln, die von relevanten Verbänden oder Organisationen anerkannt sind, kann eine einheitliche Grundlage für Verträge bieten. Diese Standards können spezifische Anforderungen und Best Practices für den Datenschutz in bestimmten Sektoren festlegen.\n\n3. **Zertifizierungsverfahren**: Die Implementierung von genehmigten Zertifizierungsverfahren, wie in Artikel 42 der DSGVO erwähnt, kann dazu beitragen, dass Auftragsverarbeiter nachweislich die erforderlichen Datenschutzstandards einhalten. Dies kann in den Verträgen berücksichtigt werden, um Vertrauen zu schaffen.\n\n4. **Schulungen und Sensibilisierung**: Die Schulung von Verantwortlichen und Auftragsverarbeitern über die Anforderungen der DSGVO und die Bedeutung von Datenschutz kann dazu beitragen, dass Verträge besser verstanden und eingehalten werden.\n\n5. **Rechtsberatung**: Die Einbeziehung von rechtlichem Fachwissen bei der Erstellung und Überprüfung von Verträgen kann sicherstellen, dass alle relevanten gesetzlichen Anforderungen erfüllt sind und die Verträge rechtssicher sind.\n\n6. **Regelmäßige Überprüfung und Anpassung**: Verträge sollten regelmäßig überprüft und aktualisiert werden, um sicherzustellen, dass sie den aktuellen rechtlichen Anforderungen und den Entwicklungen im Datenschutz gerecht werden.\n\nDurch diese Maßnahmen kann die Standardisierung von Verträgen zwischen Verantwortlichen und Auftragsverarbeitern gefördert werden, was zu einer besseren Einhaltung der Datenschutzvorschriften und einem höheren Schutz der Rechte betroffener Personen führt.",
+    "chunks_retrieved": 5,
+    "context_length": 3683,
+    "tokens_used": 917,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.11723359209597742,
+    "recall": 0.4112506861130715,
+    "f1": 0.18245536214759306,
+    "word_precision": 0.15384615384615385,
+    "word_recall": 0.8888888888888888,
+    "sequence_similarity": 0.031804281345565746,
+    "semantic_similarity": 0.15384615384615385,
+    "query_time": 5.7864789962768555,
+    "tokens_per_second": 63.94216590746565,
+    "response_length": 1483,
+    "word_count": 177,
+    "avg_word_length": 7.350282485875706,
+    "estimated_tokens": 370,
+    "faithfulness": 0.6057692307692307,
+    "answer_relevance": 0.11308411214953272,
+    "context_relevance": 0.3857142857142857,
+    "context_utilization": 0.29428571428571426,
+    "dsgvo_score": 0.4139527061723323,
+    "question": "Welche Aspekte der personenbezogenen Daten fallen unter die Verpflichtung der Datenschutzfreundlichkeit gemäß Artikel 25 der DSGVO?",
+    "expected_answer": "Diese Verpflichtung gilt für die Menge der erhobenen personenbezogenen Daten, den Umfang ihrer Verarbeitung, ihre Speicherfrist und ihre Zugänglichkeit.",
+    "actual_answer": "Die Verpflichtung der Datenschutzfreundlichkeit gemäß Artikel 25 der Datenschutz-Grundverordnung (DSGVO) umfasst mehrere Aspekte der Verarbeitung personenbezogener Daten:\n\n1. **Datenminimierung**: Es dürfen nur die personenbezogenen Daten verarbeitet werden, die für den jeweiligen bestimmten Verarbeitungszweck erforderlich sind. Dies betrifft sowohl die Menge der erhobenen Daten als auch den Umfang ihrer Verarbeitung.\n\n2. **Zugänglichkeit**: Die Verarbeitung personenbezogener Daten muss so gestaltet sein, dass diese Daten nicht ohne das Eingreifen der betroffenen Person einer unbestimmten Zahl von natürlichen Personen zugänglich gemacht werden.\n\n3. **Speicherfrist**: Die Dauer, für die personenbezogene Daten gespeichert werden, muss auf das notwendige Minimum beschränkt sein, das für den jeweiligen Verarbeitungszweck erforderlich ist.\n\n4. **Voreinstellungen**: Bei der Verarbeitung personenbezogener Daten müssen die Voreinstellungen so gestaltet sein, dass sie datenschutzfreundlich sind. Das bedeutet, dass standardmäßig nur die notwendigsten Daten verarbeitet werden.\n\n5. **Technische und organisatorische Maßnahmen**: Es müssen geeignete technische und organisatorische Maßnahmen getroffen werden, um die oben genannten Prinzipien der Datenschutzfreundlichkeit zu gewährleisten.\n\nDiese Aspekte sollen sicherstellen, dass der Datenschutz von Anfang an in die Verarbeitung personenbezogener Daten integriert wird und die Rechte der betroffenen Personen gewahrt bleiben.",
+    "chunks_retrieved": 5,
+    "context_length": 4133,
+    "tokens_used": 1030,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.09762320387092036,
+    "recall": 0.2854492908274421,
+    "f1": 0.14548929875635958,
+    "word_precision": 0.13043478260869565,
+    "word_recall": 0.6,
+    "sequence_similarity": 0.029048656499636893,
+    "semantic_similarity": 0.12244897959183673,
+    "query_time": 4.979259014129639,
+    "tokens_per_second": 59.6474292976532,
+    "response_length": 1188,
+    "word_count": 150,
+    "avg_word_length": 6.913333333333333,
+    "estimated_tokens": 297,
+    "faithfulness": 0.40217391304347827,
+    "answer_relevance": 0.1134020618556701,
+    "context_relevance": 0.2,
+    "context_utilization": 0.25857142857142856,
+    "dsgvo_score": 0.2751075750784402,
+    "question": "Welche kriminalitätsbezogenen Gründe können nach DSGVO Artikel 23 zur Einschränkung von Rechten und Pflichten führen?",
+    "expected_answer": "die Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder die Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit;",
+    "actual_answer": "Die DSGVO (Datenschutz-Grundverordnung) erlaubt in Artikel 23 die Einschränkung von Rechten und Pflichten aus bestimmten Gründen, die auch kriminalitätsbezogene Aspekte umfassen können. Die spezifischen Gründe für eine solche Einschränkung sind in Absatz 1 von Artikel 23 aufgeführt. Dazu gehören:\n\n1. **Nationale Sicherheit**: Maßnahmen, die erforderlich sind, um die nationale Sicherheit zu schützen.\n2. **Öffentliche Sicherheit**: Einschränkungen, die notwendig sind, um die öffentliche Sicherheit zu gewährleisten.\n3. **Verbrechensbekämpfung**: Maßnahmen, die erforderlich sind, um die Verhütung, Untersuchung, Aufdeckung oder Verfolgung von Straftaten zu unterstützen.\n4. **Wichtige wirtschaftliche oder finanzielle Interessen eines Mitgliedstaats**: Dies kann auch die Bekämpfung von Betrug oder Geldwäsche umfassen.\n5. **Schutz von Personen**: Einschränkungen, die notwendig sind, um die Rechte und Freiheiten anderer Personen zu schützen.\n\nDiese Gründe müssen jedoch immer im Einklang mit den Grundrechten und den Prinzipien der DSGVO stehen. Es ist wichtig, dass die Einschränkungen verhältnismäßig sind und die Rechte der betroffenen Personen nicht unangemessen beeinträchtigen.",
+    "chunks_retrieved": 5,
+    "context_length": 3630,
+    "tokens_used": 905,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.1299167499167499,
+    "recall": 0.40004662004662006,
+    "f1": 0.19613716583932986,
+    "word_precision": 0.14285714285714285,
+    "word_recall": 0.8181818181818182,
+    "sequence_similarity": 0.10411810411810411,
+    "semantic_similarity": 0.13846153846153847,
+    "query_time": 4.54410457611084,
+    "tokens_per_second": 64.03901915678578,
+    "response_length": 1165,
+    "word_count": 141,
+    "avg_word_length": 7.226950354609929,
+    "estimated_tokens": 291,
+    "faithfulness": 0.6666666666666666,
+    "answer_relevance": 0.34375,
+    "context_relevance": 0.48571428571428565,
+    "context_utilization": 0.37342857142857144,
+    "dsgvo_score": 0.5336011904761904,
+    "question": "Welche Informationen über die Zwecke und die Rechtsgrundlage der Datenverarbeitung muss der Verantwortliche bereitstellen, wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden?",
+    "expected_answer": "die Zwecke, für die die personenbezogenen Daten verarbeitet werden sollen, sowie die Rechtsgrundlage für die Verarbeitung;",
+    "actual_answer": "Wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden, muss der Verantwortliche folgende Informationen bereitstellen:\n\n1. **Zwecke der Verarbeitung**: Der Verantwortliche muss die Zwecke angeben, für die die personenbezogenen Daten verarbeitet werden.\n\n2. **Rechtsgrundlage der Verarbeitung**: Der Verantwortliche muss die Rechtsgrundlage für die Verarbeitung der personenbezogenen Daten darlegen.\n\n3. **Kategorien personenbezogener Daten**: Es müssen die Kategorien der verarbeiteten personenbezogenen Daten beschrieben werden.\n\n4. **Empfänger oder Kategorien von Empfängern**: Der Verantwortliche muss angeben, an wen die personenbezogenen Daten weitergegeben werden oder an welche Kategorien von Empfängern sie weitergegeben werden.\n\n5. **Informationen über die Herkunft der Daten**: Der Verantwortliche muss Informationen darüber bereitstellen, woher die personenbezogenen Daten stammen, wenn sie nicht von der betroffenen Person selbst erhoben wurden.\n\nDiese Informationen müssen in einer klaren und verständlichen Weise bereitgestellt werden, um der betroffenen Person Transparenz über die Verarbeitung ihrer Daten zu gewährleisten.",
+    "chunks_retrieved": 5,
+    "context_length": 5237,
+    "tokens_used": 1307,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 0.1667575807514832,
+    "recall": 0.3039527027027027,
+    "f1": 0.21536141931562797,
+    "word_precision": 0.21951219512195122,
+    "word_recall": 0.5625,
+    "sequence_similarity": 0.07567567567567568,
+    "semantic_similarity": 0.1875,
+    "query_time": 1.7534129619598389,
+    "tokens_per_second": 59.31289562485969,
+    "response_length": 416,
+    "word_count": 52,
+    "avg_word_length": 7.019230769230769,
+    "estimated_tokens": 104,
+    "faithfulness": 0.7560975609756098,
+    "answer_relevance": 0.35000000000000003,
+    "context_relevance": 0.6352941176470589,
+    "context_utilization": 0.42857142857142855,
+    "dsgvo_score": 0.6101076040172166,
+    "question": "Welche Anforderungen genehmigt der Ausschuss im Hinblick auf die Akkreditierung von Zertifizierungsstellen gemäß Artikel 43 Absatz 3?",
+    "expected_answer": "Genehmigung der inArtikel 43Absatz 3 genannten Anforderungen im Hinblick auf die Akkreditierung von Zertifizierungsstellen gemäßArtikel 43;",
+    "actual_answer": "Der Ausschuss genehmigt die Anforderungen, die für die Akkreditierung von Zertifizierungsstellen gemäß Artikel 43 Absatz 3 erforderlich sind. Diese Anforderungen müssen von der zuständigen Aufsichtsbehörde oder dem Ausschuss selbst genehmigt werden und sind in leicht zugänglicher Form zu veröffentlichen. Die spezifischen Inhalte dieser Anforderungen sind im bereitgestellten Kontext jedoch nicht näher beschrieben.",
+    "chunks_retrieved": 5,
+    "context_length": 6008,
+    "tokens_used": 1500,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  },
+  {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "word_precision": 1.0,
+    "word_recall": 1.0,
+    "sequence_similarity": 1.0,
+    "semantic_similarity": 1.0,
+    "query_time": 1.234818458557129,
+    "tokens_per_second": 22.675397995522093,
+    "response_length": 113,
+    "word_count": 13,
+    "avg_word_length": 7.769230769230769,
+    "estimated_tokens": 28,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.5133333333333334,
+    "context_relevance": 0.2444444444444444,
+    "context_utilization": 0.24514285714285713,
+    "dsgvo_score": 0.7028888888888889,
+    "question": "Wer darf ein umfassendes Register der strafrechtlichen Verurteilungen führen?",
+    "expected_answer": "Ein umfassendes Register der strafrechtlichen Verurteilungen darf nur unter behördlicher Aufsicht geführt werden.",
+    "actual_answer": "Ein umfassendes Register der strafrechtlichen Verurteilungen darf nur unter behördlicher Aufsicht geführt werden.",
+    "chunks_retrieved": 5,
+    "context_length": 3446,
+    "tokens_used": 858,
+    "max_context_length": 3500,
+    "truncated": false,
+    "chunks_used": 5,
+    "chunks_total": 5,
+    "llm_model": "openai-gpt-4o-mini",
+    "embedding_model": "sentence-transformers-all-MiniLM-L6-v2",
+    "retrieval_method": "vector-similarity-retrieval",
+    "pipeline_info": {
+      "llm": {
+        "name": "openai-gpt-4o-mini",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 1000
+      },
+      "embedding": {
+        "name": "sentence-transformers-all-MiniLM-L6-v2",
+        "provider": "sentence-transformers",
+        "model": "all-MiniLM-L6-v2",
+        "device": "cpu",
+        "dimensions": 384
+      },
+      "chunking": {
+        "name": "fixedsizechunking-chunking",
+        "strategy": 1200,
+        "chunk_size": 1200,
+        "chunk_overlap": 180,
+        "separator": "\n"
+      },
+      "retrieval": {
+        "name": "vector-similarity-retrieval",
+        "method": "cosine_similarity",
+        "chunks_indexed": 264,
+        "top_k": 7,
+        "similarity_threshold": 0.1,
+        "embedding_dimensions": 384
+      },
+      "pipeline": {
+        "max_context_length": 3500,
+        "include_context": true
+      },
+      "is_indexed": true,
+      "dataset": {
+        "documents_processed": 99,
+        "grouping_applied": true
+      }
+    }
+  }
+]
