@@ -19,7 +19,10 @@ class DSGVODataset:
 
         # Check if evaluation dataset exists, otherwise load raw data
         #evaluation_path = Path("data/evaluation/dsgvo_evaluation_dataset.jsonl")
-        evaluation_path = Path("data/evaluation/dsgvo_llm_quality_dataset.jsonl")
+        #evaluation_path = Path("data/evaluation/dsgvo_llm_quality_dataset.jsonl")
+
+        PROJECT_ROOT = Path(__file__).resolve().parents[2]
+        evaluation_path = PROJECT_ROOT / "data" / "evaluation" / "dsgvo_llm_quality_dataset.jsonl"
 
         if evaluation_path.exists():
             logger.info("Loading pre-prepared evaluation dataset")
