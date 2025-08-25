@@ -18,13 +18,13 @@ embedding:
 
 chunking:
   type: fixedsize
-  chunk_size: 1200
-  chunk_overlap: 180
+  chunk_size: 1500
+  chunk_overlap: 225
   separator: "\n"
 
 retrieval:
   type: vector-similarity
-  top_k: 7
+  top_k: 5
   similarity_threshold: 0.1
 
 evaluation:
