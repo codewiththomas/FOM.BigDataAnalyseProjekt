@@ -94,7 +94,8 @@ def group_documents_by_article(documents: List[Dict[str, Any]]) -> List[Dict[str
 
     logger.info(f"Gruppierung abgeschlossen: {len(documents)} → {len(result)} Dokumente")
 
-    result_path = Path('data/output/dsgvo_grouped.txt')
+    result_path = Path(__file__).resolve().parents[2] / 'data' / 'output' / 'dsgvo_grouped.txt'
+
     try:
         result_path.parent.mkdir(parents=True, exist_ok=True)
         logger.info(f"Speichere gruppierten Dokumentenkorpus in {result_path} (nur Debug).")
