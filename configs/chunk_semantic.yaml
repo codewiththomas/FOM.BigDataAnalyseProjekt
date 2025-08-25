@@ -1,0 +1,42 @@
+# ResearchRAG Baseline Configuration
+# This configuration uses GPT-4o-mini as the baseline model
+
+llm:
+  type: openai
+  model: gpt-4o-mini
+  abbr: g4o-mini # für Benennung der Ausgabe-Datei. Für jedes neue Modell ergänzen.
+  temperature: 0.1
+  max_tokens: 1000
+
+embedding:
+  type: sentence-transformers
+  model_name: all-MiniLM-L6-v2
+  # device: cpu          # ← vorher
+  device: cpu           # ← nutzt GPU
+  # batch_size: 32       # ← beispielhafter alter/kleiner Wert
+  batch_size: 32        # ← größerer Batch für GPU (64–256 testen)
+
+chunking:
+  type: semantic
+  separator: "\n"
+
+retrieval:
+  type: vector-similarity
+  top_k: 5
+  similarity_threshold: 0.1
+
+evaluation:
+  enabled_metrics:
+    - precision-recall
+    - timing
+    - ragas
+
+dataset:
+  evaluation_subset_size: 100
+  save_qa_pairs: true
+  grouping:
+    enabled: true
+
+pipeline:
+  include_context: true
+  max_context_length: 1000
