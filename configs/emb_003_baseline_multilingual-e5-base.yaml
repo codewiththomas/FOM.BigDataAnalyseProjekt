@@ -22,7 +22,7 @@ chunking:
 
 retrieval:
   type: vector-similarity
-  top_k: 7
+  top_k: 5
   similarity_threshold: 0.1
 
 evaluation:
