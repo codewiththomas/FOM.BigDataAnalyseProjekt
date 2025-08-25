@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import os
-import json
+import json, shutil
 import tempfile
 from contextlib import contextmanager
 from copy import deepcopy
@@ -16,21 +16,23 @@ from dotenv import load_dotenv
 # Import aus deinem Projekt
 from evaluator import RAGEvaluator  # unverändert verwenden
 
+# Arbeitsverzeichnis auf Projekt-Root setzen (eine Ebene über src)
+os.chdir(Path(__file__).resolve().parents[2])
+
 # --- Setup & Konstanten ------------------------------------------------------
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]  # .../FOM.BigDataAnalyseProjekt
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 BASELINE_PATH = PROJECT_ROOT / "configs" / "000_baseline.yaml"
 OUT_DIR = PROJECT_ROOT / "results" / "runs" / "retrieval"
 
 # Grid NUR für Retrieval-Ebene (Embedding & LLM-Params bleiben fix)
 PARAMETER_GRID = {
-    "chunking_type": ["fixedsize", "recursive", "semantic"], # "fixedsize", "recursive", "semantic"
-    "chunk_size": [1200, 1800, 2000],  # nur für fixedsize/recursive
-    "top_k": [3, 5, 7], # 3, 5, 7
-    "similarity_threshold": [0.00, 0.10],
-    "grouping_enabled": [True, False], # True oder False oder True, False
+    "chunking_type": ["recursive"], # "fixedsize", "recursive", "semantic"
+    "chunk_size": [1500],  # nur für fixedsize/recursive
+    "top_k": [5], # 3, 5, 7
+    "similarity_threshold": [0.10], # 0.00, 0.10
+    "grouping_enabled": [True], # True oder False oder True, False
 }
-
 
 def load_baseline_config() -> dict:
     with open(BASELINE_PATH, "r", encoding="utf-8") as f:
@@ -115,12 +117,14 @@ def main():
     load_dotenv()
     print("✅ .env file loaded in grid search")
 
+    # Basisordner für Cache sicherstellen
+    (PROJECT_ROOT / "cache").mkdir(parents=True, exist_ok=True)
+
     base_cfg = load_baseline_config()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     print(f"📁 Output (retrieval runs): {OUT_DIR.resolve()}")
 
-    # Informationen aus Baseline (Embedding bleibt fix; Abkürzung kommt aus Config)
     emb_abbr = get_embedding_abbr(base_cfg)
     dataset_path = Path(base_cfg["dataset"]["path"]).resolve()
     num_qa = int(base_cfg.get("dataset", {}).get("evaluation_subset_size", 100))
@@ -178,7 +182,7 @@ def main():
                     num_qa=num_qa, save_results=True
                 )
 
-                # Optionales Cache-Aufräumen pro Run (deine Vorgabe)
+                # optional: Cache nach jedem Run leeren
                 try:
                     evaluator.clear_cache()
                 except Exception:
