@@ -1,0 +1,87 @@
+{
+  "avg_precision": 0.04188119970675373,
+  "min_precision": 0.0019300361881785283,
+  "max_precision": 0.18417776352692575,
+  "avg_recall": 0.2547603114635117,
+  "min_recall": 0.0019300361881785283,
+  "max_recall": 0.5132557777113229,
+  "avg_f1": 0.06934207859982254,
+  "min_f1": 0.0019300361881785283,
+  "max_f1": 0.27108045617740695,
+  "avg_query_time": 55.36835367202759,
+  "min_query_time": 27.245986700057983,
+  "max_query_time": 143.16691303253174,
+  "avg_response_length": 4107.96,
+  "min_response_length": 17,
+  "max_response_length": 5539,
+  "avg_faithfulness": 0.19277124794825987,
+  "min_faithfulness": 0.0,
+  "max_faithfulness": 0.3617021276595745,
+  "avg_answer_relevance": 0.04773584041503094,
+  "min_answer_relevance": 0.0,
+  "max_answer_relevance": 0.1316901408450704,
+  "avg_context_relevance": 0.3881217312701059,
+  "min_context_relevance": 0.08888888888888888,
+  "max_context_relevance": 0.6470588235294117,
+  "avg_dsgvo_score": 0.1883307223526604,
+  "min_dsgvo_score": 0.068,
+  "max_dsgvo_score": 0.3159136616388639,
+  "pipeline_info": {
+    "llm": {
+      "name": "qwen3:8b",
+      "provider": "local",
+      "endpoint": "http://localhost:11434",
+      "api_type": "ollama",
+      "temperature": 0.1,
+      "max_tokens": 1000
+    },
+    "embedding": {
+      "name": "sentence-transformers-all-MiniLM-L6-v2",
+      "provider": "sentence-transformers",
+      "model": "all-MiniLM-L6-v2",
+      "device": "cpu",
+      "dimensions": 384
+    },
+    "chunking": {
+      "name": "fixedsizechunking-chunking",
+      "strategy": 1500,
+      "chunk_size": 1500,
+      "chunk_overlap": 225,
+      "separator": "\n"
+    },
+    "retrieval": {
+      "name": "vector-similarity-retrieval",
+      "method": "cosine_similarity",
+      "chunks_indexed": 220,
+      "top_k": 5,
+      "similarity_threshold": 0.1,
+      "embedding_dimensions": 384
+    },
+    "pipeline": {
+      "max_context_length": 1000,
+      "include_context": true
+    },
+    "is_indexed": true,
+    "dataset": {
+      "documents_processed": 99,
+      "grouping_applied": true
+    }
+  },
+  "context_optimization": {
+    "truncation_rate": 0.78,
+    "avg_context_utilization": 0.81122,
+    "avg_chunks_used": 4.06,
+    "total_chunks_wasted": 94
+  },
+  "evaluation_info": {
+    "enabled_evaluators": [
+      "PrecisionRecallEvaluator",
+      "TimingEvaluator",
+      "RAGASEvaluator"
+    ],
+    "total_metrics": 24
+  },
+  "total_evaluation_time": 5537.340636014938,
+  "qa_pairs_evaluated": 100,
+  "random_seed": 42
+}
