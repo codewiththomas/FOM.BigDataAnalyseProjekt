@@ -99,22 +99,52 @@ class VectorSimilarityRetrieval(RetrievalInterface):
 
     def _calculate_cosine_similarities(self, query_embedding: np.ndarray) -> np.ndarray:
         """Calculate cosine similarities between query and all chunk embeddings"""
-        # Normalize embeddings for cosine similarity
-        query_norm = np.linalg.norm(query_embedding)
-        if query_norm == 0:
-            return np.zeros(len(self.embeddings_array))
+        try:
+            # Debug: Check embedding values
+            logger.debug(f"Query embedding shape: {query_embedding.shape}, norm: {np.linalg.norm(query_embedding):.6f}")
+            logger.debug(f"Chunk embeddings shape: {self.embeddings_array.shape}")
 
-        query_normalized = query_embedding / query_norm
+            # Check if embeddings are already normalized (common for OpenAI embeddings)
+            query_norm = np.linalg.norm(query_embedding)
+            chunk_norms = np.linalg.norm(self.embeddings_array, axis=1)
 
-        # Normalize chunk embeddings
-        chunk_norms = np.linalg.norm(self.embeddings_array, axis=1)
-        chunk_norms[chunk_norms == 0] = 1  # Avoid division by zero
-        chunk_normalized = self.embeddings_array / chunk_norms[:, np.newaxis]
+            logger.debug(f"Query norm: {query_norm:.6f}, Chunk norms range: [{chunk_norms.min():.6f}, {chunk_norms.max():.6f}]")
 
-        # Calculate cosine similarities (dot product of normalized vectors)
-        similarities = np.dot(chunk_normalized, query_normalized)
+            # If embeddings are already close to unit norm, use them directly
+            if 0.95 < query_norm < 1.05 and np.all((0.95 < chunk_norms) & (chunk_norms < 1.05)):
+                logger.debug("Embeddings appear to be pre-normalized, using direct dot product")
+                similarities = np.dot(self.embeddings_array, query_embedding)
+            else:
+                # Normalize embeddings for cosine similarity
+                if query_norm == 0:
+                    logger.warning("Query embedding has zero norm")
+                    return np.zeros(len(self.embeddings_array))
 
-        return similarities
+                query_normalized = query_embedding / query_norm
+
+                # Normalize chunk embeddings
+                chunk_norms[chunk_norms == 0] = 1  # Avoid division by zero
+                chunk_normalized = self.embeddings_array / chunk_norms[:, np.newaxis]
+
+                # Calculate cosine similarities (dot product of normalized vectors)
+                similarities = np.dot(chunk_normalized, query_normalized)
+
+            # Debug: Check similarity values
+            logger.debug(f"Similarities range: [{similarities.min():.6f}, {similarities.max():.6f}]")
+            logger.debug(f"Top 5 similarities: {np.sort(similarities)[::-1][:5]}")
+
+            return similarities
+
+        except Exception as e:
+            logger.error(f"Error calculating cosine similarities: {e}")
+            # Fallback to simple dot product
+            try:
+                similarities = np.dot(self.embeddings_array, query_embedding)
+                logger.info("Using fallback dot product calculation")
+                return similarities
+            except Exception as fallback_error:
+                logger.error(f"Fallback calculation also failed: {fallback_error}")
+                return np.zeros(len(self.embeddings_array))
 
     def _get_random_chunks(self, top_k: int) -> List[Chunk]:
         """Fallback method to get random chunks"""

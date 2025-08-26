@@ -1,0 +1,41 @@
+# ResearchRAG Baseline Configuration
+# This configuration uses GPT-4o-mini as the baseline model with OpenAI text-embedding-ada-002 embeddings
+
+llm:
+  type: openai
+  model: gpt-4o-mini
+  abbr: g4o-mini # für Benennung der Ausgabe-Datei. Für jedes neue Modell ergänzen.
+  temperature: 0.1
+  max_tokens: 1000
+
+embedding:
+  type: openai
+  model: text-embedding-3-small
+  #api_key: ${OPENAI_API_KEY}  # Will be loaded from environment variable
+
+chunking:
+  type: fixedsize
+  chunk_size: 1500
+  chunk_overlap: 225
+  separator: "\n"
+
+retrieval:
+  type: vector-similarity
+  top_k: 5
+  similarity_threshold: 0.0  # Lowered for OpenAI embeddings
+
+evaluation:
+  enabled_metrics:
+    - precision-recall
+    - timing
+    - ragas
+
+dataset:
+  evaluation_subset_size: 50
+  save_qa_pairs: true
+  grouping:
+    enabled: true
+
+pipeline:
+  include_context: true
+  max_context_length: 1000
